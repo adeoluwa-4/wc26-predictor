@@ -1,4 +1,4 @@
-# World Cup 26 Predictor 
+# World Cup 2026 Predictor 
 This repository contains:
 - a reproducible, date safe data pipeline,
 - baseline model training with time based evaluation,
