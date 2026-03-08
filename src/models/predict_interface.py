@@ -1,0 +1,161 @@
+"""Prediction interface for WC26 baseline models."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+import joblib
+import pandas as pd
+
+from src.models.config import MODELS_DIR
+
+
+class WC26Predictor:
+    """Load trained artifacts and expose match-level prediction API."""
+
+    def __init__(self, models_dir: str | Path = MODELS_DIR):
+        self.models_dir = Path(models_dir)
+
+        self.outcome_model = joblib.load(self.models_dir / "outcome_model.joblib")
+        self.home_goals_model = joblib.load(self.models_dir / "home_goals_model.joblib")
+        self.away_goals_model = joblib.load(self.models_dir / "away_goals_model.joblib")
+
+        self.metadata = json.loads((self.models_dir / "model_metadata.json").read_text(encoding="utf-8"))
+        self.feature_columns = self.metadata["feature_columns"]
+        self.defaults = self.metadata["defaults"]
+
+        self.team_profiles = pd.read_parquet(self.models_dir / "team_profiles.parquet")
+        self.team_profiles = self.team_profiles.sort_values("team").drop_duplicates(subset=["team"], keep="last")
+        self.team_profiles = self.team_profiles.set_index("team")
+
+        self.h2h_profiles = pd.read_parquet(self.models_dir / "h2h_profiles.parquet")
+        self.h2h_profiles = self.h2h_profiles.set_index(["team_a", "team_b"])
+
+    def _team_profile(self, team: str) -> dict[str, Any]:
+        if team in self.team_profiles.index:
+            row = self.team_profiles.loc[team]
+            return row.to_dict()
+
+        numeric_defaults = self.defaults["numeric"]
+        profile = {key: numeric_defaults[key] for key in numeric_defaults.keys()}
+        profile["confederation"] = self.defaults["confederation"]
+        return profile
+
+    def _h2h_features(self, home_team: str, away_team: str) -> dict[str, float]:
+        team_a, team_b = sorted((home_team, away_team))
+        if (team_a, team_b) not in self.h2h_profiles.index:
+            return {
+                "h2h_matches_prior": 0.0,
+                "h2h_home_team_wins_prior": 0.0,
+                "h2h_away_team_wins_prior": 0.0,
+                "h2h_draws_prior": 0.0,
+                "h2h_goal_diff_prior": 0.0,
+            }
+
+        row = self.h2h_profiles.loc[(team_a, team_b)]
+        if home_team == team_a:
+            home_wins = float(row["team_a_wins"])
+            away_wins = float(row["team_b_wins"])
+            goal_diff = float(row["team_a_goal_diff"])
+        else:
+            home_wins = float(row["team_b_wins"])
+            away_wins = float(row["team_a_wins"])
+            goal_diff = -float(row["team_a_goal_diff"])
+
+        return {
+            "h2h_matches_prior": float(row["matches"]),
+            "h2h_home_team_wins_prior": home_wins,
+            "h2h_away_team_wins_prior": away_wins,
+            "h2h_draws_prior": float(row["draws"]),
+            "h2h_goal_diff_prior": goal_diff,
+        }
+
+    def _build_feature_row(self, home_team: str, away_team: str) -> pd.DataFrame:
+        home_profile = self._team_profile(home_team)
+        away_profile = self._team_profile(away_team)
+
+        row: dict[str, Any] = {
+            "home_team": home_team,
+            "away_team": away_team,
+            "tournament_type": "World Cup",
+            "neutral": True,
+            "is_friendly": False,
+            "is_qualifier": False,
+            "is_continental_competition": False,
+            "is_world_cup": True,
+            "is_host_home_country": False,
+            "is_host_away_country": False,
+            "tournament_importance_score": 1.0,
+            "confederation_home": home_profile.get("confederation", self.defaults["confederation"]),
+            "confederation_away": away_profile.get("confederation", self.defaults["confederation"]),
+        }
+
+        row["same_confederation"] = row["confederation_home"] == row["confederation_away"]
+
+        row["home_elo"] = float(home_profile.get("elo", self.defaults["numeric"]["elo"]))
+        row["away_elo"] = float(away_profile.get("elo", self.defaults["numeric"]["elo"]))
+        row["elo_diff"] = row["home_elo"] - row["away_elo"]
+
+        row["home_fifa_rank"] = float(home_profile.get("fifa_rank", self.defaults["numeric"]["fifa_rank"]))
+        row["away_fifa_rank"] = float(away_profile.get("fifa_rank", self.defaults["numeric"]["fifa_rank"]))
+        row["fifa_rank_diff"] = row["home_fifa_rank"] - row["away_fifa_rank"]
+
+        row["home_fifa_points"] = float(home_profile.get("fifa_points", self.defaults["numeric"]["fifa_points"]))
+        row["away_fifa_points"] = float(away_profile.get("fifa_points", self.defaults["numeric"]["fifa_points"]))
+        row["fifa_points_diff"] = row["home_fifa_points"] - row["away_fifa_points"]
+
+        for key, value in home_profile.items():
+            if key.endswith(("_last_5", "_last_10")):
+                row[f"home_{key}"] = float(value)
+        for key, value in away_profile.items():
+            if key.endswith(("_last_5", "_last_10")):
+                row[f"away_{key}"] = float(value)
+
+        row.update(self._h2h_features(home_team, away_team))
+
+        for col in self.feature_columns:
+            if col in row:
+                continue
+            if col in self.metadata["categorical_columns"]:
+                row[col] = "Unknown"
+            else:
+                row[col] = 0.0
+
+        return pd.DataFrame([{col: row[col] for col in self.feature_columns}])
+
+    def predict_match(self, home_team: str, away_team: str) -> dict[str, float]:
+        if home_team == away_team:
+            raise ValueError("home_team and away_team must be different")
+
+        X = self._build_feature_row(home_team=home_team, away_team=away_team)
+
+        outcome_proba = self.outcome_model.predict_proba(X)[0]
+        outcome_classes = self.outcome_model.named_steps["model"].classes_
+        class_probs = {cls: float(prob) for cls, prob in zip(outcome_classes, outcome_proba)}
+
+        home_goals = float(max(0.0, self.home_goals_model.predict(X)[0]))
+        away_goals = float(max(0.0, self.away_goals_model.predict(X)[0]))
+
+        return {
+            "home_win_probability": class_probs.get("home_win", 0.0),
+            "draw_probability": class_probs.get("draw", 0.0),
+            "away_win_probability": class_probs.get("away_win", 0.0),
+            "predicted_home_goals": home_goals,
+            "predicted_away_goals": away_goals,
+        }
+
+
+_DEFAULT_PREDICTOR: WC26Predictor | None = None
+
+
+def predict_match(home_team: str, away_team: str, models_dir: str | Path = MODELS_DIR) -> dict[str, float]:
+    """Convenience function matching the app-ready interface requirement."""
+    global _DEFAULT_PREDICTOR
+    models_path = Path(models_dir)
+
+    if _DEFAULT_PREDICTOR is None or _DEFAULT_PREDICTOR.models_dir != models_path:
+        _DEFAULT_PREDICTOR = WC26Predictor(models_path)
+
+    return _DEFAULT_PREDICTOR.predict_match(home_team=home_team, away_team=away_team)
