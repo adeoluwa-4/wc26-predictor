@@ -1,8 +1,7 @@
-# WC26 Predictor (Data + Baseline Modeling)
-
+# World Cup 26 Predictor 
 This repository contains:
-- a reproducible, date-safe data pipeline,
-- baseline model training with time-based evaluation,
+- a reproducible, date safe data pipeline,
+- baseline model training with time based evaluation,
 - and an inference interface for match predictions.
 
 ## Data Pipeline Artifacts
