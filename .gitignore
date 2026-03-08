@@ -1,0 +1,21 @@
+.DS_Store
+.venv/
+.codex/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+.ruff_cache/
+
+# Data and model artifacts
+data/interim/
+data/processed/
+models/*.joblib
+models/*.pkl
+models/*.parquet
+models/*.json
+
+# Streamlit cache
+.streamlit/
