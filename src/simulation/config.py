@@ -23,6 +23,8 @@ class SimulationConfig:
     group_names: tuple[str, ...] = DEFAULT_GROUP_NAMES
     min_active_date: str | None = "2018-01-01"
     teams_config_path: str = "data/config/wc26_teams.csv"
+    simulation_input_audit_path: str = "data/processed/simulation_input_audit.json"
+    allow_auto_groups_debug: bool = False
 
     def validate(self) -> None:
         if self.num_groups <= 0:
