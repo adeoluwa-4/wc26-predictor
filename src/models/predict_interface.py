@@ -33,6 +33,9 @@ class WC26Predictor:
         self.h2h_profiles = pd.read_parquet(self.models_dir / "h2h_profiles.parquet")
         self.h2h_profiles = self.h2h_profiles.set_index(["team_a", "team_b"])
 
+        # Speeds up Monte Carlo runs dramatically: at most 48*47 oriented matchups in a WC.
+        self._prediction_cache: dict[tuple[str, str], dict[str, float]] = {}
+
     def _team_profile(self, team: str) -> dict[str, Any]:
         if team in self.team_profiles.index:
             row = self.team_profiles.loc[team]
@@ -105,6 +108,13 @@ class WC26Predictor:
         row["home_fifa_points"] = float(home_profile.get("fifa_points", self.defaults["numeric"]["fifa_points"]))
         row["away_fifa_points"] = float(away_profile.get("fifa_points", self.defaults["numeric"]["fifa_points"]))
         row["fifa_points_diff"] = row["home_fifa_points"] - row["away_fifa_points"]
+        row["home_fifa_available"] = float(
+            pd.notna(home_profile.get("fifa_rank")) and pd.notna(home_profile.get("fifa_points"))
+        )
+        row["away_fifa_available"] = float(
+            pd.notna(away_profile.get("fifa_rank")) and pd.notna(away_profile.get("fifa_points"))
+        )
+        row["fifa_pair_available"] = float(row["home_fifa_available"] * row["away_fifa_available"])
 
         for key, value in home_profile.items():
             if key.endswith(("_last_5", "_last_10")):
@@ -129,6 +139,11 @@ class WC26Predictor:
         if home_team == away_team:
             raise ValueError("home_team and away_team must be different")
 
+        key = (home_team, away_team)
+        cached = self._prediction_cache.get(key)
+        if cached is not None:
+            return cached
+
         X = self._build_feature_row(home_team=home_team, away_team=away_team)
 
         outcome_proba = self.outcome_model.predict_proba(X)[0]
@@ -138,13 +153,15 @@ class WC26Predictor:
         home_goals = float(max(0.0, self.home_goals_model.predict(X)[0]))
         away_goals = float(max(0.0, self.away_goals_model.predict(X)[0]))
 
-        return {
+        out = {
             "home_win_probability": class_probs.get("home_win", 0.0),
             "draw_probability": class_probs.get("draw", 0.0),
             "away_win_probability": class_probs.get("away_win", 0.0),
             "predicted_home_goals": home_goals,
             "predicted_away_goals": away_goals,
         }
+        self._prediction_cache[key] = out
+        return out
 
 
 _DEFAULT_PREDICTOR: WC26Predictor | None = None

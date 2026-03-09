@@ -58,7 +58,15 @@ def _fit_outcome_model(
     categorical_cols: list[str],
 ) -> tuple[Pipeline, dict[str, float], dict[str, float]]:
     preprocessor = _build_preprocessor(numeric_cols, categorical_cols)
-    model = LogisticRegression(max_iter=10000, solver="saga", n_jobs=-1, tol=1e-3)
+    model = LogisticRegression(
+        max_iter=20000,
+        solver="saga",
+        n_jobs=1,
+        tol=5e-4,
+        C=4.0,
+        class_weight=None,
+        random_state=42,
+    )
 
     pipeline = Pipeline(
         steps=[

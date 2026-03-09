@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from pathlib import Path
 from typing import Callable
 
 import numpy as np
 
 from src.models.predict_interface import WC26Predictor
+from src.simulation.audit import write_simulation_input_audit
 from src.simulation.config import SimulationConfig
 from src.simulation.reporting import (
     build_advancement_probabilities,
@@ -15,7 +17,7 @@ from src.simulation.reporting import (
     build_group_winner_probabilities,
 )
 from src.simulation.schemas import MonteCarloResult
-from src.simulation.team_config import build_groups_from_team_config, load_team_config
+from src.simulation.team_config import groups_from_team_config, load_team_config
 from src.simulation.tournament import build_default_groups, run_single_tournament
 
 
@@ -38,16 +40,33 @@ def run_world_cup_simulation(
         predictor = WC26Predictor()
     predict_fn = predict_match_fn or predictor.predict_match
 
+    team_config_df = None
     if groups is not None:
         tournament_groups = groups
-    elif cfg.teams_config_path:
-        team_config = load_team_config(cfg.teams_config_path, config=cfg)
-        draw_rng = np.random.default_rng(cfg.random_seed)
-        tournament_groups = build_groups_from_team_config(team_config, rng=draw_rng, config=cfg)
     else:
-        if predictor is None:
-            predictor = WC26Predictor()
-        tournament_groups = build_default_groups(predictor, config=cfg)
+        team_config_path = Path(cfg.teams_config_path)
+        if team_config_path.exists():
+            team_config_df = load_team_config(team_config_path, config=cfg)
+            tournament_groups = groups_from_team_config(team_config_df, config=cfg)
+        elif cfg.allow_auto_groups_debug:
+            if predictor is None:
+                predictor = WC26Predictor()
+            tournament_groups = build_default_groups(predictor, config=cfg)
+        else:
+            raise FileNotFoundError(
+                "Fixed group config file is required for simulation. "
+                f"Missing: {team_config_path}. "
+                "Set allow_auto_groups_debug=True only for debug fallback."
+            )
+
+    if team_config_df is not None:
+        simulation_input_audit = write_simulation_input_audit(
+            output_path=cfg.simulation_input_audit_path,
+            groups=tournament_groups,
+            team_config=team_config_df,
+        )
+    else:
+        simulation_input_audit = {}
 
     rng = np.random.default_rng(cfg.random_seed)
 
@@ -68,14 +87,16 @@ def run_world_cup_simulation(
     }
 
     group_winner_counts: dict[tuple[str, str], int] = defaultdict(int)
+    sample_debug: dict[str, object] = {}
 
-    for _ in range(sims):
+    for sim_idx in range(sims):
         seed = int(rng.integers(0, 2**32 - 1))
         run = run_single_tournament(
             groups=tournament_groups,
             predict_match_fn=predict_fn,
             seed=seed,
             config=cfg,
+            include_group_details=(sim_idx == 0),
         )
 
         for team, flags in run.progression.items():
@@ -85,6 +106,18 @@ def run_world_cup_simulation(
 
         for group_name, winner in run.group_winners.items():
             group_winner_counts[(group_name, winner)] += 1
+
+        if sim_idx == 0:
+            sample_debug = {
+                "group_finishers": run.group_finishers,
+                "selected_third_place": (
+                    run.selected_third_place.to_dict(orient="records")
+                    if run.selected_third_place is not None
+                    else []
+                ),
+                "third_place_slot_groups": run.third_place_slot_groups or {},
+                "round_of_32_pairings": run.round_of_32_pairings or [],
+            }
 
     advancement_df = build_advancement_probabilities(progression_counts=progression_counts, simulations=sims)
     champion_df = build_champion_probabilities(advancement_probabilities=advancement_df)
@@ -99,5 +132,10 @@ def run_world_cup_simulation(
             "groups": tournament_groups,
             "progression_counts": progression_counts,
             "group_winner_counts": {f"{g}:{t}": c for (g, t), c in group_winner_counts.items()},
+            "team_config_rows": (
+                team_config_df.to_dict(orient="records") if team_config_df is not None else []
+            ),
+            "simulation_input_audit": simulation_input_audit,
+            "sample_run_debug": sample_debug,
         },
     )
