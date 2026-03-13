@@ -223,6 +223,12 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_parquet(TRAINING_TABLE_PATH)
+    if config.min_training_date:
+        cutoff = pd.Timestamp(config.min_training_date)
+        df = df[pd.to_datetime(df["date"], errors="coerce") >= cutoff].copy()
+        if df.empty:
+            raise ValueError(f"No rows remain after min_training_date={config.min_training_date}")
+
     split = make_time_split(df, train_frac=config.train_frac, val_frac=config.val_frac)
 
     numeric_cols, categorical_cols = get_feature_columns(df)
@@ -271,6 +277,7 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
         "numeric_columns": numeric_cols,
         "categorical_columns": categorical_cols,
         "split": {
+            "min_training_date": config.min_training_date,
             "train_end_date": str(split.train_end_date.date()),
             "val_end_date": str(split.val_end_date.date()),
             "train_rows": int(len(split.train)),
