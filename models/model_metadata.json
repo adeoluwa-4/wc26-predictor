@@ -114,21 +114,22 @@
     "confederation_away"
   ],
   "split": {
-    "train_end_date": "1999-05-05",
-    "val_end_date": "2010-03-20",
-    "train_rows": 23515,
-    "val_rows": 10215,
-    "test_rows": 15341
+    "min_training_date": "2000-01-01",
+    "train_end_date": "2015-06-26",
+    "val_end_date": "2020-01-15",
+    "train_rows": 14789,
+    "val_rows": 4497,
+    "test_rows": 5727
   },
   "defaults": {
     "confederation": "UEFA",
     "numeric": {
       "elo": 1366.0,
       "fifa_rank": 103.0,
-      "fifa_points": 1205.96,
+      "fifa_points": 1206.9850000000001,
       "draws_last_10": 2.0,
       "draws_last_5": 1.0,
-      "goal_diff_last_10": -2.0,
+      "goal_diff_last_10": -1.0,
       "goal_diff_last_5": -1.0,
       "goals_against_last_10": 14.0,
       "goals_against_last_5": 7.0,
@@ -138,7 +139,7 @@
       "losses_last_5": 2.0,
       "points_last_10": 11.0,
       "points_last_5": 6.0,
-      "points_per_match_last_10": 1.2,
+      "points_per_match_last_10": 1.3,
       "points_per_match_last_5": 1.2,
       "wins_last_10": 3.0,
       "wins_last_5": 1.0
@@ -147,32 +148,32 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.5804209495839452,
-        "log_loss": 0.8922854410262089
+        "accuracy": 0.594618634645319,
+        "log_loss": 0.8753462182876282
       },
       "test": {
-        "accuracy": 0.5871194837363927,
-        "log_loss": 0.8908671673648694
+        "accuracy": 0.5997904662126768,
+        "log_loss": 0.8704877302637867
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.2976721932834865,
-        "rmse": 1.8223112521335674
+        "mae": 1.257569854497479,
+        "rmse": 1.701891931792935
       },
       "test": {
-        "mae": 1.2591651414259957,
-        "rmse": 1.6534750717685465
+        "mae": 1.2261583737897965,
+        "rmse": 1.5863782381540332
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.9959020751899232,
-        "rmse": 1.3430593317194712
+        "mae": 0.974898570632576,
+        "rmse": 1.3617727124111199
       },
       "test": {
-        "mae": 1.0179148146530606,
-        "rmse": 1.3632955227664594
+        "mae": 0.930389179835229,
+        "rmse": 1.2837744793849573
       }
     }
   },
