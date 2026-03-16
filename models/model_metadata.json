@@ -114,12 +114,12 @@
     "confederation_away"
   ],
   "split": {
-    "min_training_date": "2000-01-01",
-    "train_end_date": "2015-06-26",
-    "val_end_date": "2020-01-15",
-    "train_rows": 14789,
-    "val_rows": 4497,
-    "test_rows": 5727
+    "min_training_date": "2010-01-01",
+    "train_end_date": "2019-10-02",
+    "val_end_date": "2023-01-13",
+    "train_rows": 9377,
+    "val_rows": 2835,
+    "test_rows": 3276
   },
   "defaults": {
     "confederation": "UEFA",
@@ -133,11 +133,11 @@
       "goal_diff_last_5": -1.0,
       "goals_against_last_10": 14.0,
       "goals_against_last_5": 7.0,
-      "goals_for_last_10": 12.0,
+      "goals_for_last_10": 13.0,
       "goals_for_last_5": 6.0,
       "losses_last_10": 4.0,
       "losses_last_5": 2.0,
-      "points_last_10": 11.0,
+      "points_last_10": 12.0,
       "points_last_5": 6.0,
       "points_per_match_last_10": 1.3,
       "points_per_match_last_5": 1.2,
@@ -148,32 +148,32 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.594618634645319,
-        "log_loss": 0.8753462182876282
+        "accuracy": 0.6084656084656085,
+        "log_loss": 0.8589517617909397
       },
       "test": {
-        "accuracy": 0.5997904662126768,
-        "log_loss": 0.8704877302637867
+        "accuracy": 0.601037851037851,
+        "log_loss": 0.8699406642416749
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.257569854497479,
-        "rmse": 1.701891931792935
+        "mae": 1.2285863248644522,
+        "rmse": 1.6318971861619205
       },
       "test": {
-        "mae": 1.2261583737897965,
-        "rmse": 1.5863782381540332
+        "mae": 1.2275595288552525,
+        "rmse": 1.6010923238925487
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.974898570632576,
-        "rmse": 1.3617727124111199
+        "mae": 0.9204468737439482,
+        "rmse": 1.2686781902049524
       },
       "test": {
-        "mae": 0.930389179835229,
-        "rmse": 1.2837744793849573
+        "mae": 0.9620167315059072,
+        "rmse": 1.3102040264033283
       }
     }
   },
