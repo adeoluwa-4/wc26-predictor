@@ -228,6 +228,10 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
         df = df[pd.to_datetime(df["date"], errors="coerce") >= cutoff].copy()
         if df.empty:
             raise ValueError(f"No rows remain after min_training_date={config.min_training_date}")
+    if config.exclude_friendlies:
+        df = df[~df["is_friendly"].astype(bool)].copy()
+        if df.empty:
+            raise ValueError("No rows remain after exclude_friendlies filter")
 
     split = make_time_split(df, train_frac=config.train_frac, val_frac=config.val_frac)
 
@@ -278,6 +282,7 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
         "categorical_columns": categorical_cols,
         "split": {
             "min_training_date": config.min_training_date,
+            "exclude_friendlies": config.exclude_friendlies,
             "train_end_date": str(split.train_end_date.date()),
             "val_end_date": str(split.val_end_date.date()),
             "train_rows": int(len(split.train)),

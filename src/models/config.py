@@ -18,3 +18,4 @@ class ModelingConfig:
     val_frac: float = 0.15
     random_state: int = 42
     min_training_date: str | None = "2010-01-01"
+    exclude_friendlies: bool = True
