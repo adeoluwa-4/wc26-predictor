@@ -8,6 +8,7 @@ __pycache__/
 *.pyd
 .mypy_cache/
 .ruff_cache/
+catboost_info/
 
 # Data and model artifacts
 data/interim/
