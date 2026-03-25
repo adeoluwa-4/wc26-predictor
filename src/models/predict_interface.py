@@ -36,6 +36,25 @@ class WC26Predictor:
         # Speeds up Monte Carlo runs dramatically: at most 48*47 oriented matchups in a WC.
         self._prediction_cache: dict[tuple[str, str], dict[str, float]] = {}
 
+    def _predict_outcome_probabilities(self, X: pd.DataFrame) -> dict[str, float]:
+        model_type = self.metadata.get("outcome_model", "logistic")
+        outcome_classes = list(self.metadata.get("outcome_classes", []))
+
+        if model_type == "catboost":
+            X_model = X.copy()
+            for col in self.metadata.get("catboost_categorical_columns", []):
+                if col in X_model.columns:
+                    X_model[col] = X_model[col].fillna("Unknown").astype(str)
+            outcome_proba = self.outcome_model.predict_proba(X_model)[0]
+            if not outcome_classes and hasattr(self.outcome_model, "classes_"):
+                outcome_classes = list(self.outcome_model.classes_)
+        else:
+            outcome_proba = self.outcome_model.predict_proba(X)[0]
+            if not outcome_classes and hasattr(self.outcome_model, "named_steps"):
+                outcome_classes = list(self.outcome_model.named_steps["model"].classes_)
+
+        return {cls: float(prob) for cls, prob in zip(outcome_classes, outcome_proba)}
+
     def _team_profile(self, team: str) -> dict[str, Any]:
         if team in self.team_profiles.index:
             row = self.team_profiles.loc[team]
@@ -146,9 +165,7 @@ class WC26Predictor:
 
         X = self._build_feature_row(home_team=home_team, away_team=away_team)
 
-        outcome_proba = self.outcome_model.predict_proba(X)[0]
-        outcome_classes = self.outcome_model.named_steps["model"].classes_
-        class_probs = {cls: float(prob) for cls, prob in zip(outcome_classes, outcome_proba)}
+        class_probs = self._predict_outcome_probabilities(X)
 
         home_goals = float(max(0.0, self.home_goals_model.predict(X)[0]))
         away_goals = float(max(0.0, self.away_goals_model.predict(X)[0]))

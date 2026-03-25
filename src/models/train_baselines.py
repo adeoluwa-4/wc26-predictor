@@ -8,6 +8,7 @@ from typing import Any
 
 import joblib
 import pandas as pd
+from catboost import CatBoostClassifier
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression, PoissonRegressor
@@ -56,43 +57,71 @@ def _fit_outcome_model(
     feature_cols: list[str],
     numeric_cols: list[str],
     categorical_cols: list[str],
-) -> tuple[Pipeline, dict[str, float], dict[str, float]]:
+    config: ModelingConfig,
+) -> tuple[Any, dict[str, float], dict[str, float], list[str]]:
+    X_train = train_df[feature_cols]
+    y_train = train_df["outcome_label"]
+
+    if config.outcome_model == "catboost":
+        model = CatBoostClassifier(
+            loss_function="MultiClass",
+            depth=4,
+            learning_rate=0.07,
+            iterations=400,
+            l2_leaf_reg=3,
+            random_seed=config.random_state,
+            verbose=False,
+        )
+        X_train_model = X_train.copy()
+        for col in categorical_cols:
+            X_train_model[col] = X_train_model[col].fillna("Unknown").astype(str)
+        model.fit(X_train_model, y_train, cat_features=categorical_cols)
+
+        def evaluate(split_df: pd.DataFrame) -> dict[str, float]:
+            X = split_df[feature_cols].copy()
+            for col in categorical_cols:
+                X[col] = X[col].fillna("Unknown").astype(str)
+            y = split_df["outcome_label"]
+            pred = model.predict(X).reshape(-1)
+            proba = model.predict_proba(X)
+            classes = model.classes_
+            return {
+                "accuracy": float(accuracy_score(y, pred)),
+                "log_loss": float(log_loss(y, proba, labels=classes)),
+            }
+
+        return model, evaluate(val_df), evaluate(test_df), list(model.classes_)
+
     preprocessor = _build_preprocessor(numeric_cols, categorical_cols)
-    model = LogisticRegression(
+    logistic = LogisticRegression(
         max_iter=20000,
         solver="saga",
         n_jobs=1,
         tol=5e-4,
         C=4.0,
         class_weight=None,
-        random_state=42,
+        random_state=config.random_state,
     )
-
-    pipeline = Pipeline(
+    model = Pipeline(
         steps=[
             ("preprocessor", preprocessor),
-            ("model", model),
+            ("model", logistic),
         ]
     )
-
-    X_train = train_df[feature_cols]
-    y_train = train_df["outcome_label"]
-
-    pipeline.fit(X_train, y_train)
+    model.fit(X_train, y_train)
 
     def evaluate(split_df: pd.DataFrame) -> dict[str, float]:
         X = split_df[feature_cols]
         y = split_df["outcome_label"]
-        pred = pipeline.predict(X)
-        proba = pipeline.predict_proba(X)
-        classes = pipeline.named_steps["model"].classes_
-
+        pred = model.predict(X)
+        proba = model.predict_proba(X)
+        classes = model.named_steps["model"].classes_
         return {
             "accuracy": float(accuracy_score(y, pred)),
             "log_loss": float(log_loss(y, proba, labels=classes)),
         }
 
-    return pipeline, evaluate(val_df), evaluate(test_df)
+    return model, evaluate(val_df), evaluate(test_df), list(model.named_steps["model"].classes_)
 
 
 def _fit_goal_model(
@@ -236,15 +265,18 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
     split = make_time_split(df, train_frac=config.train_frac, val_frac=config.val_frac)
 
     numeric_cols, categorical_cols = get_feature_columns(df)
+    if config.drop_categorical_features:
+        categorical_cols = [col for col in categorical_cols if col not in set(config.drop_categorical_features)]
     feature_cols = [*numeric_cols, *categorical_cols]
 
-    outcome_model, outcome_val, outcome_test = _fit_outcome_model(
+    outcome_model, outcome_val, outcome_test, outcome_classes = _fit_outcome_model(
         train_df=split.train,
         val_df=split.val,
         test_df=split.test,
         feature_cols=feature_cols,
         numeric_cols=numeric_cols,
         categorical_cols=categorical_cols,
+        config=config,
     )
 
     home_goal_model, home_goal_val, home_goal_test = _fit_goal_model(
@@ -295,7 +327,9 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
             "home_goals": {"val": home_goal_val, "test": home_goal_test},
             "away_goals": {"val": away_goal_val, "test": away_goal_test},
         },
-        "outcome_classes": list(outcome_model.named_steps["model"].classes_),
+        "outcome_model": config.outcome_model,
+        "catboost_categorical_columns": categorical_cols if config.outcome_model == "catboost" else [],
+        "outcome_classes": outcome_classes,
     }
 
     MODEL_METADATA_PATH.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
