@@ -18,6 +18,12 @@ Build pipeline:
 python -m src.data.build_training_table --export-csv
 ```
 
+Refresh international results from zip first (recommended before rebuild):
+
+```bash
+python -m src.data.refresh_international_results --zip-path /Users/adeoluwa/Downloads/international_results-master-2.zip
+```
+
 ## Baseline Modeling Stage
 
 Trains and saves:
@@ -84,6 +90,12 @@ from src.simulation.monte_carlo import run_world_cup_simulation
 
 result = run_world_cup_simulation(n_simulations=1000)
 print(result.champion_probabilities.head())
+```
+
+Resolve projected WC26 qualifier slots in config from latest results/shootouts:
+
+```bash
+python -m src.simulation.update_wc26_teams --config-path data/config/wc26_teams.csv
 ```
 
 ## Streamlit Dashboard

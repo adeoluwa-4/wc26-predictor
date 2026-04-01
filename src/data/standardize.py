@@ -23,6 +23,10 @@ DEFAULT_MANUAL_ALIASES = {
     "cabo verde": "Cape Verde",
     "congo dr": "DR Congo",
     "curacao": "Curaçao",
+    "turkiye": "Turkey",
+    "türkiye": "Turkey",
+    "cote d'ivoire": "Ivory Coast",
+    "côte d'ivoire": "Ivory Coast",
 }
 
 
