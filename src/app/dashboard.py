@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -10,6 +11,10 @@ import streamlit as st
 from src.models.predict_interface import WC26Predictor
 from src.simulation.config import SimulationConfig
 from src.simulation.monte_carlo import run_world_cup_simulation
+from src.simulation.team_config import load_team_config
+from src.utils.logging import get_logger
+
+LOGGER = get_logger(__name__)
 
 
 @dataclass(frozen=True)
@@ -29,10 +34,33 @@ def get_predictor() -> WC26Predictor:
 @st.cache_data
 
 def get_team_options() -> list[str]:
-    """Return sorted teams available in trained profiles."""
+    """Return confirmed WC teams available in trained profiles.
+
+    Falls back to all model profile teams if fixed config is unavailable.
+    """
     predictor = get_predictor()
-    teams = predictor.team_profiles.reset_index()["team"].dropna().astype(str).tolist()
-    return sorted(set(teams))
+    profile_teams = set(predictor.team_profiles.reset_index()["team"].dropna().astype(str).tolist())
+
+    cfg = SimulationConfig()
+    config_path = Path(cfg.teams_config_path)
+    if config_path.exists():
+        config_df = load_team_config(config_path, config=cfg)
+        confirmed = sorted(
+            set(config_df.loc[config_df["status"] == "confirmed", "team"].dropna().astype(str).tolist())
+        )
+        available = sorted(team for team in confirmed if team in profile_teams)
+        missing = sorted(set(confirmed) - set(available))
+        if missing:
+            LOGGER.warning(
+                "Excluding %d confirmed config teams not found in model profiles: %s",
+                len(missing),
+                missing,
+            )
+        if available:
+            return available
+
+    LOGGER.warning("Falling back to full model-profile team list for UI dropdowns")
+    return sorted(profile_teams)
 
 
 @st.cache_data(show_spinner=True)

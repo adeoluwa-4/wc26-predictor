@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 from typing import Iterable
 
 import pandas as pd
 
 from src.data import config
+
+LOGGER = logging.getLogger(__name__)
 
 
 def _read_csv_with_fallback(path: Path, **kwargs) -> pd.DataFrame:
@@ -47,11 +50,85 @@ def _find_existing_path(candidates: Iterable[Path]) -> Path:
     )
 
 
+def _is_valid_raw_csv(path: Path) -> bool:
+    return path.is_file() and "__MACOSX" not in path.parts
+
+
+def _discover_international_results_bundles() -> list[tuple[Path, Path, Path]]:
+    """Discover candidate (results, shootouts, former_names) bundles.
+
+    Any directory containing all three CSVs is treated as a candidate.
+    """
+    root = config.RAW_DIR / "international_results"
+    bundles: list[tuple[Path, Path, Path]] = []
+    seen: set[tuple[Path, Path, Path]] = set()
+
+    if root.exists():
+        for results_path in root.rglob("results.csv"):
+            if not _is_valid_raw_csv(results_path):
+                continue
+            bundle_dir = results_path.parent
+            shootouts_path = bundle_dir / "shootouts.csv"
+            former_names_path = bundle_dir / "former_names.csv"
+            if not (_is_valid_raw_csv(shootouts_path) and _is_valid_raw_csv(former_names_path)):
+                continue
+            bundle = (results_path, shootouts_path, former_names_path)
+            if bundle not in seen:
+                seen.add(bundle)
+                bundles.append(bundle)
+
+    # Keep backward compatibility with explicit candidate paths.
+    for results_path in config.RESULTS_CANDIDATE_FILES:
+        if not _is_valid_raw_csv(results_path):
+            continue
+        bundle_dir = results_path.parent
+        shootouts_path = bundle_dir / "shootouts.csv"
+        former_names_path = bundle_dir / "former_names.csv"
+        if not (_is_valid_raw_csv(shootouts_path) and _is_valid_raw_csv(former_names_path)):
+            continue
+        bundle = (results_path, shootouts_path, former_names_path)
+        if bundle not in seen:
+            seen.add(bundle)
+            bundles.append(bundle)
+
+    return bundles
+
+
+def _results_max_date(path: Path) -> pd.Timestamp:
+    """Return max match date from a results CSV for bundle ranking."""
+    df = _read_csv_with_fallback(path, usecols=["date"])
+    dates = pd.to_datetime(df["date"], errors="coerce")
+    return dates.max()
+
+
+def _select_newest_results_bundle(
+    bundles: list[tuple[Path, Path, Path]],
+) -> tuple[Path, Path, Path]:
+    if not bundles:
+        raise FileNotFoundError(
+            "No valid international results bundle found under "
+            f"{config.RAW_DIR / 'international_results'}"
+        )
+
+    ranked: list[tuple[pd.Timestamp, tuple[Path, Path, Path]]] = []
+    for bundle in bundles:
+        max_date = _results_max_date(bundle[0])
+        ranked.append((max_date, bundle))
+
+    ranked.sort(key=lambda item: item[0])
+    selected_date, selected_bundle = ranked[-1]
+    LOGGER.info(
+        "Selected international results bundle: %s (max_date=%s)",
+        selected_bundle[0].parent,
+        selected_date.date() if pd.notna(selected_date) else "NaT",
+    )
+    return selected_bundle
+
+
 def load_international_results() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Load results, shootouts, and former names tables."""
-    results_path = _find_existing_path(config.RESULTS_CANDIDATE_FILES)
-    shootouts_path = _find_existing_path(config.SHOOTOUTS_CANDIDATE_FILES)
-    former_names_path = _find_existing_path(config.FORMER_NAMES_CANDIDATE_FILES)
+    bundles = _discover_international_results_bundles()
+    results_path, shootouts_path, former_names_path = _select_newest_results_bundle(bundles)
 
     results = _read_csv_with_fallback(results_path)
     shootouts = _read_csv_with_fallback(shootouts_path)

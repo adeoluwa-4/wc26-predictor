@@ -1,10 +1,10 @@
 group,team,status,source,notes
 A,Mexico,confirmed,user_provided,Host nation
 A,South Africa,confirmed,user_provided,
-A,Korea Republic,confirmed,user_provided,
-A,Denmark,projected_placeholder,user_provided,Replace UEFA Play-Off D winner
+A,South Korea,confirmed,user_provided,
+A,Czech Republic,confirmed,qualification_results_auto:UEFA Play-Off D winner,Resolved UEFA Play-Off D winner on 2026-03-31 (Czech Republic 2-2 Denmark)
 B,Canada,confirmed,user_provided,Host nation
-B,Italy,projected_placeholder,user_provided,Replace UEFA Play-Off A winner
+B,Bosnia and Herzegovina,confirmed,qualification_results_auto:UEFA Play-Off A winner,Resolved UEFA Play-Off A winner on 2026-03-31 (Bosnia and Herzegovina 1-1 Italy)
 B,Qatar,confirmed,user_provided,
 B,Switzerland,confirmed,user_provided,
 C,Brazil,confirmed,user_provided,
@@ -14,14 +14,14 @@ C,Scotland,confirmed,user_provided,
 D,United States,confirmed,user_provided,Host nation
 D,Paraguay,confirmed,user_provided,
 D,Australia,confirmed,user_provided,
-D,Türkiye,projected_placeholder,user_provided,Replace UEFA Play-Off C winner
+D,Turkey,confirmed,qualification_results_auto:UEFA Play-Off C winner,Resolved UEFA Play-Off C winner on 2026-03-31 (Kosovo 0-1 Turkey)
 E,Germany,confirmed,user_provided,
 E,Curaçao,confirmed,user_provided,
-E,Côte d'Ivoire,confirmed,user_provided,
+E,Ivory Coast,confirmed,user_provided,
 E,Ecuador,confirmed,user_provided,
 F,Netherlands,confirmed,user_provided,
 F,Japan,confirmed,user_provided,
-F,Ukraine,projected_placeholder,user_provided,Replace UEFA Play-Off B winner
+F,Sweden,confirmed,qualification_results_auto:UEFA Play-Off B winner,Resolved UEFA Play-Off B winner on 2026-03-31 (Sweden 3-2 Poland)
 F,Tunisia,confirmed,user_provided,
 G,Belgium,confirmed,user_provided,
 G,Egypt,confirmed,user_provided,
@@ -33,14 +33,14 @@ H,Saudi Arabia,confirmed,user_provided,
 H,Uruguay,confirmed,user_provided,
 I,France,confirmed,user_provided,
 I,Senegal,confirmed,user_provided,
-I,Iraq,projected_placeholder,user_provided,Replace FIFA Play-Off Tournament winner 2
+I,Iraq,confirmed,qualification_results_auto:FIFA Play-Off Tournament winner 2,Resolved FIFA Play-Off Tournament winner 2 on 2026-03-31 (Iraq 2-1 Bolivia)
 I,Norway,confirmed,user_provided,
 J,Argentina,confirmed,user_provided,
 J,Algeria,confirmed,user_provided,
 J,Austria,confirmed,user_provided,
 J,Jordan,confirmed,user_provided,
 K,Portugal,confirmed,user_provided,
-K,DR Congo,projected_placeholder,user_provided,Replace FIFA Play-Off Tournament winner 1
+K,DR Congo,confirmed,qualification_results_auto:FIFA Play-Off Tournament winner 1,Resolved FIFA Play-Off Tournament winner 1 on 2026-03-31 (DR Congo 1-0 Jamaica)
 K,Uzbekistan,confirmed,user_provided,
 K,Colombia,confirmed,user_provided,
 L,England,confirmed,user_provided,
