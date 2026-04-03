@@ -20,21 +20,17 @@ st.title("World Cup 2026 Predictor")
 logo_path = Path("/Users/adeoluwa/Downloads/FIFA-World-Cup-26-Official-Brand-unveiled-in-Los-Angeles.avif")
 if logo_path.exists():
     st.image(str(logo_path), caption="World Cup 2026 Official", use_container_width=True)
-st.caption("World Cup 2026 simulation dashboard powered by your trained model and Monte Carlo engine.")
+st.caption("World Cup 2026 prediction dashboard powered by your trained model.")
 
 state = render_sidebar(default_team="United States")
 outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)
 
 advancement = outputs["advancement"]
 champion = outputs["champion"]
-projected = outputs["projected_placeholders"]
 round_of_32_pairings = outputs["round_of_32_pairings"]
 selected_third_place = outputs["selected_third_place"]
 group_finishers = outputs["group_finishers"]
 
-st.info(
-    "Projected placeholders are used for unresolved playoff slots and can be updated when final qualifiers are confirmed."
-)
 st.caption(
     "Knockout bracket follows the official 2026 FIFA World Cup structure, including best third-place team routing."
 )
@@ -123,18 +119,6 @@ else:
 
 if "qualified_from_group" in advancement.columns:
     st.caption("Qualification rates and progression rates are available on Team Odds and Group Winners pages.")
-
-st.subheader("Projected Placeholder Slots")
-if projected.empty:
-    st.caption("No projected placeholders in current team-group config.")
-else:
-    st.dataframe(
-        projected.assign(team=projected["team"].map(team_with_flag))[["group", "team", "notes"]].rename(
-            columns={"group": "Group", "team": "Team", "notes": "Replacement Note"}
-        ),
-        use_container_width=True,
-        hide_index=True,
-    )
 
 with st.expander("Debug: Group Finishers and Knockout Routing", expanded=False):
     if group_finishers:
