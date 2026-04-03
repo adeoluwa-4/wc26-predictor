@@ -21,7 +21,7 @@ class ModelingConfig:
     exclude_friendlies: bool = False
     outcome_model: str = "catboost"
     drop_categorical_features: list[str] = field(default_factory=list)
-    catboost_depth: int = 4
-    catboost_learning_rate: float = 0.07
-    catboost_iterations: int = 400
-    catboost_l2_leaf_reg: int = 3
+    catboost_depth: int = 3
+    catboost_learning_rate: float = 0.09
+    catboost_iterations: int = 250
+    catboost_l2_leaf_reg: int = 2
