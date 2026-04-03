@@ -22,11 +22,11 @@ class WC26Predictor:
         self.feature_columns = self.metadata["feature_columns"]
         self.defaults = self.metadata["defaults"]
 
-        self.team_profiles = pd.read_parquet(self.models_dir / "team_profiles.parquet")
+        self.team_profiles = self._read_profiles_table("team_profiles")
         self.team_profiles = self.team_profiles.sort_values("team").drop_duplicates(subset=["team"], keep="last")
         self.team_profiles = self.team_profiles.set_index("team")
 
-        self.h2h_profiles = pd.read_parquet(self.models_dir / "h2h_profiles.parquet")
+        self.h2h_profiles = self._read_profiles_table("h2h_profiles")
         self.h2h_profiles = self.h2h_profiles.set_index(["team_a", "team_b"])
 
         # Speeds up Monte Carlo runs dramatically: at most 48*47 oriented matchups in a WC.
@@ -45,6 +45,20 @@ class WC26Predictor:
             self.outcome_model = None
             self.home_goals_model = None
             self.away_goals_model = None
+
+    def _read_profiles_table(self, stem: str) -> pd.DataFrame:
+        parquet_path = self.models_dir / f"{stem}.parquet"
+        csv_path = self.models_dir / f"{stem}.csv"
+        if parquet_path.exists():
+            try:
+                return pd.read_parquet(parquet_path)
+            except Exception:
+                if csv_path.exists():
+                    return pd.read_csv(csv_path)
+                raise
+        if csv_path.exists():
+            return pd.read_csv(csv_path)
+        raise FileNotFoundError(f"Missing model profile table: {parquet_path} or {csv_path}")
 
     def _predict_outcome_probabilities(self, X: pd.DataFrame) -> dict[str, float]:
         model_type = self.metadata.get("outcome_model", "logistic")
