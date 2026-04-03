@@ -17,10 +17,15 @@ class WC26Predictor:
 
     def __init__(self, models_dir: str | Path = MODELS_DIR):
         self.models_dir = Path(models_dir)
-
-        self.outcome_model = joblib.load(self.models_dir / "outcome_model.joblib")
-        self.home_goals_model = joblib.load(self.models_dir / "home_goals_model.joblib")
-        self.away_goals_model = joblib.load(self.models_dir / "away_goals_model.joblib")
+        try:
+            self.outcome_model = joblib.load(self.models_dir / "outcome_model.joblib")
+            self.home_goals_model = joblib.load(self.models_dir / "home_goals_model.joblib")
+            self.away_goals_model = joblib.load(self.models_dir / "away_goals_model.joblib")
+        except Exception as exc:  # pragma: no cover - environment-dependent failure path
+            raise RuntimeError(
+                "Failed to load model artifacts. Ensure deployment matches pinned runtime/dependencies "
+                "(python-3.11, scikit-learn==1.6.1, catboost==1.2.10, numpy==2.0.2)."
+            ) from exc
 
         self.metadata = json.loads((self.models_dir / "model_metadata.json").read_text(encoding="utf-8"))
         self.feature_columns = self.metadata["feature_columns"]
