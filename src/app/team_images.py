@@ -19,6 +19,7 @@ TEAM_FILE_OVERRIDES = {
     "DR Congo": "DRCongo",
     "Czech Republic": "CzechRepublic",
     "Cape Verde": "CapeVerde",
+    "Curaçao": "Curacao",
     "Saudi Arabia": "SaudiArabia",
     "New Zealand": "NewZealand",
 }
