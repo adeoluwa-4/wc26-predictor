@@ -14,12 +14,14 @@ TRAINING_TABLE_PATH = PROJECT_ROOT / "data" / "processed" / "training_matches.pa
 
 @dataclass(frozen=True)
 class ModelingConfig:
-    train_frac: float = 0.80
-    val_frac: float = 0.10
+    train_frac: float = 0.90
+    val_frac: float = 0.05
     random_state: int = 42
-    min_training_date: str | None = "2020-01-01"
-    exclude_friendlies: bool = True
+    min_training_date: str | None = None
+    exclude_friendlies: bool = False
     outcome_model: str = "catboost"
-    drop_categorical_features: list[str] = field(
-        default_factory=lambda: ["home_team", "away_team", "confederation_home", "confederation_away"]
-    )
+    drop_categorical_features: list[str] = field(default_factory=list)
+    catboost_depth: int = 4
+    catboost_learning_rate: float = 0.07
+    catboost_iterations: int = 400
+    catboost_l2_leaf_reg: int = 3
