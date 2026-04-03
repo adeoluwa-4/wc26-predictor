@@ -25,6 +25,7 @@ class SimulationConfig:
     teams_config_path: str = "data/config/wc26_teams.csv"
     simulation_input_audit_path: str = "data/processed/simulation_input_audit.json"
     allow_auto_groups_debug: bool = False
+    enforce_neutral_order_invariance: bool = True
 
     def validate(self) -> None:
         if self.num_groups <= 0:

@@ -1,6 +1,7 @@
 import numpy as np
 
 from src.simulation.bracket import build_seeded_knockout_fixtures, simulate_knockout_bracket
+from src.simulation.config import SimulationConfig
 from src.simulation.match_simulator import MatchSimulator
 
 
@@ -19,7 +20,8 @@ def test_knockout_advancement_pipeline():
     teams = [f"T{i}" for i in range(1, 9)]
     fixtures = build_seeded_knockout_fixtures(teams)
 
-    simulator = MatchSimulator(always_home_predictor, rng=np.random.default_rng(5))
+    cfg = SimulationConfig(enforce_neutral_order_invariance=False)
+    simulator = MatchSimulator(always_home_predictor, rng=np.random.default_rng(5), config=cfg)
     knockout = simulate_knockout_bracket(fixtures, match_simulator=simulator, rng=np.random.default_rng(5))
 
     assert "quarterfinal" in knockout.participants_by_round
