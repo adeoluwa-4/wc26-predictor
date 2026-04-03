@@ -149,12 +149,12 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.5907570054370557,
-        "log_loss": 0.8931783176259247
+        "accuracy": 0.5890840652446675,
+        "log_loss": 0.8911312234908416
       },
       "test": {
-        "accuracy": 0.604795871907725,
-        "log_loss": 0.8702147213011249
+        "accuracy": 0.6050994081044164,
+        "log_loss": 0.8692544031875147
       }
     },
     "home_goals": {
@@ -180,10 +180,10 @@
   },
   "outcome_model": "catboost",
   "outcome_model_params": {
-    "catboost_depth": 3,
-    "catboost_learning_rate": 0.09,
-    "catboost_iterations": 250,
-    "catboost_l2_leaf_reg": 2
+    "catboost_depth": 5,
+    "catboost_learning_rate": 0.05,
+    "catboost_iterations": 700,
+    "catboost_l2_leaf_reg": 4
   },
   "catboost_categorical_columns": [
     "home_team",
