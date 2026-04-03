@@ -28,8 +28,8 @@ def _short_team(team: str) -> str:
     return value if len(value) <= 14 else f"{value[:13]}…"
 
 
-def _team_label(team: str) -> str:
-    return f"{team_flag(team)} {_short_team(team)}"
+def _team_parts(team: str) -> tuple[str, str]:
+    return team_flag(team), _short_team(team)
 
 
 def _build_bracket_svg(knockout: pd.DataFrame) -> str:
@@ -46,7 +46,7 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
     final = [103]
 
     card_w = 188
-    card_h = 42
+    card_h = 48
     top = 100
     row_gap = 80
 
@@ -176,8 +176,8 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         y = y_by_match[match_id]
         home_team = str(row["home_team"])
         away_team = str(row["away_team"])
-        home = _team_label(home_team)
-        away = _team_label(away_team)
+        home_flag, home_name = _team_parts(home_team)
+        away_flag, away_name = _team_parts(away_team)
         winner = str(row.get("winner") or "")
         home_w = "700" if winner and winner == home_team else "400"
         away_w = "700" if winner and winner == away_team else "400"
@@ -187,12 +187,20 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 15:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)}</text>'
+            f'<text x="{x + 8:.1f}" y="{card_y + 17:.1f}" fill="#111827" font-size="16" '
+            f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 31:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)}</text>'
+            f'<text x="{x + 30:.1f}" y="{card_y + 17:.1f}" fill="#111827" font-size="11" '
+            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
+        )
+        out.append(
+            f'<text x="{x + 8:.1f}" y="{card_y + 37:.1f}" fill="#111827" font-size="16" '
+            f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
+        )
+        out.append(
+            f'<text x="{x + 30:.1f}" y="{card_y + 37:.1f}" fill="#111827" font-size="11" '
+            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
     if 104 in rows:
@@ -201,8 +209,8 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         y = max(y_by_match.values()) + 64
         home_team = str(row["home_team"])
         away_team = str(row["away_team"])
-        home = _team_label(home_team)
-        away = _team_label(away_team)
+        home_flag, home_name = _team_parts(home_team)
+        away_flag, away_name = _team_parts(away_team)
         winner = str(row.get("winner") or "")
         home_w = "700" if winner and winner == home_team else "400"
         away_w = "700" if winner and winner == away_team else "400"
@@ -216,12 +224,20 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 15:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)}</text>'
+            f'<text x="{x + 8:.1f}" y="{card_y + 17:.1f}" fill="#111827" font-size="16" '
+            f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 31:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)}</text>'
+            f'<text x="{x + 30:.1f}" y="{card_y + 17:.1f}" fill="#111827" font-size="11" '
+            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
+        )
+        out.append(
+            f'<text x="{x + 8:.1f}" y="{card_y + 37:.1f}" fill="#111827" font-size="16" '
+            f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
+        )
+        out.append(
+            f'<text x="{x + 30:.1f}" y="{card_y + 37:.1f}" fill="#111827" font-size="11" '
+            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
     out.append("</svg>")
