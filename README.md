@@ -113,6 +113,14 @@ Run app:
 streamlit run streamlit_app.py
 ```
 
+### Deployment Runtime Note
+
+Model artifacts in `models/` are version-sensitive. Deployment is pinned via:
+- `runtime.txt` (`python-3.11`)
+- exact package versions in `requirements.txt`
+
+If deployment fails while loading `.joblib` models, confirm your host is using these pinned versions.
+
 ### Team Photos In UI
 
 To show country/team photos in predictor pages, add image files to:
