@@ -66,23 +66,34 @@ fig.update_layout(height=440)
 st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("All Groups Table")
-display = merged[[
-    "group",
-    "team",
-    "group_winner_probability_pct",
-    "qualification_probability",
-    "third_place_advancement_probability",
-]].copy()
+display = merged.copy()
 display["team"] = display["team"].map(team_with_flag)
+display = display.sort_values(["group", "group_winner_probability_pct"], ascending=[True, False])
 
-display = display.rename(
-    columns={
-        "group": "Group",
-        "team": "Team",
-        "group_winner_probability_pct": "Group Winner (%)",
-        "qualification_probability": "Qualification (%)",
-        "third_place_advancement_probability": "Advanced as 3rd (%)",
-    }
-).sort_values(["Group", "Group Winner (%)"], ascending=[True, False])
-
-st.dataframe(display, use_container_width=True, hide_index=True)
+for i in range(0, len(groups), 3):
+    row_groups = groups[i:i + 3]
+    cols = st.columns(3)
+    for j in range(3):
+        with cols[j]:
+            if j >= len(row_groups):
+                st.empty()
+                continue
+            group_name = row_groups[j]
+            gdf = display[display["group"] == group_name][
+                [
+                    "team",
+                    "group_winner_probability_pct",
+                    "qualification_probability",
+                    "third_place_advancement_probability",
+                ]
+            ].copy()
+            gdf = gdf.rename(
+                columns={
+                    "team": "Team",
+                    "group_winner_probability_pct": "Winner %",
+                    "qualification_probability": "Qualify %",
+                    "third_place_advancement_probability": "3rd %",
+                }
+            )
+            st.markdown(f"### Group {group_name}")
+            st.dataframe(gdf, use_container_width=True, hide_index=True)

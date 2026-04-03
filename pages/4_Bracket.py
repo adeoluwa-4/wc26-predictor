@@ -9,6 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 from src.app.dashboard import render_sidebar, run_cached_simulation
+from src.app.team_flags import team_flag
 from src.app.theme import apply_wc26_theme
 from src.simulation.knockout_config import FINAL_PATH, QUARTERFINAL_PATHS, ROUND_OF_16_PATHS, SEMIFINAL_PATHS
 
@@ -25,6 +26,10 @@ def _short_team(team: str) -> str:
     }
     value = aliases.get(team, team)
     return value if len(value) <= 14 else f"{value[:13]}…"
+
+
+def _team_label(team: str) -> str:
+    return f"{team_flag(team)} {_short_team(team)}"
 
 
 def _build_bracket_svg(knockout: pd.DataFrame) -> str:
@@ -169,13 +174,13 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             continue
         x = x_by_match[match_id]
         y = y_by_match[match_id]
-        home = _short_team(str(row["home_team"]))
-        away = _short_team(str(row["away_team"]))
-        home_score = int(row["home_goals"])
-        away_score = int(row["away_goals"])
+        home_team = str(row["home_team"])
+        away_team = str(row["away_team"])
+        home = _team_label(home_team)
+        away = _team_label(away_team)
         winner = str(row.get("winner") or "")
-        home_w = "700" if winner and winner == str(row["home_team"]) else "400"
-        away_w = "700" if winner and winner == str(row["away_team"]) else "400"
+        home_w = "700" if winner and winner == home_team else "400"
+        away_w = "700" if winner and winner == away_team else "400"
         card_y = y - (card_h / 2.0)
         out.append(
             f'<rect x="{x:.1f}" y="{card_y:.1f}" width="{card_w}" height="{card_h}" rx="7" ry="7" '
@@ -183,24 +188,24 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         )
         out.append(
             f'<text x="{x + 8:.1f}" y="{card_y + 15:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)} {home_score}</text>'
+            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)}</text>'
         )
         out.append(
             f'<text x="{x + 8:.1f}" y="{card_y + 31:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)} {away_score}</text>'
+            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)}</text>'
         )
 
     if 104 in rows:
         row = rows[104]
         x = final_x
         y = max(y_by_match.values()) + 64
-        home = _short_team(str(row["home_team"]))
-        away = _short_team(str(row["away_team"]))
-        home_score = int(row["home_goals"])
-        away_score = int(row["away_goals"])
+        home_team = str(row["home_team"])
+        away_team = str(row["away_team"])
+        home = _team_label(home_team)
+        away = _team_label(away_team)
         winner = str(row.get("winner") or "")
-        home_w = "700" if winner and winner == str(row["home_team"]) else "400"
-        away_w = "700" if winner and winner == str(row["away_team"]) else "400"
+        home_w = "700" if winner and winner == home_team else "400"
+        away_w = "700" if winner and winner == away_team else "400"
         card_y = y - (card_h / 2.0)
         out.append(
             f'<text x="{x + card_w / 2.0:.1f}" y="{card_y - 10:.1f}" fill="#6b7280" font-size="12" text-anchor="middle" '
@@ -212,11 +217,11 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         )
         out.append(
             f'<text x="{x + 8:.1f}" y="{card_y + 15:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)} {home_score}</text>'
+            f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home)}</text>'
         )
         out.append(
             f'<text x="{x + 8:.1f}" y="{card_y + 31:.1f}" fill="#111827" font-size="11" '
-            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)} {away_score}</text>'
+            f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away)}</text>'
         )
 
     out.append("</svg>")
