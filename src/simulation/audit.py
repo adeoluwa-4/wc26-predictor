@@ -25,6 +25,21 @@ def _table_to_records(df: pd.DataFrame, cols: list[str], n: int) -> list[dict[st
     return out.to_dict(orient="records")
 
 
+def _read_table_with_csv_fallback(parquet_path: Path) -> pd.DataFrame:
+    """Read parquet when available; fall back to CSV with same stem."""
+    csv_path = parquet_path.with_suffix(".csv")
+    if parquet_path.exists():
+        try:
+            return pd.read_parquet(parquet_path)
+        except Exception:
+            if csv_path.exists():
+                return pd.read_csv(csv_path)
+            raise
+    if csv_path.exists():
+        return pd.read_csv(csv_path)
+    raise FileNotFoundError(f"Missing table: {parquet_path} or {csv_path}")
+
+
 def build_strength_sanity() -> dict[str, Any]:
     """Build sanity tables from processed training data and model profiles."""
     warnings: list[str] = []
@@ -40,7 +55,11 @@ def build_strength_sanity() -> dict[str, Any]:
         warnings.append(f"Training table not found at {training_path}")
         return tables
 
-    df = pd.read_parquet(training_path)
+    try:
+        df = _read_table_with_csv_fallback(training_path)
+    except Exception as exc:
+        warnings.append(f"Failed reading training table {training_path}: {type(exc).__name__}: {exc}")
+        return tables
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     recent = df[df["date"] >= pd.Timestamp("2018-01-01")].copy()
     if recent.empty:
@@ -76,8 +95,12 @@ def build_strength_sanity() -> dict[str, Any]:
         warnings.append(f"Elite teams missing from top-20 recent Elo table: {missing_elite}")
 
     model_profiles = PROJECT_ROOT / "models" / "team_profiles.parquet"
-    if model_profiles.exists():
-        profiles = pd.read_parquet(model_profiles)
+    if model_profiles.exists() or model_profiles.with_suffix(".csv").exists():
+        try:
+            profiles = _read_table_with_csv_fallback(model_profiles)
+        except Exception as exc:
+            warnings.append(f"Failed reading model profiles {model_profiles}: {type(exc).__name__}: {exc}")
+            return tables
         profiles["implied_strength"] = (
             0.7 * profiles["elo"].fillna(profiles["elo"].median(skipna=True))
             + 0.3 * profiles["fifa_points"].fillna(profiles["fifa_points"].median(skipna=True))
