@@ -159,26 +159,27 @@
     },
     "home_goals": {
       "val": {
-        "mae": 1.2742365567456815,
-        "rmse": 1.6635283524473343
+        "mae": 1.0645690172178,
+        "rmse": 1.3866060611732296
       },
       "test": {
-        "mae": 1.2630553373653164,
-        "rmse": 1.6272345651029403
+        "mae": 1.0525322839187434,
+        "rmse": 1.3651752496225178
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.9742320507009549,
-        "rmse": 1.36366590446921
+        "mae": 0.8682488186258867,
+        "rmse": 1.1614332800685394
       },
       "test": {
-        "mae": 1.113459788619024,
-        "rmse": 1.5524621616574896
+        "mae": 0.9372379929811352,
+        "rmse": 1.3117068130934653
       }
     }
   },
   "outcome_model": "catboost",
+  "goal_model": "catboost",
   "outcome_model_params": {
     "catboost_depth": 3,
     "catboost_learning_rate": 0.08,
@@ -192,6 +193,18 @@
     "confederation_home",
     "confederation_away"
   ],
+  "goal_catboost_categorical_columns": [
+    "home_team",
+    "away_team",
+    "tournament_type",
+    "confederation_home",
+    "confederation_away"
+  ],
+  "goal_model_params": {
+    "catboost_goal_depth": 4,
+    "catboost_goal_learning_rate": 0.05,
+    "catboost_goal_iterations": 400
+  },
   "outcome_classes": [
     "away_win",
     "draw",

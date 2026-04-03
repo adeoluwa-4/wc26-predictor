@@ -9,6 +9,7 @@ from typing import Any
 
 import joblib
 import pandas as pd
+from catboost import CatBoostRegressor
 
 from src.models.config import MODELS_DIR
 
@@ -32,19 +33,46 @@ class WC26Predictor:
         # Speeds up Monte Carlo runs dramatically: at most 48*47 oriented matchups in a WC.
         self._prediction_cache: dict[tuple[str, str], dict[str, float]] = {}
         self._use_fallback_model = False
+        self._fallback_outcome = False
+        self._fallback_goals = False
         self._model_load_error: str | None = None
 
+        # Outcome model (primary source of accuracy for win/draw/loss probs).
         try:
             self.outcome_model = joblib.load(self.models_dir / "outcome_model.joblib")
-            self.home_goals_model = joblib.load(self.models_dir / "home_goals_model.joblib")
-            self.away_goals_model = joblib.load(self.models_dir / "away_goals_model.joblib")
         except Exception as exc:  # pragma: no cover - environment-dependent failure path
-            # Keep the app alive on deployment environments where pickle ABI/class paths differ.
-            self._use_fallback_model = True
-            self._model_load_error = f"{type(exc).__name__}: {exc}"
             self.outcome_model = None
+            self._fallback_outcome = True
+            self._model_load_error = f"outcome_model: {type(exc).__name__}: {exc}"
+
+        # Goal models: prefer portable CatBoost native files; fall back to sklearn joblib.
+        self.goal_model_type = str(self.metadata.get("goal_model", "poisson"))
+        self.home_goals_model = None
+        self.away_goals_model = None
+        try:
+            home_cbm = self.models_dir / "home_goals_model.cbm"
+            away_cbm = self.models_dir / "away_goals_model.cbm"
+            if home_cbm.exists() and away_cbm.exists():
+                home_model = CatBoostRegressor()
+                away_model = CatBoostRegressor()
+                home_model.load_model(home_cbm)
+                away_model.load_model(away_cbm)
+                self.home_goals_model = home_model
+                self.away_goals_model = away_model
+                self.goal_model_type = "catboost"
+            else:
+                self.home_goals_model = joblib.load(self.models_dir / "home_goals_model.joblib")
+                self.away_goals_model = joblib.load(self.models_dir / "away_goals_model.joblib")
+        except Exception as exc:  # pragma: no cover - environment-dependent failure path
             self.home_goals_model = None
             self.away_goals_model = None
+            self._fallback_goals = True
+            if self._model_load_error is None:
+                self._model_load_error = f"goal_models: {type(exc).__name__}: {exc}"
+            else:
+                self._model_load_error = f"{self._model_load_error}; goal_models: {type(exc).__name__}: {exc}"
+
+        self._use_fallback_model = self._fallback_outcome or self._fallback_goals
 
     def _read_profiles_table(self, stem: str) -> pd.DataFrame:
         parquet_path = self.models_dir / f"{stem}.parquet"
@@ -121,6 +149,21 @@ class WC26Predictor:
             "away_win_probability": float(away_win),
             "predicted_home_goals": float(home_goals),
             "predicted_away_goals": float(away_goals),
+        }
+
+    def _fallback_outcome_only(self, X: pd.DataFrame) -> dict[str, float]:
+        out = self._fallback_predict(X)
+        return {
+            "home_win_probability": out["home_win_probability"],
+            "draw_probability": out["draw_probability"],
+            "away_win_probability": out["away_win_probability"],
+        }
+
+    def _fallback_goals_only(self, X: pd.DataFrame) -> dict[str, float]:
+        out = self._fallback_predict(X)
+        return {
+            "predicted_home_goals": out["predicted_home_goals"],
+            "predicted_away_goals": out["predicted_away_goals"],
         }
 
     def _h2h_features(self, home_team: str, away_team: str) -> dict[str, float]:
@@ -223,15 +266,25 @@ class WC26Predictor:
 
         X = self._build_feature_row(home_team=home_team, away_team=away_team)
 
-        if self._use_fallback_model:
-            out = self._fallback_predict(X)
-            self._prediction_cache[key] = out
-            return out
+        if self._fallback_outcome:
+            class_probs = self._fallback_outcome_only(X)
+        else:
+            class_probs = self._predict_outcome_probabilities(X)
 
-        class_probs = self._predict_outcome_probabilities(X)
-
-        home_goals = float(max(0.0, self.home_goals_model.predict(X)[0]))
-        away_goals = float(max(0.0, self.away_goals_model.predict(X)[0]))
+        if self._fallback_goals:
+            goals = self._fallback_goals_only(X)
+            home_goals = float(max(0.0, goals["predicted_home_goals"]))
+            away_goals = float(max(0.0, goals["predicted_away_goals"]))
+        elif self.goal_model_type == "catboost":
+            X_model = X.copy()
+            for col in self.metadata.get("goal_catboost_categorical_columns", self.metadata.get("catboost_categorical_columns", [])):
+                if col in X_model.columns:
+                    X_model[col] = X_model[col].fillna("Unknown").astype(str)
+            home_goals = float(max(0.0, self.home_goals_model.predict(X_model)[0]))
+            away_goals = float(max(0.0, self.away_goals_model.predict(X_model)[0]))
+        else:
+            home_goals = float(max(0.0, self.home_goals_model.predict(X)[0]))
+            away_goals = float(max(0.0, self.away_goals_model.predict(X)[0]))
 
         out = {
             "home_win_probability": class_probs.get("home_win", 0.0),
