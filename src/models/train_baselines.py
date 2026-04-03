@@ -65,10 +65,10 @@ def _fit_outcome_model(
     if config.outcome_model == "catboost":
         model = CatBoostClassifier(
             loss_function="MultiClass",
-            depth=4,
-            learning_rate=0.07,
-            iterations=400,
-            l2_leaf_reg=3,
+            depth=config.catboost_depth,
+            learning_rate=config.catboost_learning_rate,
+            iterations=config.catboost_iterations,
+            l2_leaf_reg=config.catboost_l2_leaf_reg,
             random_seed=config.random_state,
             verbose=False,
         )
@@ -328,6 +328,14 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
             "away_goals": {"val": away_goal_val, "test": away_goal_test},
         },
         "outcome_model": config.outcome_model,
+        "outcome_model_params": {
+            "catboost_depth": config.catboost_depth,
+            "catboost_learning_rate": config.catboost_learning_rate,
+            "catboost_iterations": config.catboost_iterations,
+            "catboost_l2_leaf_reg": config.catboost_l2_leaf_reg,
+        }
+        if config.outcome_model == "catboost"
+        else {},
         "catboost_categorical_columns": categorical_cols if config.outcome_model == "catboost" else [],
         "outcome_classes": outcome_classes,
     }
