@@ -35,6 +35,17 @@ st.markdown(
     background: linear-gradient(135deg, rgba(10, 90, 160, 0.35), rgba(220, 10, 40, 0.35));
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+.wc26-photo-selected {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    background: linear-gradient(135deg, rgba(10, 90, 160, 0.35), rgba(220, 10, 40, 0.35));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 </style>
 """,
     unsafe_allow_html=True,
@@ -47,10 +58,6 @@ selected_team = st.selectbox(
     index=teams.index(state.selected_team) if state.selected_team in teams else 0,
     format_func=team_with_flag,
 )
-photo = team_photo_path(selected_team)
-if photo is not None:
-    st.image(str(photo), caption=team_with_flag(selected_team), width=260)
-
 row_df = advancement[advancement["team"] == selected_team]
 if row_df.empty:
     st.warning(f"No simulation row found for {selected_team}.")
@@ -60,11 +67,22 @@ row = row_df.iloc[0]
 champ_row = champion[champion["team"] == selected_team]
 champ_prob = float(champ_row.iloc[0]["champion_probability"]) if not champ_row.empty else 0.0
 
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Title Odds", f"{champ_prob * 100:.2f}%")
-c2.metric("Final", f"{float(row.get('reached_final', 0.0)) * 100:.2f}%")
-c3.metric("Semifinal", f"{float(row.get('reached_semifinal', 0.0)) * 100:.2f}%")
-c4.metric("Quarterfinal", f"{float(row.get('reached_quarterfinal', 0.0)) * 100:.2f}%")
+hero_col, metrics_col = st.columns([1, 2], gap="large")
+with hero_col:
+    photo = team_photo_path(selected_team)
+    if photo is not None:
+        st.image(str(photo), use_container_width=True)
+    else:
+        st.markdown(f"<div class='wc26-photo-selected'>{team_flag(selected_team)}</div>", unsafe_allow_html=True)
+    st.caption(team_with_flag(selected_team))
+
+with metrics_col:
+    st.markdown("### Selected Team Snapshot")
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Title Odds", f"{champ_prob * 100:.2f}%")
+    c2.metric("Final", f"{float(row.get('reached_final', 0.0)) * 100:.2f}%")
+    c3.metric("Semifinal", f"{float(row.get('reached_semifinal', 0.0)) * 100:.2f}%")
+    c4.metric("Quarterfinal", f"{float(row.get('reached_quarterfinal', 0.0)) * 100:.2f}%")
 
 progression_keys = [
     ("qualified_from_group", "Qualified"),
