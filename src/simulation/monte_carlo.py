@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from dataclasses import asdict
 from pathlib import Path
 from typing import Callable
 
@@ -19,6 +20,17 @@ from src.simulation.reporting import (
 from src.simulation.schemas import MonteCarloResult
 from src.simulation.team_config import groups_from_team_config, load_team_config
 from src.simulation.tournament import build_default_groups, run_single_tournament
+
+
+def _serialize_knockout_debug(run_debug: object) -> list[dict[str, object]]:
+    """Serialize knockout matches with match numbers for UI/debug use."""
+    results_by_match = getattr(run_debug, "results_by_match_number", None) or {}
+    serialized: list[dict[str, object]] = []
+    for match_no, result in sorted(results_by_match.items(), key=lambda item: int(item[0])):
+        row = asdict(result)
+        row["match_number"] = int(match_no)
+        serialized.append(row)
+    return serialized
 
 
 def run_world_cup_simulation(
@@ -117,6 +129,7 @@ def run_world_cup_simulation(
                 ),
                 "third_place_slot_groups": run.third_place_slot_groups or {},
                 "round_of_32_pairings": run.round_of_32_pairings or [],
+                "knockout_matches": _serialize_knockout_debug(run.knockout),
             }
 
     advancement_df = build_advancement_probabilities(progression_counts=progression_counts, simulations=sims)
