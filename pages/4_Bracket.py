@@ -45,8 +45,8 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
     right_sf = [102]
     final = [103]
 
-    card_w = 220
-    card_h = 60
+    card_w = 188
+    card_h = 48
     top = 100
     row_gap = 80
 
@@ -187,19 +187,19 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 10:.1f}" y="{card_y + 22:.1f}" fill="#111827" font-size="22" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="18" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 22:.1f}" fill="#111827" font-size="13" '
+            f'<text x="{x + 34:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="12" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 10:.1f}" y="{card_y + 48:.1f}" fill="#111827" font-size="22" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="18" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 48:.1f}" fill="#111827" font-size="13" '
+            f'<text x="{x + 34:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="12" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
@@ -224,19 +224,19 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 10:.1f}" y="{card_y + 22:.1f}" fill="#111827" font-size="22" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="18" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 22:.1f}" fill="#111827" font-size="13" '
+            f'<text x="{x + 34:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="12" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 10:.1f}" y="{card_y + 48:.1f}" fill="#111827" font-size="22" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="18" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 48:.1f}" fill="#111827" font-size="13" '
+            f'<text x="{x + 34:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="12" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
