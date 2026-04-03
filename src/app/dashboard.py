@@ -98,6 +98,9 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
 def render_sidebar(default_team: str | None = None) -> DashboardState:
     """Render shared sidebar controls and return current state."""
     st.sidebar.header("Simulation Controls")
+    predictor = get_predictor()
+    if getattr(predictor, "_use_fallback_model", False):
+        st.sidebar.warning("Using fallback predictor (deployed model binary mismatch).")
 
     simulations = st.sidebar.slider(
         "Number of simulations",
