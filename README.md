@@ -28,8 +28,8 @@ python -m src.data.refresh_international_results --zip-path /Users/adeoluwa/Down
 
 Trains and saves:
 - `models/outcome_model.joblib`
-- `models/home_goals_model.joblib`
-- `models/away_goals_model.joblib`
+- `models/home_goals_model.cbm` (portable CatBoost)
+- `models/away_goals_model.cbm` (portable CatBoost)
 - `models/model_metadata.json`
 - `models/team_profiles.parquet`
 - `models/h2h_profiles.parquet`
@@ -115,11 +115,8 @@ streamlit run streamlit_app.py
 
 ### Deployment Runtime Note
 
-Model artifacts in `models/` are version-sensitive. Deployment is pinned via:
-- `runtime.txt` (`python-3.11`)
-- exact package versions in `requirements.txt`
-
-If deployment fails while loading `.joblib` models, confirm your host is using these pinned versions.
+Goal models are stored as CatBoost native `.cbm` files to improve cross-runtime portability in deployment.
+The app also supports CSV fallbacks for profile tables when parquet/pyarrow is unavailable.
 
 ### Team Photos In UI
 
