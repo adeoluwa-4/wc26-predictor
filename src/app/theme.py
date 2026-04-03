@@ -37,24 +37,6 @@ div[data-testid="stSidebar"] {
   border-right: 1px solid var(--wc-border);
 }
 
-/* Force first nav item label to "Overview" as a fallback when pages.toml label is ignored. */
-div[data-testid="stSidebarNav"] ul li:first-child a {
-  position: relative;
-}
-div[data-testid="stSidebarNav"] ul li:first-child a p {
-  visibility: hidden;
-}
-div[data-testid="stSidebarNav"] ul li:first-child a::after {
-  content: "Overview";
-  position: absolute;
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgb(250, 250, 250);
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
 div[data-testid="stMetric"] {
   background: var(--wc-card);
   border: 1px solid var(--wc-border);

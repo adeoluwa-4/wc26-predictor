@@ -25,5 +25,3 @@ models/*.pkl
 
 # Streamlit cache
 .streamlit/
-!.streamlit/
-!.streamlit/pages.toml
