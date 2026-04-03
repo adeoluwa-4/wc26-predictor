@@ -337,27 +337,23 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         home_flag, home_name = _team_parts(home_team)
         away_flag, away_name = _team_parts(away_team)
         winner = str(row.get("winner") or "")
-        home_w = "700" if winner and winner == home_team else "400"
-        away_w = "700" if winner and winner == away_team else "400"
+        home_w = "700"
+        away_w = "700"
         card_y = y - (card_h / 2.0)
         out.append(
-            f'<rect x="{x:.1f}" y="{card_y:.1f}" width="{card_w}" height="{card_h}" rx="7" ry="7" '
-            'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
-        )
-        out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="24" '
+            f'<text x="{x + 6:.1f}" y="{card_y + 20:.1f}" fill="#111827" font-size="30" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="11" '
+            f'<text x="{x + 44:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="10" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="24" '
+            f'<text x="{x + 6:.1f}" y="{card_y + 45:.1f}" fill="#111827" font-size="30" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="11" '
+            f'<text x="{x + 44:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="10" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
@@ -370,31 +366,27 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
         home_flag, home_name = _team_parts(home_team)
         away_flag, away_name = _team_parts(away_team)
         winner = str(row.get("winner") or "")
-        home_w = "700" if winner and winner == home_team else "400"
-        away_w = "700" if winner and winner == away_team else "400"
+        home_w = "700"
+        away_w = "700"
         card_y = y - (card_h / 2.0)
         out.append(
             f'<text x="{x + card_w / 2.0:.1f}" y="{card_y - 10:.1f}" fill="#6b7280" font-size="12" text-anchor="middle" '
             'font-family="Arial, sans-serif" font-weight="600">Third Place</text>'
         )
         out.append(
-            f'<rect x="{x:.1f}" y="{card_y:.1f}" width="{card_w}" height="{card_h}" rx="7" ry="7" '
-            'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
-        )
-        out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="24" '
+            f'<text x="{x + 6:.1f}" y="{card_y + 20:.1f}" fill="#111827" font-size="30" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="11" '
+            f'<text x="{x + 44:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="10" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="24" '
+            f'<text x="{x + 6:.1f}" y="{card_y + 45:.1f}" fill="#111827" font-size="30" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 42:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="11" '
+            f'<text x="{x + 44:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="10" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
