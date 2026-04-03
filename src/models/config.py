@@ -14,14 +14,14 @@ TRAINING_TABLE_PATH = PROJECT_ROOT / "data" / "processed" / "training_matches.pa
 
 @dataclass(frozen=True)
 class ModelingConfig:
-    train_frac: float = 0.90
-    val_frac: float = 0.05
+    train_frac: float = 0.80
+    val_frac: float = 0.10
     random_state: int = 42
-    min_training_date: str | None = None
-    exclude_friendlies: bool = False
+    min_training_date: str | None = "2019-01-01"
+    exclude_friendlies: bool = True
     outcome_model: str = "catboost"
     drop_categorical_features: list[str] = field(default_factory=list)
-    catboost_depth: int = 5
-    catboost_learning_rate: float = 0.05
-    catboost_iterations: int = 700
-    catboost_l2_leaf_reg: int = 4
+    catboost_depth: int = 3
+    catboost_learning_rate: float = 0.08
+    catboost_iterations: int = 300
+    catboost_l2_leaf_reg: int = 2
