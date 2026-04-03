@@ -41,9 +41,51 @@ class MatchSimulator:
         goals = int(self.rng.poisson(lam))
         return min(goals, self.config.goal_cap)
 
+    def _predict_neutral_symmetric(self, home_team: str, away_team: str) -> dict[str, float]:
+        """Build order-invariant neutral prediction by averaging both orientations.
+
+        World Cup fixtures are effectively neutral for this simulator, so we remove
+        home/away ordering bias from the underlying match model.
+        """
+        forward = self.predict_match_fn(home_team, away_team)
+        reverse = self.predict_match_fn(away_team, home_team)
+
+        home_win = (
+            float(forward.get("home_win_probability", 0.0))
+            + float(reverse.get("away_win_probability", 0.0))
+        ) / 2.0
+        draw = (
+            float(forward.get("draw_probability", 0.0))
+            + float(reverse.get("draw_probability", 0.0))
+        ) / 2.0
+        away_win = (
+            float(forward.get("away_win_probability", 0.0))
+            + float(reverse.get("home_win_probability", 0.0))
+        ) / 2.0
+
+        home_goals = (
+            float(forward.get("predicted_home_goals", 1.0))
+            + float(reverse.get("predicted_away_goals", 1.0))
+        ) / 2.0
+        away_goals = (
+            float(forward.get("predicted_away_goals", 1.0))
+            + float(reverse.get("predicted_home_goals", 1.0))
+        ) / 2.0
+
+        return {
+            "home_win_probability": home_win,
+            "draw_probability": draw,
+            "away_win_probability": away_win,
+            "predicted_home_goals": home_goals,
+            "predicted_away_goals": away_goals,
+        }
+
     def simulate_match(self, fixture: MatchFixture, knockout: bool = False) -> SimulatedMatchResult:
         """Simulate one fixture from model output and randomness."""
-        pred = self.predict_match_fn(fixture.home_team, fixture.away_team)
+        if self.config.enforce_neutral_order_invariance:
+            pred = self._predict_neutral_symmetric(fixture.home_team, fixture.away_team)
+        else:
+            pred = self.predict_match_fn(fixture.home_team, fixture.away_team)
         p_home, p_draw, p_away = self._normalize_probs(pred)
 
         sampled_outcome = self.rng.choice(["home_win", "draw", "away_win"], p=[p_home, p_draw, p_away])

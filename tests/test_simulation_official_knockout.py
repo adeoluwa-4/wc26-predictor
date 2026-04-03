@@ -81,7 +81,8 @@ def test_official_knockout_progression_paths_and_champion():
     selected_third = _mock_selected_third()
     fixtures, _ = build_official_round_of_32_fixtures(group_finishers, selected_third)
 
-    simulator = MatchSimulator(always_home_predictor, rng=np.random.default_rng(7))
+    cfg = SimulationConfig(enforce_neutral_order_invariance=False)
+    simulator = MatchSimulator(always_home_predictor, rng=np.random.default_rng(7), config=cfg)
     out = simulate_official_knockout_bracket(fixtures, match_simulator=simulator)
 
     assert "round_of_32" in out.participants_by_round
