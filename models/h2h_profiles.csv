@@ -1,0 +1,2470 @@
+team_a,team_b,matches,team_a_wins,team_b_wins,draws,team_a_goal_diff
+Abkhazia,Artsakh,1,0,0,1,0
+Abkhazia,Chameria,2,1,0,1,2
+Abkhazia,Sápmi,1,1,0,0,1
+Abkhazia,Western Armenia,1,0,0,1,0
+Afghanistan,Bangladesh,2,1,0,1,1
+Afghanistan,Cambodia,1,0,0,1,0
+Afghanistan,Hong Kong,1,0,1,0,-1
+Afghanistan,India,5,1,1,3,0
+Afghanistan,Iran,1,0,1,0,-5
+Afghanistan,Kuwait,2,0,2,0,-5
+Afghanistan,Mongolia,2,2,0,0,2
+Afghanistan,Myanmar,1,0,1,0,-1
+Afghanistan,Oman,2,0,2,0,-4
+Afghanistan,Pakistan,2,0,0,2,0
+Afghanistan,Qatar,4,0,3,1,-14
+Afghanistan,Syria,1,0,1,0,-1
+Albania,Andorra,6,5,0,1,9
+Albania,Belarus,2,2,0,0,3
+Albania,Croatia,1,0,0,1,0
+Albania,Czech Republic,4,1,1,2,1
+Albania,England,4,0,4,0,-11
+Albania,Faroe Islands,2,1,0,1,2
+Albania,France,2,0,2,0,-5
+Albania,Georgia,2,1,1,0,0
+Albania,Hungary,2,2,0,0,2
+Albania,Iceland,4,1,1,2,1
+Albania,Israel,2,0,2,0,-2
+Albania,Italy,1,0,1,0,-1
+Albania,Kazakhstan,2,1,0,1,2
+Albania,Latvia,2,1,0,1,1
+Albania,Lithuania,2,0,1,1,-1
+Albania,Moldova,4,3,0,1,8
+Albania,Poland,5,1,4,0,-4
+Albania,San Marino,2,2,0,0,7
+Albania,Serbia,2,1,0,1,1
+Albania,Spain,1,0,1,0,-1
+Albania,Turkey,2,0,2,0,-3
+Albania,Ukraine,2,1,1,0,0
+Alderney,Guernsey,1,0,1,0,-2
+Alderney,Hitra,1,0,1,0,-2
+Alderney,Isle of Man,1,0,1,0,-5
+Alderney,Jersey,2,0,2,0,-7
+Alderney,Orkney,1,1,0,0,1
+Algeria,Angola,1,0,0,1,0
+Algeria,Bahrain,1,1,0,0,4
+Algeria,Bolivia,1,1,0,0,1
+Algeria,Botswana,4,4,0,0,10
+Algeria,Burkina Faso,4,1,0,3,1
+Algeria,Cameroon,2,1,1,0,0
+Algeria,DR Congo,1,1,0,0,1
+Algeria,Djibouti,2,2,0,0,12
+Algeria,Egypt,1,0,0,1,0
+Algeria,Equatorial Guinea,4,2,1,1,3
+Algeria,Gambia,1,0,0,1,0
+Algeria,Guinea,3,1,1,1,2
+Algeria,Iraq,1,1,0,0,2
+Algeria,Ivory Coast,2,0,1,1,-2
+Algeria,Kenya,1,1,0,0,2
+Algeria,Lebanon,1,1,0,0,2
+Algeria,Liberia,2,2,0,0,7
+Algeria,Mauritania,1,0,1,0,-1
+Algeria,Morocco,1,0,0,1,0
+Algeria,Mozambique,2,2,0,0,6
+Algeria,Niger,4,4,0,0,11
+Algeria,Nigeria,2,1,1,0,-1
+Algeria,Qatar,1,1,0,0,1
+Algeria,Senegal,2,2,0,0,2
+Algeria,Sierra Leone,1,0,0,1,0
+Algeria,Somalia,2,2,0,0,5
+Algeria,South Africa,1,0,0,1,0
+Algeria,Sudan,3,2,0,1,7
+Algeria,Tanzania,3,2,0,1,5
+Algeria,Togo,2,2,0,0,5
+Algeria,Tunisia,1,1,0,0,2
+Algeria,Uganda,4,4,0,0,5
+Algeria,United Arab Emirates,1,0,0,1,0
+Algeria,Zambia,2,1,0,1,5
+Algeria,Zimbabwe,2,1,0,1,2
+American Samoa,Fiji,1,0,1,0,-9
+American Samoa,Guam,1,0,1,0,-6
+American Samoa,New Caledonia,1,0,1,0,-5
+American Samoa,Northern Mariana Islands,1,0,1,0,-4
+American Samoa,Samoa,2,0,2,0,-12
+American Samoa,Solomon Islands,2,0,2,0,-24
+American Samoa,Tahiti,1,0,1,0,-7
+American Samoa,Tonga,1,0,1,0,-4
+American Samoa,Tuvalu,1,0,0,1,0
+American Samoa,United States Virgin Islands,1,0,1,0,-3
+Andorra,Belarus,2,0,1,1,-1
+Andorra,Bolivia,1,0,1,0,-1
+Andorra,England,4,0,4,0,-12
+Andorra,Faroe Islands,2,0,2,0,-3
+Andorra,France,2,0,2,0,-7
+Andorra,Hungary,2,0,2,0,-4
+Andorra,Iceland,2,0,2,0,-4
+Andorra,Israel,2,0,2,0,-3
+Andorra,Kosovo,2,0,1,1,-3
+Andorra,Latvia,6,0,3,3,-9
+Andorra,Liechtenstein,2,2,0,0,3
+Andorra,Malta,4,0,2,2,-3
+Andorra,Moldova,6,1,4,1,-4
+Andorra,Poland,2,0,2,0,-6
+Andorra,Romania,2,0,2,0,-6
+Andorra,San Marino,2,2,0,0,5
+Andorra,Serbia,2,0,2,0,-5
+Andorra,South Africa,1,0,0,1,0
+Andorra,Switzerland,2,0,2,0,-4
+Andorra,Turkey,2,0,2,0,-3
+Angola,Botswana,2,1,1,0,0
+Angola,Burkina Faso,1,1,0,0,2
+Angola,Cameroon,2,0,0,2,0
+Angola,Cape Verde,2,0,1,1,-1
+Angola,Central African Republic,2,2,0,0,2
+Angola,Comoros,1,1,0,0,2
+Angola,DR Congo,2,0,1,1,-1
+Angola,Egypt,3,0,1,2,-1
+Angola,Eswatini,2,1,0,1,1
+Angola,Gabon,4,2,2,0,1
+Angola,Gambia,4,2,2,0,-1
+Angola,Ghana,4,1,1,2,0
+Angola,Lesotho,1,1,0,0,2
+Angola,Libya,4,0,2,2,-2
+Angola,Madagascar,2,0,0,2,0
+Angola,Mali,1,0,1,0,-1
+Angola,Mauritania,2,1,0,1,1
+Angola,Mauritius,3,1,1,1,1
+Angola,Mozambique,1,0,0,1,0
+Angola,Namibia,1,1,0,0,3
+Angola,Niger,2,2,0,0,3
+Angola,Nigeria,1,0,1,0,-1
+Angola,Seychelles,1,1,0,0,3
+Angola,South Africa,1,0,1,0,-1
+Angola,Sudan,2,1,0,1,1
+Angola,Tunisia,1,0,0,1,0
+Angola,Zimbabwe,1,0,0,1,0
+Anguilla,Bahamas,2,2,0,0,3
+Anguilla,Barbados,1,0,1,0,-1
+Anguilla,Belize,2,0,2,0,-2
+Anguilla,Bonaire,2,0,2,0,-5
+Anguilla,British Virgin Islands,1,0,1,0,-4
+Anguilla,Cayman Islands,1,0,1,0,-4
+Anguilla,Dominica,3,0,1,2,-3
+Anguilla,Dominican Republic,1,0,1,0,-6
+Anguilla,El Salvador,1,0,1,0,-3
+Anguilla,Guatemala,2,0,2,0,-15
+Anguilla,Panama,1,0,1,0,-13
+Anguilla,Puerto Rico,3,0,3,0,-12
+Anguilla,Saint Lucia,2,0,2,0,-3
+Anguilla,Saint Martin,2,0,2,0,-14
+Anguilla,Saint Vincent and the Grenadines,1,0,1,0,-6
+Anguilla,Suriname,1,0,1,0,-4
+Anguilla,Turks and Caicos Islands,4,1,1,2,1
+Anguilla,United States Virgin Islands,1,0,1,0,-3
+Antigua and Barbuda,Aruba,3,2,0,1,2
+Antigua and Barbuda,Bahamas,2,1,0,1,3
+Antigua and Barbuda,Barbados,2,1,1,0,0
+Antigua and Barbuda,Bermuda,3,0,2,1,-2
+Antigua and Barbuda,Cayman Islands,1,0,1,0,-1
+Antigua and Barbuda,Cuba,3,0,3,0,-5
+Antigua and Barbuda,Curaçao,1,1,0,0,1
+Antigua and Barbuda,Dominica,2,0,1,1,-1
+Antigua and Barbuda,Dominican Republic,2,0,2,0,-10
+Antigua and Barbuda,El Salvador,1,0,1,0,-3
+Antigua and Barbuda,Grenada,1,1,0,0,1
+Antigua and Barbuda,Guadeloupe,3,2,1,0,-3
+Antigua and Barbuda,Guyana,5,1,4,0,-16
+Antigua and Barbuda,Honduras,1,0,1,0,-2
+Antigua and Barbuda,Jamaica,2,0,2,0,-8
+Antigua and Barbuda,Montserrat,1,0,0,1,0
+Antigua and Barbuda,Puerto Rico,2,0,2,0,-6
+Antigua and Barbuda,United States Virgin Islands,1,1,0,0,3
+Argentina,Australia,1,1,0,0,1
+Argentina,Bolivia,5,5,0,0,16
+Argentina,Brazil,6,4,1,1,4
+Argentina,Canada,2,2,0,0,4
+Argentina,Chile,7,5,0,2,7
+Argentina,Colombia,7,2,2,3,-1
+Argentina,Croatia,1,1,0,0,3
+Argentina,Ecuador,6,3,1,2,4
+Argentina,France,1,0,0,1,0
+Argentina,Italy,1,1,0,0,3
+Argentina,Mexico,1,1,0,0,2
+Argentina,Netherlands,1,0,0,1,0
+Argentina,Paraguay,6,2,1,3,1
+Argentina,Peru,5,5,0,0,8
+Argentina,Poland,1,1,0,0,2
+Argentina,Qatar,1,1,0,0,2
+Argentina,Saudi Arabia,1,0,1,0,-1
+Argentina,Uruguay,5,4,1,0,4
+Argentina,Venezuela,5,4,0,1,10
+Armenia,Bosnia and Herzegovina,2,1,1,0,1
+Armenia,Croatia,2,0,2,0,-2
+Armenia,Estonia,2,1,0,1,2
+Armenia,Faroe Islands,2,0,1,1,-1
+Armenia,Finland,2,0,2,0,-5
+Armenia,Georgia,4,1,2,1,-7
+Armenia,Germany,2,0,2,0,-9
+Armenia,Greece,2,1,1,0,0
+Armenia,Hungary,2,0,2,0,-3
+Armenia,Iceland,2,1,0,1,2
+Armenia,Italy,2,0,2,0,-10
+Armenia,Latvia,4,3,1,0,3
+Armenia,Liechtenstein,4,2,0,2,4
+Armenia,North Macedonia,6,1,4,1,-9
+Armenia,Portugal,2,0,2,0,-13
+Armenia,Republic of Ireland,4,2,2,0,0
+Armenia,Romania,2,1,1,0,0
+Armenia,Scotland,2,0,2,0,-5
+Armenia,Turkey,2,0,1,1,-1
+Armenia,Ukraine,2,0,2,0,-8
+Armenia,Wales,2,1,0,1,2
+Artsakh,Chameria,1,0,1,0,-3
+Artsakh,Padania,1,1,0,0,2
+Artsakh,Székely Land,1,1,0,0,1
+Artsakh,Sápmi,1,1,0,0,1
+Aruba,Barbados,2,1,0,1,3
+Aruba,Bermuda,1,0,1,0,-5
+Aruba,Canada,1,0,1,0,-7
+Aruba,Cayman Islands,3,3,0,0,7
+Aruba,Curaçao,1,0,1,0,-2
+Aruba,Guyana,2,0,2,0,-3
+Aruba,Haiti,3,0,3,0,-9
+Aruba,Jamaica,2,0,2,0,-8
+Aruba,Liechtenstein,1,1,0,0,3
+Aruba,Macau,1,1,0,0,3
+Aruba,Puerto Rico,2,0,2,0,-5
+Aruba,Saint Kitts and Nevis,2,0,2,0,-3
+Aruba,Saint Lucia,2,0,1,1,-1
+Aruba,Saint Martin,2,1,0,1,3
+Aruba,Sint Maarten,2,0,2,0,-3
+Aruba,Suriname,1,0,1,0,-6
+Aruba,United States Virgin Islands,2,2,0,0,5
+Australia,Bahrain,2,0,1,1,-1
+Australia,Bangladesh,2,2,0,0,9
+Australia,Cameroon,1,1,0,0,1
+Australia,China,4,3,0,1,7
+Australia,Curaçao,1,1,0,0,4
+Australia,Denmark,1,1,0,0,1
+Australia,France,1,0,1,0,-3
+Australia,India,1,1,0,0,2
+Australia,Indonesia,3,2,0,1,8
+Australia,Japan,4,1,2,1,-2
+Australia,Jordan,3,2,1,0,1
+Australia,Kuwait,2,2,0,0,6
+Australia,Lebanon,2,2,0,0,7
+Australia,Nepal,2,2,0,0,8
+Australia,New Zealand,3,3,0,0,5
+Australia,Oman,2,1,0,1,2
+Australia,Palestine,3,3,0,0,9
+Australia,Peru,1,0,0,1,0
+Australia,Saudi Arabia,4,1,1,2,0
+Australia,South Korea,1,0,1,0,-1
+Australia,Syria,2,2,0,0,2
+Australia,Taiwan,2,2,0,0,10
+Australia,Tunisia,1,1,0,0,1
+Australia,United Arab Emirates,2,1,1,0,0
+Australia,Uzbekistan,2,0,0,2,0
+Australia,Vietnam,2,2,0,0,5
+Austria,Azerbaijan,2,2,0,0,4
+Austria,Belgium,2,0,1,1,-1
+Austria,Bosnia and Herzegovina,2,1,0,1,1
+Austria,Croatia,2,1,1,0,1
+Austria,Cyprus,2,2,0,0,3
+Austria,Denmark,4,0,4,0,-8
+Austria,Estonia,2,2,0,0,3
+Austria,Faroe Islands,2,2,0,0,4
+Austria,France,3,0,2,1,-3
+Austria,Israel,4,2,2,0,-1
+Austria,Italy,1,0,1,0,-1
+Austria,Kazakhstan,2,2,0,0,6
+Austria,Latvia,2,1,1,0,5
+Austria,Moldova,2,2,0,0,5
+Austria,Netherlands,2,1,1,0,-1
+Austria,North Macedonia,3,3,0,0,6
+Austria,Northern Ireland,2,2,0,0,2
+Austria,Norway,4,2,1,1,4
+Austria,Poland,3,1,1,1,1
+Austria,Romania,4,2,2,0,0
+Austria,San Marino,2,2,0,0,14
+Austria,Scotland,2,0,1,1,-1
+Austria,Serbia,2,0,1,1,-2
+Austria,Slovenia,4,2,0,2,2
+Austria,Sweden,2,2,0,0,4
+Austria,Turkey,1,0,1,0,-1
+Austria,Ukraine,1,1,0,0,1
+Austria,Wales,1,0,1,0,-1
+Aymara,Mapuche,1,0,1,0,-2
+Aymara,Maule Sur,1,0,1,0,-1
+Azerbaijan,Belarus,2,1,0,1,2
+Azerbaijan,Belgium,2,0,2,0,-6
+Azerbaijan,Bulgaria,1,0,0,1,0
+Azerbaijan,Croatia,2,0,1,1,-1
+Azerbaijan,Cyprus,2,1,0,1,1
+Azerbaijan,Estonia,4,1,1,2,0
+Azerbaijan,France,2,0,2,0,-5
+Azerbaijan,Hungary,2,0,2,0,-3
+Azerbaijan,Iceland,2,0,2,0,-7
+Azerbaijan,Kazakhstan,2,1,1,0,1
+Azerbaijan,Luxembourg,4,0,3,1,-4
+Azerbaijan,Mongolia,1,1,0,0,1
+Azerbaijan,Montenegro,2,0,1,1,-2
+Azerbaijan,Portugal,2,0,2,0,-4
+Azerbaijan,Republic of Ireland,2,0,1,1,-3
+Azerbaijan,Saint Lucia,1,1,0,0,5
+Azerbaijan,Serbia,2,0,2,0,-3
+Azerbaijan,Sierra Leone,1,0,0,1,0
+Azerbaijan,Slovakia,6,1,5,0,-10
+Azerbaijan,Sweden,4,1,3,0,-10
+Azerbaijan,Ukraine,2,0,1,1,-1
+Azerbaijan,Wales,2,0,2,0,-3
+Bahamas,Barbados,2,0,2,0,-5
+Bahamas,Bonaire,2,1,0,1,1
+Bahamas,British Virgin Islands,3,2,1,0,1
+Bahamas,Cayman Islands,1,0,1,0,-1
+Bahamas,Costa Rica,1,0,1,0,-8
+Bahamas,Dominica,1,0,1,0,-4
+Bahamas,Grenada,1,0,1,0,-6
+Bahamas,Guadeloupe,1,0,1,0,-2
+Bahamas,Guyana,2,0,2,0,-5
+Bahamas,Nicaragua,2,0,2,0,-6
+Bahamas,Puerto Rico,3,0,3,0,-17
+Bahamas,Saint Kitts and Nevis,2,0,2,0,-5
+Bahamas,Saint Vincent and the Grenadines,2,1,0,1,1
+Bahamas,Trinidad and Tobago,4,0,3,1,-10
+Bahamas,United States Virgin Islands,2,1,0,1,2
+Bahrain,Bangladesh,1,1,0,0,2
+Bahrain,Cambodia,2,2,0,0,9
+Bahrain,China,2,0,2,0,-2
+Bahrain,Djibouti,1,1,0,0,1
+Bahrain,Hong Kong,2,1,0,1,4
+Bahrain,India,1,1,0,0,1
+Bahrain,Indonesia,2,0,1,1,-1
+Bahrain,Iran,2,1,1,0,-2
+Bahrain,Iraq,7,2,1,4,2
+Bahrain,Japan,3,0,3,0,-9
+Bahrain,Jordan,2,2,0,0,2
+Bahrain,Kuwait,5,4,0,1,6
+Bahrain,Malaysia,2,2,0,0,2
+Bahrain,Nepal,2,2,0,0,8
+Bahrain,Oman,4,1,2,1,-3
+Bahrain,Qatar,2,1,1,0,0
+Bahrain,Saudi Arabia,6,2,2,2,-2
+Bahrain,South Korea,2,0,2,0,-3
+Bahrain,Sudan,1,1,0,0,2
+Bahrain,Thailand,1,0,1,0,-1
+Bahrain,Turkmenistan,1,1,0,0,1
+Bahrain,United Arab Emirates,4,1,1,2,-1
+Bahrain,Yemen,3,1,1,1,1
+Bangladesh,Bhutan,1,1,0,0,2
+Bangladesh,Hong Kong,2,0,1,1,-1
+Bangladesh,India,5,1,1,3,-1
+Bangladesh,Kuwait,1,0,1,0,-1
+Bangladesh,Kyrgyzstan,1,0,1,0,-3
+Bangladesh,Laos,2,1,0,1,1
+Bangladesh,Lebanon,3,0,2,1,-6
+Bangladesh,Malaysia,1,0,1,0,-3
+Bangladesh,Maldives,5,3,1,1,2
+Bangladesh,Nepal,1,0,0,1,0
+Bangladesh,Oman,2,0,2,0,-6
+Bangladesh,Palestine,3,0,3,0,-8
+Bangladesh,Qatar,2,0,2,0,-7
+Bangladesh,Seychelles,1,0,0,1,0
+Bangladesh,Singapore,1,0,1,0,-1
+Bangladesh,Sri Lanka,2,1,1,0,0
+Bangladesh,Turkmenistan,1,0,1,0,-1
+Barbados,Bermuda,1,0,1,0,-7
+Barbados,Bonaire,1,1,0,0,1
+Barbados,Cayman Islands,2,1,1,0,2
+Barbados,Cuba,2,0,2,0,-4
+Barbados,Curaçao,1,0,1,0,-3
+Barbados,Dominica,1,0,0,1,0
+Barbados,Dominican Republic,3,0,2,1,-8
+Barbados,Guadeloupe,2,0,2,0,-2
+Barbados,Guyana,2,0,2,0,-5
+Barbados,Haiti,1,0,1,0,-2
+Barbados,Montserrat,2,0,2,0,-3
+Barbados,Nicaragua,3,0,3,0,-9
+Barbados,Panama,1,0,1,0,-1
+Barbados,Saint Lucia,1,0,1,0,-1
+Barbados,Saint Martin,3,1,2,0,1
+Barbados,Saint Vincent and the Grenadines,1,0,1,0,-1
+Barbados,United States Virgin Islands,4,4,0,0,13
+Belarus,Belgium,2,0,2,0,-9
+Belarus,Bulgaria,2,0,0,2,0
+Belarus,Czech Republic,2,0,2,0,-3
+Belarus,Denmark,2,0,1,1,-6
+Belarus,Estonia,4,2,1,1,1
+Belarus,Georgia,1,0,1,0,-1
+Belarus,Germany,2,0,2,0,-6
+Belarus,Greece,2,0,1,1,-4
+Belarus,Israel,2,0,2,0,-2
+Belarus,Kazakhstan,4,2,1,1,2
+Belarus,Kosovo,2,2,0,0,2
+Belarus,Lithuania,2,1,0,1,2
+Belarus,Luxembourg,2,1,0,1,1
+Belarus,Netherlands,2,0,2,0,-5
+Belarus,Northern Ireland,4,0,3,1,-4
+Belarus,Romania,2,0,1,1,-1
+Belarus,Scotland,2,0,2,0,-3
+Belarus,Slovakia,2,0,1,1,-1
+Belarus,Switzerland,2,0,1,1,-5
+Belarus,Wales,2,0,2,0,-5
+Belgium,Canada,1,1,0,0,1
+Belgium,Croatia,1,0,0,1,0
+Belgium,Cyprus,2,2,0,0,7
+Belgium,Czech Republic,2,1,0,1,3
+Belgium,Denmark,3,3,0,0,5
+Belgium,England,2,1,1,0,1
+Belgium,Estonia,4,4,0,0,13
+Belgium,Finland,1,1,0,0,2
+Belgium,France,4,0,4,0,-5
+Belgium,Iceland,2,2,0,0,5
+Belgium,Israel,2,1,1,0,1
+Belgium,Italy,4,0,3,1,-3
+Belgium,Kazakhstan,4,3,0,1,11
+Belgium,Liechtenstein,2,2,0,0,13
+Belgium,Morocco,1,0,1,0,-2
+Belgium,Netherlands,2,0,2,0,-4
+Belgium,North Macedonia,2,0,0,2,0
+Belgium,Poland,2,2,0,0,6
+Belgium,Portugal,1,1,0,0,1
+Belgium,Romania,1,1,0,0,2
+Belgium,Russia,3,3,0,0,8
+Belgium,San Marino,2,2,0,0,13
+Belgium,Scotland,2,2,0,0,7
+Belgium,Slovakia,1,0,1,0,-1
+Belgium,Sweden,2,1,0,1,3
+Belgium,Ukraine,3,1,1,1,1
+Belgium,Wales,6,4,0,2,6
+Belize,Bermuda,2,0,1,1,-1
+Belize,Costa Rica,2,0,2,0,-12
+Belize,Dominican Republic,2,0,2,0,-4
+Belize,French Guiana,8,4,2,2,2
+Belize,Grenada,2,0,2,0,-2
+Belize,Guatemala,2,0,2,0,-3
+Belize,Guyana,3,0,3,0,-5
+Belize,Haiti,1,0,1,0,-2
+Belize,Montserrat,1,0,1,0,-1
+Belize,Nicaragua,2,0,2,0,-7
+Belize,Panama,1,0,1,0,-2
+Belize,Saint Kitts and Nevis,3,2,1,0,1
+Belize,Saint Martin,1,1,0,0,1
+Belize,Saint Vincent and the Grenadines,2,0,2,0,-4
+Belize,Sint Maarten,1,0,1,0,-1
+Belize,Turks and Caicos Islands,3,3,0,0,12
+Benin,Botswana,1,1,0,0,1
+Benin,Cameroon,1,0,0,1,0
+Benin,DR Congo,3,0,2,1,-3
+Benin,Egypt,1,0,1,0,-2
+Benin,Ghana,1,0,0,1,0
+Benin,Guinea,1,1,0,0,1
+Benin,Guinea-Bissau,1,0,0,1,0
+Benin,Lesotho,4,2,0,2,5
+Benin,Liberia,1,1,0,0,1
+Benin,Libya,2,1,0,1,1
+Benin,Madagascar,2,2,0,0,3
+Benin,Morocco,1,0,0,1,0
+Benin,Mozambique,2,0,2,0,-2
+Benin,Nigeria,6,1,4,1,-8
+Benin,Rwanda,6,3,1,2,4
+Benin,Senegal,4,0,3,1,-6
+Benin,Sierra Leone,2,1,1,0,0
+Benin,South Africa,2,0,2,0,-3
+Benin,Tanzania,2,1,1,0,0
+Benin,Togo,1,1,0,0,1
+Benin,Zimbabwe,2,1,0,1,1
+Bermuda,Brunei,1,1,0,0,2
+Bermuda,Canada,1,0,1,0,-4
+Bermuda,Cayman Islands,2,1,0,1,5
+Bermuda,Costa Rica,1,0,1,0,-1
+Bermuda,Cuba,1,1,0,0,1
+Bermuda,Curaçao,2,0,2,0,-8
+Bermuda,Dominica,2,2,0,0,6
+Bermuda,Dominican Republic,3,1,2,0,-4
+Bermuda,French Guiana,2,0,1,1,-3
+Bermuda,Guinea,1,0,1,0,-4
+Bermuda,Guyana,2,0,2,0,-3
+Bermuda,Haiti,4,0,3,1,-6
+Bermuda,Honduras,3,0,3,0,-9
+Bermuda,Jamaica,2,0,2,0,-8
+Bermuda,Mexico,2,0,2,0,-5
+Bermuda,Montserrat,1,0,1,0,-1
+Bermuda,Nicaragua,1,1,0,0,2
+Bermuda,Panama,2,1,1,0,-1
+Bermuda,Saint Vincent and the Grenadines,2,1,1,0,1
+Bermuda,Suriname,1,0,1,0,-6
+Bermuda,Trinidad and Tobago,2,0,1,1,-3
+Bhutan,Brunei,1,0,1,0,-1
+Bhutan,Central African Republic,1,0,1,0,-6
+Bhutan,Guam,2,1,1,0,-4
+Bhutan,Hong Kong,2,1,1,0,-2
+Bhutan,Laos,1,0,1,0,-1
+Bhutan,Lebanon,3,0,3,0,-9
+Bhutan,Maldives,1,0,1,0,-2
+Bhutan,Nepal,1,0,0,1,0
+Bhutan,Sri Lanka,1,0,1,0,-2
+Bhutan,Yemen,2,0,1,1,-6
+Biafra,Matabeleland,2,1,1,0,0
+Biafra,Yoruba Nation,1,1,0,0,1
+Bolivia,Brazil,5,1,4,0,-15
+Bolivia,Chile,5,2,2,1,1
+Bolivia,Colombia,4,1,2,1,-5
+Bolivia,Ecuador,4,0,4,0,-9
+Bolivia,Iraq,1,0,1,0,-1
+Bolivia,Japan,2,0,2,0,-4
+Bolivia,Panama,1,0,1,0,-2
+Bolivia,Paraguay,5,1,2,2,1
+Bolivia,Peru,5,2,3,0,-4
+Bolivia,Suriname,1,1,0,0,1
+Bolivia,United States,1,0,1,0,-2
+Bolivia,Uruguay,6,1,4,1,-9
+Bolivia,Venezuela,5,2,3,0,-1
+Bonaire,British Virgin Islands,3,3,0,0,4
+Bonaire,El Salvador,2,0,2,0,-2
+Bonaire,Guyana,1,0,1,0,-1
+Bonaire,Montserrat,2,1,1,0,0
+Bonaire,Saint Martin,3,0,3,0,-8
+Bonaire,Saint Vincent and the Grenadines,4,1,2,1,-1
+Bonaire,Sint Maarten,2,0,1,1,-5
+Bonaire,Turks and Caicos Islands,2,1,1,0,2
+Bonaire,United States Virgin Islands,2,2,0,0,4
+Bosnia and Herzegovina,Cyprus,2,1,0,1,1
+Bosnia and Herzegovina,Finland,6,2,2,2,0
+Bosnia and Herzegovina,France,2,0,1,1,-1
+Bosnia and Herzegovina,Germany,2,0,2,0,-8
+Bosnia and Herzegovina,Greece,2,0,1,1,-1
+Bosnia and Herzegovina,Hungary,2,0,1,1,-2
+Bosnia and Herzegovina,Iceland,2,1,1,0,2
+Bosnia and Herzegovina,Italy,5,0,3,2,-6
+Bosnia and Herzegovina,Kazakhstan,2,1,0,1,2
+Bosnia and Herzegovina,Liechtenstein,4,4,0,0,11
+Bosnia and Herzegovina,Luxembourg,2,0,2,0,-5
+Bosnia and Herzegovina,Montenegro,2,1,0,1,1
+Bosnia and Herzegovina,Netherlands,4,0,2,2,-5
+Bosnia and Herzegovina,Northern Ireland,1,0,0,1,0
+Bosnia and Herzegovina,Poland,2,0,2,0,-4
+Bosnia and Herzegovina,Portugal,2,0,2,0,-8
+Bosnia and Herzegovina,Romania,4,3,1,0,1
+Bosnia and Herzegovina,San Marino,2,2,0,0,7
+Bosnia and Herzegovina,Slovakia,2,0,2,0,-3
+Bosnia and Herzegovina,Ukraine,3,0,2,1,-3
+Bosnia and Herzegovina,Wales,1,0,0,1,0
+Botswana,Cape Verde,2,2,0,0,2
+Botswana,Comoros,1,1,0,0,1
+Botswana,DR Congo,1,0,1,0,-3
+Botswana,Egypt,2,0,1,1,-4
+Botswana,Equatorial Guinea,2,0,2,0,-3
+Botswana,Eswatini,3,2,0,1,3
+Botswana,Guinea,2,1,0,1,1
+Botswana,Lesotho,2,2,0,0,5
+Botswana,Libya,2,1,1,0,0
+Botswana,Malawi,3,1,1,1,0
+Botswana,Mauritania,2,0,1,1,-1
+Botswana,Mozambique,2,0,2,0,-3
+Botswana,Namibia,1,0,0,1,0
+Botswana,Senegal,1,0,1,0,-3
+Botswana,Seychelles,1,1,0,0,1
+Botswana,Somalia,2,2,0,0,4
+Botswana,South Africa,4,0,3,1,-3
+Botswana,Tunisia,2,0,1,1,-3
+Botswana,Uganda,2,0,2,0,-2
+Botswana,Zambia,5,1,3,1,-2
+Botswana,Zimbabwe,3,0,2,1,-4
+Brazil,Cameroon,1,0,1,0,-1
+Brazil,Chile,5,5,0,0,10
+Brazil,Colombia,6,3,1,2,2
+Brazil,Costa Rica,1,0,0,1,0
+Brazil,Croatia,1,0,0,1,0
+Brazil,Ecuador,5,2,0,3,3
+Brazil,Japan,1,0,1,0,-1
+Brazil,Paraguay,6,4,1,1,9
+Brazil,Peru,8,8,0,0,21
+Brazil,Serbia,1,1,0,0,2
+Brazil,South Korea,1,1,0,0,3
+Brazil,Switzerland,1,1,0,0,1
+Brazil,Uruguay,5,2,1,2,3
+Brazil,Venezuela,6,3,0,3,6
+British Virgin Islands,Cayman Islands,6,1,2,3,-1
+British Virgin Islands,Cuba,1,0,1,0,-5
+British Virgin Islands,Curaçao,1,0,1,0,-8
+British Virgin Islands,Dominica,3,0,2,1,-4
+British Virgin Islands,Dominican Republic,1,0,1,0,-4
+British Virgin Islands,Guatemala,2,0,2,0,-6
+British Virgin Islands,Jamaica,1,0,1,0,-1
+British Virgin Islands,Puerto Rico,2,0,2,0,-8
+British Virgin Islands,Saint Kitts and Nevis,2,0,2,0,-4
+British Virgin Islands,Saint Vincent and the Grenadines,1,0,1,0,-3
+British Virgin Islands,Turks and Caicos Islands,3,1,0,2,2
+British Virgin Islands,United States Virgin Islands,2,0,0,2,0
+Brunei,Cambodia,1,0,1,0,-4
+Brunei,Indonesia,3,0,3,0,-19
+Brunei,Lebanon,2,0,2,0,-8
+Brunei,Macau,2,2,0,0,4
+Brunei,Mongolia,2,1,1,0,-1
+Brunei,Philippines,1,0,1,0,-4
+Brunei,Thailand,1,0,1,0,-5
+Brunei,Timor-Leste,4,1,2,1,2
+Brunei,Vanuatu,1,1,0,0,1
+Brunei,Yemen,2,0,2,0,-11
+Bulgaria,Czech Republic,2,1,1,0,0
+Bulgaria,England,2,0,2,0,-10
+Bulgaria,Finland,2,0,2,0,-3
+Bulgaria,Georgia,4,1,2,1,-5
+Bulgaria,Gibraltar,2,1,0,1,4
+Bulgaria,Hungary,3,0,2,1,-5
+Bulgaria,Indonesia,1,1,0,0,1
+Bulgaria,Italy,2,0,1,1,-2
+Bulgaria,Kosovo,2,0,1,1,-1
+Bulgaria,Lithuania,4,1,2,1,-3
+Bulgaria,Luxembourg,2,1,0,1,1
+Bulgaria,Montenegro,4,0,2,2,-2
+Bulgaria,North Macedonia,2,1,0,1,1
+Bulgaria,Northern Ireland,4,2,1,1,-3
+Bulgaria,Republic of Ireland,4,0,2,2,-2
+Bulgaria,Serbia,2,0,0,2,0
+Bulgaria,Solomon Islands,1,1,0,0,8
+Bulgaria,Spain,2,0,2,0,-7
+Bulgaria,Switzerland,2,0,2,0,-6
+Bulgaria,Tanzania,1,1,0,0,1
+Bulgaria,Turkey,2,0,2,0,-7
+Bulgaria,Wales,2,0,2,0,-2
+Burkina Faso,Burundi,2,2,0,0,5
+Burkina Faso,Cameroon,2,0,1,1,-1
+Burkina Faso,Cape Verde,3,2,1,0,1
+Burkina Faso,Djibouti,4,4,0,0,15
+Burkina Faso,Egypt,2,0,1,1,-1
+Burkina Faso,Equatorial Guinea,1,1,0,0,1
+Burkina Faso,Eswatini,2,1,0,1,2
+Burkina Faso,Ethiopia,3,2,0,1,5
+Burkina Faso,Gabon,1,0,0,1,0
+Burkina Faso,Guinea-Bissau,2,1,0,1,1
+Burkina Faso,Ivory Coast,1,0,1,0,-3
+Burkina Faso,Kenya,1,0,0,1,0
+Burkina Faso,Malawi,4,2,1,1,1
+Burkina Faso,Mali,1,0,1,0,-1
+Burkina Faso,Mauritania,2,2,0,0,2
+Burkina Faso,Niger,2,1,0,1,2
+Burkina Faso,Senegal,3,0,2,1,-3
+Burkina Faso,Sierra Leone,2,1,0,1,1
+Burkina Faso,South Sudan,2,2,0,0,2
+Burkina Faso,Sudan,1,1,0,0,2
+Burkina Faso,Tanzania,1,1,0,0,2
+Burkina Faso,Togo,2,1,0,1,1
+Burkina Faso,Tunisia,1,1,0,0,1
+Burkina Faso,Uganda,2,0,0,2,0
+Burkina Faso,Zanzibar,2,1,1,0,0
+Burundi,Cameroon,2,0,2,0,-4
+Burundi,Central African Republic,2,0,1,1,-2
+Burundi,Gabon,3,0,2,1,-3
+Burundi,Gambia,2,1,1,0,-1
+Burundi,Guinea,1,0,1,0,-2
+Burundi,Ivory Coast,2,0,2,0,-2
+Burundi,Kenya,2,0,1,1,-1
+Burundi,Madagascar,1,0,1,0,-1
+Burundi,Malawi,2,1,0,1,1
+Burundi,Mauritania,2,1,0,1,2
+Burundi,Morocco,2,0,2,0,-4
+Burundi,Namibia,2,1,0,1,1
+Burundi,Nigeria,1,0,1,0,-1
+Burundi,Senegal,2,0,2,0,-3
+Burundi,Seychelles,2,2,0,0,7
+Burundi,Tanzania,2,0,0,2,0
+Cambodia,Equatorial Guinea,1,0,1,0,-2
+Cambodia,Guam,2,2,0,0,2
+Cambodia,Guyana,1,0,1,0,-3
+Cambodia,Hong Kong,3,0,2,1,-5
+Cambodia,India,1,0,1,0,-2
+Cambodia,Indonesia,2,0,2,0,-3
+Cambodia,Iran,2,0,2,0,-24
+Cambodia,Iraq,2,0,2,0,-7
+Cambodia,Laos,1,1,0,0,3
+Cambodia,Malaysia,2,0,1,1,-2
+Cambodia,Pakistan,4,2,1,1,2
+Cambodia,Philippines,1,1,0,0,1
+Cambodia,Singapore,1,0,1,0,-1
+Cambodia,Sri Lanka,2,0,0,2,0
+Cambodia,Thailand,2,0,2,0,-3
+Cambodia,Timor-Leste,1,1,0,0,1
+Cambodia,Vietnam,1,0,1,0,-4
+Cameroon,Cape Verde,5,1,2,2,0
+Cameroon,China,1,1,0,0,2
+Cameroon,Comoros,2,2,0,0,4
+Cameroon,DR Congo,1,0,1,0,-1
+Cameroon,Egypt,1,0,0,1,0
+Cameroon,Eswatini,2,1,0,1,3
+Cameroon,Ethiopia,1,1,0,0,3
+Cameroon,Gabon,1,1,0,0,1
+Cameroon,Gambia,2,2,0,0,3
+Cameroon,Ghana,1,0,0,1,0
+Cameroon,Guinea,1,0,0,1,0
+Cameroon,Guinea-Bissau,1,1,0,0,2
+Cameroon,Ivory Coast,3,1,1,1,0
+Cameroon,Kenya,2,2,0,0,4
+Cameroon,Libya,2,1,0,1,2
+Cameroon,Malawi,2,2,0,0,6
+Cameroon,Mauritius,2,2,0,0,5
+Cameroon,Morocco,1,0,1,0,-2
+Cameroon,Mozambique,5,5,0,0,9
+Cameroon,Namibia,4,1,1,2,0
+Cameroon,Nigeria,2,0,2,0,-3
+Cameroon,Rwanda,2,1,0,1,1
+Cameroon,Senegal,1,0,1,0,-2
+Cameroon,Serbia,1,0,0,1,0
+Cameroon,South Africa,1,1,0,0,1
+Cameroon,Switzerland,1,0,1,0,-1
+Cameroon,Zimbabwe,2,1,0,1,1
+Canada,Cayman Islands,1,1,0,0,11
+Canada,Chile,1,0,0,1,0
+Canada,Costa Rica,3,2,1,0,2
+Canada,Croatia,1,0,1,0,-3
+Canada,Cuba,4,4,0,0,16
+Canada,Curaçao,3,2,0,1,6
+Canada,El Salvador,3,3,0,0,7
+Canada,French Guiana,1,1,0,0,3
+Canada,Guadeloupe,1,0,0,1,0
+Canada,Guatemala,2,0,0,2,0
+Canada,Haiti,4,3,1,0,6
+Canada,Honduras,5,3,1,1,10
+Canada,Ivory Coast,1,0,0,1,0
+Canada,Jamaica,4,2,1,1,4
+Canada,Martinique,2,2,0,0,7
+Canada,Mexico,5,1,3,1,-4
+Canada,Morocco,1,0,1,0,-1
+Canada,Panama,3,2,1,0,4
+Canada,Peru,1,1,0,0,1
+Canada,Suriname,3,3,0,0,8
+Canada,Trinidad and Tobago,1,1,0,0,2
+Canada,Ukraine,1,1,0,0,2
+Canada,United States,8,3,3,2,-1
+Canada,Uruguay,1,0,0,1,0
+Canada,Venezuela,1,0,0,1,0
+Cape Verde,Central African Republic,2,1,0,1,1
+Cape Verde,Chile,1,0,1,0,-2
+Cape Verde,Egypt,4,0,1,3,-3
+Cape Verde,Equatorial Guinea,1,1,0,0,1
+Cape Verde,Eswatini,4,3,0,1,6
+Cape Verde,Ethiopia,1,1,0,0,1
+Cape Verde,Finland,1,0,0,1,0
+Cape Verde,Ghana,1,1,0,0,1
+Cape Verde,Guyana,1,1,0,0,1
+Cape Verde,Iran,1,0,0,1,0
+Cape Verde,Lesotho,1,0,0,1,0
+Cape Verde,Liberia,2,2,0,0,2
+Cape Verde,Libya,2,1,0,1,1
+Cape Verde,Mauritania,3,2,1,0,2
+Cape Verde,Mauritius,2,2,0,0,3
+Cape Verde,Mozambique,3,2,0,1,4
+Cape Verde,Nigeria,2,0,1,1,-1
+Cape Verde,Rwanda,2,0,0,2,0
+Cape Verde,Senegal,1,0,1,0,-2
+Cape Verde,South Africa,1,0,0,1,0
+Cape Verde,Togo,2,1,1,0,1
+Cayman Islands,Cuba,1,0,1,0,-3
+Cayman Islands,Guadeloupe,2,0,2,0,-7
+Cayman Islands,Honduras,1,0,1,0,-1
+Cayman Islands,Montserrat,1,0,1,0,-1
+Cayman Islands,Puerto Rico,2,0,2,0,-7
+Cayman Islands,Saint Kitts and Nevis,2,0,1,1,-3
+Cayman Islands,Saint Martin,2,1,1,0,-2
+Cayman Islands,Suriname,1,0,1,0,-3
+Cayman Islands,United States Virgin Islands,4,3,0,1,4
+Central African Republic,Chad,2,2,0,0,2
+Central African Republic,Comoros,2,0,2,0,-4
+Central African Republic,Gabon,2,0,2,0,-3
+Central African Republic,Ghana,4,0,3,1,-7
+Central African Republic,Guinea,1,0,0,1,0
+Central African Republic,Lesotho,2,1,1,0,1
+Central African Republic,Liberia,2,0,2,0,-3
+Central African Republic,Madagascar,4,2,2,0,0
+Central African Republic,Mali,2,0,0,2,0
+Central African Republic,Mauritania,2,0,2,0,-3
+Central African Republic,Morocco,4,0,4,0,-14
+Central African Republic,Nigeria,2,1,1,0,-1
+Central African Republic,Papua New Guinea,1,1,0,0,4
+Chad,Comoros,2,0,2,0,-3
+Chad,Gambia,2,0,1,1,-1
+Chad,Ghana,2,0,1,1,-5
+Chad,Guinea,2,0,1,1,-1
+Chad,Ivory Coast,2,0,2,0,-6
+Chad,Liberia,2,1,1,0,0
+Chad,Madagascar,2,0,2,0,-5
+Chad,Mali,4,0,4,0,-9
+Chad,Mauritius,2,2,0,0,2
+Chad,Namibia,2,0,2,0,-4
+Chad,Sierra Leone,2,0,0,2,0
+Chad,Sudan,2,0,1,1,-2
+Chad,Zambia,2,0,1,1,-1
+Chagos Islands,Parishes of Jersey,1,0,1,0,-7
+Chameria,South Ossetia,1,0,0,1,0
+Chameria,Székely Land,1,0,1,0,-1
+Chameria,Sápmi,1,1,0,0,4
+Chameria,Two Sicilies,1,1,0,0,2
+Chile,Colombia,5,0,2,3,-6
+Chile,Ecuador,5,1,2,2,-2
+Chile,Ghana,1,0,0,1,0
+Chile,Japan,1,1,0,0,4
+Chile,New Zealand,1,0,1,0,-3
+Chile,Paraguay,5,2,2,1,0
+Chile,Peru,6,2,2,2,-1
+Chile,Tunisia,1,0,1,0,-2
+Chile,Uruguay,6,0,4,2,-6
+Chile,Venezuela,4,2,2,0,1
+China,Curaçao,1,1,0,0,2
+China,Guam,2,2,0,0,14
+China,Hong Kong,2,2,0,0,3
+China,Indonesia,2,1,1,0,0
+China,Iran,1,0,1,0,-3
+China,Japan,6,0,5,1,-13
+China,Kyrgyzstan,1,1,0,0,1
+China,Lebanon,1,0,0,1,0
+China,Maldives,2,2,0,0,10
+China,Oman,2,0,1,1,-2
+China,Philippines,3,2,0,1,5
+China,Qatar,1,0,1,0,-1
+China,Saudi Arabia,4,0,3,1,-3
+China,Singapore,2,1,0,1,3
+China,South Korea,5,0,5,0,-10
+China,Syria,2,1,1,0,1
+China,Tajikistan,1,0,0,1,0
+China,Thailand,3,2,0,1,2
+China,Vietnam,2,1,1,0,-1
+Colombia,Costa Rica,1,1,0,0,3
+Colombia,Ecuador,5,1,2,2,-5
+Colombia,Japan,1,1,0,0,1
+Colombia,Panama,1,1,0,0,5
+Colombia,Paraguay,6,3,0,3,3
+Colombia,Peru,6,2,2,2,2
+Colombia,Qatar,1,1,0,0,1
+Colombia,Uruguay,6,1,2,3,-3
+Colombia,Venezuela,5,4,0,1,8
+Comoros,Egypt,2,0,1,1,-4
+Comoros,Eswatini,1,0,0,1,0
+Comoros,Gabon,1,0,1,0,-1
+Comoros,Gambia,2,1,0,1,1
+Comoros,Ghana,3,2,1,0,1
+Comoros,Ivory Coast,2,0,2,0,-4
+Comoros,Kazakhstan,1,0,1,0,-1
+Comoros,Kenya,2,1,0,1,1
+Comoros,Lesotho,2,2,0,0,3
+Comoros,Madagascar,5,1,3,1,-3
+Comoros,Malawi,2,0,2,0,-3
+Comoros,Maldives,1,1,0,0,3
+Comoros,Mali,3,0,2,1,-6
+Comoros,Mauritius,2,1,1,0,-1
+Comoros,Mayotte,2,0,1,1,-2
+Comoros,Morocco,3,0,3,0,-6
+Comoros,Namibia,1,0,0,1,0
+Comoros,Oman,1,0,1,0,-1
+Comoros,Palestine,1,0,1,0,-4
+Comoros,Réunion,2,1,0,1,1
+Comoros,Saudi Arabia,1,0,1,0,-2
+Comoros,Seychelles,2,2,0,0,4
+Comoros,Togo,4,1,1,2,-1
+Comoros,Tunisia,2,1,0,1,1
+Comoros,Yemen,1,0,0,1,0
+Comoros,Zambia,4,0,2,2,-2
+Comoros,Zimbabwe,1,0,1,0,-2
+Congo,Eswatini,2,1,0,1,2
+Congo,Gambia,2,1,0,1,1
+Congo,Guinea-Bissau,2,1,1,0,0
+Congo,Mali,2,0,2,0,-6
+Congo,Morocco,2,0,2,0,-7
+Congo,Namibia,2,0,0,2,0
+Congo,Niger,1,0,1,0,-2
+Congo,Senegal,4,0,3,1,-6
+Congo,South Africa,2,0,1,1,-5
+Congo,South Sudan,4,2,2,0,0
+Congo,Tanzania,1,0,0,1,0
+Congo,Togo,2,0,1,1,-1
+Congo,Uganda,2,0,2,0,-3
+Congo,Zambia,1,0,1,0,-2
+Congo,Zimbabwe,1,0,1,0,-2
+Cook Islands,New Caledonia,1,0,1,0,-8
+Cook Islands,Papua New Guinea,1,0,1,0,-3
+Cook Islands,Samoa,2,0,2,0,-4
+Cook Islands,Solomon Islands,1,0,1,0,-2
+Cook Islands,Tonga,3,2,1,0,0
+Costa Rica,Curaçao,2,1,0,1,1
+Costa Rica,Dominican Republic,1,1,0,0,1
+Costa Rica,El Salvador,3,2,0,1,2
+Costa Rica,Germany,1,0,1,0,-2
+Costa Rica,Grenada,1,1,0,0,3
+Costa Rica,Guadeloupe,2,2,0,0,5
+Costa Rica,Guatemala,2,1,0,1,3
+Costa Rica,Haiti,5,0,2,3,-2
+Costa Rica,Honduras,6,2,0,4,3
+Costa Rica,Jamaica,3,2,0,1,2
+Costa Rica,Japan,1,1,0,0,1
+Costa Rica,Martinique,3,3,0,0,5
+Costa Rica,Mexico,6,0,2,4,-3
+Costa Rica,New Zealand,1,1,0,0,1
+Costa Rica,Nicaragua,3,2,0,1,7
+Costa Rica,Panama,9,1,6,2,-9
+Costa Rica,Paraguay,1,1,0,0,1
+Costa Rica,Saint Kitts and Nevis,1,1,0,0,4
+Costa Rica,Spain,1,0,1,0,-7
+Costa Rica,Suriname,3,2,0,1,2
+Costa Rica,Trinidad and Tobago,1,1,0,0,1
+Costa Rica,United States,3,1,1,1,1
+Croatia,Cyprus,2,2,0,0,4
+Croatia,Czech Republic,3,1,0,2,4
+Croatia,Denmark,2,2,0,0,2
+Croatia,Egypt,1,1,0,0,2
+Croatia,England,1,0,1,0,-1
+Croatia,Faroe Islands,2,2,0,0,3
+Croatia,France,6,2,3,1,-2
+Croatia,Gibraltar,2,2,0,0,10
+Croatia,Hungary,2,1,1,0,2
+Croatia,Italy,1,0,0,1,0
+Croatia,Japan,1,0,0,1,0
+Croatia,Latvia,2,2,0,0,7
+Croatia,Malta,2,2,0,0,9
+Croatia,Montenegro,2,2,0,0,5
+Croatia,Morocco,2,1,0,1,1
+Croatia,Netherlands,1,1,0,0,2
+Croatia,Poland,2,1,0,1,1
+Croatia,Portugal,4,0,3,1,-5
+Croatia,Russia,2,1,0,1,1
+Croatia,Scotland,3,2,1,0,2
+Croatia,Slovakia,4,3,0,1,7
+Croatia,Slovenia,2,1,1,0,2
+Croatia,Spain,3,0,2,1,-5
+Croatia,Sweden,2,1,1,0,0
+Croatia,Tunisia,1,0,0,1,0
+Croatia,Turkey,2,1,1,0,1
+Croatia,Wales,4,1,1,2,0
+Cuba,Curaçao,1,0,1,0,-1
+Cuba,Dominican Republic,1,0,0,1,0
+Cuba,French Guiana,1,0,1,0,-3
+Cuba,Guadeloupe,3,1,2,0,-3
+Cuba,Guatemala,2,0,2,0,-2
+Cuba,Haiti,2,0,1,1,-1
+Cuba,Honduras,3,0,2,1,-6
+Cuba,Jamaica,1,0,0,1,0
+Cuba,Martinique,3,1,1,1,-1
+Cuba,Mexico,1,0,1,0,-7
+Cuba,Nicaragua,1,0,0,1,0
+Cuba,Saint Kitts and Nevis,2,1,1,0,3
+Cuba,Saint Lucia,1,1,0,0,3
+Cuba,Saint Vincent and the Grenadines,1,1,0,0,1
+Cuba,Suriname,1,1,0,0,1
+Cuba,Trinidad and Tobago,4,0,3,1,-7
+Cuba,United States,2,0,2,0,-11
+Curaçao,El Salvador,2,0,1,1,-1
+Curaçao,Grenada,2,1,0,1,1
+Curaçao,Guatemala,1,0,0,1,0
+Curaçao,Haiti,3,2,0,1,5
+Curaçao,Honduras,4,2,2,0,0
+Curaçao,Jamaica,3,1,0,2,2
+Curaçao,Martinique,1,0,1,0,-1
+Curaçao,Panama,3,0,2,1,-2
+Curaçao,Saint Kitts and Nevis,1,0,0,1,0
+Curaçao,Saint Lucia,3,2,1,0,6
+Curaçao,Saint Martin,2,2,0,0,9
+Curaçao,Saint Vincent and the Grenadines,1,1,0,0,5
+Curaçao,Trinidad and Tobago,4,1,1,2,1
+Curaçao,United States,1,0,1,0,-1
+Cyprus,Estonia,2,1,0,1,2
+Cyprus,Georgia,2,0,2,0,-5
+Cyprus,Greece,2,1,1,0,-2
+Cyprus,Kazakhstan,2,1,0,1,1
+Cyprus,Kosovo,4,0,4,0,-13
+Cyprus,Lithuania,2,2,0,0,2
+Cyprus,Luxembourg,2,1,1,0,-1
+Cyprus,Malta,2,0,1,1,-3
+Cyprus,Montenegro,2,0,2,0,-6
+Cyprus,Northern Ireland,2,0,0,2,0
+Cyprus,Norway,2,0,2,0,-6
+Cyprus,Romania,4,0,3,1,-8
+Cyprus,Russia,4,0,4,0,-14
+Cyprus,San Marino,4,4,0,0,15
+Cyprus,Scotland,4,0,4,0,-8
+Cyprus,Slovakia,2,0,1,1,-2
+Cyprus,Slovenia,2,1,1,0,0
+Cyprus,Spain,2,0,2,0,-8
+Czech Republic,Denmark,2,0,1,1,-1
+Czech Republic,England,3,1,2,0,-5
+Czech Republic,Estonia,2,2,0,0,6
+Czech Republic,Faroe Islands,4,3,1,0,4
+Czech Republic,Georgia,3,1,1,1,-2
+Czech Republic,Gibraltar,2,2,0,0,10
+Czech Republic,Israel,2,2,0,0,2
+Czech Republic,Kosovo,2,1,1,0,0
+Czech Republic,Moldova,2,1,0,1,3
+Czech Republic,Montenegro,4,4,0,0,10
+Czech Republic,Netherlands,1,1,0,0,2
+Czech Republic,Poland,2,1,0,1,2
+Czech Republic,Portugal,3,0,3,0,-7
+Czech Republic,Republic of Ireland,1,0,0,1,0
+Czech Republic,Scotland,3,1,2,0,0
+Czech Republic,Slovakia,2,2,0,0,4
+Czech Republic,Spain,2,0,1,1,-2
+Czech Republic,Sweden,1,0,1,0,-1
+Czech Republic,Switzerland,2,1,1,0,0
+Czech Republic,Turkey,1,0,1,0,-1
+Czech Republic,Ukraine,2,1,0,1,1
+Czech Republic,Wales,2,0,1,1,-1
+DR Congo,Egypt,2,0,1,1,-2
+DR Congo,Ethiopia,2,1,1,0,1
+DR Congo,Gabon,4,1,2,1,-2
+DR Congo,Gambia,2,1,0,1,1
+DR Congo,Guinea,3,2,1,0,2
+DR Congo,Ivory Coast,1,0,1,0,-1
+DR Congo,Jamaica,1,1,0,0,1
+DR Congo,Liberia,1,1,0,0,1
+DR Congo,Madagascar,3,1,1,1,1
+DR Congo,Mauritania,4,3,0,1,6
+DR Congo,Morocco,3,0,1,2,-3
+DR Congo,Nigeria,1,0,0,1,0
+DR Congo,Senegal,3,0,1,2,-1
+DR Congo,South Africa,1,0,0,1,0
+DR Congo,South Sudan,2,2,0,0,4
+DR Congo,Sudan,4,2,2,0,1
+DR Congo,Tanzania,5,3,0,2,6
+DR Congo,Togo,2,2,0,0,2
+DR Congo,Uganda,1,0,1,0,-2
+DR Congo,Zambia,1,0,0,1,0
+DR Congo,Zimbabwe,1,1,0,0,4
+Denmark,England,4,1,1,2,0
+Denmark,Faroe Islands,2,2,0,0,3
+Denmark,Finland,3,2,1,0,2
+Denmark,France,3,2,1,0,2
+Denmark,Georgia,2,1,0,1,4
+Denmark,Germany,1,0,1,0,-2
+Denmark,Gibraltar,2,2,0,0,12
+Denmark,Greece,2,2,0,0,5
+Denmark,Iceland,2,2,0,0,4
+Denmark,Israel,2,2,0,0,7
+Denmark,Kazakhstan,2,1,1,0,1
+Denmark,Moldova,2,2,0,0,12
+Denmark,North Macedonia,1,1,0,0,4
+Denmark,Northern Ireland,2,1,1,0,-1
+Denmark,Portugal,2,1,1,0,-2
+Denmark,Republic of Ireland,2,0,0,2,0
+Denmark,Russia,1,1,0,0,3
+Denmark,San Marino,2,2,0,0,5
+Denmark,Scotland,4,1,2,1,-2
+Denmark,Serbia,3,1,0,2,2
+Denmark,Slovenia,3,1,0,2,1
+Denmark,Spain,2,0,2,0,-2
+Denmark,Switzerland,4,2,0,2,3
+Denmark,Tunisia,1,0,0,1,0
+Denmark,Wales,1,1,0,0,4
+Djibouti,Egypt,2,0,2,0,-9
+Djibouti,Eswatini,2,1,0,1,1
+Djibouti,Ethiopia,2,0,1,1,-5
+Djibouti,Gambia,2,0,0,2,0
+Djibouti,Guinea-Bissau,2,0,2,0,-3
+Djibouti,Lebanon,1,0,1,0,-1
+Djibouti,Liberia,2,0,1,1,-2
+Djibouti,Mauritius,1,1,0,0,2
+Djibouti,Niger,2,0,2,0,-7
+Djibouti,Pakistan,1,1,0,0,2
+Djibouti,Sierra Leone,2,0,2,0,-2
+Djibouti,South Sudan,2,0,2,0,-3
+Dominica,Dominican Republic,4,0,4,0,-13
+Dominica,Guatemala,1,0,1,0,-6
+Dominica,Guyana,1,0,1,0,-2
+Dominica,Jamaica,1,0,1,0,-1
+Dominica,Nicaragua,2,0,2,0,-6
+Dominica,Panama,1,0,1,0,-1
+Dominica,Saint Lucia,2,0,2,0,-3
+Dominica,Saint Martin,1,0,1,0,-1
+Dominica,Saint Vincent and the Grenadines,2,1,1,0,0
+Dominica,Sint Maarten,2,0,1,1,-1
+Dominica,Suriname,2,0,2,0,-5
+Dominica,Turks and Caicos Islands,2,2,0,0,5
+Dominican Republic,El Salvador,3,1,1,1,-1
+Dominican Republic,French Guiana,2,0,1,1,-1
+Dominican Republic,Guatemala,3,0,2,1,-4
+Dominican Republic,Jamaica,1,0,1,0,-1
+Dominican Republic,Martinique,1,0,0,1,0
+Dominican Republic,Mexico,1,0,1,0,-1
+Dominican Republic,Montserrat,4,1,2,1,1
+Dominican Republic,Nicaragua,2,0,1,1,-2
+Dominican Republic,Panama,1,0,1,0,-3
+Dominican Republic,Saint Lucia,2,1,1,0,2
+Dominican Republic,Saint Vincent and the Grenadines,1,1,0,0,2
+Dominican Republic,Suriname,1,0,0,1,0
+Ecuador,Jamaica,1,1,0,0,2
+Ecuador,Japan,2,0,0,2,0
+Ecuador,Mexico,1,0,0,1,0
+Ecuador,Netherlands,1,0,0,1,0
+Ecuador,Paraguay,4,1,1,2,0
+Ecuador,Peru,5,1,1,3,0
+Ecuador,Qatar,1,1,0,0,2
+Ecuador,Senegal,1,0,1,0,-1
+Ecuador,Uruguay,5,2,2,1,-2
+Ecuador,Venezuela,6,2,2,2,0
+Egypt,Ethiopia,4,3,1,0,3
+Egypt,Gabon,2,1,0,1,1
+Egypt,Ghana,1,0,0,1,0
+Egypt,Guinea,2,2,0,0,2
+Egypt,Guinea-Bissau,3,2,0,1,2
+Egypt,Ivory Coast,2,1,0,1,1
+Egypt,Jordan,2,1,1,0,-1
+Egypt,Kenya,2,0,0,2,0
+Egypt,Kuwait,1,0,0,1,0
+Egypt,Lebanon,1,1,0,0,1
+Egypt,Libya,2,2,0,0,4
+Egypt,Malawi,2,2,0,0,6
+Egypt,Mauritania,2,2,0,0,3
+Egypt,Morocco,1,1,0,0,1
+Egypt,Mozambique,1,0,0,1,0
+Egypt,New Zealand,1,1,0,0,1
+Egypt,Niger,1,0,0,1,0
+Egypt,Nigeria,2,0,1,1,-1
+Egypt,Qatar,1,0,0,1,0
+Egypt,Senegal,4,1,2,1,-1
+Egypt,Sierra Leone,2,2,0,0,3
+Egypt,South Africa,2,1,1,0,0
+Egypt,Sudan,2,2,0,0,6
+Egypt,Togo,2,2,0,0,3
+Egypt,Tunisia,1,0,1,0,-1
+Egypt,Uganda,1,1,0,0,2
+Egypt,United Arab Emirates,1,0,0,1,0
+Egypt,Uzbekistan,1,0,1,0,-2
+Egypt,Zimbabwe,2,2,0,0,2
+El Salvador,Grenada,3,2,0,1,4
+El Salvador,Guatemala,4,2,2,0,0
+El Salvador,Honduras,4,1,2,1,-4
+El Salvador,Jamaica,4,1,0,3,2
+El Salvador,Japan,1,0,1,0,-2
+El Salvador,Martinique,4,1,2,1,-1
+El Salvador,Mexico,3,0,3,0,-5
+El Salvador,Montserrat,5,4,0,1,7
+El Salvador,Panama,5,1,3,1,-4
+El Salvador,Puerto Rico,1,0,0,1,0
+El Salvador,Qatar,1,0,1,0,-1
+El Salvador,Saint Kitts and Nevis,2,2,0,0,6
+El Salvador,Saint Lucia,2,2,0,0,5
+El Salvador,Saint Vincent and the Grenadines,3,2,1,0,2
+El Salvador,Suriname,3,0,2,1,-5
+El Salvador,Trinidad and Tobago,2,1,1,0,1
+El Salvador,United States,4,0,2,2,-2
+El Salvador,United States Virgin Islands,1,1,0,0,7
+England,Finland,2,2,0,0,4
+England,France,1,0,1,0,-1
+England,Germany,3,1,0,2,2
+England,Greece,2,1,1,0,2
+England,Hungary,4,1,2,1,-1
+England,Iceland,2,2,0,0,5
+England,Iran,1,1,0,0,4
+England,Italy,5,2,1,2,2
+England,Kosovo,2,2,0,0,6
+England,Latvia,2,2,0,0,8
+England,Malta,2,2,0,0,6
+England,Montenegro,2,2,0,0,11
+England,Netherlands,2,1,1,0,-1
+England,North Macedonia,2,1,0,1,7
+England,Poland,2,1,0,1,1
+England,Republic of Ireland,2,2,0,0,7
+England,San Marino,2,2,0,0,15
+England,Scotland,1,0,0,1,0
+England,Senegal,1,1,0,0,3
+England,Serbia,3,3,0,0,8
+England,Slovakia,1,1,0,0,1
+England,Slovenia,1,0,0,1,0
+England,Spain,1,0,1,0,-1
+England,Switzerland,2,0,0,2,0
+England,Ukraine,3,2,0,1,6
+England,United States,1,0,0,1,0
+England,Wales,1,1,0,0,3
+Equatorial Guinea,Guinea,1,0,1,0,-1
+Equatorial Guinea,Guinea-Bissau,1,1,0,0,2
+Equatorial Guinea,Ivory Coast,2,1,1,0,3
+Equatorial Guinea,Liberia,4,2,1,1,-1
+Equatorial Guinea,Libya,4,3,0,1,4
+Equatorial Guinea,Malawi,2,1,1,0,-2
+Equatorial Guinea,Mali,1,0,0,1,0
+Equatorial Guinea,Mauritania,2,1,0,1,1
+Equatorial Guinea,Namibia,2,0,1,1,-3
+Equatorial Guinea,Nigeria,1,0,0,1,0
+Equatorial Guinea,Senegal,1,0,1,0,-2
+Equatorial Guinea,Sierra Leone,1,1,0,0,1
+Equatorial Guinea,South Sudan,2,1,0,1,1
+Equatorial Guinea,Sudan,2,1,1,0,2
+Equatorial Guinea,São Tomé and Príncipe,2,2,0,0,3
+Equatorial Guinea,Tanzania,2,1,1,0,0
+Equatorial Guinea,Togo,2,0,1,1,-3
+Equatorial Guinea,Tunisia,8,2,6,0,-9
+Equatorial Guinea,Zambia,2,1,0,1,2
+Eritrea,Namibia,2,0,2,0,-3
+Estonia,Faroe Islands,1,1,0,0,3
+Estonia,Georgia,2,0,1,1,-1
+Estonia,Germany,2,0,2,0,-11
+Estonia,Israel,2,0,2,0,-3
+Estonia,Italy,2,0,2,0,-7
+Estonia,Kenya,1,0,0,1,0
+Estonia,Latvia,2,1,0,1,1
+Estonia,Lithuania,3,2,0,1,3
+Estonia,Malta,2,2,0,0,2
+Estonia,Moldova,2,1,0,1,1
+Estonia,Netherlands,2,0,2,0,-9
+Estonia,North Macedonia,2,0,1,1,-1
+Estonia,Northern Ireland,2,0,2,0,-3
+Estonia,Norway,2,0,2,0,-4
+Estonia,Poland,1,0,1,0,-4
+Estonia,Rwanda,1,0,1,0,-2
+Estonia,San Marino,2,2,0,0,6
+Estonia,Slovakia,2,0,2,0,-2
+Estonia,Sweden,4,0,4,0,-13
+Estonia,Wales,2,0,1,1,-1
+Eswatini,Guinea-Bissau,4,0,3,1,-6
+Eswatini,Lesotho,2,2,0,0,4
+Eswatini,Libya,2,0,2,0,-3
+Eswatini,Malawi,1,0,0,1,0
+Eswatini,Mali,2,0,2,0,-7
+Eswatini,Mauritius,4,1,1,2,2
+Eswatini,Mozambique,3,0,1,2,-3
+Eswatini,Namibia,1,1,0,0,1
+Eswatini,Senegal,4,0,1,3,-3
+Eswatini,Somalia,4,3,0,1,7
+Eswatini,South Africa,2,0,2,0,-2
+Eswatini,Togo,2,0,1,1,-2
+Eswatini,Tunisia,1,0,1,0,-4
+Eswatini,Zambia,1,1,0,0,1
+Ethiopia,Ghana,2,0,1,1,-1
+Ethiopia,Guinea,4,0,4,0,-9
+Ethiopia,Guinea-Bissau,2,1,0,1,1
+Ethiopia,Ivory Coast,2,1,1,0,-1
+Ethiopia,Lesotho,2,0,0,2,0
+Ethiopia,Madagascar,2,1,1,0,3
+Ethiopia,Malawi,2,0,1,1,-1
+Ethiopia,Niger,2,1,1,0,2
+Ethiopia,Sierra Leone,2,0,1,1,-2
+Ethiopia,South Africa,2,0,2,0,-3
+Ethiopia,Tanzania,2,0,1,1,-2
+Ethiopia,Zimbabwe,2,1,0,1,1
+Falkland Islands,Isle of Man,1,0,1,0,-3
+Falkland Islands,Shetland,1,0,1,0,-3
+Falkland Islands,Ynys Môn,1,0,1,0,-4
+Falkland Islands,Åland Islands,1,0,0,1,0
+Faroe Islands,Gibraltar,2,2,0,0,2
+Faroe Islands,Israel,2,0,2,0,-5
+Faroe Islands,Latvia,5,0,2,3,-2
+Faroe Islands,Lithuania,2,1,0,1,1
+Faroe Islands,Luxembourg,2,0,1,1,-1
+Faroe Islands,Malta,4,2,1,1,1
+Faroe Islands,Moldova,4,1,1,2,0
+Faroe Islands,Montenegro,2,1,1,0,3
+Faroe Islands,North Macedonia,2,0,1,1,-1
+Faroe Islands,Norway,2,0,2,0,-6
+Faroe Islands,Poland,2,0,2,0,-4
+Faroe Islands,Romania,2,0,2,0,-6
+Faroe Islands,Scotland,2,0,2,0,-5
+Faroe Islands,Spain,2,0,2,0,-7
+Faroe Islands,Sweden,2,0,2,0,-7
+Faroe Islands,Turkey,2,1,1,0,-3
+Fiji,Hong Kong,2,0,1,1,-8
+Fiji,New Caledonia,4,2,1,1,1
+Fiji,New Zealand,2,0,2,0,-11
+Fiji,Northern Mariana Islands,1,1,0,0,10
+Fiji,Papua New Guinea,7,1,3,3,0
+Fiji,Samoa,1,1,0,0,8
+Fiji,Solomon Islands,7,4,1,2,3
+Fiji,Tahiti,4,2,1,1,1
+Fiji,Thailand,1,0,1,0,-3
+Fiji,Tuvalu,1,1,0,0,9
+Fiji,Vanuatu,4,1,2,1,-1
+Finland,France,2,0,2,0,-4
+Finland,Greece,4,1,3,0,-5
+Finland,Italy,2,0,2,0,-3
+Finland,Kazakhstan,4,3,1,0,3
+Finland,Liechtenstein,2,2,0,0,5
+Finland,Lithuania,2,1,0,1,1
+Finland,Malta,2,1,1,0,0
+Finland,Montenegro,2,2,0,0,4
+Finland,Netherlands,2,0,2,0,-6
+Finland,New Zealand,1,1,0,0,2
+Finland,Northern Ireland,2,2,0,0,5
+Finland,Poland,2,1,1,0,-1
+Finland,Republic of Ireland,4,2,2,0,0
+Finland,Romania,2,0,1,1,-1
+Finland,Russia,1,0,1,0,-1
+Finland,San Marino,2,2,0,0,7
+Finland,Slovenia,2,1,1,0,-1
+Finland,Ukraine,2,0,1,1,-1
+Finland,Wales,3,0,3,0,-6
+France,Germany,2,2,0,0,3
+France,Gibraltar,2,2,0,0,17
+France,Greece,2,1,0,1,1
+France,Hungary,1,0,0,1,0
+France,Iceland,4,3,0,1,6
+France,Israel,2,1,0,1,3
+France,Italy,2,1,1,0,0
+France,Kazakhstan,2,2,0,0,10
+France,Moldova,2,2,0,0,4
+France,Morocco,1,1,0,0,2
+France,Netherlands,3,2,0,1,5
+France,Poland,2,1,0,1,2
+France,Portugal,4,1,0,3,1
+France,Republic of Ireland,2,2,0,0,3
+France,Spain,3,1,2,0,-1
+France,Sweden,2,2,0,0,3
+France,Switzerland,1,0,0,1,0
+France,Tunisia,1,0,1,0,-1
+France,Turkey,2,0,1,1,-2
+France,Ukraine,4,2,0,2,6
+French Guiana,Grenada,2,0,1,1,-1
+French Guiana,Guatemala,2,1,1,0,-2
+French Guiana,Honduras,1,0,1,0,-1
+French Guiana,Nicaragua,2,0,2,0,-2
+French Guiana,Saint Kitts and Nevis,3,1,0,2,2
+French Guiana,Saint Vincent and the Grenadines,2,2,0,0,4
+French Guiana,Sint Maarten,1,1,0,0,3
+French Guiana,Trinidad and Tobago,2,0,0,2,0
+Frøya,Greenland,1,0,1,0,-2
+Frøya,Hitra,2,0,2,0,-9
+Frøya,Isle of Man,1,0,1,0,-9
+Frøya,Orkney,2,0,2,0,-4
+Frøya,Saint Helena,1,1,0,0,2
+Gabon,Gambia,4,3,1,0,2
+Gabon,Ghana,1,0,0,1,0
+Gabon,Ivory Coast,3,0,2,1,-2
+Gabon,Kenya,2,2,0,0,2
+Gabon,Lesotho,2,1,0,1,2
+Gabon,Libya,2,1,1,0,0
+Gabon,Mauritania,2,0,1,1,-1
+Gabon,Morocco,3,0,2,1,-7
+Gabon,Mozambique,1,0,1,0,-1
+Gabon,Nigeria,1,0,1,0,-3
+Gabon,Seychelles,2,2,0,0,7
+Gabon,Sudan,2,1,1,0,0
+Gabon,Trinidad and Tobago,1,0,0,1,0
+Gabon,Uzbekistan,1,0,1,0,-2
+Gambia,Guinea,2,1,1,0,0
+Gambia,Ivory Coast,2,0,2,0,-3
+Gambia,Kenya,2,1,0,1,2
+Gambia,Madagascar,2,1,0,1,1
+Gambia,Mali,3,1,1,1,-1
+Gambia,Mauritania,1,1,0,0,1
+Gambia,Senegal,1,0,1,0,-3
+Gambia,Seychelles,2,2,0,0,11
+Gambia,South Sudan,2,2,0,0,2
+Gambia,Tunisia,3,2,1,0,1
+Georgia,Gibraltar,4,4,0,0,9
+Georgia,Greece,3,0,1,2,-2
+Georgia,Kosovo,2,1,1,0,0
+Georgia,Luxembourg,1,1,0,0,2
+Georgia,North Macedonia,5,2,1,2,4
+Georgia,Norway,2,0,1,1,-1
+Georgia,Portugal,1,1,0,0,2
+Georgia,Republic of Ireland,2,0,1,1,-1
+Georgia,Scotland,2,0,1,1,-2
+Georgia,Spain,7,0,7,0,-22
+Georgia,Sweden,2,1,1,0,1
+Georgia,Switzerland,2,0,2,0,-3
+Georgia,Turkey,3,0,3,0,-6
+Georgia,Ukraine,2,0,1,1,-1
+Germany,Hungary,6,2,1,3,6
+Germany,Iceland,2,2,0,0,7
+Germany,Italy,4,2,0,2,4
+Germany,Japan,1,0,1,0,-1
+Germany,Liechtenstein,2,2,0,0,11
+Germany,Luxembourg,2,2,0,0,6
+Germany,Netherlands,4,2,1,1,0
+Germany,North Macedonia,2,1,1,0,3
+Germany,Northern Ireland,4,4,0,0,10
+Germany,Portugal,2,1,1,0,1
+Germany,Romania,2,2,0,0,2
+Germany,Scotland,1,1,0,0,4
+Germany,Slovakia,2,1,1,0,4
+Germany,Spain,4,0,2,2,-7
+Germany,Switzerland,3,0,0,3,0
+Germany,Ukraine,2,2,0,0,3
+Ghana,Guinea-Bissau,1,1,0,0,2
+Ghana,Japan,2,0,2,0,-5
+Ghana,Kenya,1,1,0,0,1
+Ghana,Madagascar,4,3,0,1,7
+Ghana,Mali,2,2,0,0,2
+Ghana,Morocco,1,0,1,0,-1
+Ghana,Mozambique,1,0,0,1,0
+Ghana,Niger,2,0,1,1,-1
+Ghana,Nigeria,3,0,1,2,-1
+Ghana,Portugal,1,0,1,0,-1
+Ghana,South Africa,4,2,1,1,2
+Ghana,South Korea,1,1,0,0,1
+Ghana,Sudan,4,1,2,1,-1
+Ghana,São Tomé and Príncipe,2,2,0,0,3
+Ghana,Trinidad and Tobago,1,1,0,0,4
+Ghana,Tunisia,1,0,0,1,0
+Ghana,Uruguay,1,0,1,0,-2
+Ghana,Zimbabwe,2,2,0,0,3
+Gibraltar,Greece,2,0,2,0,-8
+Gibraltar,Latvia,2,0,2,0,-4
+Gibraltar,Liechtenstein,4,1,0,3,1
+Gibraltar,Lithuania,2,0,2,0,-2
+Gibraltar,Montenegro,4,0,4,0,-9
+Gibraltar,Netherlands,4,0,4,0,-22
+Gibraltar,North Macedonia,2,0,2,0,-6
+Gibraltar,Norway,2,0,2,0,-7
+Gibraltar,Republic of Ireland,4,0,4,0,-10
+Gibraltar,San Marino,4,2,0,2,2
+Gibraltar,Switzerland,2,0,2,0,-9
+Gibraltar,Turkey,2,0,2,0,-9
+Gozo,Guernsey,1,0,1,0,-1
+Gozo,Jersey,2,0,2,0,-3
+Gozo,Menorca,1,1,0,0,1
+Gozo,Saint Helena,1,1,0,0,3
+Gozo,Shetland,1,0,0,1,0
+Gozo,Western Isles,1,0,0,1,0
+Greece,Italy,2,0,2,0,-5
+Greece,Kazakhstan,1,1,0,0,5
+Greece,Kosovo,6,3,0,3,4
+Greece,Liechtenstein,2,1,0,1,2
+Greece,Moldova,2,2,0,0,4
+Greece,Netherlands,2,0,2,0,-4
+Greece,Northern Ireland,2,2,0,0,3
+Greece,Republic of Ireland,4,4,0,0,7
+Greece,Scotland,4,2,2,0,1
+Greece,Slovenia,2,0,0,2,0
+Greece,Spain,2,0,1,1,-1
+Greece,Sweden,2,1,1,0,-1
+Greenland,Orkney,1,0,0,1,0
+Greenland,Shetland,1,0,1,0,-4
+Grenada,Guyana,1,0,0,1,0
+Grenada,Honduras,2,0,2,0,-8
+Grenada,Jamaica,1,0,1,0,-3
+Grenada,Kenya,1,0,1,0,-3
+Grenada,Montserrat,1,0,1,0,-1
+Grenada,Panama,1,0,1,0,-2
+Grenada,Puerto Rico,1,1,0,0,2
+Grenada,Qatar,1,0,1,0,-4
+Grenada,Rwanda,1,0,1,0,-4
+Grenada,Saint Kitts and Nevis,3,2,0,1,2
+Grenada,Saint Lucia,2,1,1,0,3
+Grenada,Saint Martin,2,1,1,0,-1
+Grenada,Suriname,2,0,1,1,-4
+Grenada,Trinidad and Tobago,1,0,0,1,0
+Grenada,United States,2,0,2,0,-11
+Grenada,United States Virgin Islands,1,1,0,0,1
+Guadeloupe,Guatemala,3,0,2,1,-2
+Guadeloupe,Guyana,1,1,0,0,2
+Guadeloupe,Jamaica,2,0,2,0,-2
+Guadeloupe,Martinique,3,0,2,1,-2
+Guadeloupe,Nicaragua,2,2,0,0,2
+Guadeloupe,Panama,1,0,1,0,-3
+Guadeloupe,Saint Kitts and Nevis,2,2,0,0,6
+Guadeloupe,Saint Lucia,2,1,1,0,1
+Guadeloupe,Sint Maarten,4,4,0,0,11
+Guadeloupe,Suriname,2,1,1,0,0
+Guadeloupe,Turks and Caicos Islands,2,2,0,0,13
+Guam,Hong Kong,1,0,1,0,-5
+Guam,Macau,1,1,0,0,1
+Guam,Maldives,2,0,2,0,-3
+Guam,Northern Mariana Islands,2,0,1,1,-1
+Guam,Philippines,2,0,2,0,-6
+Guam,Puerto Rico,1,0,1,0,-4
+Guam,Singapore,2,0,2,0,-2
+Guam,Syria,2,0,2,0,-7
+Guatemala,Guyana,4,3,1,0,7
+Guatemala,Jamaica,3,1,2,0,-3
+Guatemala,Martinique,1,1,0,0,2
+Guatemala,Mexico,1,0,1,0,-3
+Guatemala,Panama,5,0,3,2,-5
+Guatemala,Puerto Rico,2,2,0,0,10
+Guatemala,Saint Vincent and the Grenadines,1,1,0,0,10
+Guatemala,Suriname,2,1,0,1,2
+Guatemala,Trinidad and Tobago,2,0,1,1,-1
+Guatemala,United States,1,0,1,0,-1
+Guernsey,Isle of Man,1,1,0,0,1
+Guernsey,Isle of Wight,1,0,1,0,-1
+Guernsey,Jersey,3,0,2,1,-2
+Guernsey,Saint Helena,1,1,0,0,9
+Guernsey,Shetland,1,1,0,0,1
+Guernsey,Western Isles,1,1,0,0,1
+Guernsey,Ynys Môn,1,0,1,0,-1
+Guernsey,Åland Islands,1,1,0,0,3
+Guinea,Guinea-Bissau,2,0,0,2,0
+Guinea,Madagascar,1,0,0,1,0
+Guinea,Malawi,3,2,0,1,2
+Guinea,Mali,2,1,0,1,1
+Guinea,Morocco,2,0,2,0,-6
+Guinea,Mozambique,2,1,1,0,0
+Guinea,Namibia,2,1,1,0,1
+Guinea,Nigeria,1,0,1,0,-1
+Guinea,Senegal,2,0,1,1,-2
+Guinea,Somalia,2,1,0,1,3
+Guinea,Sudan,2,0,0,2,0
+Guinea,Tanzania,2,0,2,0,-2
+Guinea,Togo,1,0,0,1,0
+Guinea,Uganda,2,1,1,0,0
+Guinea,Vanuatu,1,1,0,0,6
+Guinea,Zimbabwe,1,0,1,0,-1
+Guinea-Bissau,Ivory Coast,1,0,1,0,-2
+Guinea-Bissau,Mali,2,0,1,1,-1
+Guinea-Bissau,Morocco,2,0,2,0,-8
+Guinea-Bissau,Mozambique,3,0,2,1,-2
+Guinea-Bissau,Nigeria,4,1,3,0,-3
+Guinea-Bissau,Senegal,2,0,2,0,-3
+Guinea-Bissau,Sierra Leone,4,1,1,2,-1
+Guinea-Bissau,Sudan,3,1,0,2,2
+Guinea-Bissau,São Tomé and Príncipe,4,4,0,0,7
+Guyana,Haiti,2,0,2,0,-10
+Guyana,Jamaica,2,0,1,1,-4
+Guyana,Martinique,1,0,0,1,0
+Guyana,Montserrat,3,2,0,1,4
+Guyana,Nicaragua,1,0,1,0,-1
+Guyana,Panama,2,0,2,0,-4
+Guyana,Puerto Rico,3,2,1,0,2
+Guyana,Saint Kitts and Nevis,1,0,1,0,-3
+Guyana,Suriname,2,0,2,0,-6
+Guyana,Trinidad and Tobago,2,0,1,1,-3
+Guyana,United States,1,0,1,0,-4
+Haiti,Honduras,3,0,2,1,-4
+Haiti,Jamaica,2,0,1,1,-1
+Haiti,Martinique,1,1,0,0,1
+Haiti,Mexico,2,0,2,0,-3
+Haiti,Montserrat,2,2,0,0,5
+Haiti,Nicaragua,4,4,0,0,8
+Haiti,Puerto Rico,2,2,0,0,6
+Haiti,Qatar,1,1,0,0,1
+Haiti,Saint Lucia,1,1,0,0,1
+Haiti,Saint Vincent and the Grenadines,1,1,0,0,5
+Haiti,Saudi Arabia,1,0,1,0,-1
+Haiti,Sint Maarten,2,2,0,0,14
+Haiti,Suriname,1,0,0,1,0
+Haiti,Trinidad and Tobago,1,0,0,1,0
+Haiti,Turks and Caicos Islands,1,1,0,0,10
+Haiti,United States,2,0,2,0,-2
+Hitra,Isle of Man,2,0,2,0,-11
+Hitra,Jersey,1,0,1,0,-2
+Hitra,Orkney,1,0,1,0,-1
+Hmong,Tamil Eelam,2,0,2,0,-5
+Hmong,Tibet,1,1,0,0,1
+Honduras,Jamaica,6,0,5,1,-6
+Honduras,Martinique,2,1,0,1,1
+Honduras,Mexico,9,2,7,0,-14
+Honduras,Nicaragua,2,1,1,0,0
+Honduras,Panama,4,1,1,2,0
+Honduras,Qatar,2,0,1,1,-2
+Honduras,Trinidad and Tobago,3,3,0,0,10
+Honduras,United States,3,0,3,0,-7
+Hong Kong,India,2,1,1,0,-3
+Hong Kong,Iran,5,0,5,0,-11
+Hong Kong,Iraq,3,0,3,0,-4
+Hong Kong,Japan,2,0,2,0,-11
+Hong Kong,Mongolia,1,1,0,0,3
+Hong Kong,Palestine,1,0,1,0,-3
+Hong Kong,Singapore,2,0,1,1,-1
+Hong Kong,Solomon Islands,1,1,0,0,3
+Hong Kong,South Korea,2,0,2,0,-5
+Hong Kong,Taiwan,1,1,0,0,1
+Hong Kong,Turkmenistan,2,0,0,2,0
+Hong Kong,United Arab Emirates,1,0,1,0,-2
+Hong Kong,Uzbekistan,2,0,2,0,-5
+Hungary,Iceland,1,1,0,0,1
+Hungary,Italy,2,0,2,0,-3
+Hungary,Lithuania,2,1,0,1,2
+Hungary,Montenegro,2,1,0,1,2
+Hungary,Netherlands,2,0,1,1,-4
+Hungary,Poland,2,1,0,1,1
+Hungary,Portugal,3,0,2,1,-4
+Hungary,Republic of Ireland,2,0,1,1,-1
+Hungary,Russia,2,0,1,1,-1
+Hungary,San Marino,2,2,0,0,7
+Hungary,Scotland,1,1,0,0,1
+Hungary,Serbia,4,3,0,1,3
+Hungary,Slovakia,2,0,2,0,-3
+Hungary,Switzerland,1,0,1,0,-2
+Hungary,Turkey,4,2,2,0,-2
+Hungary,Wales,2,1,1,0,-1
+Iceland,Israel,3,1,0,2,3
+Iceland,Kosovo,2,0,2,0,-3
+Iceland,Latvia,1,0,0,1,0
+Iceland,Liechtenstein,4,4,0,0,18
+Iceland,Lithuania,1,0,0,1,0
+Iceland,Luxembourg,2,0,1,1,-2
+Iceland,Moldova,2,2,0,0,4
+Iceland,Montenegro,2,2,0,0,4
+Iceland,North Macedonia,2,0,1,1,-2
+Iceland,Portugal,2,0,2,0,-3
+Iceland,Romania,3,1,1,1,-1
+Iceland,Slovakia,2,0,2,0,-3
+Iceland,Turkey,4,1,2,1,-3
+Iceland,Ukraine,3,0,3,0,-5
+Iceland,Wales,2,0,1,1,-3
+India,Iraq,1,0,0,1,0
+India,Kuwait,4,1,0,3,1
+India,Kyrgyzstan,1,1,0,0,2
+India,Lebanon,2,0,1,1,-1
+India,Maldives,1,1,0,0,2
+India,Mauritius,1,0,0,1,0
+India,Myanmar,1,1,0,0,1
+India,Nepal,3,3,0,0,6
+India,North Korea,1,0,1,0,-3
+India,Oman,2,0,2,0,-2
+India,Pakistan,1,1,0,0,4
+India,Qatar,4,0,3,1,-5
+India,Singapore,2,0,1,1,-1
+India,Sri Lanka,1,0,0,1,0
+India,Syria,3,0,2,1,-4
+India,Tajikistan,1,0,1,0,-2
+India,Thailand,1,1,0,0,3
+India,United Arab Emirates,1,0,1,0,-2
+India,Uzbekistan,1,0,1,0,-3
+Indonesia,Iraq,4,0,4,0,-9
+Indonesia,Japan,3,0,3,0,-12
+Indonesia,Jordan,1,0,1,0,-1
+Indonesia,Kuwait,1,1,0,0,1
+Indonesia,Laos,2,1,0,1,4
+Indonesia,Malaysia,3,1,2,0,0
+Indonesia,Myanmar,1,1,0,0,1
+Indonesia,Nepal,1,1,0,0,7
+Indonesia,Philippines,4,2,1,1,2
+Indonesia,Saint Kitts and Nevis,1,1,0,0,4
+Indonesia,Saudi Arabia,3,1,1,1,1
+Indonesia,Singapore,2,1,0,1,2
+Indonesia,Taiwan,2,2,0,0,4
+Indonesia,Thailand,5,0,2,3,-7
+Indonesia,United Arab Emirates,2,0,2,0,-10
+Indonesia,Vietnam,9,3,4,2,-4
+Iran,Iraq,5,3,1,1,4
+Iran,Japan,2,1,1,0,-2
+Iran,Kyrgyzstan,3,3,0,0,6
+Iran,Lebanon,2,2,0,0,3
+Iran,North Korea,2,2,0,0,4
+Iran,Oman,1,1,0,0,2
+Iran,Palestine,1,1,0,0,3
+Iran,Qatar,3,1,2,0,1
+Iran,South Korea,2,0,1,1,-2
+Iran,Syria,3,2,0,1,4
+Iran,Turkmenistan,2,2,0,0,6
+Iran,United Arab Emirates,5,5,0,0,6
+Iran,United States,1,0,1,0,-1
+Iran,Uzbekistan,6,1,0,5,1
+Iran,Vietnam,1,1,0,0,2
+Iran,Wales,1,1,0,0,2
+Iran,Yemen,1,1,0,0,5
+Iraq,Japan,1,1,0,0,1
+Iraq,Jordan,4,1,2,1,-1
+Iraq,Kuwait,2,0,0,2,0
+Iraq,Lebanon,3,1,0,2,1
+Iraq,Oman,6,3,0,3,3
+Iraq,Palestine,3,2,1,0,1
+Iraq,Philippines,2,2,0,0,6
+Iraq,Qatar,4,2,2,0,-2
+Iraq,Saudi Arabia,3,1,1,1,0
+Iraq,South Korea,4,0,3,1,-6
+Iraq,Sudan,1,1,0,0,2
+Iraq,Syria,4,1,0,3,1
+Iraq,Thailand,2,1,0,1,1
+Iraq,United Arab Emirates,5,3,0,2,4
+Iraq,Vietnam,4,4,0,0,5
+Iraq,Yemen,5,4,0,1,10
+Isle of Man,Jersey,1,1,0,0,1
+Isle of Man,Orkney,2,2,0,0,3
+Isle of Man,Shetland,2,1,1,0,4
+Isle of Man,Ynys Môn,2,0,2,0,-2
+Isle of Wight,Jersey,1,0,1,0,-1
+Isle of Wight,Western Isles,1,1,0,0,1
+Isle of Wight,Åland Islands,1,1,0,0,2
+Israel,Italy,4,0,4,0,-8
+Israel,Kosovo,2,0,1,1,-1
+Israel,Latvia,2,2,0,0,5
+Israel,Moldova,4,4,0,0,11
+Israel,North Macedonia,2,0,1,1,-1
+Israel,Norway,2,0,2,0,-7
+Israel,Poland,2,0,2,0,-5
+Israel,Romania,2,0,1,1,-1
+Israel,Scotland,5,1,1,3,0
+Israel,Slovakia,2,1,0,1,1
+Israel,Slovenia,2,0,1,1,-1
+Israel,Switzerland,2,0,1,1,-3
+Italy,Liechtenstein,2,2,0,0,11
+Italy,Lithuania,2,2,0,0,7
+Italy,Malta,2,2,0,0,6
+Italy,Moldova,2,2,0,0,4
+Italy,Netherlands,3,2,0,1,2
+Italy,North Macedonia,3,1,1,1,2
+Italy,Northern Ireland,3,2,0,1,4
+Italy,Norway,2,0,2,0,-6
+Italy,Poland,2,1,0,1,2
+Italy,Spain,4,0,3,1,-3
+Italy,Switzerland,4,1,1,2,1
+Italy,Turkey,1,1,0,0,3
+Italy,Ukraine,2,1,0,1,1
+Italy,Wales,1,1,0,0,1
+Ivory Coast,Kenya,2,1,0,1,3
+Ivory Coast,Lesotho,2,1,0,1,1
+Ivory Coast,Madagascar,2,1,0,1,1
+Ivory Coast,Malawi,2,2,0,0,4
+Ivory Coast,Mali,2,2,0,0,2
+Ivory Coast,Morocco,1,0,1,0,-1
+Ivory Coast,Mozambique,3,2,0,1,4
+Ivory Coast,Namibia,1,1,0,0,3
+Ivory Coast,New Zealand,1,0,1,0,-1
+Ivory Coast,Niger,2,2,0,0,4
+Ivory Coast,Nigeria,2,1,1,0,0
+Ivory Coast,Rwanda,1,1,0,0,3
+Ivory Coast,Senegal,1,0,0,1,0
+Ivory Coast,Seychelles,2,2,0,0,16
+Ivory Coast,Sierra Leone,3,1,1,1,2
+Ivory Coast,South Africa,1,1,0,0,1
+Ivory Coast,Zambia,4,2,2,0,0
+Jamaica,Mexico,6,0,4,2,-6
+Jamaica,New Caledonia,1,1,0,0,1
+Jamaica,Nicaragua,1,1,0,0,2
+Jamaica,Nigeria,1,0,0,1,0
+Jamaica,Panama,5,2,3,0,-5
+Jamaica,Saint Kitts and Nevis,1,1,0,0,5
+Jamaica,Saint Vincent and the Grenadines,2,1,0,1,3
+Jamaica,Suriname,3,2,0,1,4
+Jamaica,Trinidad and Tobago,4,3,0,1,6
+Jamaica,United States,8,0,6,2,-10
+Jamaica,Venezuela,1,0,1,0,-3
+Japan,Kyrgyzstan,2,2,0,0,6
+Japan,Mongolia,2,2,0,0,20
+Japan,Myanmar,4,4,0,0,22
+Japan,North Korea,1,1,0,0,1
+Japan,Oman,3,2,1,0,1
+Japan,Paraguay,2,1,0,1,2
+Japan,Qatar,1,0,1,0,-2
+Japan,Saudi Arabia,5,3,1,1,4
+Japan,Serbia,1,1,0,0,1
+Japan,South Korea,2,1,1,0,2
+Japan,Spain,1,1,0,0,1
+Japan,Syria,2,2,0,0,10
+Japan,Tajikistan,2,2,0,0,6
+Japan,Trinidad and Tobago,1,0,0,1,0
+Japan,Tunisia,1,0,1,0,-3
+Japan,Turkmenistan,1,1,0,0,1
+Japan,United States,1,1,0,0,2
+Japan,Uruguay,1,0,0,1,0
+Japan,Uzbekistan,1,1,0,0,1
+Japan,Venezuela,1,0,1,0,-3
+Japan,Vietnam,4,3,0,1,4
+Jersey,Menorca,1,1,0,0,4
+Jersey,Orkney,1,1,0,0,5
+Jersey,Saint Helena,1,1,0,0,5
+Jersey,Shetland,1,0,0,1,0
+Jersey,Western Isles,1,1,0,0,7
+Jersey,Ynys Môn,2,1,1,0,2
+Jordan,Kuwait,7,2,0,5,5
+Jordan,Malaysia,1,1,0,0,4
+Jordan,Morocco,2,0,2,0,-5
+Jordan,Nepal,3,3,0,0,8
+Jordan,Oman,3,3,0,0,8
+Jordan,Pakistan,2,2,0,0,10
+Jordan,Palestine,4,3,0,1,8
+Jordan,Qatar,1,0,1,0,-2
+Jordan,Saudi Arabia,5,4,1,0,4
+Jordan,South Korea,4,1,1,2,0
+Jordan,Syria,2,2,0,0,4
+Jordan,Taiwan,2,2,0,0,6
+Jordan,Tajikistan,3,2,0,1,4
+Jordan,United Arab Emirates,1,1,0,0,1
+Jordan,Vietnam,1,0,0,1,0
+Kazakhstan,Liechtenstein,2,2,0,0,6
+Kazakhstan,Lithuania,2,1,1,0,1
+Kazakhstan,Moldova,2,1,1,0,0
+Kazakhstan,Namibia,1,1,0,0,2
+Kazakhstan,North Macedonia,2,0,1,1,-1
+Kazakhstan,Northern Ireland,2,2,0,0,2
+Kazakhstan,Norway,2,0,1,1,-5
+Kazakhstan,Russia,2,0,2,0,-5
+Kazakhstan,San Marino,4,4,0,0,11
+Kazakhstan,Scotland,2,1,1,0,1
+Kazakhstan,Slovakia,2,2,0,0,2
+Kazakhstan,Slovenia,4,0,4,0,-6
+Kazakhstan,Ukraine,2,0,0,2,0
+Kazakhstan,Wales,2,0,2,0,-3
+Kenya,Mali,2,0,2,0,-6
+Kenya,Mauritius,1,0,1,0,-1
+Kenya,Namibia,2,1,0,1,1
+Kenya,Pakistan,1,1,0,0,1
+Kenya,Rwanda,2,1,0,1,1
+Kenya,Senegal,1,0,1,0,-3
+Kenya,Seychelles,2,2,0,0,10
+Kenya,Tanzania,2,2,0,0,3
+Kenya,Togo,2,1,0,1,1
+Kenya,Uganda,2,0,0,2,0
+Kenya,Zanzibar,1,0,1,0,-1
+Kenya,Zimbabwe,2,0,0,2,0
+Kernow,Sápmi,1,1,0,0,1
+Kosovo,Lithuania,2,2,0,0,2
+Kosovo,Moldova,2,1,0,1,1
+Kosovo,Montenegro,2,1,0,1,2
+Kosovo,North Macedonia,1,0,1,0,-1
+Kosovo,Northern Ireland,2,1,1,0,0
+Kosovo,Romania,4,0,2,2,-5
+Kosovo,Slovakia,1,1,0,0,1
+Kosovo,Slovenia,4,1,2,1,0
+Kosovo,Spain,2,0,2,0,-4
+Kosovo,Sweden,4,2,2,0,-3
+Kosovo,Switzerland,4,0,1,3,-4
+Kosovo,Turkey,1,0,1,0,-1
+Kuwait,Mauritania,1,1,0,0,2
+Kuwait,Nepal,4,4,0,0,13
+Kuwait,Oman,4,0,3,1,-6
+Kuwait,Pakistan,1,1,0,0,4
+Kuwait,Palestine,2,0,1,1,-2
+Kuwait,Qatar,4,0,3,1,-6
+Kuwait,Saudi Arabia,2,2,0,0,3
+Kuwait,South Korea,2,0,2,0,-6
+Kuwait,Taiwan,2,2,0,0,10
+Kuwait,United Arab Emirates,3,2,1,0,0
+Kyrgyzstan,Malaysia,2,0,1,1,-1
+Kyrgyzstan,Mongolia,2,1,1,0,0
+Kyrgyzstan,Myanmar,4,3,0,1,16
+Kyrgyzstan,North Korea,2,1,0,1,1
+Kyrgyzstan,Oman,4,1,1,2,0
+Kyrgyzstan,Palestine,1,1,0,0,1
+Kyrgyzstan,Philippines,1,1,0,0,2
+Kyrgyzstan,Qatar,2,1,1,0,0
+Kyrgyzstan,Saudi Arabia,1,0,1,0,-2
+Kyrgyzstan,Singapore,1,1,0,0,1
+Kyrgyzstan,South Korea,1,0,1,0,-1
+Kyrgyzstan,Taiwan,2,2,0,0,6
+Kyrgyzstan,Tajikistan,4,0,2,2,-2
+Kyrgyzstan,Thailand,1,0,1,0,-2
+Kyrgyzstan,United Arab Emirates,3,0,2,1,-4
+Kyrgyzstan,Uzbekistan,3,0,3,0,-4
+Laos,Malaysia,4,0,4,0,-16
+Laos,Myanmar,2,0,1,1,-1
+Laos,Nepal,5,1,3,1,-3
+Laos,Philippines,1,0,0,1,0
+Laos,Singapore,1,0,1,0,-2
+Laos,Vietnam,5,0,5,0,-18
+Latvia,Liechtenstein,2,2,0,0,3
+Latvia,Lithuania,2,1,1,0,0
+Latvia,Malta,2,0,1,1,-1
+Latvia,Moldova,2,1,1,0,1
+Latvia,Montenegro,2,0,1,1,-1
+Latvia,Netherlands,2,0,2,0,-3
+Latvia,North Macedonia,4,0,4,0,-8
+Latvia,Norway,2,0,1,1,-2
+Latvia,Poland,2,0,2,0,-5
+Latvia,Serbia,2,0,2,0,-2
+Latvia,Slovenia,2,0,2,0,-6
+Latvia,Turkey,4,0,3,1,-6
+Latvia,Wales,2,0,2,0,-3
+Lebanon,Malaysia,1,0,1,0,-1
+Lebanon,Maldives,1,1,0,0,1
+Lebanon,North Korea,3,1,1,1,1
+Lebanon,Palestine,3,0,0,3,0
+Lebanon,Qatar,2,0,2,0,-5
+Lebanon,Saudi Arabia,1,0,1,0,-2
+Lebanon,South Korea,4,0,3,1,-3
+Lebanon,Sri Lanka,2,2,0,0,4
+Lebanon,Sudan,2,1,1,0,0
+Lebanon,Syria,3,2,1,0,-1
+Lebanon,Tajikistan,2,1,1,0,0
+Lebanon,Thailand,1,0,1,0,-1
+Lebanon,Turkmenistan,2,1,1,0,0
+Lebanon,United Arab Emirates,2,0,1,1,-1
+Lebanon,Yemen,2,0,1,1,-1
+Lesotho,Malawi,2,1,0,1,1
+Lesotho,Mauritius,2,2,0,0,3
+Lesotho,Morocco,2,0,2,0,-8
+Lesotho,Mozambique,1,1,0,0,1
+Lesotho,Nigeria,4,0,3,1,-6
+Lesotho,Rwanda,2,0,1,1,-1
+Lesotho,Seychelles,2,1,0,1,2
+Lesotho,Sierra Leone,2,0,0,2,0
+Lesotho,South Africa,3,1,2,0,-4
+Lesotho,Uganda,1,0,0,1,0
+Lesotho,Zambia,4,1,3,0,-4
+Lesotho,Zimbabwe,3,2,0,1,3
+Liberia,Libya,1,0,0,1,0
+Liberia,Malawi,2,0,1,1,-1
+Liberia,Morocco,2,0,2,0,-5
+Liberia,Namibia,2,1,0,1,2
+Liberia,Nigeria,2,0,2,0,-4
+Liberia,Sierra Leone,2,1,1,0,1
+Liberia,South Africa,2,0,1,1,-1
+Liberia,São Tomé and Príncipe,2,2,0,0,2
+Liberia,Togo,2,1,0,1,1
+Liberia,Tunisia,2,0,2,0,-4
+Libya,Mauritius,2,1,0,1,1
+Libya,Niger,1,0,0,1,0
+Libya,Nigeria,1,0,1,0,-1
+Libya,Palestine,1,0,0,1,0
+Libya,Rwanda,2,1,0,1,1
+Libya,South Africa,1,0,1,0,-1
+Libya,Sudan,1,0,1,0,-1
+Libya,Tanzania,2,1,1,0,0
+Libya,Tunisia,4,0,4,0,-10
+Liechtenstein,Luxembourg,2,0,2,0,-3
+Liechtenstein,Moldova,2,0,2,0,-4
+Liechtenstein,North Macedonia,4,0,4,0,-17
+Liechtenstein,Portugal,2,0,2,0,-6
+Liechtenstein,Romania,2,0,2,0,-4
+Liechtenstein,San Marino,4,1,2,1,-1
+Liechtenstein,Slovakia,2,0,2,0,-4
+Liechtenstein,Tanzania,1,1,0,0,1
+Liechtenstein,Wales,2,0,2,0,-4
+Lithuania,Luxembourg,4,0,3,1,-4
+Lithuania,Malta,2,0,0,2,0
+Lithuania,Montenegro,2,0,1,1,-2
+Lithuania,Netherlands,2,0,2,0,-5
+Lithuania,Northern Ireland,2,0,2,0,-4
+Lithuania,Poland,2,0,2,0,-3
+Lithuania,Portugal,2,0,2,0,-10
+Lithuania,Romania,2,0,2,0,-3
+Lithuania,Serbia,4,0,4,0,-8
+Lithuania,Switzerland,2,0,2,0,-5
+Lithuania,Turkey,2,0,2,0,-8
+Lithuania,Ukraine,2,0,2,0,-5
+Luxembourg,Montenegro,2,1,1,0,0
+Luxembourg,Northern Ireland,4,0,3,1,-5
+Luxembourg,Portugal,6,0,6,0,-27
+Luxembourg,Republic of Ireland,2,1,1,0,-2
+Luxembourg,Serbia,4,0,4,0,-7
+Luxembourg,Slovakia,4,0,3,1,-4
+Luxembourg,Turkey,2,0,1,1,-2
+Luxembourg,Ukraine,2,0,2,0,-2
+Macau,Myanmar,2,0,1,1,-4
+Macau,Sri Lanka,2,1,1,0,-2
+Macau,Tanzania,1,0,1,0,-6
+Madagascar,Mali,2,0,1,1,-3
+Madagascar,Mauritius,2,0,0,2,0
+Madagascar,Namibia,1,0,1,0,-2
+Madagascar,Niger,2,1,0,1,4
+Madagascar,Nigeria,1,1,0,0,2
+Madagascar,Réunion,1,1,0,0,1
+Madagascar,Senegal,1,0,1,0,-2
+Madagascar,Seychelles,2,1,0,1,1
+Madagascar,South Africa,1,0,1,0,-1
+Madagascar,Tanzania,2,0,1,1,-1
+Madagascar,Tunisia,3,0,3,0,-5
+Malawi,Mauritius,1,1,0,0,2
+Malawi,Morocco,2,0,1,1,-1
+Malawi,Mozambique,4,1,2,1,-2
+Malawi,Namibia,4,2,1,1,1
+Malawi,Senegal,4,0,3,1,-6
+Malawi,Seychelles,2,2,0,0,5
+Malawi,South Africa,2,0,0,2,0
+Malawi,South Sudan,2,2,0,0,2
+Malawi,São Tomé and Príncipe,2,1,1,0,1
+Malawi,Tunisia,2,0,2,0,-3
+Malawi,Uganda,2,1,1,0,-1
+Malawi,Zambia,2,1,0,1,1
+Malawi,Zimbabwe,2,1,0,1,1
+Malaysia,Myanmar,1,1,0,0,1
+Malaysia,Nepal,2,2,0,0,3
+Malaysia,Oman,2,0,2,0,-4
+Malaysia,Philippines,1,1,0,0,1
+Malaysia,Singapore,2,1,0,1,3
+Malaysia,South Korea,1,0,0,1,0
+Malaysia,Taiwan,2,2,0,0,3
+Malaysia,Tajikistan,1,0,0,1,0
+Malaysia,Thailand,6,3,2,1,-1
+Malaysia,Timor-Leste,3,3,0,0,11
+Malaysia,Turkmenistan,1,1,0,0,2
+Malaysia,United Arab Emirates,2,0,2,0,-5
+Malaysia,Vietnam,5,1,4,0,-4
+Maldives,Mayotte,1,0,1,0,-2
+Maldives,Nepal,1,0,1,0,-1
+Maldives,Philippines,4,0,3,1,-6
+Maldives,Réunion,1,0,1,0,-4
+Maldives,Seychelles,1,0,0,1,0
+Maldives,Sri Lanka,4,3,0,1,5
+Maldives,Syria,2,0,2,0,-5
+Maldives,Tajikistan,2,0,2,0,-5
+Maldives,Thailand,1,0,1,0,-3
+Maldives,Timor-Leste,1,0,1,0,-1
+Maldives,Uzbekistan,1,0,1,0,-4
+Mali,Mauritania,2,2,0,0,5
+Mali,Morocco,1,0,0,1,0
+Mali,Mozambique,2,1,0,1,1
+Mali,Namibia,3,2,0,1,2
+Mali,Rwanda,2,2,0,0,4
+Mali,Senegal,1,0,1,0,-1
+Mali,South Africa,1,1,0,0,2
+Mali,South Sudan,3,3,0,0,9
+Mali,Tunisia,6,1,1,4,0
+Mali,Uganda,2,1,0,1,1
+Mali,Zambia,1,0,0,1,0
+Malta,Moldova,2,1,1,0,-1
+Malta,Netherlands,2,0,2,0,-12
+Malta,North Macedonia,2,0,2,0,-3
+Malta,Norway,2,0,2,0,-3
+Malta,Poland,2,0,2,0,-3
+Malta,Romania,2,0,2,0,-5
+Malta,Russia,2,0,2,0,-4
+Malta,San Marino,2,2,0,0,3
+Malta,Slovakia,2,0,1,1,-6
+Malta,Slovenia,2,0,2,0,-5
+Malta,Spain,2,0,2,0,-9
+Malta,Sweden,2,0,2,0,-7
+Malta,Ukraine,2,0,2,0,-3
+Mapuche,Maule Sur,1,0,1,0,-1
+Marshall Islands,Turks and Caicos Islands,1,0,1,0,-1
+Marshall Islands,United States Virgin Islands,1,0,1,0,-4
+Martinique,Mexico,1,0,1,0,-1
+Martinique,Panama,4,0,3,1,-9
+Martinique,Puerto Rico,1,1,0,0,2
+Martinique,Saint Lucia,1,1,0,0,2
+Martinique,Suriname,2,0,2,0,-2
+Martinique,Trinidad and Tobago,2,0,0,2,0
+Martinique,United States,1,0,1,0,-5
+Matabeleland,Yoruba Nation,1,0,0,1,0
+Mauritania,Morocco,2,0,0,2,0
+Mauritania,Senegal,2,0,2,0,-5
+Mauritania,South Sudan,2,0,0,2,0
+Mauritania,Sudan,4,2,1,1,4
+Mauritania,Syria,1,1,0,0,1
+Mauritania,Togo,2,1,0,1,2
+Mauritania,Tunisia,5,0,3,2,-11
+Mauritania,United Arab Emirates,1,0,1,0,-1
+Mauritania,Yemen,1,1,0,0,2
+Mauritania,Zambia,2,0,2,0,-5
+Mauritius,Mayotte,1,1,0,0,1
+Mauritius,Mozambique,3,0,3,0,-4
+Mauritius,Pakistan,1,1,0,0,3
+Mauritius,Réunion,2,0,1,1,-1
+Mauritius,Seychelles,2,1,0,1,1
+Mauritius,Syria,1,0,1,0,-2
+Mauritius,São Tomé and Príncipe,4,1,2,1,0
+Mayotte,Réunion,2,0,1,1,-1
+Mayotte,Seychelles,1,1,0,0,2
+Menorca,Saint Helena,1,1,0,0,5
+Menorca,Western Isles,1,0,1,0,-1
+Mexico,Panama,8,7,0,1,12
+Mexico,Poland,1,0,0,1,0
+Mexico,Qatar,1,0,1,0,-1
+Mexico,Saudi Arabia,2,2,0,0,3
+Mexico,Suriname,3,3,0,0,7
+Mexico,Trinidad and Tobago,1,0,0,1,0
+Mexico,United States,8,2,5,1,-7
+Mexico,Venezuela,1,0,1,0,-1
+Moldova,Norway,2,0,2,0,-15
+Moldova,Poland,2,1,0,1,1
+Moldova,Scotland,2,0,2,0,-3
+Moldova,Slovenia,2,0,2,0,-5
+Moldova,Turkey,2,0,2,0,-8
+Mongolia,Myanmar,2,1,1,0,0
+Mongolia,Palestine,1,0,1,0,-1
+Mongolia,Philippines,1,0,1,0,-1
+Mongolia,Taiwan,1,0,1,0,-4
+Mongolia,Tajikistan,2,0,2,0,-4
+Mongolia,Tanzania,1,0,1,0,-3
+Mongolia,Timor-Leste,2,1,1,0,-1
+Mongolia,Yemen,1,1,0,0,2
+Montenegro,Netherlands,2,0,1,1,-4
+Montenegro,Norway,2,0,2,0,-3
+Montenegro,Romania,2,2,0,0,5
+Montenegro,Serbia,2,0,2,0,-4
+Montenegro,Turkey,4,1,2,1,0
+Montenegro,Wales,2,0,2,0,-2
+Montserrat,Nicaragua,3,0,3,0,-9
+Montserrat,Panama,1,0,1,0,-2
+Montserrat,Saint Lucia,2,1,0,1,1
+Montserrat,Saint Vincent and the Grenadines,2,0,2,0,-3
+Montserrat,Trinidad and Tobago,1,0,1,0,-5
+Montserrat,United States Virgin Islands,1,1,0,0,4
+Morocco,Namibia,1,1,0,0,1
+Morocco,Niger,2,2,0,0,6
+Morocco,Nigeria,1,0,0,1,0
+Morocco,Oman,1,0,0,1,0
+Morocco,Palestine,1,1,0,0,4
+Morocco,Portugal,1,1,0,0,1
+Morocco,Saudi Arabia,2,2,0,0,2
+Morocco,Senegal,1,1,0,0,3
+Morocco,South Africa,4,2,2,0,-1
+Morocco,Spain,1,0,0,1,0
+Morocco,Sudan,2,2,0,0,5
+Morocco,Syria,1,1,0,0,1
+Morocco,Tanzania,4,4,0,0,8
+Morocco,United Arab Emirates,1,1,0,0,3
+Morocco,Zambia,4,4,0,0,7
+Mozambique,Namibia,3,1,2,0,-1
+Mozambique,Nigeria,1,0,1,0,-4
+Mozambique,Rwanda,4,2,1,1,3
+Mozambique,Senegal,4,0,3,1,-6
+Mozambique,Seychelles,1,0,0,1,0
+Mozambique,Somalia,2,2,0,0,2
+Mozambique,South Africa,2,0,1,1,-3
+Mozambique,Uganda,2,1,1,0,-2
+Mozambique,Zimbabwe,1,0,0,1,0
+Myanmar,North Korea,2,0,2,0,-8
+Myanmar,Pakistan,1,1,0,0,1
+Myanmar,Philippines,2,0,1,1,-1
+Myanmar,Singapore,3,0,3,0,-8
+Myanmar,Syria,4,0,3,1,-14
+Myanmar,Tajikistan,3,1,2,0,-7
+Myanmar,Thailand,1,0,1,0,-4
+Myanmar,Timor-Leste,1,1,0,0,2
+Myanmar,Vietnam,2,0,2,0,-8
+Namibia,Senegal,3,1,2,0,-4
+Namibia,Seychelles,1,1,0,0,3
+Namibia,South Africa,3,0,2,1,-5
+Namibia,São Tomé and Príncipe,2,2,0,0,5
+Namibia,Togo,2,1,1,0,0
+Namibia,Tunisia,3,1,1,1,-2
+Namibia,Zambia,2,0,2,0,-4
+Namibia,Zimbabwe,3,1,2,0,-1
+Nepal,Pakistan,1,1,0,0,1
+Nepal,Sri Lanka,1,1,0,0,1
+Nepal,Taiwan,2,2,0,0,4
+Nepal,United Arab Emirates,2,0,2,0,-8
+Nepal,Vietnam,2,0,2,0,-3
+Nepal,Yemen,2,0,1,1,-2
+Netherlands,North Macedonia,1,1,0,0,3
+Netherlands,Northern Ireland,2,1,0,1,2
+Netherlands,Norway,2,1,0,1,2
+Netherlands,Poland,7,4,0,3,5
+Netherlands,Portugal,1,0,1,0,-1
+Netherlands,Qatar,1,1,0,0,2
+Netherlands,Republic of Ireland,2,2,0,0,2
+Netherlands,Romania,1,1,0,0,3
+Netherlands,Senegal,1,1,0,0,2
+Netherlands,Spain,2,0,0,2,0
+Netherlands,Turkey,3,2,1,0,4
+Netherlands,Ukraine,1,1,0,0,1
+Netherlands,United States,1,1,0,0,2
+Netherlands,Wales,2,2,0,0,2
+New Caledonia,New Zealand,2,0,2,0,-9
+New Caledonia,Papua New Guinea,3,2,1,0,3
+New Caledonia,Solomon Islands,5,2,2,1,1
+New Caledonia,Tahiti,2,2,0,0,6
+New Caledonia,Tonga,1,1,0,0,7
+New Caledonia,Tuvalu,1,1,0,0,11
+New Caledonia,Vanuatu,2,2,0,0,5
+New Zealand,Papua New Guinea,1,1,0,0,1
+New Zealand,Samoa,1,1,0,0,8
+New Zealand,Solomon Islands,2,2,0,0,8
+New Zealand,Tahiti,3,3,0,0,9
+New Zealand,Tunisia,1,0,0,1,0
+New Zealand,Ukraine,1,0,1,0,-1
+New Zealand,Vanuatu,3,3,0,0,14
+Nicaragua,Panama,1,0,1,0,-3
+Nicaragua,Saint Vincent and the Grenadines,4,1,1,2,2
+Nicaragua,Suriname,2,0,2,0,-7
+Nicaragua,Trinidad and Tobago,2,1,0,1,1
+Nicaragua,Turks and Caicos Islands,1,1,0,0,7
+Niger,Sudan,2,1,1,0,3
+Niger,Tanzania,4,1,2,1,-1
+Niger,Togo,1,0,1,0,-1
+Niger,Uganda,2,0,1,1,-2
+Niger,Zambia,2,2,0,0,2
+Nigeria,Rwanda,4,2,1,1,2
+Nigeria,Seychelles,1,1,0,0,2
+Nigeria,Sierra Leone,4,2,0,2,2
+Nigeria,South Africa,4,1,0,3,1
+Nigeria,Sudan,1,1,0,0,2
+Nigeria,São Tomé and Príncipe,2,2,0,0,16
+Nigeria,Tanzania,1,1,0,0,1
+Nigeria,Tunisia,3,2,1,0,1
+Nigeria,Uganda,1,1,0,0,2
+Nigeria,Zimbabwe,2,0,0,2,0
+North Korea,Qatar,3,0,2,1,-10
+North Korea,Saudi Arabia,1,0,1,0,-4
+North Korea,South Korea,1,0,0,1,0
+North Korea,Sri Lanka,1,1,0,0,1
+North Korea,Syria,3,1,2,0,-3
+North Korea,Tajikistan,2,2,0,0,2
+North Korea,Turkmenistan,1,0,1,0,-2
+North Korea,United Arab Emirates,2,0,1,1,-1
+North Korea,Uzbekistan,2,0,2,0,-2
+North Macedonia,Poland,2,0,2,0,-3
+North Macedonia,Portugal,1,0,1,0,-2
+North Macedonia,Romania,2,0,1,1,-1
+North Macedonia,Slovenia,2,1,0,1,1
+North Macedonia,Ukraine,3,0,3,0,-4
+North Macedonia,Wales,2,0,1,1,-6
+Northern Ireland,Norway,2,0,2,0,-5
+Northern Ireland,Romania,2,0,0,2,0
+Northern Ireland,San Marino,2,2,0,0,5
+Northern Ireland,Slovakia,3,1,2,0,0
+Northern Ireland,Slovenia,2,0,2,0,-3
+Northern Ireland,Switzerland,2,0,1,1,-2
+Northern Mariana Islands,Tahiti,1,0,1,0,-5
+Northern Mariana Islands,Tuvalu,1,0,1,0,-3
+Norway,Romania,4,1,1,2,1
+Norway,Scotland,2,0,1,1,-1
+Norway,Serbia,3,1,2,0,-2
+Norway,Slovenia,4,2,1,1,5
+Norway,Spain,4,0,3,1,-5
+Norway,Sweden,4,2,0,2,2
+Norway,Turkey,2,0,1,1,-3
+Oman,Palestine,2,1,0,1,1
+Oman,Qatar,5,1,3,1,-2
+Oman,Saudi Arabia,7,2,5,0,-4
+Oman,Somalia,2,1,0,1,1
+Oman,South Korea,2,0,1,1,-2
+Oman,Taiwan,2,2,0,0,6
+Oman,Tajikistan,1,0,0,1,0
+Oman,Thailand,1,0,0,1,0
+Oman,Tunisia,1,0,1,0,-1
+Oman,Turkmenistan,2,2,0,0,4
+Oman,United Arab Emirates,2,0,1,1,-1
+Oman,Uzbekistan,2,0,2,0,-4
+Oman,Vietnam,2,2,0,0,3
+Oman,Yemen,1,1,0,0,1
+Orkney,Shetland,1,1,0,0,1
+Orkney,Western Isles,1,1,0,0,1
+Orkney,Ynys Môn,1,0,1,0,-2
+Padania,South Ossetia,1,0,1,0,-1
+Padania,Székely Land,1,1,0,0,4
+Padania,Sápmi,1,1,0,0,4
+Padania,Western Armenia,1,0,0,1,0
+Pakistan,Saudi Arabia,2,0,2,0,-7
+Pakistan,Syria,2,0,2,0,-7
+Pakistan,Tajikistan,2,0,2,0,-8
+Palestine,Philippines,1,1,0,0,4
+Palestine,Qatar,2,1,1,0,0
+Palestine,Saudi Arabia,4,0,2,2,-6
+Palestine,Singapore,2,1,1,0,3
+Palestine,South Korea,2,0,0,2,0
+Palestine,Syria,3,1,0,2,1
+Palestine,Tunisia,1,0,0,1,0
+Palestine,United Arab Emirates,1,0,0,1,0
+Palestine,Uzbekistan,2,1,1,0,0
+Palestine,Yemen,4,3,1,0,8
+Panama,Qatar,2,1,0,1,4
+Panama,Suriname,2,0,0,2,0
+Panama,Trinidad and Tobago,1,1,0,0,2
+Panama,United States,6,3,2,1,-2
+Panama,Uruguay,1,0,1,0,-2
+Papua New Guinea,Samoa,2,2,0,0,7
+Papua New Guinea,Solomon Islands,5,2,3,0,-2
+Papua New Guinea,Sri Lanka,1,0,0,1,0
+Papua New Guinea,Tahiti,2,0,1,1,-2
+Papua New Guinea,Tonga,1,1,0,0,8
+Papua New Guinea,Tuvalu,1,1,0,0,3
+Papua New Guinea,Vanuatu,6,3,1,2,3
+Paraguay,Peru,5,1,1,3,-1
+Paraguay,Qatar,1,0,0,1,0
+Paraguay,Uruguay,5,1,2,2,0
+Paraguay,Venezuela,4,3,1,0,2
+Parishes of Jersey,Yorkshire,1,0,1,0,-1
+Peru,Uruguay,5,1,2,2,-3
+Peru,Venezuela,6,3,1,2,2
+Philippines,Singapore,1,0,1,0,-1
+Philippines,South Korea,1,0,1,0,-1
+Philippines,Syria,2,0,2,0,-4
+Philippines,Tajikistan,3,1,0,2,3
+Philippines,Thailand,5,1,4,0,-8
+Philippines,Timor-Leste,3,3,0,0,12
+Philippines,Vietnam,3,0,2,1,-3
+Philippines,Yemen,1,0,0,1,0
+Poland,Portugal,2,0,2,0,-6
+Poland,San Marino,2,2,0,0,11
+Poland,Saudi Arabia,1,1,0,0,2
+Poland,Scotland,2,1,1,0,0
+Poland,Slovakia,1,0,1,0,-1
+Poland,Slovenia,2,1,1,0,-1
+Poland,Spain,1,0,0,1,0
+Poland,Sweden,3,1,2,0,0
+Poland,Wales,3,2,0,1,2
+Portugal,Republic of Ireland,4,2,1,1,0
+Portugal,Scotland,2,1,0,1,1
+Portugal,Serbia,4,1,1,2,1
+Portugal,Slovakia,2,2,0,0,2
+Portugal,Slovenia,1,0,0,1,0
+Portugal,South Korea,1,0,1,0,-1
+Portugal,Spain,3,0,1,2,-1
+Portugal,Sweden,2,2,0,0,5
+Portugal,Switzerland,4,3,1,0,10
+Portugal,Turkey,2,2,0,0,5
+Portugal,Ukraine,2,0,1,1,-1
+Portugal,Uruguay,1,1,0,0,2
+Puerto Rico,Saint Kitts and Nevis,1,0,1,0,-1
+Puerto Rico,Saint Vincent and the Grenadines,1,1,0,0,1
+Puerto Rico,Sint Maarten,2,1,1,0,0
+Puerto Rico,Suriname,2,0,1,1,-1
+Puerto Rico,Trinidad and Tobago,1,0,0,1,0
+Puerto Rico,United States Virgin Islands,1,1,0,0,2
+Qatar,Saudi Arabia,2,1,1,0,1
+Qatar,Senegal,1,0,1,0,-2
+Qatar,South Korea,1,1,0,0,1
+Qatar,Syria,1,0,0,1,0
+Qatar,Tajikistan,1,1,0,0,1
+Qatar,Tunisia,1,0,1,0,-3
+Qatar,United Arab Emirates,8,4,2,2,5
+Qatar,United States,1,0,1,0,-1
+Qatar,Uzbekistan,3,1,1,1,-2
+Qatar,Yemen,1,1,0,0,6
+Raetia,Ticino,1,1,0,0,7
+Republic of Ireland,Scotland,2,1,1,0,2
+Republic of Ireland,Serbia,2,0,1,1,-1
+Republic of Ireland,Slovakia,1,0,0,1,0
+Republic of Ireland,Switzerland,2,0,1,1,-2
+Republic of Ireland,Ukraine,2,0,1,1,-1
+Republic of Ireland,Wales,2,0,1,1,-1
+Romania,San Marino,2,2,0,0,10
+Romania,Slovakia,1,0,0,1,0
+Romania,Spain,2,0,2,0,-6
+Romania,Sweden,2,0,2,0,-3
+Romania,Switzerland,2,1,0,1,1
+Romania,Turkey,1,0,1,0,-1
+Romania,Ukraine,1,1,0,0,3
+Russia,San Marino,2,2,0,0,14
+Russia,Scotland,2,2,0,0,5
+Russia,Serbia,2,1,1,0,-3
+Russia,Slovakia,2,1,1,0,0
+Russia,Slovenia,2,2,0,0,2
+Russia,Turkey,2,0,1,1,-1
+Rwanda,Senegal,2,0,1,1,-1
+Rwanda,Seychelles,2,2,0,0,10
+Rwanda,South Africa,2,1,1,0,-1
+Rwanda,Uganda,2,0,2,0,-2
+Rwanda,Zimbabwe,2,1,0,1,1
+Réunion,Seychelles,1,1,0,0,4
+Saint Helena,Shetland,1,0,1,0,-5
+Saint Helena,Western Isles,1,0,1,0,-1
+Saint Kitts and Nevis,Saint Lucia,2,0,1,1,-2
+Saint Kitts and Nevis,Saint Martin,2,1,0,1,2
+Saint Kitts and Nevis,Sint Maarten,3,1,1,1,0
+Saint Kitts and Nevis,Solomon Islands,1,1,0,0,2
+Saint Kitts and Nevis,Suriname,1,0,1,0,-2
+Saint Kitts and Nevis,Trinidad and Tobago,3,0,3,0,-9
+Saint Kitts and Nevis,United States,1,0,1,0,-6
+Saint Lucia,Saint Martin,2,1,1,0,-3
+Saint Lucia,Saint Vincent and the Grenadines,1,0,1,0,-2
+Saint Lucia,Sint Maarten,2,1,1,0,3
+Saint Martin,Sint Maarten,1,0,1,0,-1
+Saint Martin,United States Virgin Islands,2,1,1,0,0
+Saint Vincent and the Grenadines,Suriname,3,1,1,1,-2
+Saint Vincent and the Grenadines,Trinidad and Tobago,2,0,2,0,-5
+Samoa,Solomon Islands,1,0,1,0,-1
+Samoa,Tahiti,3,0,3,0,-6
+Samoa,Tonga,3,3,0,0,6
+Samoa,Vanuatu,2,0,2,0,-14
+San Marino,Scotland,2,0,2,0,-8
+San Marino,Slovenia,2,0,2,0,-6
+Saudi Arabia,Singapore,2,2,0,0,6
+Saudi Arabia,South Korea,1,0,0,1,0
+Saudi Arabia,Tajikistan,2,1,0,1,1
+Saudi Arabia,Thailand,1,0,0,1,0
+Saudi Arabia,Trinidad and Tobago,1,0,0,1,0
+Saudi Arabia,United States,1,0,1,0,-1
+Saudi Arabia,Uzbekistan,2,2,0,0,4
+Saudi Arabia,Vietnam,2,2,0,0,3
+Saudi Arabia,Yemen,4,3,0,1,6
+Scotland,Serbia,1,0,0,1,0
+Scotland,Slovakia,2,1,1,0,0
+Scotland,Spain,2,1,1,0,0
+Scotland,Switzerland,1,0,0,1,0
+Scotland,Ukraine,3,1,1,1,1
+Senegal,South Africa,1,0,0,1,0
+Senegal,South Sudan,2,2,0,0,9
+Senegal,Sudan,3,2,0,1,4
+Senegal,Tanzania,1,1,0,0,2
+Senegal,Togo,4,2,0,2,4
+Senegal,Tunisia,1,1,0,0,1
+Senegal,Uganda,1,1,0,0,1
+Senegal,Zambia,1,0,1,0,-1
+Senegal,Zimbabwe,2,2,0,0,2
+Serbia,Slovenia,3,1,0,2,3
+Serbia,Spain,2,0,1,1,-3
+Serbia,Sweden,2,2,0,0,4
+Serbia,Switzerland,3,1,1,1,1
+Serbia,Turkey,2,0,0,2,0
+Serbia,Ukraine,2,0,1,1,-5
+Seychelles,South Sudan,2,0,2,0,-2
+Seychelles,Sri Lanka,2,1,0,1,1
+Seychelles,Zambia,1,0,1,0,-2
+Shetland,Ynys Môn,2,0,2,0,-3
+Sierra Leone,São Tomé and Príncipe,2,1,0,1,2
+Sierra Leone,Zambia,2,0,2,0,-3
+Singapore,South Korea,2,0,2,0,-12
+Singapore,Tajikistan,1,0,1,0,-1
+Singapore,Thailand,4,0,4,0,-8
+Singapore,Timor-Leste,2,2,0,0,5
+Singapore,Uzbekistan,2,0,2,0,-7
+Singapore,Vietnam,3,0,2,1,-4
+Singapore,Yemen,2,1,0,1,1
+Sint Maarten,Turks and Caicos Islands,4,1,3,0,0
+Sint Maarten,United States Virgin Islands,2,1,0,1,1
+Slovakia,Slovenia,4,0,1,3,-1
+Slovakia,Spain,1,0,1,0,-5
+Slovakia,Sweden,3,0,2,1,-2
+Slovakia,Ukraine,1,0,1,0,-1
+Slovakia,Wales,2,0,1,1,-1
+Slovenia,Sweden,4,0,1,3,-2
+Slovenia,Switzerland,2,0,1,1,-3
+Solomon Islands,Tahiti,2,1,1,0,-1
+Solomon Islands,Tuvalu,1,1,0,0,13
+Solomon Islands,Vanuatu,4,2,2,0,2
+Somalia,Uganda,2,0,2,0,-3
+Somalia,Zimbabwe,2,1,1,0,-1
+South Africa,South Sudan,2,2,0,0,4
+South Africa,Sudan,2,1,1,0,-1
+South Africa,São Tomé and Príncipe,2,2,0,0,4
+South Africa,Tunisia,1,0,0,1,0
+South Africa,Uganda,3,1,0,2,2
+South Africa,Zambia,2,0,1,1,-1
+South Africa,Zimbabwe,5,3,0,2,4
+South Korea,Sri Lanka,2,2,0,0,13
+South Korea,Syria,2,2,0,0,3
+South Korea,Thailand,2,1,0,1,3
+South Korea,Turkmenistan,2,2,0,0,7
+South Korea,United Arab Emirates,2,1,1,0,0
+South Korea,Uruguay,1,0,0,1,0
+South Ossetia,Székely Land,1,0,0,1,0
+South Ossetia,Western Armenia,2,2,0,0,2
+South Sudan,Sudan,2,0,1,1,-3
+South Sudan,Syria,1,0,1,0,-2
+South Sudan,São Tomé and Príncipe,2,0,0,2,0
+South Sudan,Togo,2,0,0,2,0
+South Sudan,Uganda,4,1,3,0,-2
+Spain,Sweden,5,2,1,2,3
+Spain,Switzerland,7,4,1,2,5
+Spain,Turkey,2,1,0,1,6
+Spain,Ukraine,2,1,1,0,3
+Sri Lanka,Taiwan,1,1,0,0,2
+Sri Lanka,Thailand,3,0,3,0,-7
+Sri Lanka,Turkmenistan,4,1,3,0,-4
+Sri Lanka,Uzbekistan,1,0,1,0,-3
+Sri Lanka,Yemen,2,0,1,1,-3
+Sudan,São Tomé and Príncipe,2,2,0,0,6
+Sudan,Togo,2,0,1,1,-1
+Sweden,Switzerland,2,0,2,0,-5
+Sweden,Ukraine,2,1,1,0,1
+Switzerland,Turkey,1,1,0,0,2
+Switzerland,Ukraine,2,1,1,0,2
+Switzerland,Wales,1,0,0,1,0
+Syria,Tajikistan,2,1,1,0,-1
+Syria,Thailand,1,0,1,0,-1
+Syria,Tunisia,2,2,0,0,3
+Syria,United Arab Emirates,3,0,2,1,-3
+Syria,Uzbekistan,1,0,0,1,0
+Syria,Yemen,1,0,0,1,0
+Székely Land,Sápmi,1,0,1,0,-1
+Székely Land,Two Sicilies,1,1,0,0,7
+Székely Land,Western Armenia,1,0,1,0,-5
+São Tomé and Príncipe,Tunisia,2,0,2,0,-10
+Tahiti,Tuvalu,1,1,0,0,7
+Tahiti,Vanuatu,1,1,0,0,2
+Taiwan,Thailand,2,0,2,0,-7
+Taiwan,Timor-Leste,2,2,0,0,7
+Taiwan,Turkmenistan,2,0,2,0,-3
+Tajikistan,Timor-Leste,2,2,0,0,6
+Tajikistan,Trinidad and Tobago,1,1,0,0,1
+Tajikistan,Turkmenistan,1,0,0,1,0
+Tajikistan,Uganda,1,0,0,1,0
+Tajikistan,United Arab Emirates,1,0,0,1,0
+Tajikistan,Uzbekistan,1,0,1,0,-4
+Tamil Eelam,Tibet,1,1,0,0,2
+Tanzania,Tunisia,3,0,1,2,-1
+Tanzania,Uganda,4,2,1,1,3
+Tanzania,Zambia,3,1,1,1,0
+Tanzania,Zanzibar,1,0,1,0,-1
+Thailand,Timor-Leste,2,2,0,0,12
+Thailand,Trinidad and Tobago,1,1,0,0,1
+Thailand,Turkmenistan,1,0,1,0,-2
+Thailand,United Arab Emirates,3,1,1,1,-1
+Thailand,Uzbekistan,2,0,2,0,-3
+Thailand,Vietnam,8,2,2,4,1
+Tonga,Tuvalu,1,0,1,0,-4
+Tonga,Vanuatu,1,0,1,0,-14
+Trinidad and Tobago,United States,5,1,4,0,-19
+Trinidad and Tobago,Venezuela,1,0,1,0,-3
+Tunisia,Uganda,1,1,0,0,2
+Tunisia,United Arab Emirates,1,1,0,0,1
+Tunisia,Zambia,2,2,0,0,4
+Turkey,Wales,5,1,1,3,0
+Turkmenistan,Uzbekistan,4,0,4,0,-10
+Turks and Caicos Islands,United States Virgin Islands,3,1,1,1,0
+Tuvalu,Vanuatu,1,0,1,0,-6
+Uganda,Uzbekistan,1,0,1,0,-2
+Uganda,Zimbabwe,1,0,0,1,0
+Ukraine,Wales,1,0,1,0,-1
+United Arab Emirates,Uzbekistan,2,0,1,1,-1
+United Arab Emirates,Vietnam,2,1,1,0,0
+United Arab Emirates,Yemen,3,3,0,0,7
+United States,Uruguay,1,0,1,0,-1
+United States,Wales,1,0,0,1,0
+Uruguay,Venezuela,4,2,0,2,5
+Uzbekistan,Venezuela,1,0,0,1,0
+Uzbekistan,Yemen,2,2,0,0,6
+Vietnam,Yemen,1,1,0,0,2
+Western Isles,Ynys Môn,2,0,2,0,-2
+Western Isles,Åland Islands,1,1,0,0,2
+Zambia,Zimbabwe,3,1,1,1,1
