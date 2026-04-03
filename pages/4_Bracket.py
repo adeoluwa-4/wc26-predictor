@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-from src.app.dashboard import render_sidebar, run_cached_simulation
+from src.app.dashboard import get_predictor, render_sidebar, run_cached_simulation
 from src.app.team_flags import team_flag
 from src.app.theme import apply_wc26_theme
 from src.simulation.knockout_config import FINAL_PATH, QUARTERFINAL_PATHS, ROUND_OF_16_PATHS, SEMIFINAL_PATHS
@@ -30,6 +30,163 @@ def _short_team(team: str) -> str:
 
 def _team_parts(team: str) -> tuple[str, str]:
     return team_flag(team), _short_team(team)
+
+
+def _neutral_win_probs(home_team: str, away_team: str) -> tuple[float, float]:
+    predictor = get_predictor()
+    forward = predictor.predict_match(home_team, away_team)
+    reverse = predictor.predict_match(away_team, home_team)
+    p_home = (
+        float(forward.get("home_win_probability", 0.0))
+        + float(reverse.get("away_win_probability", 0.0))
+    ) / 2.0
+    p_away = (
+        float(forward.get("away_win_probability", 0.0))
+        + float(reverse.get("home_win_probability", 0.0))
+    ) / 2.0
+    total = p_home + p_away
+    if total <= 0:
+        return 0.5, 0.5
+    return p_home / total, p_away / total
+
+
+def _predict_winner(home_team: str, away_team: str) -> str:
+    p_home, p_away = _neutral_win_probs(home_team, away_team)
+    return home_team if p_home >= p_away else away_team
+
+
+def _loser(home_team: str, away_team: str, winner: str) -> str:
+    return away_team if winner == home_team else home_team
+
+
+def _build_model_favorite_bracket(round_of_32_pairings: pd.DataFrame) -> pd.DataFrame:
+    if round_of_32_pairings.empty:
+        return pd.DataFrame()
+
+    cols = set(round_of_32_pairings.columns.tolist())
+    if not {"home_team", "away_team"}.issubset(cols):
+        return pd.DataFrame()
+
+    pairings = round_of_32_pairings.copy()
+    if "match" in pairings.columns:
+        pairings["match_number"] = pd.to_numeric(pairings["match"], errors="coerce")
+    else:
+        pairings["match_number"] = pd.to_numeric(pairings.get("match_number"), errors="coerce")
+    pairings = pairings.dropna(subset=["match_number"]).copy()
+    pairings["match_number"] = pairings["match_number"].astype(int)
+
+    base = pairings[["match_number", "home_team", "away_team"]].drop_duplicates()
+    rows: list[dict[str, object]] = []
+    winners: dict[int, str] = {}
+    losers: dict[int, str] = {}
+
+    for match_id in range(73, 89):
+        m = base[base["match_number"] == match_id]
+        if m.empty:
+            continue
+        home = str(m.iloc[0]["home_team"])
+        away = str(m.iloc[0]["away_team"])
+        winner = _predict_winner(home, away)
+        winners[match_id] = winner
+        losers[match_id] = _loser(home, away, winner)
+        rows.append(
+            {
+                "match_number": match_id,
+                "stage": "round_of_32",
+                "home_team": home,
+                "away_team": away,
+                "winner": winner,
+            }
+        )
+
+    for match_id, (left, right) in sorted(ROUND_OF_16_PATHS.items()):
+        if left not in winners or right not in winners:
+            continue
+        home = winners[left]
+        away = winners[right]
+        winner = _predict_winner(home, away)
+        winners[match_id] = winner
+        losers[match_id] = _loser(home, away, winner)
+        rows.append(
+            {
+                "match_number": match_id,
+                "stage": "round_of_16",
+                "home_team": home,
+                "away_team": away,
+                "winner": winner,
+            }
+        )
+
+    for match_id, (left, right) in sorted(QUARTERFINAL_PATHS.items()):
+        if left not in winners or right not in winners:
+            continue
+        home = winners[left]
+        away = winners[right]
+        winner = _predict_winner(home, away)
+        winners[match_id] = winner
+        losers[match_id] = _loser(home, away, winner)
+        rows.append(
+            {
+                "match_number": match_id,
+                "stage": "quarterfinal",
+                "home_team": home,
+                "away_team": away,
+                "winner": winner,
+            }
+        )
+
+    for match_id, (left, right) in sorted(SEMIFINAL_PATHS.items()):
+        if left not in winners or right not in winners:
+            continue
+        home = winners[left]
+        away = winners[right]
+        winner = _predict_winner(home, away)
+        winners[match_id] = winner
+        losers[match_id] = _loser(home, away, winner)
+        rows.append(
+            {
+                "match_number": match_id,
+                "stage": "semifinal",
+                "home_team": home,
+                "away_team": away,
+                "winner": winner,
+            }
+        )
+
+    if FINAL_PATH[0] in winners and FINAL_PATH[1] in winners:
+        final_home = winners[FINAL_PATH[0]]
+        final_away = winners[FINAL_PATH[1]]
+        final_winner = _predict_winner(final_home, final_away)
+        winners[103] = final_winner
+        losers[103] = _loser(final_home, final_away, final_winner)
+        rows.append(
+            {
+                "match_number": 103,
+                "stage": "final",
+                "home_team": final_home,
+                "away_team": final_away,
+                "winner": final_winner,
+            }
+        )
+
+    if 101 in losers and 102 in losers:
+        tp_home = losers[101]
+        tp_away = losers[102]
+        tp_winner = _predict_winner(tp_home, tp_away)
+        rows.append(
+            {
+                "match_number": 104,
+                "stage": "third_place",
+                "home_team": tp_home,
+                "away_team": tp_away,
+                "winner": tp_winner,
+            }
+        )
+
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return out.sort_values("match_number").reset_index(drop=True)
 
 
 def _build_bracket_svg(knockout: pd.DataFrame) -> str:
@@ -92,7 +249,8 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
     height = int(max(y_by_match.values()) + 125)
 
     out: list[str] = [
-        f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">',
+        f'<svg viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" '
+        'style="width:100%;height:auto;display:block;" preserveAspectRatio="xMidYMin meet">',
         '<rect x="0" y="0" width="100%" height="100%" fill="#f3f4f6"/>',
         '<text x="970" y="36" fill="#4b5563" font-size="28" text-anchor="middle" '
         'font-family="Arial, sans-serif" font-weight="700" letter-spacing="3">WORLD CUP 2026</text>',
@@ -187,19 +345,19 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="18" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="24" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 34:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="12" '
+            f'<text x="{x + 42:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="11" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="18" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="24" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 34:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="12" '
+            f'<text x="{x + 42:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="11" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
@@ -224,19 +382,19 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
             'fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="18" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="24" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(home_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 34:.1f}" y="{card_y + 18:.1f}" fill="#111827" font-size="12" '
+            f'<text x="{x + 42:.1f}" y="{card_y + 19:.1f}" fill="#111827" font-size="11" '
             f'font-family="Arial, sans-serif" font-weight="{home_w}">{escape(home_name)}</text>'
         )
         out.append(
-            f'<text x="{x + 8:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="18" '
+            f'<text x="{x + 8:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="24" '
             f'font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, sans-serif">{escape(away_flag)}</text>'
         )
         out.append(
-            f'<text x="{x + 34:.1f}" y="{card_y + 39:.1f}" fill="#111827" font-size="12" '
+            f'<text x="{x + 42:.1f}" y="{card_y + 42:.1f}" fill="#111827" font-size="11" '
             f'font-family="Arial, sans-serif" font-weight="{away_w}">{escape(away_name)}</text>'
         )
 
@@ -249,9 +407,13 @@ apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
 outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)
-knockout = outputs["knockout_matches"]
+round_of_32_pairings = outputs["round_of_32_pairings"]
+knockout = _build_model_favorite_bracket(round_of_32_pairings)
+if knockout.empty:
+    knockout = outputs["knockout_matches"]
 
 st.title("World Cup 2026 Bracket")
+st.caption("Model-favorite bracket: each matchup advances the team with higher pre-match win probability.")
 
 if knockout.empty:
     st.info("No bracket data available yet.")
@@ -264,10 +426,10 @@ knockout = knockout.dropna(subset=["match_number"]).sort_values("match_number").
 svg = _build_bracket_svg(knockout)
 components.html(
     f"""
-<div style="overflow:auto; width:100%; border:1px solid #cbd5e1; border-radius:12px; background:#f3f4f6;">
+<div style="width:100%; border:1px solid #cbd5e1; border-radius:12px; background:#f3f4f6;">
 {svg}
 </div>
 """,
     height=900,
-    scrolling=True,
+    scrolling=False,
 )
