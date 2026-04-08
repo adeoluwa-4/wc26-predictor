@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from functools import lru_cache
 from pathlib import Path
 import re
 
@@ -30,6 +31,7 @@ def _slug(value: str) -> str:
     return clean
 
 
+@lru_cache(maxsize=256)
 def team_photo_path(team: str) -> Path | None:
     """Return best-effort local photo path for a team, if available."""
     if not team:
