@@ -9,7 +9,6 @@ from typing import Any
 
 import joblib
 import pandas as pd
-from catboost import CatBoostRegressor
 
 from src.models.config import MODELS_DIR
 
@@ -53,6 +52,8 @@ class WC26Predictor:
             home_cbm = self.models_dir / "home_goals_model.cbm"
             away_cbm = self.models_dir / "away_goals_model.cbm"
             if home_cbm.exists() and away_cbm.exists():
+                from catboost import CatBoostRegressor
+
                 home_model = CatBoostRegressor()
                 away_model = CatBoostRegressor()
                 home_model.load_model(home_cbm)

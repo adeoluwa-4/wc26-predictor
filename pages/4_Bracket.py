@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-from src.app.dashboard import get_predictor, render_sidebar, run_cached_simulation
+from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar
 from src.app.team_flags import team_flag
 from src.app.theme import apply_wc26_theme
 from src.simulation.knockout_config import FINAL_PATH, QUARTERFINAL_PATHS, ROUND_OF_16_PATHS, SEMIFINAL_PATHS
@@ -398,7 +398,7 @@ st.set_page_config(page_title="Bracket | World Cup 2026 Predictor", layout="wide
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
-outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)
+outputs = get_simulation_outputs(simulations=state.simulations, random_seed=state.random_seed)
 round_of_32_pairings = outputs["round_of_32_pairings"]
 knockout = _build_model_favorite_bracket(round_of_32_pairings)
 if knockout.empty:

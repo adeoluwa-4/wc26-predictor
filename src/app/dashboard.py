@@ -95,6 +95,20 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
     }
 
 
+def get_simulation_outputs(simulations: int, random_seed: int) -> dict[str, object]:
+    """Return simulation outputs with session-level reuse across page navigation."""
+    key = (int(simulations), int(random_seed))
+    cache_key = "wc26_sim_outputs_key"
+    cache_val = "wc26_sim_outputs_val"
+    if st.session_state.get(cache_key) == key and cache_val in st.session_state:
+        return st.session_state[cache_val]
+
+    outputs = run_cached_simulation(simulations=simulations, random_seed=random_seed)
+    st.session_state[cache_key] = key
+    st.session_state[cache_val] = outputs
+    return outputs
+
+
 def render_sidebar(default_team: str | None = None) -> DashboardState:
     """Render shared sidebar controls and return current state."""
     st.sidebar.header("Simulation Controls")

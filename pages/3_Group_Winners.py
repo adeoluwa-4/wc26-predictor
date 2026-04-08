@@ -5,7 +5,7 @@ from __future__ import annotations
 import plotly.express as px
 import streamlit as st
 
-from src.app.dashboard import render_sidebar, run_cached_simulation
+from src.app.dashboard import get_simulation_outputs, render_sidebar
 from src.app.team_flags import team_with_flag
 from src.app.theme import apply_wc26_theme
 
@@ -14,7 +14,7 @@ st.set_page_config(page_title="Group Winners | World Cup 2026 Predictor", layout
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
-outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)
+outputs = get_simulation_outputs(simulations=state.simulations, random_seed=state.random_seed)
 advancement = outputs["advancement"]
 group_winner = outputs["group_winner"]
 
