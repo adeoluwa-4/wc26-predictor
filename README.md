@@ -113,6 +113,9 @@ Multi-page app includes:
 - Match Predictor
 - Bracket
 
+Live demo:
+- https://adeoluwa-4-wc26-predictor-streamlit-app-awcr9s.streamlit.app
+
 Run app:
 
 ```bash
