@@ -71,6 +71,7 @@ def _fit_outcome_model(
             learning_rate=config.catboost_learning_rate,
             iterations=config.catboost_iterations,
             l2_leaf_reg=config.catboost_l2_leaf_reg,
+            bagging_temperature=config.catboost_bagging_temperature,
             random_seed=config.random_state,
             verbose=False,
         )
@@ -400,6 +401,7 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
             "catboost_learning_rate": config.catboost_learning_rate,
             "catboost_iterations": config.catboost_iterations,
             "catboost_l2_leaf_reg": config.catboost_l2_leaf_reg,
+            "catboost_bagging_temperature": config.catboost_bagging_temperature,
         }
         if config.outcome_model == "catboost"
         else {},

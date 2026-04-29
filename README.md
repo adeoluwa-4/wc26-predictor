@@ -40,6 +40,12 @@ Run training:
 python -m src.models.train_baselines
 ```
 
+Optional focused tuning pass (time-safe, outcome model):
+
+```bash
+python -m src.models.tune_outcome
+```
+
 ## Inference Interface
 
 Use from Python:
