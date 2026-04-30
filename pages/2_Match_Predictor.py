@@ -56,7 +56,7 @@ if st.button("Predict Match", type="primary"):
 
     prob_df = pd.DataFrame(
         {
-            "Outcome": [f"{team_with_flag(home_team)} Win", "Draw", f"{team_with_flag(away_team)} Win"],
+            "Outcome": [f"{home_team} Win", "Draw", f"{away_team} Win"],
             "Probability": [home_prob, draw_prob, away_prob],
         }
     )
@@ -68,7 +68,13 @@ if st.button("Predict Match", type="primary"):
         title="Outcome Probabilities",
         labels={"Probability": "Probability (%)"},
     )
-    fig.update_layout(height=380)
+    fig.update_layout(
+        height=380,
+        font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=14),
+        title=dict(x=0.01, xanchor="left"),
+    )
+    fig.update_yaxes(tickformat=".1f")
+    fig.update_traces(hovertemplate="Outcome=%{x}<br>Probability=%{y:.2f}%<extra></extra>")
     st.plotly_chart(fig, use_container_width=True)
 
     predicted_home_goals = out["predicted_home_goals"]

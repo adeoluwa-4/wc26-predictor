@@ -65,7 +65,7 @@ groups = sorted(merged["group"].unique().tolist())
 selected_group = st.selectbox("Select group", groups)
 
 group_df = merged[merged["group"] == selected_group].sort_values("group_winner_probability_pct", ascending=False)
-group_df = group_df.assign(team_display=group_df["team"].map(team_with_flag))
+group_df = group_df.assign(team_display=group_df["team"])
 
 fig = px.bar(
     group_df,
@@ -75,7 +75,13 @@ fig = px.bar(
     title=f"Group {selected_group} Probabilities",
     labels={"value": "Probability (%)", "team_display": "Team", "variable": "Metric"},
 )
-fig.update_layout(height=440)
+fig.update_layout(
+    height=440,
+    font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=14),
+    title=dict(x=0.01, xanchor="left"),
+)
+fig.update_yaxes(tickformat=".1f")
+fig.update_traces(hovertemplate="Team=%{x}<br>Probability=%{y:.2f}%<extra></extra>")
 st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("All Groups Table")

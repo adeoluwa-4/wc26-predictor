@@ -119,10 +119,16 @@ fig = px.bar(
     plot_df,
     x="stage",
     y="probability",
-    title=f"{team_with_flag(selected_team)} Advancement Probabilities",
+    title=f"{selected_team} Advancement Probabilities",
     labels={"probability": "Probability (%)", "stage": "Stage"},
 )
-fig.update_layout(height=430)
+fig.update_layout(
+    height=430,
+    font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=14),
+    title=dict(x=0.01, xanchor="left"),
+)
+fig.update_yaxes(tickformat=".1f")
+fig.update_traces(hovertemplate="Stage=%{x}<br>Probability=%{y:.2f}%<extra></extra>")
 st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("Where This Team Ranks")

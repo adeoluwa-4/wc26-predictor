@@ -68,7 +68,7 @@ with spot_b:
 st.subheader("Title Odds")
 champion_top10 = champion.head(10).copy()
 champion_top10["title_odds_pct"] = champion_top10["champion_probability"] * 100.0
-champion_top10["team_display"] = champion_top10["team"].map(team_with_flag)
+champion_top10["team_display"] = champion_top10["team"]
 
 fig = px.bar(
     champion_top10,
@@ -78,7 +78,14 @@ fig = px.bar(
     title="Top 10 Championship Favorites",
     labels={"title_odds_pct": "Title Odds (%)", "team_display": "Team"},
 )
-fig.update_layout(yaxis=dict(categoryorder="total ascending"), height=460)
+fig.update_layout(
+    yaxis=dict(categoryorder="total ascending"),
+    height=460,
+    font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=15),
+    title=dict(text="Top 10 Championship Favorites", x=0.01, xanchor="left"),
+)
+fig.update_xaxes(tickformat=".1f")
+fig.update_traces(hovertemplate="Team=%{y}<br>Title Odds=%{x:.2f}%<extra></extra>")
 st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("Dark Horses")

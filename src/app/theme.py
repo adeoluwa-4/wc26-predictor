@@ -27,7 +27,7 @@ def apply_wc26_theme() -> None:
 
 .stApp {
   color: var(--wc-text);
-  font-family: "Segoe UI", "Inter", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   background:
     radial-gradient(circle at 22% 18%, rgba(90, 17, 212, 0.70) 0%, rgba(90, 17, 212, 0.0) 38%),
     radial-gradient(circle at 72% 24%, rgba(217, 4, 4, 0.68) 0%, rgba(217, 4, 4, 0.0) 42%),
@@ -110,7 +110,7 @@ div[data-testid="stTextInput"] input {
 
 /* Sidebar controls */
 div[data-testid="stSidebar"] * {
-  font-family: "Segoe UI", "Inter", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
 }
 
 /* Top page links for mobile navigation */
@@ -126,7 +126,27 @@ div[data-testid="stPageLink"] > a:hover {
 
 /* Plotly text should be able to render flag emoji on Windows */
 .js-plotly-plot .plotly text {
-  font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+  font-feature-settings: "tnum" 1, "lnum" 1 !important;
+}
+
+div[data-testid="stMetricValue"],
+div[data-testid="stMetricValue"] * {
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+  font-feature-settings: "tnum" 1, "lnum" 1 !important;
+}
+
+div[data-testid="stMetricLabel"],
+div[data-testid="stMetricLabel"] * {
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
 }
 
 .wc-photo-card {
