@@ -23,6 +23,11 @@ if logo_path.exists():
 st.caption("World Cup 2026 prediction dashboard powered by your trained model.")
 
 state = render_sidebar(default_team="United States")
+front_run = st.button("Run Simulation Now", type="primary", use_container_width=False)
+if front_run:
+    st.session_state["wc26_requested_sim_key"] = (int(state.simulations), int(state.random_seed))
+    st.rerun()
+
 outputs = get_simulation_outputs(
     simulations=state.simulations,
     random_seed=state.random_seed,
