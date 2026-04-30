@@ -5,12 +5,16 @@ from __future__ import annotations
 import plotly.express as px
 import streamlit as st
 
-from src.app.dashboard import get_simulation_outputs, render_sidebar
+from src.app.dashboard import get_simulation_outputs, render_sidebar, render_top_nav
 from src.app.team_flags import team_with_flag
 from src.app.theme import apply_wc26_theme
 
 
-st.set_page_config(page_title="Group Winners | World Cup 2026 Predictor", layout="wide")
+st.set_page_config(
+    page_title="Group Winners | World Cup 2026 Predictor",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
@@ -27,6 +31,7 @@ advancement = outputs["advancement"]
 group_winner = outputs["group_winner"]
 
 st.title("Group Winners")
+render_top_nav(current_page="Group Winners")
 st.caption("Winner odds, group qualification odds, and third-place advancement rates.")
 
 if group_winner.empty:

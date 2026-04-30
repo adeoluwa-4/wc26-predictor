@@ -6,16 +6,17 @@ import plotly.express as px
 import streamlit as st
 from pathlib import Path
 
-from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar
+from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar, render_top_nav
 from src.app.team_images import team_photo_path
 from src.app.team_flags import team_with_flag
 from src.app.theme import apply_wc26_theme
 
 
-st.set_page_config(page_title="World Cup 2026 Predictor", layout="wide")
+st.set_page_config(page_title="World Cup 2026 Predictor", layout="wide", initial_sidebar_state="expanded")
 apply_wc26_theme()
 
 st.title("World Cup 2026 Predictor")
+render_top_nav(current_page="Overview")
 logo_path = Path("/Users/adeoluwa/Downloads/FIFA-World-Cup-26-Official-Brand-unveiled-in-Los-Angeles.avif")
 if logo_path.exists():
     st.image(str(logo_path), caption="World Cup 2026 Official", use_container_width=True)

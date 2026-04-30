@@ -6,13 +6,17 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from src.app.dashboard import get_simulation_outputs, get_team_options, render_sidebar
+from src.app.dashboard import get_simulation_outputs, get_team_options, render_sidebar, render_top_nav
 from src.app.team_images import team_photo_path
 from src.app.team_flags import team_flag, team_with_flag
 from src.app.theme import apply_wc26_theme
 
 
-st.set_page_config(page_title="Team Odds | World Cup 2026 Predictor", layout="wide")
+st.set_page_config(
+    page_title="Team Odds | World Cup 2026 Predictor",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
@@ -29,6 +33,7 @@ advancement = outputs["advancement"]
 champion = outputs["champion"]
 
 st.title("Team Odds")
+render_top_nav(current_page="Team Odds")
 st.markdown(
     """
 <style>

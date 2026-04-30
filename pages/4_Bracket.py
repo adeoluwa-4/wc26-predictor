@@ -8,7 +8,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar
+from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar, render_top_nav
 from src.app.team_flags import team_flag
 from src.app.theme import apply_wc26_theme
 from src.simulation.knockout_config import FINAL_PATH, QUARTERFINAL_PATHS, ROUND_OF_16_PATHS, SEMIFINAL_PATHS
@@ -394,7 +394,11 @@ def _build_bracket_svg(knockout: pd.DataFrame) -> str:
     return "\n".join(out)
 
 
-st.set_page_config(page_title="Bracket | World Cup 2026 Predictor", layout="wide")
+st.set_page_config(
+    page_title="Bracket | World Cup 2026 Predictor",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
@@ -413,6 +417,7 @@ if knockout.empty:
     knockout = outputs["knockout_matches"]
 
 st.title("World Cup 2026 Bracket")
+render_top_nav(current_page="Bracket")
 st.caption("Model-favorite bracket: each matchup advances the team with higher pre-match win probability.")
 
 if knockout.empty:

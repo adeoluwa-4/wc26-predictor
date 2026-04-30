@@ -51,6 +51,23 @@ div[data-testid="stSidebar"] {
   border-right: 1px solid var(--wc-border);
 }
 
+div[data-testid="stSidebarNav"] {
+  background: rgba(8, 13, 28, 0.86);
+  border: 1px solid var(--wc-border);
+  border-radius: 12px;
+  padding: 8px 8px 4px 8px;
+  margin-bottom: 12px;
+}
+
+div[data-testid="stSidebarNav"] a {
+  color: var(--wc-text) !important;
+  border-radius: 10px;
+}
+
+div[data-testid="stSidebarNav"] a:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+}
+
 div[data-testid="stMetric"] {
   background: var(--wc-card);
   border: 1px solid var(--wc-border);
@@ -94,6 +111,17 @@ div[data-testid="stTextInput"] input {
 /* Sidebar controls */
 div[data-testid="stSidebar"] * {
   font-family: "Segoe UI", "Inter", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+}
+
+/* Top page links for mobile navigation */
+div[data-testid="stPageLink"] > a {
+  background: rgba(9, 14, 30, 0.82);
+  border: 1px solid var(--wc-border);
+  border-radius: 10px;
+  color: var(--wc-text) !important;
+}
+div[data-testid="stPageLink"] > a:hover {
+  background: rgba(255, 255, 255, 0.10);
 }
 
 /* Plotly text should be able to render flag emoji on Windows */

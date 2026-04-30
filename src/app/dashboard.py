@@ -27,6 +27,27 @@ class DashboardState:
     has_cached_outputs: bool
 
 
+def render_top_nav(current_page: str) -> None:
+    """Render a mobile-friendly top navigation row for all pages."""
+    pages = [
+        ("Overview", "streamlit_app.py", "🏠"),
+        ("Team Odds", "pages/1_Team_Odds.py", "📊"),
+        ("Match Predictor", "pages/2_Match_Predictor.py", "⚽"),
+        ("Group Winners", "pages/3_Group_Winners.py", "🏆"),
+        ("Bracket", "pages/4_Bracket.py", "🧩"),
+    ]
+    cols = st.columns(len(pages))
+    for col, (label, path, icon) in zip(cols, pages):
+        with col:
+            st.page_link(
+                path,
+                label=label,
+                icon=icon,
+                disabled=(label == current_page),
+                use_container_width=True,
+            )
+
+
 @st.cache_resource
 
 def get_predictor() -> WC26Predictor:

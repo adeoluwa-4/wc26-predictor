@@ -6,19 +6,24 @@ import plotly.express as px
 import pandas as pd
 import streamlit as st
 
-from src.app.dashboard import get_team_options, render_sidebar
+from src.app.dashboard import get_team_options, render_sidebar, render_top_nav
 from src.app.team_images import team_photo_path
 from src.app.team_flags import team_with_flag
 from src.app.theme import apply_wc26_theme
 from src.models.predict_interface import predict_match
 
 
-st.set_page_config(page_title="Match Predictor | World Cup 2026 Predictor", layout="wide")
+st.set_page_config(
+    page_title="Match Predictor | World Cup 2026 Predictor",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
 
 st.title("Match Predictor")
+render_top_nav(current_page="Match Predictor")
 st.caption("Predict a single matchup with win/draw/loss probabilities and expected scoreline.")
 
 teams = get_team_options()
