@@ -16,7 +16,6 @@ from src.simulation.team_config import load_team_config
 from src.utils.logging import get_logger
 
 LOGGER = get_logger(__name__)
-FORCED_CHAMPION_TEAM = "France"
 
 
 @dataclass(frozen=True)
@@ -102,30 +101,6 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
     advancement = result.advancement_probabilities.copy()
     champion = result.champion_probabilities.copy()
     group_winner = result.group_winner_probabilities.copy()
-
-    # Demo override requested by user: force France as tournament winner in app outputs.
-    if not champion.empty:
-        champion = champion.copy()
-        if FORCED_CHAMPION_TEAM not in set(champion["team"].astype(str)):
-            champion = pd.concat(
-                [
-                    champion,
-                    pd.DataFrame([{"team": FORCED_CHAMPION_TEAM, "champion_probability": 0.0}]),
-                ],
-                ignore_index=True,
-            )
-        champion["champion_probability"] = 0.0
-        champion.loc[champion["team"] == FORCED_CHAMPION_TEAM, "champion_probability"] = 1.0
-        champion = champion.sort_values("champion_probability", ascending=False).reset_index(drop=True)
-
-    if "won_tournament" in advancement.columns and not advancement.empty:
-        advancement = advancement.copy()
-        if FORCED_CHAMPION_TEAM not in set(advancement["team"].astype(str)):
-            new_row = {col: 0.0 for col in advancement.columns if col != "team"}
-            new_row["team"] = FORCED_CHAMPION_TEAM
-            advancement = pd.concat([advancement, pd.DataFrame([new_row])], ignore_index=True)
-        advancement["won_tournament"] = 0.0
-        advancement.loc[advancement["team"] == FORCED_CHAMPION_TEAM, "won_tournament"] = 1.0
     team_config_rows = pd.DataFrame(result.raw.get("team_config_rows", []))
     projected_rows = pd.DataFrame(
         [row for row in result.raw.get("team_config_rows", []) if row.get("status") == "projected_placeholder"]
