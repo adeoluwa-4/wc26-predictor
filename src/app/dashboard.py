@@ -23,6 +23,8 @@ class DashboardState:
     simulations: int
     random_seed: int
     selected_team: str
+    run_requested: bool
+    has_cached_outputs: bool
 
 
 @st.cache_resource
@@ -68,7 +70,12 @@ def get_team_options() -> list[str]:
 def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, object]:
     """Run and cache expensive Monte Carlo simulation."""
     cfg = SimulationConfig(random_seed=random_seed)
-    result = run_world_cup_simulation(n_simulations=simulations, config=cfg)
+    predictor = get_predictor()
+    result = run_world_cup_simulation(
+        n_simulations=simulations,
+        config=cfg,
+        predict_match_fn=predictor.predict_match,
+    )
 
     advancement = result.advancement_probabilities.copy()
     champion = result.champion_probabilities.copy()
@@ -95,17 +102,33 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
     }
 
 
-def get_simulation_outputs(simulations: int, random_seed: int) -> dict[str, object]:
-    """Return simulation outputs with session-level reuse across page navigation."""
+def get_simulation_outputs(
+    simulations: int,
+    random_seed: int,
+    run_requested: bool = False,
+    allow_autorun: bool = False,
+) -> dict[str, object] | None:
+    """Return simulation outputs with session-level reuse across page navigation.
+
+    If no cached outputs exist for this control state, computation only runs when:
+    - `run_requested` is True (button click), or
+    - `allow_autorun` is True.
+    """
     key = (int(simulations), int(random_seed))
     cache_key = "wc26_sim_outputs_key"
     cache_val = "wc26_sim_outputs_val"
     if st.session_state.get(cache_key) == key and cache_val in st.session_state:
         return st.session_state[cache_val]
 
+    should_run = allow_autorun or run_requested or (st.session_state.get("wc26_requested_sim_key") == key)
+    if not should_run:
+        return None
+
     outputs = run_cached_simulation(simulations=simulations, random_seed=random_seed)
     st.session_state[cache_key] = key
     st.session_state[cache_val] = outputs
+    if st.session_state.get("wc26_requested_sim_key") == key:
+        st.session_state.pop("wc26_requested_sim_key", None)
     return outputs
 
 
@@ -120,7 +143,7 @@ def render_sidebar(default_team: str | None = None) -> DashboardState:
         "Number of simulations",
         min_value=100,
         max_value=5000,
-        value=1000,
+        value=400,
         step=100,
         help="Higher values are slower but more stable.",
     )
@@ -152,5 +175,24 @@ def render_sidebar(default_team: str | None = None) -> DashboardState:
     )
 
     st.sidebar.caption("Simulation results are cached by controls above.")
+    key = (int(simulations), int(random_seed))
+    cache_key = "wc26_sim_outputs_key"
+    cache_val = "wc26_sim_outputs_val"
+    has_cached = st.session_state.get(cache_key) == key and cache_val in st.session_state
 
-    return DashboardState(simulations=simulations, random_seed=int(random_seed), selected_team=selected_team)
+    run_requested = st.sidebar.button("Run Simulation", type="primary", use_container_width=True)
+    if run_requested:
+        st.session_state["wc26_requested_sim_key"] = key
+
+    if has_cached:
+        st.sidebar.success("Cached results ready for this setting.")
+    else:
+        st.sidebar.info("Click Run Simulation to generate results.")
+
+    return DashboardState(
+        simulations=simulations,
+        random_seed=int(random_seed),
+        selected_team=selected_team,
+        run_requested=run_requested,
+        has_cached_outputs=has_cached,
+    )

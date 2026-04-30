@@ -398,7 +398,15 @@ st.set_page_config(page_title="Bracket | World Cup 2026 Predictor", layout="wide
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
-outputs = get_simulation_outputs(simulations=state.simulations, random_seed=state.random_seed)
+outputs = get_simulation_outputs(
+    simulations=state.simulations,
+    random_seed=state.random_seed,
+    run_requested=state.run_requested,
+)
+if outputs is None:
+    st.title("World Cup 2026 Bracket")
+    st.info("Click **Run Simulation** in the sidebar to generate bracket outcomes.")
+    st.stop()
 round_of_32_pairings = outputs["round_of_32_pairings"]
 knockout = _build_model_favorite_bracket(round_of_32_pairings)
 if knockout.empty:

@@ -22,7 +22,14 @@ if logo_path.exists():
 st.caption("World Cup 2026 prediction dashboard powered by your trained model.")
 
 state = render_sidebar(default_team="United States")
-outputs = get_simulation_outputs(simulations=state.simulations, random_seed=state.random_seed)
+outputs = get_simulation_outputs(
+    simulations=state.simulations,
+    random_seed=state.random_seed,
+    run_requested=state.run_requested,
+)
+if outputs is None:
+    st.info("Click **Run Simulation** in the sidebar to load tournament probabilities.")
+    st.stop()
 
 advancement = outputs["advancement"]
 champion = outputs["champion"]

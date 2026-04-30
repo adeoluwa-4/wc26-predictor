@@ -16,7 +16,15 @@ st.set_page_config(page_title="Team Odds | World Cup 2026 Predictor", layout="wi
 apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
-outputs = get_simulation_outputs(simulations=state.simulations, random_seed=state.random_seed)
+outputs = get_simulation_outputs(
+    simulations=state.simulations,
+    random_seed=state.random_seed,
+    run_requested=state.run_requested,
+)
+if outputs is None:
+    st.title("Team Odds")
+    st.info("Click **Run Simulation** in the sidebar to load team odds.")
+    st.stop()
 advancement = outputs["advancement"]
 champion = outputs["champion"]
 
