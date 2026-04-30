@@ -69,7 +69,11 @@ def _iso_to_flag_emoji(iso2: str) -> str:
 
 
 def team_flag(team: str) -> str:
-    iso2 = TEAM_TO_ISO2.get(team, "")
+    name = str(team or "").strip()
+    iso2 = TEAM_TO_ISO2.get(name, "")
+    if not iso2 and name:
+        # Conservative normalization for common variants.
+        iso2 = TEAM_TO_ISO2.get(name.replace("’", "'"), "")
     return _iso_to_flag_emoji(iso2)
 
 
