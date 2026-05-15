@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from src.app.team_flags import team_with_flag
 from src.models.predict_interface import WC26Predictor
 from src.simulation.config import SimulationConfig
 from src.simulation.monte_carlo import run_world_cup_simulation
@@ -77,6 +78,7 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
         [row for row in result.raw.get("team_config_rows", []) if row.get("status") == "projected_placeholder"]
     )
     round_of_32_pairings = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("round_of_32_pairings", []))
+    knockout_matches = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("knockout_matches", []))
     selected_third_place = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("selected_third_place", []))
     group_finishers = result.raw.get("sample_run_debug", {}).get("group_finishers", {})
 
@@ -87,6 +89,7 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
         "team_config": team_config_rows,
         "projected_placeholders": projected_rows,
         "round_of_32_pairings": round_of_32_pairings,
+        "knockout_matches": knockout_matches,
         "selected_third_place": selected_third_place,
         "group_finishers": group_finishers,
     }
@@ -127,6 +130,7 @@ def render_sidebar(default_team: str | None = None) -> DashboardState:
         "Selected team",
         teams,
         index=default_idx,
+        format_func=team_with_flag,
         help="Used by Team Odds page.",
     )
 

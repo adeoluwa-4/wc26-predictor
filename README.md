@@ -105,12 +105,23 @@ Multi-page app includes:
 - Team Odds
 - Group Winners
 - Match Predictor
+- Bracket
 
 Run app:
 
 ```bash
 streamlit run streamlit_app.py
 ```
+
+### Team Photos In UI
+
+To show country/team photos in predictor pages, add image files to:
+
+`assets/team_photos/`
+
+Supported extensions: `.avif`, `.png`, `.jpg`, `.jpeg`, `.webp`
+
+Name files with team names (for example: `France.avif`, `Turkey.avif`). The app auto-loads images when available.
 
 ## Notes
 

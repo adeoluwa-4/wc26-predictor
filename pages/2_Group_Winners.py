@@ -6,9 +6,12 @@ import plotly.express as px
 import streamlit as st
 
 from src.app.dashboard import render_sidebar, run_cached_simulation
+from src.app.team_flags import team_with_flag
+from src.app.theme import apply_wc26_theme
 
 
 st.set_page_config(page_title="Group Winners | World Cup 2026 Predictor", layout="wide")
+apply_wc26_theme()
 
 state = render_sidebar(default_team="United States")
 outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)
@@ -49,14 +52,15 @@ groups = sorted(merged["group"].unique().tolist())
 selected_group = st.selectbox("Select group", groups)
 
 group_df = merged[merged["group"] == selected_group].sort_values("group_winner_probability_pct", ascending=False)
+group_df = group_df.assign(team_display=group_df["team"].map(team_with_flag))
 
 fig = px.bar(
     group_df,
-    x="team",
+    x="team_display",
     y=["group_winner_probability_pct", "qualification_probability", "third_place_advancement_probability"],
     barmode="group",
     title=f"Group {selected_group} Probabilities",
-    labels={"value": "Probability (%)", "team": "Team", "variable": "Metric"},
+    labels={"value": "Probability (%)", "team_display": "Team", "variable": "Metric"},
 )
 fig.update_layout(height=440)
 st.plotly_chart(fig, use_container_width=True)
@@ -69,6 +73,7 @@ display = merged[[
     "qualification_probability",
     "third_place_advancement_probability",
 ]].copy()
+display["team"] = display["team"].map(team_with_flag)
 
 display = display.rename(
     columns={
