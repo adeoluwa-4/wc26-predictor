@@ -61,8 +61,21 @@ Simulation modules live in `src/simulation/` and support:
 - Monte Carlo aggregation.
 
 Teams are loaded from:
-- `data/config/wc26_teams.csv` with columns: `team`, `confederation`, `pot`, optional `group`.
-- If `group` is blank, groups are drawn randomly with confederation constraints (max 2 UEFA, max 1 from other confederations, and one team per pot per group).
+- `data/config/wc26_teams.csv` with columns: `group, team, status, source, notes`.
+- Simulator now uses this fixed group file for tournament input.
+- Auto-generated Elo-seeded groups are disabled by default and only allowed when `allow_auto_groups_debug=True` and the fixed file is missing.
+
+### Knockout Audit Note
+
+Previous behavior used a generic seeded knockout pairing approach, which does not match the official 2026 structure and can skew title odds.
+
+Current behavior uses:
+- official Match 73-88 slot definitions,
+- deterministic best-third routing via allowed-group combination lookup,
+- fixed progression paths for Matches 89-102 plus third-place and final.
+
+Diagnostic artifact:
+- `data/processed/simulation_input_audit.json` (groups used, confirmed/projected slots, recent Elo sanity table, warnings).
 
 Run Monte Carlo simulation:
 
