@@ -254,7 +254,7 @@ class WC26Predictor:
             else:
                 row[col] = 0.0
 
-        return pd.DataFrame([{col: row[col] for col in self.feature_columns}])
+        return pd.DataFrame([row])[self.feature_columns]
 
     def predict_match(self, home_team: str, away_team: str) -> dict[str, float]:
         if home_team == away_team:

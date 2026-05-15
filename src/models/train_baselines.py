@@ -293,7 +293,8 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
     config = config or ModelingConfig()
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_parquet(TRAINING_TABLE_PATH)
+    full_df = pd.read_parquet(TRAINING_TABLE_PATH)
+    df = full_df.copy()
     if config.min_training_date:
         cutoff = pd.Timestamp(config.min_training_date)
         df = df[pd.to_datetime(df["date"], errors="coerce") >= cutoff].copy()
@@ -360,8 +361,14 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
             categorical_cols=categorical_cols,
         )
 
-    team_profiles, defaults = _build_team_profiles(df)
-    h2h_profiles = _build_h2h_profiles(df)
+    # Keep inference profiles fresher than the strict training subset so the app reflects
+    # the latest team form, including recent friendlies that are useful context for today.
+    profile_df = full_df.copy()
+    if config.min_training_date:
+        cutoff = pd.Timestamp(config.min_training_date)
+        profile_df = profile_df[pd.to_datetime(profile_df["date"], errors="coerce") >= cutoff].copy()
+    team_profiles, defaults = _build_team_profiles(profile_df)
+    h2h_profiles = _build_h2h_profiles(profile_df)
 
     joblib.dump(outcome_model, OUTCOME_MODEL_PATH)
     if config.goal_model == "catboost":
