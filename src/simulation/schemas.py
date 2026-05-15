@@ -16,6 +16,7 @@ class MatchFixture:
     away_team: str
     stage: str
     group: str | None = None
+    match_number: int | None = None
 
 
 @dataclass(frozen=True)
@@ -51,6 +52,8 @@ class KnockoutSimulationResult:
     participants_by_round: dict[str, list[str]]
     champion: str
     finalists: tuple[str, str]
+    third_place_winner: str | None = None
+    results_by_match_number: dict[int, SimulatedMatchResult] | None = None
 
 
 @dataclass
@@ -62,6 +65,10 @@ class TournamentRunResult:
     knockout: KnockoutSimulationResult
     group_winners: dict[str, str]
     progression: dict[str, dict[str, bool]]
+    group_finishers: dict[str, dict[str, str]] | None = None
+    selected_third_place: pd.DataFrame | None = None
+    third_place_slot_groups: dict[int, str] | None = None
+    round_of_32_pairings: list[dict[str, str]] | None = None
 
 
 @dataclass

@@ -13,23 +13,22 @@ from src.simulation.schemas import SimulatedMatchResult
 
 def initialize_group_table(teams: Iterable[str], group_name: str) -> pd.DataFrame:
     """Create a fresh group standings table."""
-    rows = []
-    for team in teams:
-        rows.append(
-            {
-                "group": group_name,
-                "team": team,
-                "played": 0,
-                "wins": 0,
-                "draws": 0,
-                "losses": 0,
-                "goals_for": 0,
-                "goals_against": 0,
-                "goal_diff": 0,
-                "points": 0,
-            }
-        )
-    return pd.DataFrame(rows)
+    idx = list(teams)
+    df = pd.DataFrame(
+        {
+            "group": group_name,
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "goals_for": 0,
+            "goals_against": 0,
+            "goal_diff": 0,
+            "points": 0,
+        },
+        index=pd.Index(idx, name="team"),
+    )
+    return df
 
 
 def apply_match_result(
@@ -39,41 +38,39 @@ def apply_match_result(
 ) -> pd.DataFrame:
     """Apply one result to a group table and return updated table."""
     cfg = config or SimulationConfig()
-    out = table.copy()
+    if table.index.name != "team":
+        raise ValueError("Group table must be indexed by team")
 
-    home_idx = out.index[out["team"] == result.home_team]
-    away_idx = out.index[out["team"] == result.away_team]
+    home = result.home_team
+    away = result.away_team
+    if home not in table.index or away not in table.index:
+        raise ValueError("Both teams must exist in the group table index")
 
-    if len(home_idx) != 1 or len(away_idx) != 1:
-        raise ValueError("Both teams must exist exactly once in the group table")
+    table.at[home, "played"] += 1
+    table.at[away, "played"] += 1
 
-    h = int(home_idx[0])
-    a = int(away_idx[0])
-
-    out.at[h, "played"] += 1
-    out.at[a, "played"] += 1
-
-    out.at[h, "goals_for"] += result.home_goals
-    out.at[h, "goals_against"] += result.away_goals
-    out.at[a, "goals_for"] += result.away_goals
-    out.at[a, "goals_against"] += result.home_goals
+    table.at[home, "goals_for"] += result.home_goals
+    table.at[home, "goals_against"] += result.away_goals
+    table.at[away, "goals_for"] += result.away_goals
+    table.at[away, "goals_against"] += result.home_goals
 
     if result.home_goals > result.away_goals:
-        out.at[h, "wins"] += 1
-        out.at[a, "losses"] += 1
-        out.at[h, "points"] += cfg.points_for_win
+        table.at[home, "wins"] += 1
+        table.at[away, "losses"] += 1
+        table.at[home, "points"] += cfg.points_for_win
     elif result.away_goals > result.home_goals:
-        out.at[a, "wins"] += 1
-        out.at[h, "losses"] += 1
-        out.at[a, "points"] += cfg.points_for_win
+        table.at[away, "wins"] += 1
+        table.at[home, "losses"] += 1
+        table.at[away, "points"] += cfg.points_for_win
     else:
-        out.at[h, "draws"] += 1
-        out.at[a, "draws"] += 1
-        out.at[h, "points"] += cfg.points_for_draw
-        out.at[a, "points"] += cfg.points_for_draw
+        table.at[home, "draws"] += 1
+        table.at[away, "draws"] += 1
+        table.at[home, "points"] += cfg.points_for_draw
+        table.at[away, "points"] += cfg.points_for_draw
 
-    out["goal_diff"] = out["goals_for"] - out["goals_against"]
-    return out
+    table.at[home, "goal_diff"] = table.at[home, "goals_for"] - table.at[home, "goals_against"]
+    table.at[away, "goal_diff"] = table.at[away, "goals_for"] - table.at[away, "goals_against"]
+    return table
 
 
 def sort_group_table(table: pd.DataFrame, rng: np.random.Generator) -> pd.DataFrame:
@@ -86,7 +83,11 @@ def sort_group_table(table: pd.DataFrame, rng: np.random.Generator) -> pd.DataFr
     4. wins
     5. random tie break
     """
-    out = table.copy().reset_index(drop=True)
+    out = table.copy()
+    if "team" not in out.columns:
+        out = out.reset_index()
+    else:
+        out = out.reset_index(drop=True)
     out["_random_tiebreak"] = rng.random(len(out))
 
     out = out.sort_values(
