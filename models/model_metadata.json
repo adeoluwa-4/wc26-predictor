@@ -125,7 +125,7 @@
   "defaults": {
     "confederation": "UEFA",
     "numeric": {
-      "elo": 1368.0,
+      "elo": 1367.0,
       "fifa_rank": 103.0,
       "fifa_points": 1208.01,
       "draws_last_10": 2.0,
@@ -134,7 +134,7 @@
       "goal_diff_last_5": -1.0,
       "goals_against_last_10": 14.0,
       "goals_against_last_5": 7.0,
-      "goals_for_last_10": 13.0,
+      "goals_for_last_10": 12.0,
       "goals_for_last_5": 6.0,
       "losses_last_10": 4.0,
       "losses_last_5": 2.0,
