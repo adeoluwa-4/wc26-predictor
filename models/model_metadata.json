@@ -1,0 +1,184 @@
+{
+  "feature_columns": [
+    "neutral",
+    "is_friendly",
+    "is_qualifier",
+    "is_continental_competition",
+    "is_world_cup",
+    "is_host_home_country",
+    "is_host_away_country",
+    "same_confederation",
+    "tournament_importance_score",
+    "home_elo",
+    "away_elo",
+    "elo_diff",
+    "h2h_matches_prior",
+    "h2h_home_team_wins_prior",
+    "h2h_away_team_wins_prior",
+    "h2h_draws_prior",
+    "h2h_goal_diff_prior",
+    "away_draws_last_10",
+    "away_draws_last_5",
+    "away_goal_diff_last_10",
+    "away_goal_diff_last_5",
+    "away_goals_against_last_10",
+    "away_goals_against_last_5",
+    "away_goals_for_last_10",
+    "away_goals_for_last_5",
+    "away_losses_last_10",
+    "away_losses_last_5",
+    "away_points_last_10",
+    "away_points_last_5",
+    "away_points_per_match_last_10",
+    "away_points_per_match_last_5",
+    "away_wins_last_10",
+    "away_wins_last_5",
+    "home_draws_last_10",
+    "home_draws_last_5",
+    "home_goal_diff_last_10",
+    "home_goal_diff_last_5",
+    "home_goals_against_last_10",
+    "home_goals_against_last_5",
+    "home_goals_for_last_10",
+    "home_goals_for_last_5",
+    "home_losses_last_10",
+    "home_losses_last_5",
+    "home_points_last_10",
+    "home_points_last_5",
+    "home_points_per_match_last_10",
+    "home_points_per_match_last_5",
+    "home_wins_last_10",
+    "home_wins_last_5",
+    "home_team",
+    "away_team",
+    "tournament_type",
+    "confederation_home",
+    "confederation_away"
+  ],
+  "numeric_columns": [
+    "neutral",
+    "is_friendly",
+    "is_qualifier",
+    "is_continental_competition",
+    "is_world_cup",
+    "is_host_home_country",
+    "is_host_away_country",
+    "same_confederation",
+    "tournament_importance_score",
+    "home_elo",
+    "away_elo",
+    "elo_diff",
+    "h2h_matches_prior",
+    "h2h_home_team_wins_prior",
+    "h2h_away_team_wins_prior",
+    "h2h_draws_prior",
+    "h2h_goal_diff_prior",
+    "away_draws_last_10",
+    "away_draws_last_5",
+    "away_goal_diff_last_10",
+    "away_goal_diff_last_5",
+    "away_goals_against_last_10",
+    "away_goals_against_last_5",
+    "away_goals_for_last_10",
+    "away_goals_for_last_5",
+    "away_losses_last_10",
+    "away_losses_last_5",
+    "away_points_last_10",
+    "away_points_last_5",
+    "away_points_per_match_last_10",
+    "away_points_per_match_last_5",
+    "away_wins_last_10",
+    "away_wins_last_5",
+    "home_draws_last_10",
+    "home_draws_last_5",
+    "home_goal_diff_last_10",
+    "home_goal_diff_last_5",
+    "home_goals_against_last_10",
+    "home_goals_against_last_5",
+    "home_goals_for_last_10",
+    "home_goals_for_last_5",
+    "home_losses_last_10",
+    "home_losses_last_5",
+    "home_points_last_10",
+    "home_points_last_5",
+    "home_points_per_match_last_10",
+    "home_points_per_match_last_5",
+    "home_wins_last_10",
+    "home_wins_last_5"
+  ],
+  "categorical_columns": [
+    "home_team",
+    "away_team",
+    "tournament_type",
+    "confederation_home",
+    "confederation_away"
+  ],
+  "split": {
+    "train_end_date": "1999-05-05",
+    "val_end_date": "2010-03-20",
+    "train_rows": 23515,
+    "val_rows": 10215,
+    "test_rows": 15341
+  },
+  "defaults": {
+    "confederation": "UEFA",
+    "numeric": {
+      "elo": 1366.0,
+      "fifa_rank": 103.0,
+      "fifa_points": 1205.96,
+      "draws_last_10": 2.0,
+      "draws_last_5": 1.0,
+      "goal_diff_last_10": -2.0,
+      "goal_diff_last_5": -1.0,
+      "goals_against_last_10": 14.0,
+      "goals_against_last_5": 7.0,
+      "goals_for_last_10": 12.0,
+      "goals_for_last_5": 6.0,
+      "losses_last_10": 4.0,
+      "losses_last_5": 2.0,
+      "points_last_10": 11.0,
+      "points_last_5": 6.0,
+      "points_per_match_last_10": 1.2,
+      "points_per_match_last_5": 1.2,
+      "wins_last_10": 3.0,
+      "wins_last_5": 1.0
+    }
+  },
+  "metrics": {
+    "outcome": {
+      "val": {
+        "accuracy": 0.5804209495839452,
+        "log_loss": 0.8922854410262089
+      },
+      "test": {
+        "accuracy": 0.5871194837363927,
+        "log_loss": 0.8908671673648694
+      }
+    },
+    "home_goals": {
+      "val": {
+        "mae": 1.2976721932834865,
+        "rmse": 1.8223112521335674
+      },
+      "test": {
+        "mae": 1.2591651414259957,
+        "rmse": 1.6534750717685465
+      }
+    },
+    "away_goals": {
+      "val": {
+        "mae": 0.9959020751899232,
+        "rmse": 1.3430593317194712
+      },
+      "test": {
+        "mae": 1.0179148146530606,
+        "rmse": 1.3632955227664594
+      }
+    }
+  },
+  "outcome_classes": [
+    "away_win",
+    "draw",
+    "home_win"
+  ]
+}

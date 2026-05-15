@@ -12,10 +12,15 @@ __pycache__/
 # Data and model artifacts
 data/interim/
 data/processed/
-models/*.joblib
 models/*.pkl
-models/*.parquet
-models/*.json
+
+# Keep the demo-ready trained artifacts tracked (small, reproducible in this repo).
+!models/outcome_model.joblib
+!models/home_goals_model.joblib
+!models/away_goals_model.joblib
+!models/model_metadata.json
+!models/team_profiles.parquet
+!models/h2h_profiles.parquet
 
 # Streamlit cache
 .streamlit/
