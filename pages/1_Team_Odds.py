@@ -1,4 +1,4 @@
-"""Team odds page for WC26 Streamlit app."""
+"""Team odds page for World Cup 2026 Streamlit app."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import streamlit as st
 from src.app.dashboard import get_team_options, render_sidebar, run_cached_simulation
 
 
-st.set_page_config(page_title="Team Odds | WC26 Predictor", layout="wide")
+st.set_page_config(page_title="Team Odds | World Cup 2026 Predictor", layout="wide")
 
 state = render_sidebar(default_team="United States")
 outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)

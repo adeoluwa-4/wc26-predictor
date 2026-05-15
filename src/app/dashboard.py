@@ -36,8 +36,7 @@ def get_team_options() -> list[str]:
 
 
 @st.cache_data(show_spinner=True)
-
-def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, pd.DataFrame]:
+def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, object]:
     """Run and cache expensive Monte Carlo simulation."""
     cfg = SimulationConfig(random_seed=random_seed)
     result = run_world_cup_simulation(n_simulations=simulations, config=cfg)
@@ -45,11 +44,23 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, pd.Da
     advancement = result.advancement_probabilities.copy()
     champion = result.champion_probabilities.copy()
     group_winner = result.group_winner_probabilities.copy()
+    team_config_rows = pd.DataFrame(result.raw.get("team_config_rows", []))
+    projected_rows = pd.DataFrame(
+        [row for row in result.raw.get("team_config_rows", []) if row.get("status") == "projected_placeholder"]
+    )
+    round_of_32_pairings = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("round_of_32_pairings", []))
+    selected_third_place = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("selected_third_place", []))
+    group_finishers = result.raw.get("sample_run_debug", {}).get("group_finishers", {})
 
     return {
         "advancement": advancement,
         "champion": champion,
         "group_winner": group_winner,
+        "team_config": team_config_rows,
+        "projected_placeholders": projected_rows,
+        "round_of_32_pairings": round_of_32_pairings,
+        "selected_third_place": selected_third_place,
+        "group_finishers": group_finishers,
     }
 
 

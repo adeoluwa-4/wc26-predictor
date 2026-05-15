@@ -8,7 +8,7 @@ import streamlit as st
 from src.app.dashboard import render_sidebar, run_cached_simulation
 
 
-st.set_page_config(page_title="Group Winners | WC26 Predictor", layout="wide")
+st.set_page_config(page_title="Group Winners | World Cup 2026 Predictor", layout="wide")
 
 state = render_sidebar(default_team="United States")
 outputs = run_cached_simulation(simulations=state.simulations, random_seed=state.random_seed)

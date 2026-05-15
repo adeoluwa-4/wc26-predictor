@@ -10,7 +10,7 @@ from src.app.dashboard import get_team_options, render_sidebar
 from src.models.predict_interface import predict_match
 
 
-st.set_page_config(page_title="Match Predictor | WC26 Predictor", layout="wide")
+st.set_page_config(page_title="Match Predictor | World Cup 2026 Predictor", layout="wide")
 
 state = render_sidebar(default_team="United States")
 
