@@ -8,6 +8,7 @@ from typing import Any
 
 import joblib
 import pandas as pd
+from catboost import CatBoostClassifier, CatBoostRegressor
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression, PoissonRegressor
@@ -22,6 +23,8 @@ from src.models.features import get_feature_columns, make_time_split
 OUTCOME_MODEL_PATH = MODELS_DIR / "outcome_model.joblib"
 HOME_GOALS_MODEL_PATH = MODELS_DIR / "home_goals_model.joblib"
 AWAY_GOALS_MODEL_PATH = MODELS_DIR / "away_goals_model.joblib"
+HOME_GOALS_CATBOOST_PATH = MODELS_DIR / "home_goals_model.cbm"
+AWAY_GOALS_CATBOOST_PATH = MODELS_DIR / "away_goals_model.cbm"
 TEAM_PROFILE_PATH = MODELS_DIR / "team_profiles.parquet"
 H2H_PROFILE_PATH = MODELS_DIR / "h2h_profiles.parquet"
 MODEL_METADATA_PATH = MODELS_DIR / "model_metadata.json"
@@ -56,35 +59,72 @@ def _fit_outcome_model(
     feature_cols: list[str],
     numeric_cols: list[str],
     categorical_cols: list[str],
-) -> tuple[Pipeline, dict[str, float], dict[str, float]]:
-    preprocessor = _build_preprocessor(numeric_cols, categorical_cols)
-    model = LogisticRegression(max_iter=10000, solver="saga", n_jobs=-1, tol=1e-3)
-
-    pipeline = Pipeline(
-        steps=[
-            ("preprocessor", preprocessor),
-            ("model", model),
-        ]
-    )
-
+    config: ModelingConfig,
+) -> tuple[Any, dict[str, float], dict[str, float], list[str]]:
     X_train = train_df[feature_cols]
     y_train = train_df["outcome_label"]
 
-    pipeline.fit(X_train, y_train)
+    if config.outcome_model == "catboost":
+        model = CatBoostClassifier(
+            loss_function="MultiClass",
+            depth=config.catboost_depth,
+            learning_rate=config.catboost_learning_rate,
+            iterations=config.catboost_iterations,
+            l2_leaf_reg=config.catboost_l2_leaf_reg,
+            bagging_temperature=config.catboost_bagging_temperature,
+            random_seed=config.random_state,
+            verbose=False,
+        )
+        X_train_model = X_train.copy()
+        for col in categorical_cols:
+            X_train_model[col] = X_train_model[col].fillna("Unknown").astype(str)
+        model.fit(X_train_model, y_train, cat_features=categorical_cols)
+
+        def evaluate(split_df: pd.DataFrame) -> dict[str, float]:
+            X = split_df[feature_cols].copy()
+            for col in categorical_cols:
+                X[col] = X[col].fillna("Unknown").astype(str)
+            y = split_df["outcome_label"]
+            pred = model.predict(X).reshape(-1)
+            proba = model.predict_proba(X)
+            classes = model.classes_
+            return {
+                "accuracy": float(accuracy_score(y, pred)),
+                "log_loss": float(log_loss(y, proba, labels=classes)),
+            }
+
+        return model, evaluate(val_df), evaluate(test_df), list(model.classes_)
+
+    preprocessor = _build_preprocessor(numeric_cols, categorical_cols)
+    logistic = LogisticRegression(
+        max_iter=20000,
+        solver="saga",
+        n_jobs=1,
+        tol=5e-4,
+        C=4.0,
+        class_weight=None,
+        random_state=config.random_state,
+    )
+    model = Pipeline(
+        steps=[
+            ("preprocessor", preprocessor),
+            ("model", logistic),
+        ]
+    )
+    model.fit(X_train, y_train)
 
     def evaluate(split_df: pd.DataFrame) -> dict[str, float]:
         X = split_df[feature_cols]
         y = split_df["outcome_label"]
-        pred = pipeline.predict(X)
-        proba = pipeline.predict_proba(X)
-        classes = pipeline.named_steps["model"].classes_
-
+        pred = model.predict(X)
+        proba = model.predict_proba(X)
+        classes = model.named_steps["model"].classes_
         return {
             "accuracy": float(accuracy_score(y, pred)),
             "log_loss": float(log_loss(y, proba, labels=classes)),
         }
 
-    return pipeline, evaluate(val_df), evaluate(test_df)
+    return model, evaluate(val_df), evaluate(test_df), list(model.named_steps["model"].classes_)
 
 
 def _fit_goal_model(
@@ -95,7 +135,7 @@ def _fit_goal_model(
     feature_cols: list[str],
     numeric_cols: list[str],
     categorical_cols: list[str],
-) -> tuple[Pipeline, dict[str, float], dict[str, float]]:
+) -> tuple[Any, dict[str, float], dict[str, float]]:
     preprocessor = _build_preprocessor(numeric_cols, categorical_cols)
     model = PoissonRegressor(alpha=0.2, max_iter=1000)
 
@@ -121,6 +161,45 @@ def _fit_goal_model(
         }
 
     return pipeline, evaluate(val_df), evaluate(test_df)
+
+
+def _fit_goal_model_catboost(
+    train_df: pd.DataFrame,
+    val_df: pd.DataFrame,
+    test_df: pd.DataFrame,
+    target_col: str,
+    feature_cols: list[str],
+    categorical_cols: list[str],
+    config: ModelingConfig,
+) -> tuple[CatBoostRegressor, dict[str, float], dict[str, float]]:
+    X_train = train_df[feature_cols].copy()
+    y_train = train_df[target_col]
+    for col in categorical_cols:
+        X_train[col] = X_train[col].fillna("Unknown").astype(str)
+
+    model = CatBoostRegressor(
+        loss_function="RMSE",
+        depth=config.catboost_goal_depth,
+        learning_rate=config.catboost_goal_learning_rate,
+        iterations=config.catboost_goal_iterations,
+        random_seed=config.random_state,
+        verbose=False,
+    )
+    model.fit(X_train, y_train, cat_features=categorical_cols)
+
+    def evaluate(split_df: pd.DataFrame) -> dict[str, float]:
+        X = split_df[feature_cols].copy()
+        for col in categorical_cols:
+            X[col] = X[col].fillna("Unknown").astype(str)
+        y = split_df[target_col]
+        pred = model.predict(X)
+        rmse = mean_squared_error(y, pred) ** 0.5
+        return {
+            "mae": float(mean_absolute_error(y, pred)),
+            "rmse": float(rmse),
+        }
+
+    return model, evaluate(val_df), evaluate(test_df)
 
 
 def _build_team_profiles(df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, Any]]:
@@ -214,55 +293,102 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
     config = config or ModelingConfig()
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_parquet(TRAINING_TABLE_PATH)
+    full_df = pd.read_parquet(TRAINING_TABLE_PATH)
+    df = full_df.copy()
+    if config.min_training_date:
+        cutoff = pd.Timestamp(config.min_training_date)
+        df = df[pd.to_datetime(df["date"], errors="coerce") >= cutoff].copy()
+        if df.empty:
+            raise ValueError(f"No rows remain after min_training_date={config.min_training_date}")
+    if config.exclude_friendlies:
+        df = df[~df["is_friendly"].astype(bool)].copy()
+        if df.empty:
+            raise ValueError("No rows remain after exclude_friendlies filter")
+
     split = make_time_split(df, train_frac=config.train_frac, val_frac=config.val_frac)
 
     numeric_cols, categorical_cols = get_feature_columns(df)
+    if config.drop_categorical_features:
+        categorical_cols = [col for col in categorical_cols if col not in set(config.drop_categorical_features)]
     feature_cols = [*numeric_cols, *categorical_cols]
 
-    outcome_model, outcome_val, outcome_test = _fit_outcome_model(
+    outcome_model, outcome_val, outcome_test, outcome_classes = _fit_outcome_model(
         train_df=split.train,
         val_df=split.val,
         test_df=split.test,
         feature_cols=feature_cols,
         numeric_cols=numeric_cols,
         categorical_cols=categorical_cols,
+        config=config,
     )
 
-    home_goal_model, home_goal_val, home_goal_test = _fit_goal_model(
-        train_df=split.train,
-        val_df=split.val,
-        test_df=split.test,
-        target_col="home_score",
-        feature_cols=feature_cols,
-        numeric_cols=numeric_cols,
-        categorical_cols=categorical_cols,
-    )
+    if config.goal_model == "catboost":
+        home_goal_model, home_goal_val, home_goal_test = _fit_goal_model_catboost(
+            train_df=split.train,
+            val_df=split.val,
+            test_df=split.test,
+            target_col="home_score",
+            feature_cols=feature_cols,
+            categorical_cols=categorical_cols,
+            config=config,
+        )
+        away_goal_model, away_goal_val, away_goal_test = _fit_goal_model_catboost(
+            train_df=split.train,
+            val_df=split.val,
+            test_df=split.test,
+            target_col="away_score",
+            feature_cols=feature_cols,
+            categorical_cols=categorical_cols,
+            config=config,
+        )
+    else:
+        home_goal_model, home_goal_val, home_goal_test = _fit_goal_model(
+            train_df=split.train,
+            val_df=split.val,
+            test_df=split.test,
+            target_col="home_score",
+            feature_cols=feature_cols,
+            numeric_cols=numeric_cols,
+            categorical_cols=categorical_cols,
+        )
+        away_goal_model, away_goal_val, away_goal_test = _fit_goal_model(
+            train_df=split.train,
+            val_df=split.val,
+            test_df=split.test,
+            target_col="away_score",
+            feature_cols=feature_cols,
+            numeric_cols=numeric_cols,
+            categorical_cols=categorical_cols,
+        )
 
-    away_goal_model, away_goal_val, away_goal_test = _fit_goal_model(
-        train_df=split.train,
-        val_df=split.val,
-        test_df=split.test,
-        target_col="away_score",
-        feature_cols=feature_cols,
-        numeric_cols=numeric_cols,
-        categorical_cols=categorical_cols,
-    )
-
-    team_profiles, defaults = _build_team_profiles(df)
-    h2h_profiles = _build_h2h_profiles(df)
+    # Keep inference profiles fresher than the strict training subset so the app reflects
+    # the latest team form, including recent friendlies that are useful context for today.
+    profile_df = full_df.copy()
+    if config.min_training_date:
+        cutoff = pd.Timestamp(config.min_training_date)
+        profile_df = profile_df[pd.to_datetime(profile_df["date"], errors="coerce") >= cutoff].copy()
+    team_profiles, defaults = _build_team_profiles(profile_df)
+    h2h_profiles = _build_h2h_profiles(profile_df)
 
     joblib.dump(outcome_model, OUTCOME_MODEL_PATH)
-    joblib.dump(home_goal_model, HOME_GOALS_MODEL_PATH)
-    joblib.dump(away_goal_model, AWAY_GOALS_MODEL_PATH)
+    if config.goal_model == "catboost":
+        home_goal_model.save_model(HOME_GOALS_CATBOOST_PATH)
+        away_goal_model.save_model(AWAY_GOALS_CATBOOST_PATH)
+    else:
+        joblib.dump(home_goal_model, HOME_GOALS_MODEL_PATH)
+        joblib.dump(away_goal_model, AWAY_GOALS_MODEL_PATH)
     team_profiles.to_parquet(TEAM_PROFILE_PATH, index=False)
+    team_profiles.to_csv(TEAM_PROFILE_PATH.with_suffix(".csv"), index=False)
     h2h_profiles.to_parquet(H2H_PROFILE_PATH, index=False)
+    h2h_profiles.to_csv(H2H_PROFILE_PATH.with_suffix(".csv"), index=False)
 
     metadata = {
         "feature_columns": feature_cols,
         "numeric_columns": numeric_cols,
         "categorical_columns": categorical_cols,
         "split": {
+            "min_training_date": config.min_training_date,
+            "exclude_friendlies": config.exclude_friendlies,
             "train_end_date": str(split.train_end_date.date()),
             "val_end_date": str(split.val_end_date.date()),
             "train_rows": int(len(split.train)),
@@ -275,7 +401,27 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
             "home_goals": {"val": home_goal_val, "test": home_goal_test},
             "away_goals": {"val": away_goal_val, "test": away_goal_test},
         },
-        "outcome_classes": list(outcome_model.named_steps["model"].classes_),
+        "outcome_model": config.outcome_model,
+        "goal_model": config.goal_model,
+        "outcome_model_params": {
+            "catboost_depth": config.catboost_depth,
+            "catboost_learning_rate": config.catboost_learning_rate,
+            "catboost_iterations": config.catboost_iterations,
+            "catboost_l2_leaf_reg": config.catboost_l2_leaf_reg,
+            "catboost_bagging_temperature": config.catboost_bagging_temperature,
+        }
+        if config.outcome_model == "catboost"
+        else {},
+        "catboost_categorical_columns": categorical_cols if config.outcome_model == "catboost" else [],
+        "goal_catboost_categorical_columns": categorical_cols if config.goal_model == "catboost" else [],
+        "goal_model_params": {
+            "catboost_goal_depth": config.catboost_goal_depth,
+            "catboost_goal_learning_rate": config.catboost_goal_learning_rate,
+            "catboost_goal_iterations": config.catboost_goal_iterations,
+        }
+        if config.goal_model == "catboost"
+        else {},
+        "outcome_classes": outcome_classes,
     }
 
     MODEL_METADATA_PATH.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
