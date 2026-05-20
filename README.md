@@ -18,12 +18,18 @@ Build pipeline:
 python -m src.data.build_training_table --export-csv
 ```
 
+Refresh international results from zip first (recommended before rebuild):
+
+```bash
+python -m src.data.refresh_international_results --zip-path /Users/adeoluwa/Downloads/international_results-master-2.zip
+```
+
 ## Baseline Modeling Stage
 
 Trains and saves:
 - `models/outcome_model.joblib`
-- `models/home_goals_model.joblib`
-- `models/away_goals_model.joblib`
+- `models/home_goals_model.cbm` (portable CatBoost)
+- `models/away_goals_model.cbm` (portable CatBoost)
 - `models/model_metadata.json`
 - `models/team_profiles.parquet`
 - `models/h2h_profiles.parquet`
@@ -32,6 +38,12 @@ Run training:
 
 ```bash
 python -m src.models.train_baselines
+```
+
+Optional focused tuning pass (time-safe, outcome model):
+
+```bash
+python -m src.models.tune_outcome
 ```
 
 ## Inference Interface
@@ -61,8 +73,21 @@ Simulation modules live in `src/simulation/` and support:
 - Monte Carlo aggregation.
 
 Teams are loaded from:
-- `data/config/wc26_teams.csv` with columns: `team`, `confederation`, `pot`, optional `group`.
-- If `group` is blank, groups are drawn randomly with confederation constraints (max 2 UEFA, max 1 from other confederations, and one team per pot per group).
+- `data/config/wc26_teams.csv` with columns: `group, team, status, source, notes`.
+- Simulator now uses this fixed group file for tournament input.
+- Auto-generated Elo-seeded groups are disabled by default and only allowed when `allow_auto_groups_debug=True` and the fixed file is missing.
+
+### Knockout Audit Note
+
+Previous behavior used a generic seeded knockout pairing approach, which does not match the official 2026 structure and can skew title odds.
+
+Current behavior uses:
+- official Match 73-88 slot definitions,
+- deterministic best-third routing via allowed-group combination lookup,
+- fixed progression paths for Matches 89-102 plus third-place and final.
+
+Diagnostic artifact:
+- `data/processed/simulation_input_audit.json` (groups used, confirmed/projected slots, recent Elo sanity table, warnings).
 
 Run Monte Carlo simulation:
 
@@ -73,6 +98,12 @@ result = run_world_cup_simulation(n_simulations=1000)
 print(result.champion_probabilities.head())
 ```
 
+Resolve projected WC26 qualifier slots in config from latest results/shootouts:
+
+```bash
+python -m src.simulation.update_wc26_teams --config-path data/config/wc26_teams.csv
+```
+
 ## Streamlit Dashboard
 
 Multi-page app includes:
@@ -80,12 +111,31 @@ Multi-page app includes:
 - Team Odds
 - Group Winners
 - Match Predictor
+- Bracket
+
+Live demo:
+- https://adeoluwa-4-wc26-predictor-streamlit-app-awcr9s.streamlit.app
 
 Run app:
 
 ```bash
 streamlit run streamlit_app.py
 ```
+
+### Deployment Runtime Note
+
+Goal models are stored as CatBoost native `.cbm` files to improve cross-runtime portability in deployment.
+The app also supports CSV fallbacks for profile tables when parquet/pyarrow is unavailable.
+
+### Team Photos In UI
+
+To show country/team photos in predictor pages, add image files to:
+
+`assets/team_photos/`
+
+Supported extensions: `.avif`, `.png`, `.jpg`, `.jpeg`, `.webp`
+
+Name files with team names (for example: `France.avif`, `Turkey.avif`). The app auto-loads images when available.
 
 ## Notes
 
