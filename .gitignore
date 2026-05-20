@@ -8,14 +8,24 @@ __pycache__/
 *.pyd
 .mypy_cache/
 .ruff_cache/
+catboost_info/
 
 # Data and model artifacts
 data/interim/
 data/processed/
-models/*.joblib
 models/*.pkl
-models/*.parquet
-models/*.json
+
+# Keep the demo-ready trained artifacts tracked (small, reproducible in this repo).
+!models/outcome_model.joblib
+!models/home_goals_model.joblib
+!models/away_goals_model.joblib
+!models/model_metadata.json
+!models/team_profiles.parquet
+!models/h2h_profiles.parquet
 
 # Streamlit cache
 .streamlit/
+# Excluded from git history (download separately)
+data/raw/
+legacy/
+assets/team_photos/
