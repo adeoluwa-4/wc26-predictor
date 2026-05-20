@@ -3,13 +3,19 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
+from src.app.team_flags import team_with_flag
 from src.models.predict_interface import WC26Predictor
 from src.simulation.config import SimulationConfig
 from src.simulation.monte_carlo import run_world_cup_simulation
+from src.simulation.team_config import load_team_config
+from src.utils.logging import get_logger
+
+LOGGER = get_logger(__name__)
 
 
 @dataclass(frozen=True)
@@ -17,6 +23,29 @@ class DashboardState:
     simulations: int
     random_seed: int
     selected_team: str
+    run_requested: bool
+    has_cached_outputs: bool
+
+
+def render_top_nav(current_page: str) -> None:
+    """Render a mobile-friendly top navigation row for all pages."""
+    pages = [
+        ("Overview", "streamlit_app.py", "🏠"),
+        ("Team Odds", "pages/1_Team_Odds.py", "📊"),
+        ("Match Predictor", "pages/2_Match_Predictor.py", "⚽"),
+        ("Group Winners", "pages/3_Group_Winners.py", "🏆"),
+        ("Bracket", "pages/4_Bracket.py", "🧩"),
+    ]
+    cols = st.columns(len(pages))
+    for col, (label, path, icon) in zip(cols, pages):
+        with col:
+            st.page_link(
+                path,
+                label=label,
+                icon=icon,
+                disabled=(label == current_page),
+                use_container_width=True,
+            )
 
 
 @st.cache_resource
@@ -29,39 +58,113 @@ def get_predictor() -> WC26Predictor:
 @st.cache_data
 
 def get_team_options() -> list[str]:
-    """Return sorted teams available in trained profiles."""
+    """Return confirmed WC teams available in trained profiles.
+
+    Falls back to all model profile teams if fixed config is unavailable.
+    """
     predictor = get_predictor()
-    teams = predictor.team_profiles.reset_index()["team"].dropna().astype(str).tolist()
-    return sorted(set(teams))
+    profile_teams = set(predictor.team_profiles.reset_index()["team"].dropna().astype(str).tolist())
+
+    cfg = SimulationConfig()
+    config_path = Path(cfg.teams_config_path)
+    if config_path.exists():
+        config_df = load_team_config(config_path, config=cfg)
+        confirmed = sorted(
+            set(config_df.loc[config_df["status"] == "confirmed", "team"].dropna().astype(str).tolist())
+        )
+        available = sorted(team for team in confirmed if team in profile_teams)
+        missing = sorted(set(confirmed) - set(available))
+        if missing:
+            LOGGER.warning(
+                "Excluding %d confirmed config teams not found in model profiles: %s",
+                len(missing),
+                missing,
+            )
+        if available:
+            return available
+
+    LOGGER.warning("Falling back to full model-profile team list for UI dropdowns")
+    return sorted(profile_teams)
 
 
 @st.cache_data(show_spinner=True)
-
-def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, pd.DataFrame]:
+def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, object]:
     """Run and cache expensive Monte Carlo simulation."""
     cfg = SimulationConfig(random_seed=random_seed)
-    result = run_world_cup_simulation(n_simulations=simulations, config=cfg)
+    predictor = get_predictor()
+    result = run_world_cup_simulation(
+        n_simulations=simulations,
+        config=cfg,
+        predict_match_fn=predictor.predict_match,
+    )
 
     advancement = result.advancement_probabilities.copy()
     champion = result.champion_probabilities.copy()
     group_winner = result.group_winner_probabilities.copy()
+    team_config_rows = pd.DataFrame(result.raw.get("team_config_rows", []))
+    projected_rows = pd.DataFrame(
+        [row for row in result.raw.get("team_config_rows", []) if row.get("status") == "projected_placeholder"]
+    )
+    round_of_32_pairings = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("round_of_32_pairings", []))
+    knockout_matches = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("knockout_matches", []))
+    selected_third_place = pd.DataFrame(result.raw.get("sample_run_debug", {}).get("selected_third_place", []))
+    group_finishers = result.raw.get("sample_run_debug", {}).get("group_finishers", {})
 
     return {
         "advancement": advancement,
         "champion": champion,
         "group_winner": group_winner,
+        "team_config": team_config_rows,
+        "projected_placeholders": projected_rows,
+        "round_of_32_pairings": round_of_32_pairings,
+        "knockout_matches": knockout_matches,
+        "selected_third_place": selected_third_place,
+        "group_finishers": group_finishers,
     }
+
+
+def get_simulation_outputs(
+    simulations: int,
+    random_seed: int,
+    run_requested: bool = False,
+    allow_autorun: bool = False,
+) -> dict[str, object] | None:
+    """Return simulation outputs with session-level reuse across page navigation.
+
+    If no cached outputs exist for this control state, computation only runs when:
+    - `run_requested` is True (button click), or
+    - `allow_autorun` is True.
+    """
+    key = (int(simulations), int(random_seed))
+    cache_key = "wc26_sim_outputs_key"
+    cache_val = "wc26_sim_outputs_val"
+    if st.session_state.get(cache_key) == key and cache_val in st.session_state:
+        return st.session_state[cache_val]
+
+    should_run = allow_autorun or run_requested or (st.session_state.get("wc26_requested_sim_key") == key)
+    if not should_run:
+        return None
+
+    outputs = run_cached_simulation(simulations=simulations, random_seed=random_seed)
+    st.session_state[cache_key] = key
+    st.session_state[cache_val] = outputs
+    if st.session_state.get("wc26_requested_sim_key") == key:
+        st.session_state.pop("wc26_requested_sim_key", None)
+    return outputs
 
 
 def render_sidebar(default_team: str | None = None) -> DashboardState:
     """Render shared sidebar controls and return current state."""
     st.sidebar.header("Simulation Controls")
+    predictor = get_predictor()
+    if getattr(predictor, "_use_fallback_model", False):
+        st.sidebar.warning("Using fallback predictor (deployed model binary mismatch).")
 
     simulations = st.sidebar.slider(
         "Number of simulations",
         min_value=100,
         max_value=5000,
-        value=1000,
+        value=400,
         step=100,
         help="Higher values are slower but more stable.",
     )
@@ -88,9 +191,29 @@ def render_sidebar(default_team: str | None = None) -> DashboardState:
         "Selected team",
         teams,
         index=default_idx,
+        format_func=team_with_flag,
         help="Used by Team Odds page.",
     )
 
     st.sidebar.caption("Simulation results are cached by controls above.")
+    key = (int(simulations), int(random_seed))
+    cache_key = "wc26_sim_outputs_key"
+    cache_val = "wc26_sim_outputs_val"
+    has_cached = st.session_state.get(cache_key) == key and cache_val in st.session_state
 
-    return DashboardState(simulations=simulations, random_seed=int(random_seed), selected_team=selected_team)
+    run_requested = st.sidebar.button("Run Simulation", type="primary", use_container_width=True)
+    if run_requested:
+        st.session_state["wc26_requested_sim_key"] = key
+
+    if has_cached:
+        st.sidebar.success("Cached results ready for this setting.")
+    else:
+        st.sidebar.info("Click Run Simulation to generate results.")
+
+    return DashboardState(
+        simulations=simulations,
+        random_seed=int(random_seed),
+        selected_team=selected_team,
+        run_requested=run_requested,
+        has_cached_outputs=has_cached,
+    )
