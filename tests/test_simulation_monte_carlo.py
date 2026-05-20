@@ -50,3 +50,21 @@ def test_monte_carlo_aggregation_outputs():
     assert "won_tournament" in adv.columns
     assert abs(champ["champion_probability"].sum() - 1.0) < 1e-9
     assert set(group_winners["group"].unique()) == {"A", "B", "C", "D"}
+
+
+def test_requires_fixed_group_file_unless_debug_fallback_enabled(tmp_path):
+    cfg = SimulationConfig(
+        teams_config_path=str(tmp_path / "missing_wc26_teams.csv"),
+        allow_auto_groups_debug=False,
+    )
+
+    try:
+        run_world_cup_simulation(
+            n_simulations=1,
+            groups=None,
+            config=cfg,
+            predict_match_fn=lightweight_predictor,
+        )
+        assert False, "Expected FileNotFoundError when fixed group config is missing"
+    except FileNotFoundError as exc:
+        assert "Fixed group config file is required" in str(exc)
