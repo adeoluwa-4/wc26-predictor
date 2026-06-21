@@ -24,6 +24,19 @@ Refresh international results from zip first (recommended before rebuild):
 python -m src.data.refresh_international_results --zip-path /Users/adeoluwa/Downloads/international_results-master-2.zip
 ```
 
+Refresh latest upstream results, rebuild the training table, extract completed WC26 group matches, and retrain models:
+
+```bash
+python -m src.automation.update_after_matchday
+```
+
+Preferred mode is the full raw pipeline. If historical Elo/FIFA raw files are missing, the command uses an explicit incremental fallback: it appends newly scored matches to the existing processed table using the latest saved team/H2H profiles, then retrains and records `build_mode=incremental_profile_fallback` in the report.
+
+The update command writes:
+- `data/config/wc26_played_matches.csv`
+- `data/processed/latest_model_update_report.json`
+- refreshed model artifacts under `models/`
+
 ## Baseline Modeling Stage
 
 Trains and saves:
@@ -77,6 +90,10 @@ Teams are loaded from:
 - Simulator now uses this fixed group file for tournament input.
 - Auto-generated Elo-seeded groups are disabled by default and only allowed when `allow_auto_groups_debug=True` and the fixed file is missing.
 
+Completed group-stage matches are loaded from:
+- `data/config/wc26_played_matches.csv` with columns: `date, group, home_team, away_team, home_goals, away_goals, source`.
+- If the file exists, simulations use those real scores first and simulate only unplayed group fixtures.
+
 ### Knockout Audit Note
 
 Previous behavior used a generic seeded knockout pairing approach, which does not match the official 2026 structure and can skew title odds.
@@ -103,6 +120,10 @@ Resolve projected WC26 qualifier slots in config from latest results/shootouts:
 ```bash
 python -m src.simulation.update_wc26_teams --config-path data/config/wc26_teams.csv
 ```
+
+### Automated Matchday Updates
+
+The GitHub Actions workflow `.github/workflows/update-after-matchday.yml` runs every four hours and can also be started manually from the Actions tab. It downloads the latest `martj42/international_results` archive, rebuilds processed data, retrains, and commits changed artifacts one file at a time.
 
 ## Streamlit Dashboard
 
