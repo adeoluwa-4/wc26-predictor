@@ -15,6 +15,12 @@ data/interim/
 data/processed/
 models/*.pkl
 
+# Keep the compact training base available for scheduled incremental retrains.
+!data/processed/
+data/processed/*
+!data/processed/training_matches.parquet
+!data/processed/latest_model_update_report.json
+
 # Keep the demo-ready trained artifacts tracked (small, reproducible in this repo).
 !models/outcome_model.joblib
 !models/home_goals_model.joblib
