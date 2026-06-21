@@ -23,6 +23,7 @@ class SimulationConfig:
     group_names: tuple[str, ...] = DEFAULT_GROUP_NAMES
     min_active_date: str | None = "2018-01-01"
     teams_config_path: str = "data/config/wc26_teams.csv"
+    played_matches_path: str = "data/config/wc26_played_matches.csv"
     simulation_input_audit_path: str = "data/processed/simulation_input_audit.json"
     allow_auto_groups_debug: bool = False
     enforce_neutral_order_invariance: bool = True
