@@ -8,6 +8,7 @@ import numpy as np
 
 from src.simulation.config import SimulationConfig
 from src.simulation.match_simulator import MatchSimulator
+from src.simulation.played_matches import PlayedResultMap, played_result_for_fixture
 from src.simulation.schemas import GroupSimulationResult, MatchFixture
 from src.simulation.standings import apply_match_result, initialize_group_table, sort_group_table
 
@@ -26,6 +27,7 @@ def simulate_group_stage(
     match_simulator: MatchSimulator,
     rng: np.random.Generator,
     config: SimulationConfig | None = None,
+    played_results: PlayedResultMap | None = None,
 ) -> GroupSimulationResult:
     """Simulate every fixture in one group and return final standings."""
     cfg = config or SimulationConfig()
@@ -34,7 +36,9 @@ def simulate_group_stage(
 
     results = []
     for fixture in fixtures:
-        result = match_simulator.simulate_match(fixture, knockout=False)
+        result = played_result_for_fixture(fixture, played_results)
+        if result is None:
+            result = match_simulator.simulate_match(fixture, knockout=False)
         table = apply_match_result(table, result, config=cfg)
         results.append(result)
 
