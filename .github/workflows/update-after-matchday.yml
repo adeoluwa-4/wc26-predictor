@@ -1,0 +1,76 @@
+name: Update WC26 model after matchday
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */4 * * *"
+
+concurrency:
+  group: wc26-model-update
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-and-train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Refresh data and retrain
+        run: python -m src.automation.update_after_matchday
+
+      - name: Commit changed artifacts file by file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No model/data changes to commit."
+            exit 0
+          fi
+
+          git status --porcelain | while read -r status file; do
+            if [ -f "$file" ]; then
+              size_bytes=$(wc -c < "$file" | tr -d ' ')
+              if [ "$size_bytes" -gt 104857600 ]; then
+                echo "Refusing to commit >100MB file: $file ($size_bytes bytes)"
+                exit 1
+              fi
+            fi
+
+            case "$file" in
+              models/*)
+                prefix="model"
+                ;;
+              data/*)
+                prefix="data"
+                ;;
+              src/app/*|pages/*|streamlit_app.py)
+                prefix="ui"
+                ;;
+              src/*|tests/*)
+                prefix="fix"
+                ;;
+              *)
+                prefix="feat"
+                ;;
+            esac
+
+            git add "$file"
+            git commit -m "$prefix: update $file"
+            git push origin main
+          done
