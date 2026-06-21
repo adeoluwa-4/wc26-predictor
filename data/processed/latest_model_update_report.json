@@ -1,0 +1,54 @@
+{
+  "raw_refresh": {},
+  "training_rows": 49397,
+  "training_max_date": "2026-06-20",
+  "build_mode": "incremental_profile_fallback",
+  "played_wc26_group_matches": 36,
+  "played_matches_path": "data/config/wc26_played_matches.csv",
+  "validation": {
+    "mode": "incremental_profile_fallback",
+    "appended_rows": 0,
+    "reason": "no scored rows newer than existing training table"
+  },
+  "model_metrics": {
+    "outcome": {
+      "val": {
+        "accuracy": 0.6252220248667851,
+        "log_loss": 0.8137508967795989
+      },
+      "test": {
+        "accuracy": 0.5866666666666667,
+        "log_loss": 0.909755009185558
+      }
+    },
+    "home_goals": {
+      "val": {
+        "mae": 1.0605630561068549,
+        "rmse": 1.3738711131498467
+      },
+      "test": {
+        "mae": 1.0655411113061546,
+        "rmse": 1.4097265221501065
+      }
+    },
+    "away_goals": {
+      "val": {
+        "mae": 0.8990333685156149,
+        "rmse": 1.2195236890844412
+      },
+      "test": {
+        "mae": 0.8992014509703619,
+        "rmse": 1.2482110123007866
+      }
+    }
+  },
+  "model_split": {
+    "min_training_date": "2019-01-01",
+    "exclude_friendlies": true,
+    "train_end_date": "2024-12-20",
+    "val_end_date": "2025-10-12",
+    "train_rows": 4431,
+    "val_rows": 563,
+    "test_rows": 375
+  }
+}
