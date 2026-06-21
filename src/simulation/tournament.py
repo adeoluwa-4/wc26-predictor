@@ -17,6 +17,7 @@ from src.simulation.bracket import (
 from src.simulation.config import SimulationConfig
 from src.simulation.group_stage import simulate_group_stage
 from src.simulation.match_simulator import MatchSimulator
+from src.simulation.played_matches import PlayedResultMap, played_result_for_fixture
 from src.simulation.schemas import MatchFixture, TournamentRunResult
 
 
@@ -93,6 +94,7 @@ def run_single_tournament(
     seed: int,
     config: SimulationConfig | None = None,
     include_group_details: bool = True,
+    played_results: PlayedResultMap | None = None,
 ) -> TournamentRunResult:
     """Run one full tournament simulation from groups to champion."""
     cfg = config or SimulationConfig()
@@ -124,6 +126,7 @@ def run_single_tournament(
                 match_simulator=match_simulator,
                 rng=rng,
                 config=cfg,
+                played_results=played_results,
             )
             group_results[group_name] = result
 
@@ -174,7 +177,9 @@ def run_single_tournament(
                         stage="group",
                         group=group_name,
                     )
-                    result = match_simulator.simulate_match(fixture, knockout=False)
+                    result = played_result_for_fixture(fixture, played_results)
+                    if result is None:
+                        result = match_simulator.simulate_match(fixture, knockout=False)
 
                     h = stats[home]
                     a = stats[away]
