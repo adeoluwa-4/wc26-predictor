@@ -12,6 +12,7 @@ import numpy as np
 from src.models.predict_interface import WC26Predictor
 from src.simulation.audit import write_simulation_input_audit
 from src.simulation.config import SimulationConfig
+from src.simulation.played_matches import build_played_result_map, load_played_matches
 from src.simulation.reporting import (
     build_advancement_probabilities,
     build_champion_probabilities,
@@ -71,6 +72,9 @@ def run_world_cup_simulation(
                 "Set allow_auto_groups_debug=True only for debug fallback."
             )
 
+    played_matches_df = load_played_matches(cfg.played_matches_path)
+    played_results = build_played_result_map(played_matches_df)
+
     if team_config_df is not None:
         simulation_input_audit = write_simulation_input_audit(
             output_path=cfg.simulation_input_audit_path,
@@ -109,6 +113,7 @@ def run_world_cup_simulation(
             seed=seed,
             config=cfg,
             include_group_details=(sim_idx == 0),
+            played_results=played_results,
         )
 
         for team, flags in run.progression.items():
@@ -148,6 +153,7 @@ def run_world_cup_simulation(
             "team_config_rows": (
                 team_config_df.to_dict(orient="records") if team_config_df is not None else []
             ),
+            "played_matches": played_matches_df.to_dict(orient="records"),
             "simulation_input_audit": simulation_input_audit,
             "sample_run_debug": sample_debug,
         },
