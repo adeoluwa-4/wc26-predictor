@@ -586,6 +586,7 @@ Belgium,France,4,0,4,0,-5
 Belgium,Germany,1,1,0,0,1
 Belgium,Greece,1,0,0,1,0
 Belgium,Iceland,2,2,0,0,5
+Belgium,Iran,1,0,0,1,0
 Belgium,Israel,2,1,1,0,1
 Belgium,Italy,4,0,3,1,-3
 Belgium,Ivory Coast,1,0,0,1,0
@@ -1070,6 +1071,7 @@ Cape Verde,South Africa,1,0,0,1,0
 Cape Verde,Spain,1,0,0,1,0
 Cape Verde,Togo,3,2,1,0,2
 Cape Verde,Tunisia,1,0,1,0,-2
+Cape Verde,Uruguay,1,0,0,1,0
 Cascadia,Chagos Islands,1,1,0,0,3
 Catalonia,Venezuela,1,1,0,0,1
 Cayman Islands,Cuba,1,0,1,0,-3
@@ -1567,7 +1569,7 @@ Egypt,Malawi,2,2,0,0,6
 Egypt,Mauritania,2,2,0,0,3
 Egypt,Morocco,1,1,0,0,1
 Egypt,Mozambique,1,0,0,1,0
-Egypt,New Zealand,1,1,0,0,1
+Egypt,New Zealand,2,2,0,0,3
 Egypt,Niger,2,1,0,1,3
 Egypt,Nigeria,3,0,2,1,-2
 Egypt,Qatar,1,0,0,1,0
@@ -3300,6 +3302,7 @@ Saudi Arabia,Senegal,1,0,0,1,0
 Saudi Arabia,Serbia,1,0,1,0,-1
 Saudi Arabia,Singapore,2,2,0,0,6
 Saudi Arabia,South Korea,2,0,1,1,-1
+Saudi Arabia,Spain,1,0,1,0,-4
 Saudi Arabia,Tajikistan,2,1,0,1,1
 Saudi Arabia,Thailand,1,0,0,1,0
 Saudi Arabia,Trinidad and Tobago,1,0,0,1,0
