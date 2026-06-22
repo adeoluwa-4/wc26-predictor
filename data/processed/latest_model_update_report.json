@@ -1,44 +1,50 @@
 {
-  "raw_refresh": {},
-  "training_rows": 49397,
-  "training_max_date": "2026-06-20",
+  "raw_refresh": {
+    "output_dir": "/home/runner/work/wc26-predictor/wc26-predictor/data/raw/international_results/international_results-master",
+    "rows": 49477,
+    "min_date": "1872-11-30",
+    "max_date": "2026-06-27"
+  },
+  "training_rows": 49401,
+  "training_max_date": "2026-06-21",
   "build_mode": "incremental_profile_fallback",
-  "played_wc26_group_matches": 36,
+  "played_wc26_group_matches": 40,
   "played_matches_path": "data/config/wc26_played_matches.csv",
   "validation": {
     "mode": "incremental_profile_fallback",
-    "appended_rows": 0,
-    "reason": "no scored rows newer than existing training table"
+    "appended_rows": 4,
+    "first_appended_date": "2026-06-21",
+    "last_appended_date": "2026-06-21"
   },
   "model_metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6252220248667851,
-        "log_loss": 0.8137508967795989
+        "accuracy": 0.6247848537005164,
+        "log_loss": 0.8235850292726052
       },
       "test": {
-        "accuracy": 0.5866666666666667,
-        "log_loss": 0.909755009185558
+        "accuracy": 0.592797783933518,
+        "log_loss": 0.8988914795552251
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.0605630561068549,
-        "rmse": 1.3738711131498467
+        "mae": 1.0536117795972189,
+        "rmse": 1.3604097614887745
       },
       "test": {
-        "mae": 1.0655411113061546,
-        "rmse": 1.4097265221501065
+        "mae": 1.0665700318526306,
+        "rmse": 1.4190062902647687
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.8990333685156149,
-        "rmse": 1.2195236890844412
+        "mae": 0.8988107146420341,
+        "rmse": 1.213329970531561
       },
       "test": {
-        "mae": 0.8992014509703619,
-        "rmse": 1.2482110123007866
+        "mae": 0.896837826444218,
+        "rmse": 1.2531883944380895
       }
     }
   },
@@ -46,9 +52,9 @@
     "min_training_date": "2019-01-01",
     "exclude_friendlies": true,
     "train_end_date": "2024-12-20",
-    "val_end_date": "2025-10-12",
+    "val_end_date": "2025-10-13",
     "train_rows": 4431,
-    "val_rows": 563,
-    "test_rows": 375
+    "val_rows": 581,
+    "test_rows": 361
   }
 }
