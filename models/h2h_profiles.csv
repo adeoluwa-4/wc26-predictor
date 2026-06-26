@@ -348,6 +348,7 @@ Australia,Nepal,2,2,0,0,8
 Australia,New Zealand,5,5,0,0,8
 Australia,Oman,2,1,0,1,2
 Australia,Palestine,3,3,0,0,9
+Australia,Paraguay,1,0,0,1,0
 Australia,Peru,1,0,0,1,0
 Australia,Saudi Arabia,4,1,1,2,0
 Australia,South Korea,2,0,2,0,-2
@@ -1360,6 +1361,7 @@ Curaçao,Guatemala,1,0,0,1,0
 Curaçao,Haiti,3,2,0,1,5
 Curaçao,Honduras,4,2,2,0,0
 Curaçao,Indonesia,2,0,2,0,-2
+Curaçao,Ivory Coast,1,0,1,0,-2
 Curaçao,Jamaica,3,1,0,2,2
 Curaçao,Kazakhstan,1,0,1,0,-2
 Curaçao,Martinique,1,0,1,0,-1
@@ -1540,6 +1542,7 @@ Dominican Republic,Suriname,1,0,0,1,0
 Dominican Republic,United Arab Emirates,1,0,1,0,-4
 Dominican Republic,Uruguay,1,0,1,0,-1
 Ecuador,El Salvador,1,0,0,1,0
+Ecuador,Germany,1,1,0,0,1
 Ecuador,Guatemala,2,2,0,0,5
 Ecuador,Honduras,2,1,0,1,1
 Ecuador,Iraq,1,0,0,1,0
@@ -2453,6 +2456,7 @@ Japan,Scotland,1,1,0,0,1
 Japan,Serbia,1,1,0,0,1
 Japan,South Korea,3,2,1,0,5
 Japan,Spain,1,1,0,0,1
+Japan,Sweden,1,0,0,1,0
 Japan,Syria,2,2,0,0,10
 Japan,Tajikistan,2,2,0,0,6
 Japan,Thailand,1,1,0,0,5
@@ -2998,6 +3002,7 @@ Netherlands,Scotland,2,1,0,1,4
 Netherlands,Senegal,1,1,0,0,2
 Netherlands,Spain,3,0,0,3,0
 Netherlands,Sweden,1,1,0,0,4
+Netherlands,Tunisia,1,1,0,0,2
 Netherlands,Turkey,3,2,1,0,4
 Netherlands,Ukraine,1,1,0,0,1
 Netherlands,United States,1,1,0,0,2
@@ -3482,7 +3487,7 @@ Trinidad and Tobago,Wales,1,0,1,0,-1
 Tunisia,Uganda,1,1,0,0,2
 Tunisia,United Arab Emirates,1,1,0,0,1
 Tunisia,Zambia,2,2,0,0,4
-Turkey,United States,1,1,0,0,1
+Turkey,United States,2,2,0,0,2
 Turkey,Uzbekistan,1,1,0,0,2
 Turkey,Venezuela,1,1,0,0,1
 Turkey,Wales,5,1,1,3,0
