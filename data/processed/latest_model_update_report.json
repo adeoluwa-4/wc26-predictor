@@ -12,9 +12,8 @@
   "played_matches_path": "data/config/wc26_played_matches.csv",
   "validation": {
     "mode": "incremental_profile_fallback",
-    "appended_rows": 3,
-    "first_appended_date": "2026-06-29",
-    "last_appended_date": "2026-06-29"
+    "appended_rows": 0,
+    "reason": "no scored rows newer than existing training table"
   },
   "model_metrics": {
     "outcome": {
