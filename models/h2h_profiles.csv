@@ -809,7 +809,7 @@ Brazil,Ghana,1,1,0,0,3
 Brazil,Guinea,1,1,0,0,3
 Brazil,Haiti,1,1,0,0,3
 Brazil,Honduras,1,1,0,0,7
-Brazil,Japan,2,1,1,0,0
+Brazil,Japan,3,2,1,0,1
 Brazil,Mexico,1,1,0,0,1
 Brazil,Morocco,2,0,1,1,-1
 Brazil,Nigeria,1,0,0,1,0
@@ -1939,6 +1939,7 @@ Germany,Netherlands,6,3,1,2,1
 Germany,North Macedonia,2,1,1,0,3
 Germany,Northern Ireland,4,4,0,0,10
 Germany,Oman,1,1,0,0,1
+Germany,Paraguay,1,0,0,1,0
 Germany,Peru,1,1,0,0,2
 Germany,Poland,1,0,1,0,-1
 Germany,Portugal,2,1,1,0,1
@@ -2939,6 +2940,7 @@ Montserrat,Trinidad and Tobago,1,0,1,0,-5
 Montserrat,United States Virgin Islands,1,1,0,0,4
 Morocco,Mozambique,1,1,0,0,1
 Morocco,Namibia,1,1,0,0,1
+Morocco,Netherlands,1,0,0,1,0
 Morocco,Niger,3,3,0,0,7
 Morocco,Nigeria,1,0,0,1,0
 Morocco,Norway,1,0,0,1,0
