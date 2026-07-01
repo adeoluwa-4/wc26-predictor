@@ -1558,7 +1558,7 @@ Ecuador,Italy,1,0,1,0,-2
 Ecuador,Ivory Coast,1,0,1,0,-1
 Ecuador,Jamaica,1,1,0,0,2
 Ecuador,Japan,2,0,0,2,0
-Ecuador,Mexico,5,1,1,3,0
+Ecuador,Mexico,6,1,2,3,-2
 Ecuador,Morocco,1,0,0,1,0
 Ecuador,Netherlands,2,0,0,2,0
 Ecuador,New Zealand,1,1,0,0,2
@@ -1840,7 +1840,7 @@ France,Scotland,1,1,0,0,3
 France,Senegal,1,1,0,0,2
 France,South Africa,1,1,0,0,5
 France,Spain,3,1,2,0,-1
-France,Sweden,2,2,0,0,3
+France,Sweden,3,3,0,0,6
 France,Switzerland,1,0,0,1,0
 France,Tunisia,1,0,1,0,-1
 France,Turkey,2,0,1,1,-2
@@ -2421,6 +2421,7 @@ Ivory Coast,Namibia,1,1,0,0,3
 Ivory Coast,New Zealand,1,0,1,0,-1
 Ivory Coast,Niger,2,2,0,0,4
 Ivory Coast,Nigeria,2,1,1,0,0
+Ivory Coast,Norway,1,0,1,0,-1
 Ivory Coast,Oman,1,1,0,0,2
 Ivory Coast,Rwanda,1,1,0,0,3
 Ivory Coast,Saudi Arabia,1,0,1,0,-1
