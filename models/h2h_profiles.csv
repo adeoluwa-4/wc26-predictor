@@ -109,6 +109,7 @@ Algeria,Somalia,2,2,0,0,5
 Algeria,South Africa,1,0,0,1,0
 Algeria,Sudan,3,2,0,1,7
 Algeria,Sweden,2,0,2,0,-3
+Algeria,Switzerland,1,0,1,0,-2
 Algeria,Syria,1,1,0,0,1
 Algeria,Tanzania,3,2,0,1,5
 Algeria,Togo,3,3,0,0,8
@@ -396,6 +397,7 @@ Austria,Serbia,3,1,1,1,-1
 Austria,Slovakia,2,1,0,1,2
 Austria,Slovenia,4,2,0,2,2
 Austria,South Korea,1,1,0,0,1
+Austria,Spain,1,0,1,0,-3
 Austria,Sweden,2,2,0,0,4
 Austria,Switzerland,1,0,0,1,0
 Austria,Tunisia,1,1,0,0,1
@@ -1329,7 +1331,7 @@ Croatia,Netherlands,1,1,0,0,2
 Croatia,North Macedonia,1,1,0,0,3
 Croatia,Panama,1,1,0,0,1
 Croatia,Poland,2,1,0,1,1
-Croatia,Portugal,5,1,3,1,-4
+Croatia,Portugal,6,1,4,1,-5
 Croatia,Russia,2,1,0,1,1
 Croatia,Saudi Arabia,1,1,0,0,1
 Croatia,Scotland,3,2,1,0,2
