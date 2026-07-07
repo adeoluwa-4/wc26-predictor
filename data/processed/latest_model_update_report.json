@@ -1,49 +1,50 @@
 {
   "raw_refresh": {
     "output_dir": "/home/runner/work/wc26-predictor/wc26-predictor/data/raw/international_results/international_results-master",
-    "rows": 49503,
+    "rows": 49504,
     "min_date": "1872-11-30",
     "max_date": "2026-07-11"
   },
-  "training_rows": 49453,
-  "training_max_date": "2026-07-05",
+  "training_rows": 49455,
+  "training_max_date": "2026-07-06",
   "build_mode": "incremental_profile_fallback",
   "played_wc26_group_matches": 72,
   "played_matches_path": "data/config/wc26_played_matches.csv",
   "validation": {
     "mode": "incremental_profile_fallback",
-    "appended_rows": 0,
-    "reason": "no scored rows newer than existing training table"
+    "appended_rows": 2,
+    "first_appended_date": "2026-07-06",
+    "last_appended_date": "2026-07-06"
   },
   "model_metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6242937853107344,
-        "log_loss": 0.8188924826657877
+        "accuracy": 0.6228813559322034,
+        "log_loss": 0.8185996769713729
       },
       "test": {
-        "accuracy": 0.6030534351145038,
-        "log_loss": 0.907691191439377
+        "accuracy": 0.5871212121212122,
+        "log_loss": 0.9157620054336364
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.0715009854848023,
-        "rmse": 1.4082640119905803
+        "mae": 1.0707722688923724,
+        "rmse": 1.410172076282521
       },
       "test": {
-        "mae": 1.0085214045884803,
-        "rmse": 1.3082661863235814
+        "mae": 1.0030365342826186,
+        "rmse": 1.3070017967821668
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.9245231572869351,
-        "rmse": 1.2455280952682581
+        "mae": 0.922307629715032,
+        "rmse": 1.2385939941767072
       },
       "test": {
-        "mae": 0.832570543194684,
-        "rmse": 1.1662067489271084
+        "mae": 0.8500594545126121,
+        "rmse": 1.1807976880268751
       }
     }
   },
@@ -54,6 +55,6 @@
     "val_end_date": "2025-11-26",
     "train_rows": 4455,
     "val_rows": 708,
-    "test_rows": 262
+    "test_rows": 264
   }
 }
