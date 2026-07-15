@@ -5,45 +5,46 @@
     "min_date": "1872-11-30",
     "max_date": "2026-07-19"
   },
-  "training_rows": 49461,
-  "training_max_date": "2026-07-11",
+  "training_rows": 49462,
+  "training_max_date": "2026-07-14",
   "build_mode": "incremental_profile_fallback",
   "played_wc26_group_matches": 72,
   "played_matches_path": "data/config/wc26_played_matches.csv",
   "validation": {
     "mode": "incremental_profile_fallback",
-    "appended_rows": 0,
-    "reason": "no scored rows newer than existing training table"
+    "appended_rows": 1,
+    "first_appended_date": "2026-07-14",
+    "last_appended_date": "2026-07-14"
   },
   "model_metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6185133239831697,
-        "log_loss": 0.818070414065995
+        "accuracy": 0.6223776223776224,
+        "log_loss": 0.8227696314179024
       },
       "test": {
-        "accuracy": 0.6192307692307693,
-        "log_loss": 0.8901422639291479
+        "accuracy": 0.6254826254826255,
+        "log_loss": 0.8888290048448471
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.0766990276408324,
-        "rmse": 1.4123640879715982
+        "mae": 1.0702008032772556,
+        "rmse": 1.4005044662768538
       },
       "test": {
-        "mae": 0.996664748518178,
-        "rmse": 1.3047010837780897
+        "mae": 0.9981399873976721,
+        "rmse": 1.3012144653801807
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.916862097806036,
-        "rmse": 1.241357257271139
+        "mae": 0.9125223658722424,
+        "rmse": 1.2295415725340375
       },
       "test": {
-        "mae": 0.8604409341067181,
-        "rmse": 1.188917617156137
+        "mae": 0.859588339123366,
+        "rmse": 1.1850710701360903
       }
     }
   },
@@ -51,9 +52,9 @@
     "min_training_date": "2019-01-01",
     "exclude_friendlies": true,
     "train_end_date": "2025-01-07",
-    "val_end_date": "2025-12-04",
+    "val_end_date": "2025-12-05",
     "train_rows": 4460,
-    "val_rows": 713,
-    "test_rows": 260
+    "val_rows": 715,
+    "test_rows": 259
   }
 }
