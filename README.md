@@ -1,165 +1,31 @@
-# World Cup 2026 Predictor 
-This repository contains:
-- a reproducible, date safe data pipeline,
-- baseline model training with time based evaluation,
-- and an inference interface for match predictions.
+# World Cup 2026 Predictor
 
-## Data Pipeline Artifacts
+This app predicts World Cup match and tournament outcomes in a simple, interactive way.
 
-Pipeline outputs:
-- `data/processed/training_matches.parquet`
-- `data/processed/training_matches.csv` (optional)
-- `data/processed/validation_report.json`
-- `data/processed/unmapped_team_names.csv`
+## What it does
 
-Build pipeline:
+- Lets you compare two teams and see win/draw/loss chances.
+- Simulates full World Cup tournaments many times.
+- Shows each team's odds to advance through each round.
+- Shows title odds, meaning each team's chance to win the World Cup.
 
-```bash
-python -m src.data.build_training_table --export-csv
-```
+## How to use it
 
-Refresh international results from zip first (recommended before rebuild):
+1. Open the app.
+2. Choose your team or matchup.
+3. Click **Run Simulation**.
+4. Explore:
+   - **Overview** for top favorites
+   - **Team Odds** for one team's path
+   - **Match Predictor** for head-to-head predictions
+   - **Group Winners** for group-stage probabilities
+   - **Bracket** for knockout projections
 
-```bash
-python -m src.data.refresh_international_results --zip-path /Users/adeoluwa/Downloads/international_results-master-2.zip
-```
+## Live app
 
-Refresh latest upstream results, rebuild the training table, extract completed WC26 group matches, and retrain models:
-
-```bash
-python -m src.automation.update_after_matchday
-```
-
-Preferred mode is the full raw pipeline. If historical Elo/FIFA raw files are missing, the command uses an explicit incremental fallback: it appends newly scored matches to the existing processed table using the latest saved team/H2H profiles, then retrains and records `build_mode=incremental_profile_fallback` in the report.
-
-The update command writes:
-- `data/config/wc26_played_matches.csv`
-- `data/processed/latest_model_update_report.json`
-- refreshed model artifacts under `models/`
-
-## Baseline Modeling Stage
-
-Trains and saves:
-- `models/outcome_model.joblib`
-- `models/home_goals_model.cbm` (portable CatBoost)
-- `models/away_goals_model.cbm` (portable CatBoost)
-- `models/model_metadata.json`
-- `models/team_profiles.parquet`
-- `models/h2h_profiles.parquet`
-
-Run training:
-
-```bash
-python -m src.models.train_baselines
-```
-
-Optional focused tuning pass (time-safe, outcome model):
-
-```bash
-python -m src.models.tune_outcome
-```
-
-## Inference Interface
-
-Use from Python:
-
-```python
-from src.models.predict_interface import predict_match
-
-out = predict_match("Brazil", "France")
-print(out)
-```
-
-Returned keys:
-- `home_win_probability`
-- `draw_probability`
-- `away_win_probability`
-- `predicted_home_goals`
-- `predicted_away_goals`
-
-## Tournament Simulation Engine
-
-Simulation modules live in `src/simulation/` and support:
-- group stage simulation,
-- third-place ranking,
-- knockout bracket progression,
-- Monte Carlo aggregation.
-
-Teams are loaded from:
-- `data/config/wc26_teams.csv` with columns: `group, team, status, source, notes`.
-- Simulator now uses this fixed group file for tournament input.
-- Auto-generated Elo-seeded groups are disabled by default and only allowed when `allow_auto_groups_debug=True` and the fixed file is missing.
-
-Completed group-stage matches are loaded from:
-- `data/config/wc26_played_matches.csv` with columns: `date, group, home_team, away_team, home_goals, away_goals, source`.
-- If the file exists, simulations use those real scores first and simulate only unplayed group fixtures.
-
-### Knockout Audit Note
-
-Previous behavior used a generic seeded knockout pairing approach, which does not match the official 2026 structure and can skew title odds.
-
-Current behavior uses:
-- official Match 73-88 slot definitions,
-- deterministic best-third routing via allowed-group combination lookup,
-- fixed progression paths for Matches 89-102 plus third-place and final.
-
-Diagnostic artifact:
-- `data/processed/simulation_input_audit.json` (groups used, confirmed/projected slots, recent Elo sanity table, warnings).
-
-Run Monte Carlo simulation:
-
-```python
-from src.simulation.monte_carlo import run_world_cup_simulation
-
-result = run_world_cup_simulation(n_simulations=1000)
-print(result.champion_probabilities.head())
-```
-
-Resolve projected WC26 qualifier slots in config from latest results/shootouts:
-
-```bash
-python -m src.simulation.update_wc26_teams --config-path data/config/wc26_teams.csv
-```
-
-### Automated Matchday Updates
-
-The GitHub Actions workflow `.github/workflows/update-after-matchday.yml` runs every four hours and can also be started manually from the Actions tab. It downloads the latest `martj42/international_results` archive, rebuilds processed data, retrains, and commits changed artifacts one file at a time.
-
-## Streamlit Dashboard
-
-Multi-page app includes:
-- Overview
-- Team Odds
-- Group Winners
-- Match Predictor
-- Bracket
-
-Live demo:
-- https://adeoluwa-4-wc26-predictor-streamlit-app-awcr9s.streamlit.app
-
-Run app:
-
-```bash
-streamlit run streamlit_app.py
-```
-
-### Deployment Runtime Note
-
-Goal models are stored as CatBoost native `.cbm` files to improve cross-runtime portability in deployment.
-The app also supports CSV fallbacks for profile tables when parquet/pyarrow is unavailable.
-
-### Team Photos In UI
-
-To show country/team photos in predictor pages, add image files to:
-
-`assets/team_photos/`
-
-Supported extensions: `.avif`, `.png`, `.jpg`, `.jpeg`, `.webp`
-
-Name files with team names (for example: `France.avif`, `Turkey.avif`). The app auto-loads images when available.
+https://adeoluwa-4-wc26-predictor-streamlit-app-awcr9s.streamlit.app
 
 ## Notes
 
-- Evaluation is strictly time-based (no random split).
-- Streamlit UI is modular and separate from simulation logic.
-- Legacy Euro project is kept under `legacy/` for reference only.
+- Results are probability-based, not guaranteed outcomes.
+- More simulations usually give more stable results.
