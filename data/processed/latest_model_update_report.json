@@ -5,55 +5,56 @@
     "min_date": "1872-11-30",
     "max_date": "2026-07-19"
   },
-  "training_rows": 49464,
-  "training_max_date": "2026-07-18",
+  "training_rows": 49465,
+  "training_max_date": "2026-07-19",
   "build_mode": "incremental_profile_fallback",
   "played_wc26_group_matches": 72,
   "played_matches_path": "data/config/wc26_played_matches.csv",
   "validation": {
     "mode": "incremental_profile_fallback",
-    "appended_rows": 0,
-    "reason": "no scored rows newer than existing training table"
+    "appended_rows": 1,
+    "first_appended_date": "2026-07-19",
+    "last_appended_date": "2026-07-19"
   },
   "model_metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6286509040333796,
-        "log_loss": 0.8208730899321554
+        "accuracy": 0.6236111111111111,
+        "log_loss": 0.8178713923629826
       },
       "test": {
-        "accuracy": 0.611764705882353,
-        "log_loss": 0.8921140850872337
+        "accuracy": 0.6141732283464567,
+        "log_loss": 0.8915084690101673
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.073676643950789,
-        "rmse": 1.4057630284983507
+        "mae": 1.0736478485701224,
+        "rmse": 1.4080040235750937
       },
       "test": {
-        "mae": 1.0075492759004026,
-        "rmse": 1.3093033120741215
+        "mae": 0.99644899721855,
+        "rmse": 1.294746018093762
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.915601782560054,
-        "rmse": 1.2368981086629294
+        "mae": 0.9197647680130558,
+        "rmse": 1.244442880042033
       },
       "test": {
-        "mae": 0.8628897539603675,
-        "rmse": 1.1935521429387477
+        "mae": 0.8669868803962866,
+        "rmse": 1.1968666722121992
       }
     }
   },
   "model_split": {
     "min_training_date": "2019-01-01",
     "exclude_friendlies": true,
-    "train_end_date": "2025-01-10",
-    "val_end_date": "2025-12-07",
-    "train_rows": 4462,
-    "val_rows": 719,
-    "test_rows": 255
+    "train_end_date": "2025-01-13",
+    "val_end_date": "2025-12-08",
+    "train_rows": 4463,
+    "val_rows": 720,
+    "test_rows": 254
   }
 }
