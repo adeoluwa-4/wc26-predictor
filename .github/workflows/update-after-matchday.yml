@@ -2,8 +2,6 @@ name: Update WC26 model after matchday
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 */4 * * *"
 
 concurrency:
   group: wc26-model-update
