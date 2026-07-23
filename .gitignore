@@ -34,4 +34,3 @@ data/processed/*
 # Excluded from git history (download separately)
 data/raw/
 legacy/
-assets/team_photos/
