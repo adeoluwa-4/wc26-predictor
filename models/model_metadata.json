@@ -149,12 +149,12 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6236111111111111,
-        "log_loss": 0.8178713923629826
+        "accuracy": 0.625,
+        "log_loss": 0.8186503180222495
       },
       "test": {
-        "accuracy": 0.6141732283464567,
-        "log_loss": 0.8915084690101673
+        "accuracy": 0.6181102362204725,
+        "log_loss": 0.8918885767516426
       }
     },
     "home_goals": {
@@ -181,9 +181,9 @@
   "outcome_model": "catboost",
   "goal_model": "catboost",
   "outcome_model_params": {
-    "catboost_depth": 3,
-    "catboost_learning_rate": 0.05,
-    "catboost_iterations": 300,
+    "catboost_depth": 2,
+    "catboost_learning_rate": 0.03,
+    "catboost_iterations": 800,
     "catboost_l2_leaf_reg": 4,
     "catboost_bagging_temperature": 0.3
   },
