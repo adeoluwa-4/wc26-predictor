@@ -1,6 +1,6 @@
 # World Cup 2026 Predictor
 
-An end-to-end machine-learning and simulation system for the 48-team FIFA World Cup. The project estimates match win, draw, and loss probabilities, predicts expected goals, and runs Monte Carlo tournament simulations to calculate advancement and title odds.
+An end to end machine learning and simulation system for the 48 team FIFA World Cup. The project estimates match win, draw, and loss probabilities, predicts expected goals, and runs Monte Carlo tournament simulations to calculate advancement and title odds.
 
 [Open the live Streamlit dashboard](https://adeoluwa-4-wc26-predictor-streamlit-app-awcr9s.streamlit.app)
 
@@ -18,8 +18,8 @@ The dashboard includes Overview, Team Odds, Match Predictor, Group Winners, and 
 
 ```mermaid
 flowchart LR
-    A["International results, Elo, and reference data"] --> B["Validation and team-name standardization"]
-    B --> C["Rolling form, head-to-head, and tournament features"]
+    A["International results, Elo, and reference data"] --> B["Validation and team name standardization"]
+    B --> C["Rolling form, head to head, and tournament features"]
     C --> D["Chronological train / validation / test split"]
     D --> E["CatBoost outcome and goal models"]
     E --> F["Match probability interface"]
@@ -27,21 +27,21 @@ flowchart LR
     G --> H["Streamlit dashboard"]
 ```
 
-The data layer validates source schemas, normalizes historical team names, joins ratings, and builds time-aware rolling features. The model layer produces outcome probabilities and expected goals. The simulation layer applies official group and knockout rules across repeated tournament runs, while the Streamlit app turns the results into an interactive product.
+The data layer validates source schemas, normalizes historical team names, joins ratings, and builds time aware rolling features. The model layer produces outcome probabilities and expected goals. The simulation layer applies official group and knockout rules across repeated tournament runs, while the Streamlit app turns the results into an interactive product.
 
 ## Features and modeling
 
 The committed model uses 54 numeric and categorical features, including:
 
 - Elo strength and strength difference
-- Recent 5-match and 10-match form
+- Recent 5 match and 10 match form
 - Goals scored, goals conceded, goal difference, and points per match
-- Prior head-to-head record
-- Confederation and same-confederation signals
+- Prior head to head record
+- Confederation and same confederation signals
 - Tournament type and importance
-- Host-country and neutral-venue context
+- Host country and neutral venue context
 
-Outcome prediction uses a multiclass CatBoost classifier. Separate CatBoost regressors estimate home and away goals. Team and head-to-head profiles are saved for consistent inference without recomputing the complete history for every dashboard request.
+Outcome prediction uses a multiclass CatBoost classifier. Separate CatBoost regressors estimate home and away goals. Team and head to head profiles are saved for consistent inference without recomputing the complete history for every dashboard request.
 
 ## Evaluation
 
@@ -63,10 +63,10 @@ src/data/          ingestion, validation, joins, and rolling features
 src/models/        feature selection, training, tuning, and inference
 src/simulation/    group tables, knockout rules, and Monte Carlo runs
 src/app/           Streamlit dashboard, theming, flags, and images
-src/automation/    refresh-and-retrain orchestration
-data/config/       tournament teams and played-match state
+src/automation/    refresh and retrain orchestration
+data/config/       tournament teams and played match state
 models/            trained artifacts, profiles, and evaluation metadata
-tests/             data, model-feature, and tournament-rule coverage
+tests/             data, model feature, and tournament rule coverage
 ```
 
 ## Run locally
@@ -98,5 +98,5 @@ python -m src.models.train_baselines
 
 - International football contains structural changes, sparse matchups, and events a historical model cannot anticipate.
 - Probabilities depend on the quality and freshness of the underlying results and rating data.
-- Monte Carlo estimates stabilize with more simulations but remain model-based estimates, not guarantees.
+- Monte Carlo estimates stabilize with more simulations but remain model based estimates, not guarantees.
 - Squad availability, injuries, and tactical changes are not fully represented unless reflected in the input data.
