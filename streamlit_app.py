@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import plotly.express as px
 import streamlit as st
-from pathlib import Path
 
 from src.app.dashboard import get_predictor, get_simulation_outputs, render_sidebar, render_top_nav
 from src.app.team_images import team_photo_path
@@ -17,9 +16,6 @@ apply_wc26_theme()
 
 st.title("World Cup 2026 Predictor")
 render_top_nav(current_page="Overview")
-logo_path = Path("/Users/adeoluwa/Downloads/FIFA-World-Cup-26-Official-Brand-unveiled-in-Los-Angeles.avif")
-if logo_path.exists():
-    st.image(str(logo_path), caption="World Cup 2026 Official", use_container_width=True)
 st.caption("World Cup 2026 prediction dashboard powered by your trained model.")
 
 state = render_sidebar(default_team="United States")
