@@ -29,8 +29,12 @@ def _find_zip_member(zf: zipfile.ZipFile, filename: str) -> str:
 def _infer_bundle_name(results_member: str, zip_path: Path) -> str:
     parts = Path(results_member).parts
     if len(parts) > 1:
-        return parts[0]
-    return zip_path.stem
+        candidate = parts[0]
+    else:
+        candidate = zip_path.stem
+    if candidate in {"", ".", ".."} or Path(candidate).name != candidate:
+        raise ValueError("Archive bundle name must be a single safe directory name")
+    return candidate
 
 
 def refresh_from_zip(zip_path: Path, output_root: Path) -> dict[str, object]:
@@ -61,7 +65,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Refresh raw international results from a zip file.")
     parser.add_argument(
         "--zip-path",
-        default="/Users/adeoluwa/Downloads/international_results-master-2.zip",
+        required=True,
         help="Path to the zip archive containing results.csv/shootouts.csv/former_names.csv",
     )
     parser.add_argument(
