@@ -1,0 +1,105 @@
+match_id,date,stage,stage,group,home_team,away_team,home_goals,away_goals,home_penalties,away_penalties,score_display,source
+537327,2026-06-11,GROUP_STAGE,Group stage,A,Mexico,South Africa,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537328,2026-06-11,GROUP_STAGE,Group stage,A,South Korea,Czechia,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537333,2026-06-12,GROUP_STAGE,Group stage,B,Canada,Bosnia-Herzegovina,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537345,2026-06-12,GROUP_STAGE,Group stage,D,United States,Paraguay,4,1,,,4–1,FIFA World Cup 2026 completed-results feed
+537334,2026-06-13,GROUP_STAGE,Group stage,B,Qatar,Switzerland,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537339,2026-06-13,GROUP_STAGE,Group stage,C,Brazil,Morocco,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537340,2026-06-13,GROUP_STAGE,Group stage,C,Haiti,Scotland,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537346,2026-06-14,GROUP_STAGE,Group stage,D,Australia,Turkey,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537351,2026-06-14,GROUP_STAGE,Group stage,E,Germany,Curaçao,7,1,,,7–1,FIFA World Cup 2026 completed-results feed
+537357,2026-06-14,GROUP_STAGE,Group stage,F,Netherlands,Japan,2,2,,,2–2,FIFA World Cup 2026 completed-results feed
+537352,2026-06-14,GROUP_STAGE,Group stage,E,Ivory Coast,Ecuador,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537358,2026-06-14,GROUP_STAGE,Group stage,F,Sweden,Tunisia,5,1,,,5–1,FIFA World Cup 2026 completed-results feed
+537369,2026-06-15,GROUP_STAGE,Group stage,H,Spain,Cape Verde Islands,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537363,2026-06-15,GROUP_STAGE,Group stage,G,Belgium,Egypt,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537370,2026-06-15,GROUP_STAGE,Group stage,H,Saudi Arabia,Uruguay,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537364,2026-06-15,GROUP_STAGE,Group stage,G,Iran,New Zealand,2,2,,,2–2,FIFA World Cup 2026 completed-results feed
+537391,2026-06-16,GROUP_STAGE,Group stage,I,France,Senegal,3,1,,,3–1,FIFA World Cup 2026 completed-results feed
+537392,2026-06-16,GROUP_STAGE,Group stage,I,Iraq,Norway,1,4,,,1–4,FIFA World Cup 2026 completed-results feed
+537397,2026-06-16,GROUP_STAGE,Group stage,J,Argentina,Algeria,3,0,,,3–0,FIFA World Cup 2026 completed-results feed
+537398,2026-06-17,GROUP_STAGE,Group stage,J,Austria,Jordan,3,1,,,3–1,FIFA World Cup 2026 completed-results feed
+537403,2026-06-17,GROUP_STAGE,Group stage,K,Portugal,Congo DR,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537409,2026-06-17,GROUP_STAGE,Group stage,L,England,Croatia,4,2,,,4–2,FIFA World Cup 2026 completed-results feed
+537410,2026-06-17,GROUP_STAGE,Group stage,L,Ghana,Panama,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537404,2026-06-17,GROUP_STAGE,Group stage,K,Uzbekistan,Colombia,1,3,,,1–3,FIFA World Cup 2026 completed-results feed
+537329,2026-06-18,GROUP_STAGE,Group stage,A,Czechia,South Africa,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537335,2026-06-18,GROUP_STAGE,Group stage,B,Switzerland,Bosnia-Herzegovina,4,1,,,4–1,FIFA World Cup 2026 completed-results feed
+537336,2026-06-18,GROUP_STAGE,Group stage,B,Canada,Qatar,6,0,,,6–0,FIFA World Cup 2026 completed-results feed
+537330,2026-06-18,GROUP_STAGE,Group stage,A,Mexico,South Korea,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537348,2026-06-19,GROUP_STAGE,Group stage,D,United States,Australia,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537342,2026-06-19,GROUP_STAGE,Group stage,C,Scotland,Morocco,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537341,2026-06-19,GROUP_STAGE,Group stage,C,Brazil,Haiti,3,0,,,3–0,FIFA World Cup 2026 completed-results feed
+537347,2026-06-19,GROUP_STAGE,Group stage,D,Turkey,Paraguay,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537359,2026-06-20,GROUP_STAGE,Group stage,F,Netherlands,Sweden,5,1,,,5–1,FIFA World Cup 2026 completed-results feed
+537353,2026-06-20,GROUP_STAGE,Group stage,E,Germany,Ivory Coast,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537354,2026-06-20,GROUP_STAGE,Group stage,E,Ecuador,Curaçao,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537360,2026-06-21,GROUP_STAGE,Group stage,F,Tunisia,Japan,0,4,,,0–4,FIFA World Cup 2026 completed-results feed
+537371,2026-06-21,GROUP_STAGE,Group stage,H,Spain,Saudi Arabia,4,0,,,4–0,FIFA World Cup 2026 completed-results feed
+537365,2026-06-21,GROUP_STAGE,Group stage,G,Belgium,Iran,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537372,2026-06-21,GROUP_STAGE,Group stage,H,Uruguay,Cape Verde Islands,2,2,,,2–2,FIFA World Cup 2026 completed-results feed
+537366,2026-06-21,GROUP_STAGE,Group stage,G,New Zealand,Egypt,1,3,,,1–3,FIFA World Cup 2026 completed-results feed
+537399,2026-06-22,GROUP_STAGE,Group stage,J,Argentina,Austria,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537393,2026-06-22,GROUP_STAGE,Group stage,I,France,Iraq,3,0,,,3–0,FIFA World Cup 2026 completed-results feed
+537394,2026-06-22,GROUP_STAGE,Group stage,I,Norway,Senegal,3,2,,,3–2,FIFA World Cup 2026 completed-results feed
+537400,2026-06-22,GROUP_STAGE,Group stage,J,Jordan,Algeria,1,2,,,1–2,FIFA World Cup 2026 completed-results feed
+537405,2026-06-23,GROUP_STAGE,Group stage,K,Portugal,Uzbekistan,5,0,,,5–0,FIFA World Cup 2026 completed-results feed
+537411,2026-06-23,GROUP_STAGE,Group stage,L,England,Ghana,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537412,2026-06-23,GROUP_STAGE,Group stage,L,Panama,Croatia,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537406,2026-06-23,GROUP_STAGE,Group stage,K,Colombia,Congo DR,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537337,2026-06-24,GROUP_STAGE,Group stage,B,Switzerland,Canada,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537338,2026-06-24,GROUP_STAGE,Group stage,B,Bosnia-Herzegovina,Qatar,3,1,,,3–1,FIFA World Cup 2026 completed-results feed
+537344,2026-06-24,GROUP_STAGE,Group stage,C,Morocco,Haiti,4,2,,,4–2,FIFA World Cup 2026 completed-results feed
+537343,2026-06-24,GROUP_STAGE,Group stage,C,Scotland,Brazil,0,3,,,0–3,FIFA World Cup 2026 completed-results feed
+537331,2026-06-24,GROUP_STAGE,Group stage,A,Czechia,Mexico,0,3,,,0–3,FIFA World Cup 2026 completed-results feed
+537332,2026-06-24,GROUP_STAGE,Group stage,A,South Africa,South Korea,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537355,2026-06-25,GROUP_STAGE,Group stage,E,Ecuador,Germany,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537356,2026-06-25,GROUP_STAGE,Group stage,E,Curaçao,Ivory Coast,0,2,,,0–2,FIFA World Cup 2026 completed-results feed
+537361,2026-06-25,GROUP_STAGE,Group stage,F,Tunisia,Netherlands,1,3,,,1–3,FIFA World Cup 2026 completed-results feed
+537362,2026-06-25,GROUP_STAGE,Group stage,F,Japan,Sweden,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537349,2026-06-25,GROUP_STAGE,Group stage,D,Turkey,United States,3,2,,,3–2,FIFA World Cup 2026 completed-results feed
+537350,2026-06-25,GROUP_STAGE,Group stage,D,Paraguay,Australia,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537395,2026-06-26,GROUP_STAGE,Group stage,I,Norway,France,1,4,,,1–4,FIFA World Cup 2026 completed-results feed
+537396,2026-06-26,GROUP_STAGE,Group stage,I,Senegal,Iraq,5,0,,,5–0,FIFA World Cup 2026 completed-results feed
+537373,2026-06-26,GROUP_STAGE,Group stage,H,Uruguay,Spain,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537374,2026-06-26,GROUP_STAGE,Group stage,H,Cape Verde Islands,Saudi Arabia,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537367,2026-06-26,GROUP_STAGE,Group stage,G,New Zealand,Belgium,1,5,,,1–5,FIFA World Cup 2026 completed-results feed
+537368,2026-06-26,GROUP_STAGE,Group stage,G,Egypt,Iran,1,1,,,1–1,FIFA World Cup 2026 completed-results feed
+537413,2026-06-27,GROUP_STAGE,Group stage,L,Panama,England,0,2,,,0–2,FIFA World Cup 2026 completed-results feed
+537414,2026-06-27,GROUP_STAGE,Group stage,L,Croatia,Ghana,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537407,2026-06-27,GROUP_STAGE,Group stage,K,Colombia,Portugal,0,0,,,0–0,FIFA World Cup 2026 completed-results feed
+537408,2026-06-27,GROUP_STAGE,Group stage,K,Congo DR,Uzbekistan,3,1,,,3–1,FIFA World Cup 2026 completed-results feed
+537401,2026-06-27,GROUP_STAGE,Group stage,J,Jordan,Argentina,1,3,,,1–3,FIFA World Cup 2026 completed-results feed
+537402,2026-06-27,GROUP_STAGE,Group stage,J,Algeria,Austria,3,3,,,3–3,FIFA World Cup 2026 completed-results feed
+537417,2026-06-28,LAST_32,Round of 32,,South Africa,Canada,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537423,2026-06-29,LAST_32,Round of 32,,Brazil,Japan,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537415,2026-06-29,LAST_32,Round of 32,,Germany,Paraguay,4,5,3.0,4.0,4–5 (3–4 PK),FIFA World Cup 2026 completed-results feed
+537418,2026-06-29,LAST_32,Round of 32,,Netherlands,Morocco,3,4,2.0,3.0,3–4 (2–3 PK),FIFA World Cup 2026 completed-results feed
+537424,2026-06-30,LAST_32,Round of 32,,Ivory Coast,Norway,1,2,,,1–2,FIFA World Cup 2026 completed-results feed
+537416,2026-06-30,LAST_32,Round of 32,,France,Sweden,3,0,,,3–0,FIFA World Cup 2026 completed-results feed
+537425,2026-06-30,LAST_32,Round of 32,,Mexico,Ecuador,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537426,2026-07-01,LAST_32,Round of 32,,England,Congo DR,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537422,2026-07-01,LAST_32,Round of 32,,Belgium,Senegal,3,2,,,3–2,FIFA World Cup 2026 completed-results feed
+537421,2026-07-01,LAST_32,Round of 32,,United States,Bosnia-Herzegovina,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537420,2026-07-02,LAST_32,Round of 32,,Spain,Austria,3,0,,,3–0,FIFA World Cup 2026 completed-results feed
+537419,2026-07-02,LAST_32,Round of 32,,Portugal,Croatia,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537429,2026-07-02,LAST_32,Round of 32,,Switzerland,Algeria,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537428,2026-07-03,LAST_32,Round of 32,,Australia,Egypt,3,5,2.0,4.0,3–5 (2–4 PK),FIFA World Cup 2026 completed-results feed
+537427,2026-07-03,LAST_32,Round of 32,,Argentina,Cape Verde Islands,3,2,,,3–2,FIFA World Cup 2026 completed-results feed
+537430,2026-07-03,LAST_32,Round of 32,,Colombia,Ghana,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
+537376,2026-07-04,LAST_16,Round of 16,,Canada,Morocco,0,3,,,0–3,FIFA World Cup 2026 completed-results feed
+537375,2026-07-04,LAST_16,Round of 16,,Paraguay,France,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537377,2026-07-05,LAST_16,Round of 16,,Brazil,Norway,1,2,,,1–2,FIFA World Cup 2026 completed-results feed
+537378,2026-07-05,LAST_16,Round of 16,,Mexico,England,2,3,,,2–3,FIFA World Cup 2026 completed-results feed
+537379,2026-07-06,LAST_16,Round of 16,,Portugal,Spain,0,1,,,0–1,FIFA World Cup 2026 completed-results feed
+537380,2026-07-06,LAST_16,Round of 16,,United States,Belgium,1,4,,,1–4,FIFA World Cup 2026 completed-results feed
+537381,2026-07-07,LAST_16,Round of 16,,Argentina,Egypt,3,2,,,3–2,FIFA World Cup 2026 completed-results feed
+537382,2026-07-07,LAST_16,Round of 16,,Switzerland,Colombia,4,3,4.0,3.0,4–3 (4–3 PK),FIFA World Cup 2026 completed-results feed
+537383,2026-07-09,QUARTER_FINALS,Quarter-finals,,France,Morocco,2,0,,,2–0,FIFA World Cup 2026 completed-results feed
+537384,2026-07-10,QUARTER_FINALS,Quarter-finals,,Spain,Belgium,2,1,,,2–1,FIFA World Cup 2026 completed-results feed
+537385,2026-07-11,QUARTER_FINALS,Quarter-finals,,Norway,England,1,2,,,1–2,FIFA World Cup 2026 completed-results feed
+537386,2026-07-11,QUARTER_FINALS,Quarter-finals,,Argentina,Switzerland,3,1,,,3–1,FIFA World Cup 2026 completed-results feed
+537387,2026-07-14,SEMI_FINALS,Semi-finals,,France,Spain,0,2,,,0–2,FIFA World Cup 2026 completed-results feed
+537388,2026-07-15,SEMI_FINALS,Semi-finals,,England,Argentina,1,2,,,1–2,FIFA World Cup 2026 completed-results feed
+537389,2026-07-18,THIRD_PLACE,Third-place playoff,,France,England,4,6,,,4–6,FIFA World Cup 2026 completed-results feed
+537390,2026-07-19,FINAL,Final,,Spain,Argentina,1,0,,,1–0,FIFA World Cup 2026 completed-results feed
