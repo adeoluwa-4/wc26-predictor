@@ -964,7 +964,7 @@ Cambodia,Guam,2,2,0,0,2
 Cambodia,Guyana,1,0,1,0,-3
 Cambodia,Hong Kong,7,1,3,3,-6
 Cambodia,India,1,0,1,0,-2
-Cambodia,Indonesia,2,0,2,0,-3
+Cambodia,Indonesia,3,0,3,0,-7
 Cambodia,Iran,2,0,2,0,-24
 Cambodia,Iraq,2,0,2,0,-7
 Cambodia,Laos,1,1,0,0,3
@@ -973,13 +973,13 @@ Cambodia,Malaysia,3,0,2,1,-6
 Cambodia,Mongolia,3,1,1,1,1
 Cambodia,Pakistan,4,2,1,1,2
 Cambodia,Philippines,1,1,0,0,1
-Cambodia,Singapore,1,0,1,0,-1
+Cambodia,Singapore,2,0,2,0,-2
 Cambodia,Sri Lanka,2,0,0,2,0
 Cambodia,Taiwan,1,1,0,0,1
 Cambodia,Tajikistan,1,0,1,0,-1
 Cambodia,Thailand,2,0,2,0,-3
-Cambodia,Timor-Leste,2,2,0,0,2
-Cambodia,Vietnam,2,0,2,0,-5
+Cambodia,Timor-Leste,3,3,0,0,5
+Cambodia,Vietnam,3,0,3,0,-7
 Cameroon,Cape Verde,5,1,2,2,0
 Cameroon,China,1,1,0,0,2
 Cameroon,Comoros,2,2,0,0,4
@@ -2320,15 +2320,15 @@ Indonesia,Palestine,1,0,0,1,0
 Indonesia,Philippines,4,2,1,1,2
 Indonesia,Saint Kitts and Nevis,1,1,0,0,4
 Indonesia,Saudi Arabia,3,1,1,1,1
-Indonesia,Singapore,2,1,0,1,2
+Indonesia,Singapore,3,1,0,2,2
 Indonesia,Taiwan,3,3,0,0,10
 Indonesia,Tanzania,1,0,0,1,0
 Indonesia,Thailand,5,0,2,3,-7
-Indonesia,Timor-Leste,2,2,0,0,6
+Indonesia,Timor-Leste,3,3,0,0,9
 Indonesia,Turkmenistan,1,1,0,0,2
 Indonesia,United Arab Emirates,2,0,2,0,-10
 Indonesia,Vanuatu,1,1,0,0,6
-Indonesia,Vietnam,9,3,4,2,-4
+Indonesia,Vietnam,10,3,5,2,-7
 Iran,Iraq,5,3,1,1,4
 Iran,Japan,2,1,1,0,-2
 Iran,Kenya,1,1,0,0,1
@@ -2637,15 +2637,15 @@ Kyrgyzstan,Thailand,1,0,1,0,-2
 Kyrgyzstan,United Arab Emirates,3,0,2,1,-4
 Kyrgyzstan,Uzbekistan,4,0,4,0,-6
 Kyrgyzstan,Vietnam,1,1,0,0,1
-Laos,Malaysia,5,0,5,0,-18
+Laos,Malaysia,6,0,6,0,-22
 Laos,Maldives,1,0,1,0,-2
 Laos,Mongolia,1,1,0,0,1
-Laos,Myanmar,2,0,1,1,-1
+Laos,Myanmar,3,0,2,1,-6
 Laos,Nepal,5,1,3,1,-3
-Laos,Philippines,1,0,0,1,0
+Laos,Philippines,2,0,1,1,-3
 Laos,Singapore,1,0,1,0,-2
 Laos,Sri Lanka,3,1,1,1,0
-Laos,Thailand,1,0,0,1,0
+Laos,Thailand,2,0,1,1,-5
 Laos,Vietnam,5,0,5,0,-18
 Latvia,Liechtenstein,3,2,0,1,3
 Latvia,Lithuania,3,1,1,1,0
@@ -2797,13 +2797,13 @@ Malawi,Uganda,2,1,1,0,-1
 Malawi,Zambia,3,1,1,1,0
 Malawi,Zimbabwe,3,1,0,2,1
 Malaysia,Maldives,1,1,0,0,3
-Malaysia,Myanmar,1,1,0,0,1
+Malaysia,Myanmar,2,2,0,0,2
 Malaysia,Nepal,3,3,0,0,5
 Malaysia,New Zealand,1,0,1,0,-4
 Malaysia,Oman,2,0,2,0,-4
 Malaysia,Palestine,1,1,0,0,1
 Malaysia,Papua New Guinea,1,1,0,0,10
-Malaysia,Philippines,2,2,0,0,3
+Malaysia,Philippines,3,3,0,0,4
 Malaysia,Singapore,4,2,1,1,3
 Malaysia,Solomon Islands,1,1,0,0,3
 Malaysia,South Korea,1,0,0,1,0
@@ -2811,12 +2811,12 @@ Malaysia,Sri Lanka,1,1,0,0,6
 Malaysia,Syria,2,0,0,2,0
 Malaysia,Taiwan,2,2,0,0,3
 Malaysia,Tajikistan,2,1,0,1,1
-Malaysia,Thailand,6,3,2,1,-1
+Malaysia,Thailand,7,3,3,1,-3
 Malaysia,Timor-Leste,3,3,0,0,11
 Malaysia,Turkmenistan,2,2,0,0,3
 Malaysia,United Arab Emirates,2,0,2,0,-5
 Malaysia,Uzbekistan,1,0,1,0,-4
-Malaysia,Vietnam,5,1,4,0,-4
+Malaysia,Vietnam,7,1,6,0,-8
 Maldives,Mayotte,1,0,1,0,-2
 Maldives,Nepal,1,0,1,0,-1
 Maldives,Pakistan,2,1,1,0,-2
@@ -2994,13 +2994,13 @@ Mozambique,Zimbabwe,1,0,0,1,0
 Myanmar,Nepal,2,1,0,1,1
 Myanmar,North Korea,2,0,2,0,-8
 Myanmar,Pakistan,1,1,0,0,1
-Myanmar,Philippines,3,0,2,1,-5
+Myanmar,Philippines,4,1,2,1,-2
 Myanmar,Singapore,6,1,4,1,-8
 Myanmar,Sri Lanka,2,1,0,1,2
 Myanmar,Syria,4,0,3,1,-14
 Myanmar,Taiwan,1,0,0,1,0
 Myanmar,Tajikistan,3,1,2,0,-7
-Myanmar,Thailand,2,0,2,0,-10
+Myanmar,Thailand,3,0,3,0,-12
 Myanmar,Timor-Leste,1,1,0,0,2
 Myanmar,Vietnam,2,0,2,0,-8
 Namibia,Senegal,3,1,2,0,-4
@@ -3221,7 +3221,7 @@ Philippines,South Korea,1,0,1,0,-1
 Philippines,Syria,2,0,2,0,-4
 Philippines,Taiwan,2,0,1,1,-1
 Philippines,Tajikistan,3,1,0,2,3
-Philippines,Thailand,5,1,4,0,-8
+Philippines,Thailand,6,1,5,0,-9
 Philippines,Timor-Leste,3,3,0,0,12
 Philippines,Vietnam,4,0,3,1,-4
 Philippines,Yemen,1,0,0,1,0
@@ -3400,10 +3400,10 @@ Singapore,Solomon Islands,2,1,0,1,1
 Singapore,South Korea,2,0,2,0,-12
 Singapore,Taiwan,2,1,1,0,1
 Singapore,Tajikistan,2,0,2,0,-3
-Singapore,Thailand,5,0,5,0,-9
-Singapore,Timor-Leste,2,2,0,0,5
+Singapore,Thailand,7,1,6,0,-10
+Singapore,Timor-Leste,3,3,0,0,7
 Singapore,Uzbekistan,2,0,2,0,-7
-Singapore,Vietnam,4,0,3,1,-8
+Singapore,Vietnam,5,0,3,2,-8
 Singapore,Yemen,2,1,0,1,1
 Sint Maarten,Turks and Caicos Islands,4,1,3,0,0
 Sint Maarten,United States Virgin Islands,2,1,0,1,1
@@ -3511,7 +3511,8 @@ Thailand,Trinidad and Tobago,1,1,0,0,1
 Thailand,Turkmenistan,2,1,1,0,-1
 Thailand,United Arab Emirates,4,1,2,1,-3
 Thailand,Uzbekistan,2,0,2,0,-3
-Thailand,Vietnam,9,3,2,4,2
+Thailand,Vietnam,11,3,3,5,0
+Timor-Leste,Vietnam,1,0,1,0,-7
 Tonga,Tuvalu,1,0,1,0,-4
 Tonga,Vanuatu,1,0,1,0,-14
 Trinidad and Tobago,United States,6,1,5,0,-26
