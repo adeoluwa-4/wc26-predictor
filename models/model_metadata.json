@@ -116,11 +116,11 @@
   "split": {
     "min_training_date": "2019-01-01",
     "exclude_friendlies": true,
-    "train_end_date": "2025-01-13",
-    "val_end_date": "2025-12-08",
-    "train_rows": 4463,
-    "val_rows": 720,
-    "test_rows": 254
+    "train_end_date": "2025-06-06",
+    "val_end_date": "2025-12-30",
+    "train_rows": 4660,
+    "val_rows": 566,
+    "test_rows": 237
   },
   "defaults": {
     "confederation": "UEFA",
@@ -149,41 +149,41 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.625,
-        "log_loss": 0.8186503180222495
+        "accuracy": 0.6325088339222615,
+        "log_loss": 0.8127481932697294
       },
       "test": {
-        "accuracy": 0.6181102362204725,
-        "log_loss": 0.8918885767516426
+        "accuracy": 0.6329113924050633,
+        "log_loss": 0.8713499203730241
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.0736478485701224,
-        "rmse": 1.4080040235750937
+        "mae": 1.0436329487566307,
+        "rmse": 1.379070072558269
       },
       "test": {
-        "mae": 0.99644899721855,
-        "rmse": 1.294746018093762
+        "mae": 1.0395330880130584,
+        "rmse": 1.362462740914237
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.9197647680130558,
-        "rmse": 1.244442880042033
+        "mae": 0.9179883152826688,
+        "rmse": 1.2508934302367705
       },
       "test": {
-        "mae": 0.8669868803962866,
-        "rmse": 1.1968666722121992
+        "mae": 0.9313410229056095,
+        "rmse": 1.2770044896839148
       }
     }
   },
   "outcome_model": "catboost",
   "goal_model": "catboost",
   "outcome_model_params": {
-    "catboost_depth": 2,
-    "catboost_learning_rate": 0.03,
-    "catboost_iterations": 800,
+    "catboost_depth": 3,
+    "catboost_learning_rate": 0.05,
+    "catboost_iterations": 300,
     "catboost_l2_leaf_reg": 4,
     "catboost_bagging_temperature": 0.3
   },
