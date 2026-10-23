@@ -10,6 +10,8 @@ from src.utils.paths import PROJECT_ROOT
 
 MODELS_DIR = PROJECT_ROOT / "models"
 TRAINING_TABLE_PATH = PROJECT_ROOT / "data" / "processed" / "training_matches.parquet"
+WAREHOUSE_PATH = PROJECT_ROOT / "data" / "warehouse" / "wc26.duckdb"
+MODEL_FEATURES_RELATION = "analytics.mart_model_features"
 
 
 @dataclass(frozen=True)
