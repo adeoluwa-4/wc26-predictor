@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import duckdb
 import joblib
 import pandas as pd
 from catboost import CatBoostClassifier, CatBoostRegressor
@@ -16,7 +20,7 @@ from sklearn.metrics import accuracy_score, log_loss, mean_absolute_error, mean_
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
-from src.models.config import MODELS_DIR, TRAINING_TABLE_PATH, ModelingConfig
+from src.models.config import MODEL_FEATURES_RELATION, MODELS_DIR, WAREHOUSE_PATH, ModelingConfig
 from src.models.features import get_feature_columns, make_time_split
 
 
@@ -28,6 +32,37 @@ AWAY_GOALS_CATBOOST_PATH = MODELS_DIR / "away_goals_model.cbm"
 TEAM_PROFILE_PATH = MODELS_DIR / "team_profiles.parquet"
 H2H_PROFILE_PATH = MODELS_DIR / "h2h_profiles.parquet"
 MODEL_METADATA_PATH = MODELS_DIR / "model_metadata.json"
+
+
+def _file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _load_model_features(warehouse_path: Path) -> tuple[pd.DataFrame, str]:
+    """Load the dbt feature mart and its latest source snapshot version."""
+    if not warehouse_path.exists():
+        raise FileNotFoundError(
+            f"Warehouse not found at {warehouse_path}. Run `wc26-pipeline rebuild` first."
+        )
+    connection = duckdb.connect(str(warehouse_path), read_only=True)
+    try:
+        full_df = connection.execute(f"select * from {MODEL_FEATURES_RELATION} order by date, match_id").df()
+        snapshot = connection.execute(
+            "select coalesce(max(snapshot_checksum), 'unknown') from main.raw_matches"
+        ).fetchone()[0]
+    except duckdb.Error as exc:
+        raise RuntimeError(
+            f"Unable to read {MODEL_FEATURES_RELATION}; run the dbt analytics build before training"
+        ) from exc
+    finally:
+        connection.close()
+    if full_df.empty:
+        raise ValueError(f"{MODEL_FEATURES_RELATION} contains no training rows")
+    return full_df, str(snapshot)
 
 
 def _build_preprocessor(numeric_cols: list[str], categorical_cols: list[str]) -> ColumnTransformer:
@@ -289,11 +324,15 @@ def _build_h2h_profiles(df: pd.DataFrame) -> pd.DataFrame:
     return summary
 
 
-def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
+def train_baselines(
+    config: ModelingConfig | None = None,
+    warehouse_path: Path = WAREHOUSE_PATH,
+) -> dict[str, Any]:
     config = config or ModelingConfig()
+    training_started = time.perf_counter()
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
-    full_df = pd.read_parquet(TRAINING_TABLE_PATH)
+    full_df, data_snapshot_version = _load_model_features(warehouse_path)
     df = full_df.copy()
     if config.min_training_date:
         cutoff = pd.Timestamp(config.min_training_date)
@@ -382,7 +421,27 @@ def train_baselines(config: ModelingConfig | None = None) -> dict[str, Any]:
     h2h_profiles.to_parquet(H2H_PROFILE_PATH, index=False)
     h2h_profiles.to_csv(H2H_PROFILE_PATH.with_suffix(".csv"), index=False)
 
+    artifact_paths = [
+        OUTCOME_MODEL_PATH,
+        HOME_GOALS_CATBOOST_PATH if config.goal_model == "catboost" else HOME_GOALS_MODEL_PATH,
+        AWAY_GOALS_CATBOOST_PATH if config.goal_model == "catboost" else AWAY_GOALS_MODEL_PATH,
+        TEAM_PROFILE_PATH,
+        H2H_PROFILE_PATH,
+    ]
+    artifact_checksums = {path.name: _file_sha256(path) for path in artifact_paths}
+    trained_at = datetime.now(timezone.utc)
     metadata = {
+        "model_version": f"{trained_at.strftime('%Y%m%dT%H%M%SZ')}-{data_snapshot_version[:12]}",
+        "trained_at": trained_at.isoformat(),
+        "training_duration_seconds": round(time.perf_counter() - training_started, 3),
+        "data_snapshot_version": data_snapshot_version,
+        "training_source": MODEL_FEATURES_RELATION,
+        "warehouse_path": str(warehouse_path),
+        "artifact_checksums": artifact_checksums,
+        "training_row_count": int(len(split.train)),
+        "validation_row_count": int(len(split.val)),
+        "test_row_count": int(len(split.test)),
+        "feature_count": int(len(feature_cols)),
         "feature_columns": feature_cols,
         "numeric_columns": numeric_cols,
         "categorical_columns": categorical_cols,
