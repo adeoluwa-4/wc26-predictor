@@ -1,0 +1,124 @@
+version: 2
+
+sources:
+  - name: warehouse
+    schema: main
+    description: Tables loaded idempotently by the Python ingestion layer.
+    tables:
+      - name: raw_matches
+        description: Validated source match rows with original values and ingestion metadata.
+        loaded_at_field: ingested_at
+        freshness:
+          warn_after: {count: 45, period: day}
+          error_after: {count: 120, period: day}
+      - name: raw_model_features
+        description: Leakage-safe feature table produced by the Python feature builder.
+
+models:
+  - name: stg_matches
+    description: Normalized, traceable match records from immutable source snapshots.
+    columns:
+      - name: match_key
+        tests: [unique, not_null]
+      - name: match_date
+        tests: [not_null]
+      - name: home_team
+        tests: [not_null]
+      - name: away_team
+        tests: [not_null]
+      - name: outcome
+        tests:
+          - accepted_values:
+              arguments:
+                values: [home_win, draw, away_win]
+
+  - name: dim_team
+    description: One row per canonical national team.
+    columns:
+      - name: team_key
+        tests: [unique, not_null]
+      - name: team_name
+        tests: [unique, not_null]
+
+  - name: dim_tournament
+    description: Tournament lookup and competition classification.
+    columns:
+      - name: tournament_key
+        tests: [unique, not_null]
+      - name: tournament_name
+        tests: [unique, not_null]
+
+  - name: dim_date
+    description: Calendar attributes for every match date.
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+
+  - name: fact_match
+    description: Match fact table linked to team, tournament, and date dimensions.
+    columns:
+      - name: match_key
+        tests: [unique, not_null]
+      - name: home_team_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_team')
+                field: team_key
+      - name: away_team_key
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_team')
+                field: team_key
+      - name: date_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+
+  - name: fact_team_ranking
+    description: Prior-date Elo and FIFA ranking snapshots attached to each match side.
+    columns:
+      - name: team_match_key
+        tests: [unique, not_null]
+      - name: match_key
+        tests:
+          - relationships:
+              arguments:
+                to: ref('fact_match')
+                field: match_key
+
+  - name: fact_team_form
+    description: Leakage-safe prior-match form metrics by team and match.
+    columns:
+      - name: team_match_key
+        tests: [unique, not_null]
+
+  - name: mart_team_performance
+    description: Historical team-level performance aggregates for analytics.
+    columns:
+      - name: team_key
+        tests: [unique, not_null]
+
+  - name: mart_model_features
+    description: Contract consumed by CatBoost training and evaluation.
+    columns:
+      - name: match_id
+        tests: [unique, not_null]
+      - name: date
+        tests: [not_null]
+      - name: outcome_label
+        tests:
+          - accepted_values:
+              arguments:
+                values: [home_win, draw, away_win]
+
+  - name: mart_predictions
+    description: Versioned published prediction metadata available to dashboard consumers.
+    columns:
+      - name: model_version
+        tests: [not_null]
