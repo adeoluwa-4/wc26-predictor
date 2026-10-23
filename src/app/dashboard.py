@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from src.app.analytics import published_prediction_metadata, read_mart
 from src.app.team_flags import team_with_flag
 from src.models.predict_interface import WC26Predictor
 from src.simulation.config import SimulationConfig
@@ -58,12 +59,20 @@ def get_predictor() -> WC26Predictor:
 @st.cache_data
 
 def get_team_options() -> list[str]:
-    """Return confirmed WC teams available in trained profiles.
+    """Return confirmed WC teams available in analytics and trained profiles.
 
-    Falls back to all model profile teams if fixed config is unavailable.
+    The warehouse dimension is authoritative when present. Model profiles remain
+    the compatibility fallback for lightweight hosted dashboard deployments.
     """
     predictor = get_predictor()
     profile_teams = set(predictor.team_profiles.reset_index()["team"].dropna().astype(str).tolist())
+    dim_team = read_mart("dim_team")
+    warehouse_teams = (
+        set(dim_team["team_name"].dropna().astype(str).tolist())
+        if "team_name" in dim_team.columns
+        else set()
+    )
+    available_profiles = profile_teams & warehouse_teams if warehouse_teams else profile_teams
 
     cfg = SimulationConfig()
     config_path = Path(cfg.teams_config_path)
@@ -72,7 +81,7 @@ def get_team_options() -> list[str]:
         confirmed = sorted(
             set(config_df.loc[config_df["status"] == "confirmed", "team"].dropna().astype(str).tolist())
         )
-        available = sorted(team for team in confirmed if team in profile_teams)
+        available = sorted(team for team in confirmed if team in available_profiles)
         missing = sorted(set(confirmed) - set(available))
         if missing:
             LOGGER.warning(
@@ -120,6 +129,8 @@ def run_cached_simulation(simulations: int, random_seed: int) -> dict[str, objec
         "knockout_matches": knockout_matches,
         "selected_third_place": selected_third_place,
         "group_finishers": group_finishers,
+        "team_performance": read_mart("mart_team_performance"),
+        "prediction_version": published_prediction_metadata(),
     }
 
 
