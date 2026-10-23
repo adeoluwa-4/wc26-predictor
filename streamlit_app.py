@@ -38,6 +38,8 @@ champion = outputs["champion"]
 round_of_32_pairings = outputs["round_of_32_pairings"]
 selected_third_place = outputs["selected_third_place"]
 group_finishers = outputs["group_finishers"]
+team_performance = outputs["team_performance"]
+prediction_version = outputs["prediction_version"]
 
 st.caption(
     "Knockout bracket follows the official 2026 FIFA World Cup structure, including best third-place team routing."
@@ -47,6 +49,13 @@ col_a, col_b, col_c = st.columns(3)
 col_a.metric("Simulations", f"{state.simulations:,}")
 col_b.metric("Top Favorite", team_with_flag(str(champion.iloc[0]["team"])))
 col_c.metric("Top Title Odds", f"{100 * champion.iloc[0]['champion_probability']:.1f}%")
+
+if prediction_version:
+    st.caption(
+        "Published model version: "
+        f"`{prediction_version.get('model_version', 'unknown')}` · "
+        f"published {prediction_version.get('published_at', 'unknown')}"
+    )
 
 top_team = str(champion.iloc[0]["team"])
 top_photo = team_photo_path(top_team)
@@ -116,6 +125,25 @@ st.markdown(
 - Knockout draws are resolved with probability weighted penalty resolution.
 """
 )
+
+if not team_performance.empty:
+    st.subheader("Warehouse Analytics")
+    st.caption("Historical team performance is read from the dbt `mart_team_performance` model.")
+    leaders = team_performance.sort_values(
+        ["points_per_match", "goal_difference"], ascending=[False, False]
+    ).head(10)
+    st.dataframe(
+        leaders[["team_name", "matches_played", "points_per_match", "goal_difference"]].rename(
+            columns={
+                "team_name": "Team",
+                "matches_played": "Matches",
+                "points_per_match": "Points / Match",
+                "goal_difference": "Goal Difference",
+            }
+        ),
+        use_container_width=True,
+        hide_index=True,
+    )
 
 st.subheader("Quick Sanity")
 powerhouse = ["Argentina", "Brazil", "France", "England", "Spain", "Germany"]
