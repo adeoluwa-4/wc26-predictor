@@ -13,6 +13,10 @@ catboost_info/
 # Data and model artifacts
 data/interim/
 data/processed/
+data/raw_snapshots/
+data/quarantine/
+data/warehouse/
+data/published/
 models/*.pkl
 
 # Keep the compact training base available for scheduled incremental retrains.
@@ -31,6 +35,9 @@ data/processed/*
 
 # Streamlit cache
 .streamlit/
+warehouse/target/
+warehouse/logs/
+warehouse/dbt_packages/
 # Excluded from git history (download separately)
 data/raw/
 legacy/
