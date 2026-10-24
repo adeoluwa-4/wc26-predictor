@@ -35,7 +35,7 @@ flowchart LR
 1. The latest `results.csv` is copied into a timestamped, checksum-addressed raw snapshot. Existing snapshots are never overwritten.
 2. Pandera checks required fields, dates, score bounds, and team validity. Failed rows are written to `data/quarantine/<run_id>.parquet` with a reason.
 3. Valid rows retain their original source values, receive canonical names and a score-independent stable match key, and are upserted into DuckDB. A source watermark supports incremental reruns; explicit date ranges support corrections and backfills.
-4. dbt builds staging, intermediate, dimension, fact, and analytics models and runs 35 uniqueness, null, relationship, accepted-value, and freshness checks.
+4. dbt builds staging, intermediate, dimension, fact, and analytics models, runs 35 uniqueness/null/relationship/accepted-value tests, and enforces a separate raw-source freshness check.
 5. The Python feature builder preserves strict prior-date Elo/FIFA joins, same-date-safe rolling form, H2H priors, and chronological train/validation/test splits. Its output is registered as `analytics.mart_model_features`.
 6. CatBoost training reads the dbt mart, not raw CSVs. Metadata records split sizes, feature count, metrics, duration, source snapshot, model version, and artifact checksums.
 7. The existing official-format tournament simulation repeatedly samples model probabilities. Streamlit reads analytics marts and versioned model metadata while preserving the interactive match, group, bracket, and title-odds views.
@@ -123,11 +123,11 @@ The latest local verification report is in [docs/verification_report.md](docs/ve
 - The public repository does not include the full raw Elo/FIFA source histories, so clean-checkout feature rebuilding uses the tracked feature base and saved pre-match profiles.
 - A local DuckDB file is not designed for concurrent writers; pipeline stages close the loader connection before dbt runs.
 - The configured GitHub schedule still needs a successful hosted run before it can be described as operational.
-- The live Streamlit deployment was not redeployed or browser-tested as part of the local platform verification.
+- The local Streamlit server passed an HTTP health check, but the live deployment was not redeployed or browser-tested as part of this verification.
 - Predictions are probabilistic estimates, not guaranteed outcomes.
 
 ## Resume bullets
 
-- Built a DuckDB and dbt football data platform that validated and modeled 49,547 international match records into 11 warehouse models, passing 46 dbt model and data tests in a clean local pipeline run.
-- Engineered a leakage-safe 54-feature CatBoost training mart with chronological splits, versioned artifacts, and checksum lineage, achieving 63.3% held-out match-outcome accuracy on 237 test matches.
-- Orchestrated snapshot ingestion, quarantine, idempotent upserts, analytics builds, model training, and publication with Prefect, then served warehouse analytics and Monte Carlo World Cup advancement probabilities through Streamlit.
+- Built a DuckDB/dbt football platform that produced 11 analytics models with 46 passing build checks by validating and modeling 49,547 international match records through an automated pipeline.
+- Achieved 63.3% held-out match-outcome accuracy across 237 test matches by engineering a leakage-safe 54-feature CatBoost mart with chronological splits and checksum-versioned artifacts.
+- Prevented duplicate growth across a verified replay of 49,547 source records by implementing score-independent match keys, watermark-based incremental upserts, bounded backfills, and persisted Prefect run state.
