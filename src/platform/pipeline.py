@@ -18,7 +18,7 @@ from typing import Any
 import duckdb
 import pandas as pd
 import pandera.pandas as pa
-from pandera import Check, Column, DataFrameSchema
+from pandera.pandas import Check, Column, DataFrameSchema
 
 from src.data.build_training_table import build_training_table
 from src.data.standardize import normalize_team_name
