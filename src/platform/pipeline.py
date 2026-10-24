@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import subprocess
+import sys
 import time
 import uuid
 from dataclasses import dataclass
@@ -342,13 +344,21 @@ def _latest_results_path() -> Path:
 
 
 def run_dbt(config: PipelineConfig, full_refresh: bool = False) -> None:
+    dbt_executable = Path(sys.executable).with_name("dbt")
+    if not dbt_executable.exists():
+        located = shutil.which("dbt")
+        if located is None:
+            raise FileNotFoundError("dbt executable not found in the active Python environment")
+        dbt_executable = Path(located)
     command = [
-        "dbt", "build", "--project-dir", str(config.dbt_project_dir), "--profiles-dir",
+        str(dbt_executable), "build", "--project-dir", str(config.dbt_project_dir), "--profiles-dir",
         str(config.dbt_project_dir), "--target", "dev",
     ]
     if full_refresh:
         command.append("--full-refresh")
-    subprocess.run(command, cwd=PROJECT_ROOT, check=True)
+    environment = os.environ.copy()
+    environment["WC26_WAREHOUSE_PATH"] = str(config.warehouse_path)
+    subprocess.run(command, cwd=PROJECT_ROOT, env=environment, check=True)
 
 
 def publish_prediction_artifacts(config: PipelineConfig) -> dict[str, str]:
