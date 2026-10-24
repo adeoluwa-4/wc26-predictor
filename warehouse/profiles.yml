@@ -3,6 +3,6 @@ wc26_analytics:
   outputs:
     dev:
       type: duckdb
-      path: ../data/warehouse/wc26.duckdb
+      path: "{{ env_var('WC26_WAREHOUSE_PATH', '../data/warehouse/wc26.duckdb') }}"
       schema: analytics
       threads: 4
