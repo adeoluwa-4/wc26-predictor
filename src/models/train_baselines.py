@@ -22,6 +22,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 from src.models.config import MODEL_FEATURES_RELATION, MODELS_DIR, WAREHOUSE_PATH, ModelingConfig
 from src.models.features import get_feature_columns, make_time_split
+from src.utils.paths import PROJECT_ROOT
 
 
 OUTCOME_MODEL_PATH = MODELS_DIR / "outcome_model.joblib"
@@ -436,7 +437,7 @@ def train_baselines(
         "training_duration_seconds": round(time.perf_counter() - training_started, 3),
         "data_snapshot_version": data_snapshot_version,
         "training_source": MODEL_FEATURES_RELATION,
-        "warehouse_path": str(warehouse_path),
+        "warehouse_path": str(warehouse_path.relative_to(PROJECT_ROOT)),
         "artifact_checksums": artifact_checksums,
         "training_row_count": int(len(split.train)),
         "validation_row_count": int(len(split.val)),
