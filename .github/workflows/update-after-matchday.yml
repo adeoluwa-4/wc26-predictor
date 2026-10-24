@@ -1,7 +1,26 @@
 name: Update WC26 model after matchday
 
 on:
+  schedule:
+    - cron: "0 6 * * 1"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: true
+        default: "incremental"
+        type: choice
+        options:
+          - incremental
+          - backfill
+      backfill_start:
+        description: "Backfill start date (YYYY-MM-DD)"
+        required: false
+        type: string
+      backfill_end:
+        description: "Backfill end date (YYYY-MM-DD)"
+        required: false
+        type: string
 
 concurrency:
   group: wc26-model-update
@@ -28,8 +47,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Refresh data and retrain
-        run: python -m src.automation.update_after_matchday
+      - name: Download immutable source candidate
+        run: curl -L "$RESULTS_URL" -o /tmp/international_results.zip
+        env:
+          RESULTS_URL: https://github.com/martj42/international_results/archive/refs/heads/master.zip
+
+      - name: Extract raw source bundle
+        run: python -m src.data.refresh_international_results --zip-path /tmp/international_results.zip
+
+      - name: Run incremental refresh, analytics build, and training
+        if: github.event_name == 'schedule' || inputs.mode == 'incremental'
+        run: python -m src.platform.cli run-all
+
+      - name: Run controlled historical backfill
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'backfill'
+        run: |
+          test -n "${{ inputs.backfill_start }}" && test -n "${{ inputs.backfill_end }}"
+          python -m src.platform.cli backfill --start "${{ inputs.backfill_start }}" --end "${{ inputs.backfill_end }}"
 
       - name: Commit changed artifacts file by file
         run: |
