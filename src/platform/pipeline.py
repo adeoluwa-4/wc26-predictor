@@ -369,7 +369,8 @@ def run_dbt(config: PipelineConfig, full_refresh: bool = False) -> None:
 def publish_prediction_artifacts(config: PipelineConfig) -> dict[str, str]:
     config.artifacts_root.mkdir(parents=True, exist_ok=True)
     metadata_source = PROJECT_ROOT / "models" / "model_metadata.json"
-    version = file_sha256(metadata_source)[:12]
+    metadata = json.loads(metadata_source.read_text(encoding="utf-8"))
+    version = str(metadata.get("model_version") or file_sha256(metadata_source)[:12])
     version_dir = config.artifacts_root / version
     version_dir.mkdir(parents=True, exist_ok=True)
     metadata_target = version_dir / "model_metadata.json"
