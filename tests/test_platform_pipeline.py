@@ -1,5 +1,7 @@
 from pathlib import Path
+import importlib
 
+import duckdb
 import pandas as pd
 
 from src.platform import pipeline
@@ -10,6 +12,7 @@ from src.platform.pipeline import (
     stable_match_key,
     validate_and_quarantine,
 )
+from src.models.config import ModelingConfig
 
 
 def _config(tmp_path: Path) -> PipelineConfig:
@@ -130,3 +133,80 @@ def test_backfill_filters_requested_date_range(tmp_path: Path):
 
     assert result["rows_loaded"] == 1
     assert count == 1
+
+
+def test_model_artifacts_are_generated_from_feature_mart(monkeypatch, tmp_path: Path):
+    training = importlib.import_module("src.models.train_baselines")
+    warehouse_path = tmp_path / "model-test.duckdb"
+    rows = []
+    outcomes = ["home_win", "draw", "away_win"]
+    for index in range(60):
+        outcome = outcomes[index % 3]
+        home_score, away_score = {
+            "home_win": (2, 0),
+            "draw": (1, 1),
+            "away_win": (0, 2),
+        }[outcome]
+        rows.append(
+            {
+                "match_id": f"M{index:04d}",
+                "date": pd.Timestamp("2024-01-01") + pd.Timedelta(days=index),
+                "home_team": f"Home {index % 4}",
+                "away_team": f"Away {index % 4}",
+                "home_score": home_score,
+                "away_score": away_score,
+                "outcome_label": outcome,
+                "neutral": True,
+                "is_friendly": False,
+                "home_elo": 1500.0 + index,
+                "away_elo": 1490.0 - index,
+                "elo_diff": 10.0 + (2 * index),
+                "home_fifa_rank": 10.0,
+                "away_fifa_rank": 20.0,
+                "home_fifa_points": 1600.0,
+                "away_fifa_points": 1500.0,
+                "confederation_home": "A",
+                "confederation_away": "B",
+                "tournament_type": "Tournament",
+                "home_points_last_5": float(index % 15),
+                "away_points_last_5": float((index + 3) % 15),
+            }
+        )
+    frame = pd.DataFrame(rows)
+    connection = duckdb.connect(str(warehouse_path))
+    connection.execute("create schema analytics")
+    connection.register("features", frame)
+    connection.execute("create table analytics.mart_model_features as select * from features")
+    connection.execute("create table main.raw_matches(snapshot_checksum varchar)")
+    connection.execute("insert into main.raw_matches values ('snapshot-test')")
+    connection.close()
+
+    models_dir = tmp_path / "models"
+    monkeypatch.setattr(training, "MODELS_DIR", models_dir)
+    monkeypatch.setattr(training, "OUTCOME_MODEL_PATH", models_dir / "outcome_model.joblib")
+    monkeypatch.setattr(training, "HOME_GOALS_MODEL_PATH", models_dir / "home_goals_model.joblib")
+    monkeypatch.setattr(training, "AWAY_GOALS_MODEL_PATH", models_dir / "away_goals_model.joblib")
+    monkeypatch.setattr(training, "HOME_GOALS_CATBOOST_PATH", models_dir / "home_goals_model.cbm")
+    monkeypatch.setattr(training, "AWAY_GOALS_CATBOOST_PATH", models_dir / "away_goals_model.cbm")
+    monkeypatch.setattr(training, "TEAM_PROFILE_PATH", models_dir / "team_profiles.parquet")
+    monkeypatch.setattr(training, "H2H_PROFILE_PATH", models_dir / "h2h_profiles.parquet")
+    monkeypatch.setattr(training, "MODEL_METADATA_PATH", models_dir / "model_metadata.json")
+
+    metadata = training.train_baselines(
+        ModelingConfig(
+            train_frac=0.70,
+            val_frac=0.15,
+            min_training_date=None,
+            exclude_friendlies=False,
+            catboost_iterations=2,
+            catboost_goal_iterations=2,
+        ),
+        warehouse_path=warehouse_path,
+    )
+
+    assert metadata["training_source"] == "analytics.mart_model_features"
+    assert metadata["data_snapshot_version"] == "snapshot-test"
+    assert metadata["feature_count"] > 0
+    for artifact_name, checksum in metadata["artifact_checksums"].items():
+        assert (models_dir / artifact_name).exists()
+        assert len(checksum) == 64
