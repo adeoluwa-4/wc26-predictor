@@ -431,13 +431,18 @@ def train_baselines(
     ]
     artifact_checksums = {path.name: _file_sha256(path) for path in artifact_paths}
     trained_at = datetime.now(timezone.utc)
+    try:
+        warehouse_display_path = str(warehouse_path.relative_to(PROJECT_ROOT))
+    except ValueError:
+        warehouse_display_path = str(warehouse_path)
+
     metadata = {
         "model_version": f"{trained_at.strftime('%Y%m%dT%H%M%SZ')}-{data_snapshot_version[:12]}",
         "trained_at": trained_at.isoformat(),
         "training_duration_seconds": round(time.perf_counter() - training_started, 3),
         "data_snapshot_version": data_snapshot_version,
         "training_source": MODEL_FEATURES_RELATION,
-        "warehouse_path": str(warehouse_path.relative_to(PROJECT_ROOT)),
+        "warehouse_path": warehouse_display_path,
         "artifact_checksums": artifact_checksums,
         "training_row_count": int(len(split.train)),
         "validation_row_count": int(len(split.val)),
