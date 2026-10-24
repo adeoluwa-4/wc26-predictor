@@ -11,12 +11,12 @@ from typing import Any
 import pandas as pd
 from prefect import flow, get_run_logger, task
 
-from src.data.build_training_table import build_training_table
 from src.models.train_baselines import train_baselines
 from src.platform.pipeline import (
     PipelineConfig,
     Warehouse,
     _latest_results_path,
+    build_feature_base,
     create_immutable_snapshot,
     publish_prediction_artifacts,
     run_dbt,
@@ -71,16 +71,16 @@ def load_warehouse(
 
 
 @task(retries=1, retry_delay_seconds=5, task_run_name="features-{run_id}")
-def generate_features(run_id: str, config: PipelineConfig) -> dict[str, Any]:
+def generate_features(run_id: str, config: PipelineConfig, source_path: str) -> dict[str, Any]:
     logger = get_run_logger()
-    frame, report = build_training_table(export_csv=False)
+    frame, report = build_feature_base(Path(source_path))
     warehouse = Warehouse(config.warehouse_path)
     try:
         rows = warehouse.load_feature_table(PROJECT_ROOT / "data" / "processed" / "training_matches.parquet")
     finally:
         warehouse.close()
-    logger.info("run_id=%s stage=features rows=%d status=%s", run_id, rows, report["status"])
-    return {"feature_rows": rows, "validation": report}
+    logger.info("run_id=%s stage=features rows=%d mode=%s", run_id, rows, report["mode"])
+    return {"feature_rows": rows, "feature_build": report}
 
 
 @task(retries=1, retry_delay_seconds=5, task_run_name="dbt-{run_id}")
@@ -136,7 +136,7 @@ def wc26_pipeline_flow(
                 backfill_end,
             )
         )
-        summary.update(generate_features(run_id, config))
+        summary.update(generate_features(run_id, config, source))
         build_analytics(run_id, config, full_refresh)
         if train_models:
             metadata = train_and_evaluate(run_id)
