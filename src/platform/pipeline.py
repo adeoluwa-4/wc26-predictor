@@ -414,7 +414,7 @@ def run_pipeline(
     run_id = str(uuid.uuid4())
     started = time.perf_counter()
     source_path = _latest_results_path()
-    warehouse = Warehouse(cfg.warehouse_path)
+    warehouse: Warehouse | None = Warehouse(cfg.warehouse_path)
     metrics: dict[str, Any] = {"run_id": run_id, "source": str(source_path)}
     warehouse.start_run(run_id, str(source_path))
     try:
@@ -437,6 +437,8 @@ def run_pipeline(
         metrics["feature_rows"] = warehouse.load_feature_table(
             PROJECT_ROOT / "data" / "processed" / "training_matches.parquet"
         )
+        warehouse.close()
+        warehouse = None
         run_dbt(cfg, full_refresh=rebuild_analytics)
 
         if train:
@@ -450,11 +452,23 @@ def run_pipeline(
 
         metrics["feature_build"] = feature_build
         metrics["runtime_seconds"] = round(time.perf_counter() - started, 3)
-        warehouse.finish_run(run_id, "success", metrics)
+        run_store = Warehouse(cfg.warehouse_path)
+        try:
+            run_store.finish_run(run_id, "success", metrics)
+        finally:
+            run_store.close()
         return metrics
     except Exception as exc:
         metrics["runtime_seconds"] = round(time.perf_counter() - started, 3)
-        warehouse.finish_run(run_id, "failed", metrics, f"{type(exc).__name__}: {exc}")
+        if warehouse is not None:
+            warehouse.close()
+            warehouse = None
+        run_store = Warehouse(cfg.warehouse_path)
+        try:
+            run_store.finish_run(run_id, "failed", metrics, f"{type(exc).__name__}: {exc}")
+        finally:
+            run_store.close()
         raise
     finally:
-        warehouse.close()
+        if warehouse is not None:
+            warehouse.close()
