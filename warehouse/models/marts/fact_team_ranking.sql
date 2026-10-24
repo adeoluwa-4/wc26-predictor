@@ -19,6 +19,7 @@ matched as (
      and f.home_team = s.home_team
      and f.away_team = s.away_team
      and f.tournament = s.tournament
+     and coalesce(f.city, '') = coalesce(s.city, '')
      and coalesce(f.match_occurrence, 0) = s.match_occurrence
 ),
 team_rows as (
