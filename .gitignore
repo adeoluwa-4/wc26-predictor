@@ -38,6 +38,7 @@ data/processed/*
 warehouse/target/
 warehouse/logs/
 warehouse/dbt_packages/
+warehouse/.user.yml
 # Excluded from git history (download separately)
 data/raw/
 legacy/
