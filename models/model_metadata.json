@@ -1,4 +1,21 @@
 {
+  "model_version": "20261024T171514Z-df35268f8fc3",
+  "trained_at": "2026-10-24T17:15:14.378763+00:00",
+  "training_duration_seconds": 2.554,
+  "data_snapshot_version": "df35268f8fc341ff7fb93d448b4e40356676ac35300a6b4461fd199a99ac1514",
+  "training_source": "analytics.mart_model_features",
+  "warehouse_path": "data/warehouse/wc26.duckdb",
+  "artifact_checksums": {
+    "outcome_model.joblib": "33a32b6254cd068fbb98f92434d807190d8592eb30c8a6f744b9fd228028f10a",
+    "home_goals_model.cbm": "727082203cd1b9686df361093db02c7420598b096e891b01136745f545cc74b3",
+    "away_goals_model.cbm": "8e0d4915831f6bc9a948c02d40b54de4a121c8d96e6cbc03483d8a335e1efeab",
+    "team_profiles.parquet": "7a4460a34f2b5ac0177f7b2d726da17f887beb8efd31da532e681f3c0d50035b",
+    "h2h_profiles.parquet": "b9944e4ef6c7260733269f1e1e6e44dde73f30414edcd30ab056cf0428a42ff9"
+  },
+  "training_row_count": 4660,
+  "validation_row_count": 566,
+  "test_row_count": 237,
+  "feature_count": 54,
   "feature_columns": [
     "neutral",
     "is_friendly",
