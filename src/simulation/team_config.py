@@ -31,8 +31,8 @@ def load_team_config(path: str | Path, config: SimulationConfig | None = None) -
     out["group"] = out["group"].astype(str).str.strip().str.upper()
     out["team"] = out["team"].astype(str).str.strip()
     out["status"] = out["status"].astype(str).str.strip().str.lower()
-    out["source"] = out["source"].fillna("").astype(str).str.strip()
-    out["notes"] = out["notes"].fillna("").astype(str).str.strip()
+    out["source"] = out["source"].astype("string").fillna("").str.strip()
+    out["notes"] = out["notes"].astype("string").fillna("").str.strip()
 
     if out["team"].eq("").any():
         raise ValueError("Team names must be non-empty")
