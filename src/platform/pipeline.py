@@ -86,6 +86,7 @@ def stable_match_key(row: pd.Series | dict[str, Any]) -> str:
         normalize_team_name(str(row["away_team"])).casefold(),
         str(row.get("tournament", "")).strip().casefold(),
         str(row.get("city", "")).strip().casefold(),
+        str(int(row.get("match_occurrence", 0))),
     ]
     return hashlib.sha256("|".join(values).encode("utf-8")).hexdigest()
 
@@ -168,6 +169,8 @@ def validate_and_quarantine(
     valid["source_country"] = valid["country"]
     valid["home_team"] = valid["home_team"].map(normalize_team_name)
     valid["away_team"] = valid["away_team"].map(normalize_team_name)
+    occurrence_columns = ["date", "home_team", "away_team", "tournament", "city"]
+    valid["match_occurrence"] = valid.groupby(occurrence_columns, dropna=False).cumcount()
     valid["match_key"] = valid.apply(stable_match_key, axis=1)
     return valid, invalid
 
@@ -196,6 +199,7 @@ class Warehouse:
                 city varchar,
                 country varchar,
                 neutral boolean not null,
+                match_occurrence integer not null default 0,
                 source_home_team varchar,
                 source_away_team varchar,
                 source_tournament varchar,
@@ -206,6 +210,7 @@ class Warehouse:
                 ingested_at timestamp with time zone not null,
                 updated_at timestamp with time zone not null
             );
+            alter table raw_matches add column if not exists match_occurrence integer default 0;
             create table if not exists ingestion_checkpoints (
                 source_name varchar primary key,
                 watermark_date date,
@@ -292,7 +297,7 @@ class Warehouse:
         self.connection.register("incoming_matches", incoming)
         columns = [
             "match_key", "date", "home_team", "away_team", "home_score", "away_score", "tournament",
-            "city", "country", "neutral", "source_home_team", "source_away_team", "source_tournament",
+            "city", "country", "neutral", "match_occurrence", "source_home_team", "source_away_team", "source_tournament",
             "source_city", "source_country", "source_name", "snapshot_checksum", "ingested_at", "updated_at",
         ]
         names = ", ".join(columns)
