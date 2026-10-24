@@ -367,6 +367,30 @@ def publish_prediction_artifacts(config: PipelineConfig) -> dict[str, str]:
     return {"model_version": version, "metadata_path": str(metadata_target), "latest_path": str(latest)}
 
 
+def build_feature_base(source_path: Path) -> tuple[pd.DataFrame, dict[str, Any]]:
+    """Build features from complete raw inputs or use the documented incremental fallback.
+
+    Elo and FIFA histories are intentionally not committed to the repository. A clean
+    checkout therefore starts from the tracked, leakage-safe parquet and appends only
+    scored rows newer than its watermark using the saved pre-match profiles.
+    """
+    try:
+        frame, report = build_training_table(export_csv=False)
+        return frame, {"mode": "full_raw_pipeline", "validation": report}
+    except FileNotFoundError as exc:
+        from src.automation.update_after_matchday import _incremental_fallback_training_table
+
+        frame, fallback = _incremental_fallback_training_table(
+            latest_results_path=source_path,
+            export_csv=False,
+        )
+        return frame, {
+            "mode": "incremental_profile_fallback",
+            "reason": str(exc),
+            "validation": fallback,
+        }
+
+
 def run_pipeline(
     *,
     config: PipelineConfig | None = None,
@@ -399,7 +423,7 @@ def run_pipeline(
         )
         metrics.update(load_metrics)
 
-        training_df, validation_report = build_training_table(export_csv=False)
+        training_df, feature_build = build_feature_base(source_path)
         metrics["feature_rows"] = warehouse.load_feature_table(
             PROJECT_ROOT / "data" / "processed" / "training_matches.parquet"
         )
@@ -414,7 +438,7 @@ def run_pipeline(
         else:
             metrics["models_built"] = 0
 
-        metrics["validation"] = validation_report
+        metrics["feature_build"] = feature_build
         metrics["runtime_seconds"] = round(time.perf_counter() - started, 3)
         warehouse.finish_run(run_id, "success", metrics)
         return metrics
