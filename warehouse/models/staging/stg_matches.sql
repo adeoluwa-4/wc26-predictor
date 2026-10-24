@@ -9,6 +9,7 @@ select
     nullif(trim(city), '') as city,
     nullif(trim(country), '') as country,
     cast(neutral as boolean) as neutral,
+    cast(match_occurrence as integer) as match_occurrence,
     case
         when home_score > away_score then 'home_win'
         when home_score < away_score then 'away_win'
