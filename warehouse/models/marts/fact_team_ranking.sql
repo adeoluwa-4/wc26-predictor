@@ -19,6 +19,7 @@ matched as (
      and f.home_team = s.home_team
      and f.away_team = s.away_team
      and f.tournament = s.tournament
+     and coalesce(f.match_occurrence, 0) = s.match_occurrence
 ),
 team_rows as (
     select match_key, snapshot_date, home_team as team_name, 'home' as side,
