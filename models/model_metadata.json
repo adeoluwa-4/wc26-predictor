@@ -1,20 +1,20 @@
 {
-  "model_version": "20261024T171514Z-df35268f8fc3",
-  "trained_at": "2026-10-24T17:15:14.378763+00:00",
-  "training_duration_seconds": 2.554,
-  "data_snapshot_version": "df35268f8fc341ff7fb93d448b4e40356676ac35300a6b4461fd199a99ac1514",
+  "model_version": "20261026T122711Z-5dcefd1aa048",
+  "trained_at": "2026-10-26T12:27:11.264641+00:00",
+  "training_duration_seconds": 3.931,
+  "data_snapshot_version": "5dcefd1aa0483979ea8378cef5be448d2005609d39945ea162378561a30a6767",
   "training_source": "analytics.mart_model_features",
   "warehouse_path": "data/warehouse/wc26.duckdb",
   "artifact_checksums": {
-    "outcome_model.joblib": "33a32b6254cd068fbb98f92434d807190d8592eb30c8a6f744b9fd228028f10a",
-    "home_goals_model.cbm": "727082203cd1b9686df361093db02c7420598b096e891b01136745f545cc74b3",
-    "away_goals_model.cbm": "8e0d4915831f6bc9a948c02d40b54de4a121c8d96e6cbc03483d8a335e1efeab",
-    "team_profiles.parquet": "7a4460a34f2b5ac0177f7b2d726da17f887beb8efd31da532e681f3c0d50035b",
-    "h2h_profiles.parquet": "b9944e4ef6c7260733269f1e1e6e44dde73f30414edcd30ab056cf0428a42ff9"
+    "outcome_model.joblib": "1294d768b78fb7828215378c479d6597cb8a42a6dfd31b0152ba7a415d4b5876",
+    "home_goals_model.cbm": "1ebb0a29d970ba7dcf29c19686d71854997d6858ae70fa6146e659de6af00204",
+    "away_goals_model.cbm": "5ddfe212392f4c33a643e2d4c93d655a3a98e015c28b32a114ced569269a873f",
+    "team_profiles.parquet": "49dff7026f7c5937a6e352d391096eeb615abfcc3227ef177c1a7ba7e303fdf7",
+    "h2h_profiles.parquet": "f468017132e9d879381eac35dd845fcda70ef43587b4a2659e398392a0c4aca3"
   },
-  "training_row_count": 4660,
-  "validation_row_count": 566,
-  "test_row_count": 237,
+  "training_row_count": 4744,
+  "validation_row_count": 543,
+  "test_row_count": 452,
   "feature_count": 54,
   "feature_columns": [
     "neutral",
@@ -133,11 +133,11 @@
   "split": {
     "min_training_date": "2019-01-01",
     "exclude_friendlies": true,
-    "train_end_date": "2025-06-06",
-    "val_end_date": "2025-12-30",
-    "train_rows": 4660,
-    "val_rows": 566,
-    "test_rows": 237
+    "train_end_date": "2025-06-21",
+    "val_end_date": "2026-03-28",
+    "train_rows": 4744,
+    "val_rows": 543,
+    "test_rows": 452
   },
   "defaults": {
     "confederation": "UEFA",
@@ -166,32 +166,32 @@
   "metrics": {
     "outcome": {
       "val": {
-        "accuracy": 0.6325088339222615,
-        "log_loss": 0.8127481932697294
+        "accuracy": 0.6279926335174953,
+        "log_loss": 0.8301640098657354
       },
       "test": {
-        "accuracy": 0.6329113924050633,
-        "log_loss": 0.8713499203730241
+        "accuracy": 0.6017699115044248,
+        "log_loss": 0.9106172797864869
       }
     },
     "home_goals": {
       "val": {
-        "mae": 1.0436329487566307,
-        "rmse": 1.379070072558269
+        "mae": 1.0495413334055894,
+        "rmse": 1.3818268901971773
       },
       "test": {
-        "mae": 1.0395330880130584,
-        "rmse": 1.362462740914237
+        "mae": 1.0171113025625367,
+        "rmse": 1.3679540705293478
       }
     },
     "away_goals": {
       "val": {
-        "mae": 0.9179883152826688,
-        "rmse": 1.2508934302367705
+        "mae": 0.9456236218919829,
+        "rmse": 1.3219359212810857
       },
       "test": {
-        "mae": 0.9313410229056095,
-        "rmse": 1.2770044896839148
+        "mae": 0.8829020452105336,
+        "rmse": 1.1669453194568948
       }
     }
   },
