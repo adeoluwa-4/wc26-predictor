@@ -27,7 +27,7 @@ Afghanistan,Vietnam,1,0,1,0,-2
 Albania,Andorra,6,5,0,1,9
 Albania,Armenia,1,1,0,0,2
 Albania,Azerbaijan,1,1,0,0,2
-Albania,Belarus,2,2,0,0,3
+Albania,Belarus,3,3,0,0,5
 Albania,Bulgaria,1,1,0,0,2
 Albania,Chile,1,0,1,0,-3
 Albania,Croatia,1,0,0,1,0
@@ -35,6 +35,7 @@ Albania,Czech Republic,5,1,2,2,-1
 Albania,England,4,0,4,0,-11
 Albania,Estonia,1,0,0,1,0
 Albania,Faroe Islands,2,1,0,1,2
+Albania,Finland,1,0,1,0,-1
 Albania,France,2,0,2,0,-5
 Albania,Georgia,3,1,1,1,0
 Albania,Gibraltar,1,1,0,0,1
@@ -52,7 +53,7 @@ Albania,Luxembourg,1,0,1,0,-1
 Albania,Moldova,4,3,0,1,8
 Albania,Poland,5,1,4,0,-4
 Albania,Qatar,1,0,1,0,-1
-Albania,San Marino,2,2,0,0,7
+Albania,San Marino,4,4,0,0,11
 Albania,Saudi Arabia,1,0,0,1,0
 Albania,Serbia,2,1,0,1,1
 Albania,Spain,2,0,2,0,-2
@@ -73,7 +74,7 @@ Algeria,Benin,1,1,0,0,1
 Algeria,Bolivia,2,2,0,0,5
 Algeria,Botswana,4,4,0,0,10
 Algeria,Burkina Faso,4,1,0,3,1
-Algeria,Burundi,2,1,0,1,4
+Algeria,Burundi,3,1,0,2,4
 Algeria,Cameroon,2,1,1,0,0
 Algeria,Cape Verde,1,1,0,0,4
 Algeria,Colombia,1,1,0,0,3
@@ -98,7 +99,7 @@ Algeria,Mexico,1,0,0,1,0
 Algeria,Morocco,1,0,0,1,0
 Algeria,Mozambique,2,2,0,0,6
 Algeria,Netherlands,1,1,0,0,1
-Algeria,Niger,4,4,0,0,11
+Algeria,Niger,5,5,0,0,12
 Algeria,Nigeria,4,3,1,0,1
 Algeria,Qatar,1,1,0,0,1
 Algeria,Rwanda,2,2,0,0,4
@@ -117,7 +118,7 @@ Algeria,Tunisia,4,3,0,1,5
 Algeria,Uganda,4,4,0,0,5
 Algeria,United Arab Emirates,1,0,0,1,0
 Algeria,Uruguay,1,0,0,1,0
-Algeria,Zambia,2,1,0,1,5
+Algeria,Zambia,3,2,0,1,7
 Algeria,Zimbabwe,3,2,0,1,4
 American Samoa,Fiji,1,0,1,0,-9
 American Samoa,Guam,1,0,1,0,-6
@@ -138,7 +139,7 @@ Andorra,Estonia,1,0,0,1,0
 Andorra,Faroe Islands,2,0,2,0,-3
 Andorra,Finland,1,0,1,0,-4
 Andorra,France,2,0,2,0,-7
-Andorra,Gibraltar,3,0,2,1,-2
+Andorra,Gibraltar,4,0,2,2,-2
 Andorra,Grenada,1,1,0,0,1
 Andorra,Hungary,2,0,2,0,-4
 Andorra,Iceland,2,0,2,0,-4
@@ -147,7 +148,8 @@ Andorra,Israel,2,0,2,0,-3
 Andorra,Kosovo,3,0,2,1,-6
 Andorra,Latvia,6,0,3,3,-9
 Andorra,Liechtenstein,3,3,0,0,5
-Andorra,Malta,4,0,2,2,-3
+Andorra,Lithuania,1,0,1,0,-3
+Andorra,Malta,6,0,4,2,-5
 Andorra,Moldova,6,1,4,1,-4
 Andorra,Montenegro,1,0,1,0,-2
 Andorra,Northern Ireland,1,0,1,0,-2
@@ -171,7 +173,7 @@ Angola,Cape Verde,2,0,1,1,-1
 Angola,Central African Republic,3,3,0,0,5
 Angola,Comoros,2,1,0,1,2
 Angola,DR Congo,4,0,1,3,-1
-Angola,Egypt,3,0,1,2,-1
+Angola,Egypt,4,0,1,3,-1
 Angola,Equatorial Guinea,1,0,0,1,0
 Angola,Eswatini,2,1,0,1,1
 Angola,Gabon,4,2,2,0,1
@@ -182,6 +184,7 @@ Angola,Iran,1,0,1,0,-4
 Angola,Lesotho,1,1,0,0,2
 Angola,Libya,4,0,2,2,-2
 Angola,Madagascar,2,0,0,2,0
+Angola,Malawi,1,1,0,0,2
 Angola,Mali,1,0,1,0,-1
 Angola,Mauritania,3,1,0,2,1
 Angola,Mauritius,3,1,1,1,1
@@ -196,13 +199,15 @@ Angola,Sudan,2,1,0,1,1
 Angola,Tunisia,1,0,0,1,0
 Angola,Zambia,1,1,0,0,1
 Angola,Zimbabwe,1,0,0,1,0
+Anguilla,Antigua and Barbuda,2,0,2,0,-8
+Anguilla,Aruba,2,0,2,0,-3
 Anguilla,Bahamas,2,2,0,0,3
 Anguilla,Barbados,1,0,1,0,-1
 Anguilla,Belize,2,0,2,0,-2
 Anguilla,Bonaire,2,0,2,0,-5
 Anguilla,British Virgin Islands,1,0,1,0,-4
 Anguilla,Cayman Islands,1,0,1,0,-4
-Anguilla,Dominica,3,0,1,2,-3
+Anguilla,Dominica,4,0,2,2,-4
 Anguilla,Dominican Republic,1,0,1,0,-6
 Anguilla,El Salvador,1,0,1,0,-3
 Anguilla,Grenada,1,0,1,0,-2
@@ -217,7 +222,7 @@ Anguilla,Suriname,1,0,1,0,-4
 Anguilla,Trinidad and Tobago,1,0,1,0,-15
 Anguilla,Turks and Caicos Islands,4,1,1,2,1
 Anguilla,United States Virgin Islands,1,0,1,0,-3
-Antigua and Barbuda,Aruba,3,2,0,1,2
+Antigua and Barbuda,Aruba,5,3,1,1,2
 Antigua and Barbuda,Bahamas,2,1,0,1,3
 Antigua and Barbuda,Barbados,2,1,1,0,0
 Antigua and Barbuda,Bermuda,3,0,2,1,-2
@@ -239,8 +244,10 @@ Antigua and Barbuda,Saint Kitts and Nevis,1,0,1,0,-1
 Antigua and Barbuda,United States Virgin Islands,1,1,0,0,3
 Argentina,Australia,2,2,0,0,3
 Argentina,Austria,1,1,0,0,2
-Argentina,Bolivia,5,5,0,0,16
+Argentina,Benin,1,1,0,0,3
+Argentina,Bolivia,7,7,0,0,24
 Argentina,Brazil,6,4,1,1,4
+Argentina,Burkina Faso,1,1,0,0,7
 Argentina,Canada,2,2,0,0,4
 Argentina,Cape Verde,1,1,0,0,1
 Argentina,Chile,8,5,0,3,7
@@ -283,7 +290,7 @@ Argentina,Zambia,1,1,0,0,5
 Armenia,Belarus,1,0,1,0,-1
 Armenia,Bosnia and Herzegovina,2,1,1,0,1
 Armenia,Croatia,3,0,2,1,-2
-Armenia,Cyprus,1,0,0,1,0
+Armenia,Cyprus,2,0,1,1,-2
 Armenia,Czech Republic,1,0,1,0,-1
 Armenia,Estonia,2,1,0,1,2
 Armenia,Faroe Islands,2,0,1,1,-1
@@ -296,10 +303,10 @@ Armenia,Iceland,2,1,0,1,2
 Armenia,Italy,2,0,2,0,-10
 Armenia,Kazakhstan,2,1,0,1,1
 Armenia,Kosovo,3,0,2,1,-4
-Armenia,Latvia,4,3,1,0,3
+Armenia,Latvia,5,4,1,0,5
 Armenia,Liechtenstein,4,2,0,2,4
 Armenia,Moldova,1,0,0,1,0
-Armenia,Montenegro,2,1,0,1,1
+Armenia,Montenegro,4,1,1,2,0
 Armenia,North Macedonia,7,1,5,1,-11
 Armenia,Norway,1,0,1,0,-9
 Armenia,Portugal,2,0,2,0,-13
@@ -336,6 +343,7 @@ Aruba,Suriname,1,0,1,0,-6
 Aruba,United States Virgin Islands,2,2,0,0,5
 Australia,Bahrain,3,1,1,1,1
 Australia,Bangladesh,2,2,0,0,9
+Australia,Brazil,2,0,1,1,-2
 Australia,Cameroon,1,1,0,0,1
 Australia,Canada,1,1,0,0,1
 Australia,China,4,3,0,1,7
@@ -384,10 +392,11 @@ Austria,France,3,0,2,1,-3
 Austria,Germany,1,1,0,0,2
 Austria,Ghana,1,1,0,0,4
 Austria,Greece,1,1,0,0,1
-Austria,Israel,4,2,2,0,-1
+Austria,Israel,5,3,2,0,1
 Austria,Italy,2,1,1,0,1
 Austria,Jordan,1,1,0,0,2
 Austria,Kazakhstan,2,2,0,0,6
+Austria,Kosovo,2,1,0,1,2
 Austria,Latvia,2,1,1,0,5
 Austria,Luxembourg,1,1,0,0,3
 Austria,Moldova,3,2,0,1,5
@@ -396,6 +405,7 @@ Austria,North Macedonia,3,3,0,0,6
 Austria,Northern Ireland,2,2,0,0,2
 Austria,Norway,4,2,1,1,4
 Austria,Poland,3,1,1,1,1
+Austria,Republic of Ireland,1,0,0,1,0
 Austria,Romania,4,2,2,0,0
 Austria,San Marino,2,2,0,0,14
 Austria,Scotland,3,0,1,2,-1
@@ -426,7 +436,8 @@ Azerbaijan,Iceland,2,0,2,0,-7
 Azerbaijan,Jordan,1,1,0,0,1
 Azerbaijan,Kazakhstan,3,2,1,0,2
 Azerbaijan,Latvia,2,0,1,1,-1
-Azerbaijan,Lithuania,1,0,0,1,0
+Azerbaijan,Liechtenstein,1,0,0,1,0
+Azerbaijan,Lithuania,3,1,0,2,1
 Azerbaijan,Luxembourg,4,0,3,1,-4
 Azerbaijan,Malta,2,0,2,0,-3
 Azerbaijan,Moldova,2,1,1,0,0
@@ -443,6 +454,7 @@ Azerbaijan,Sierra Leone,1,0,0,1,0
 Azerbaijan,Slovakia,6,1,5,0,-10
 Azerbaijan,Slovenia,1,0,0,1,0
 Azerbaijan,Sweden,4,1,3,0,-10
+Azerbaijan,Tajikistan,1,1,0,0,1
 Azerbaijan,Turkey,1,0,1,0,-1
 Azerbaijan,Ukraine,2,0,1,1,-1
 Azerbaijan,Wales,2,0,2,0,-3
@@ -458,10 +470,11 @@ Bahamas,Guyana,2,0,2,0,-5
 Bahamas,Nicaragua,2,0,2,0,-6
 Bahamas,Puerto Rico,3,0,3,0,-17
 Bahamas,Saint Kitts and Nevis,2,0,2,0,-5
+Bahamas,Saint Martin,2,0,2,0,-14
 Bahamas,Saint Vincent and the Grenadines,2,1,0,1,1
 Bahamas,Trinidad and Tobago,4,0,3,1,-10
 Bahamas,Turks and Caicos Islands,3,2,1,0,6
-Bahamas,United States Virgin Islands,2,1,0,1,2
+Bahamas,United States Virgin Islands,3,1,1,1,0
 Bahrain,Bangladesh,1,1,0,0,2
 Bahrain,Belarus,1,0,1,0,-1
 Bahrain,Burundi,1,1,0,0,1
@@ -493,7 +506,7 @@ Bahrain,Oman,4,1,2,1,-3
 Bahrain,Palestine,1,0,1,0,-1
 Bahrain,Panama,1,0,1,0,-2
 Bahrain,Philippines,1,1,0,0,1
-Bahrain,Qatar,3,1,1,1,0
+Bahrain,Qatar,4,1,2,1,-2
 Bahrain,Saudi Arabia,6,2,2,2,-2
 Bahrain,Serbia,1,0,1,0,-4
 Bahrain,Somalia,1,0,1,0,-1
@@ -505,19 +518,19 @@ Bahrain,Thailand,3,1,2,0,-2
 Bahrain,Turkmenistan,2,1,0,1,1
 Bahrain,Uganda,1,1,0,0,2
 Bahrain,Ukraine,1,0,0,1,0
-Bahrain,United Arab Emirates,6,2,2,2,0
-Bahrain,Yemen,3,1,1,1,1
+Bahrain,United Arab Emirates,7,2,3,2,-3
+Bahrain,Yemen,4,1,2,1,-2
 Bangladesh,Bhutan,6,5,1,0,9
 Bangladesh,Cambodia,3,3,0,0,3
 Bangladesh,Hong Kong,2,0,1,1,-1
 Bangladesh,India,5,1,1,3,-1
-Bangladesh,Indonesia,1,0,0,1,0
+Bangladesh,Indonesia,2,0,1,1,-7
 Bangladesh,Kuwait,1,0,1,0,-1
 Bangladesh,Kyrgyzstan,1,0,1,0,-3
 Bangladesh,Laos,2,1,0,1,1
 Bangladesh,Lebanon,3,0,2,1,-6
 Bangladesh,Malawi,1,0,0,1,0
-Bangladesh,Malaysia,1,0,1,0,-3
+Bangladesh,Malaysia,2,0,2,0,-6
 Bangladesh,Maldives,8,4,3,1,0
 Bangladesh,Mongolia,1,0,0,1,0
 Bangladesh,Nepal,8,1,2,5,-1
@@ -526,12 +539,12 @@ Bangladesh,Palestine,3,0,3,0,-8
 Bangladesh,Qatar,2,0,2,0,-7
 Bangladesh,San Marino,1,1,0,0,1
 Bangladesh,Seychelles,3,1,1,1,0
-Bangladesh,Singapore,1,0,1,0,-1
+Bangladesh,Singapore,2,0,2,0,-2
 Bangladesh,Sri Lanka,2,1,1,0,0
 Bangladesh,Turkmenistan,1,0,1,0,-1
 Bangladesh,Vietnam,1,0,1,0,-3
 Barawa,Kernow,1,0,1,0,-5
-Barbados,Bermuda,1,0,1,0,-7
+Barbados,Bermuda,3,2,1,0,-3
 Barbados,Bonaire,1,1,0,0,1
 Barbados,Canada,2,0,2,0,-6
 Barbados,Cayman Islands,2,1,1,0,2
@@ -540,13 +553,13 @@ Barbados,Curaçao,1,0,1,0,-3
 Barbados,Dominica,3,0,0,3,0
 Barbados,Dominican Republic,3,0,2,1,-8
 Barbados,Grenada,3,1,0,2,3
-Barbados,Guadeloupe,2,0,2,0,-2
+Barbados,Guadeloupe,3,0,2,1,-2
 Barbados,Guyana,3,0,3,0,-10
 Barbados,Haiti,1,0,1,0,-2
 Barbados,Montserrat,2,0,2,0,-3
 Barbados,Nicaragua,3,0,3,0,-9
 Barbados,Panama,1,0,1,0,-1
-Barbados,Saint Lucia,1,0,1,0,-1
+Barbados,Saint Lucia,2,1,1,0,1
 Barbados,Saint Martin,3,1,2,0,1
 Barbados,Saint Vincent and the Grenadines,1,0,1,0,-1
 Barbados,Suriname,1,0,1,0,-1
@@ -561,6 +574,7 @@ Belarus,Cyprus,1,1,0,0,1
 Belarus,Czech Republic,2,0,2,0,-3
 Belarus,Denmark,2,0,1,1,-6
 Belarus,Estonia,4,2,1,1,1
+Belarus,Finland,2,1,0,1,1
 Belarus,Georgia,1,0,1,0,-1
 Belarus,Germany,2,0,2,0,-6
 Belarus,Greece,2,0,1,1,-4
@@ -579,6 +593,7 @@ Belarus,Northern Ireland,4,0,3,1,-4
 Belarus,Oman,1,0,1,0,-2
 Belarus,Romania,3,0,2,1,-3
 Belarus,Russia,2,0,2,0,-7
+Belarus,San Marino,1,1,0,0,4
 Belarus,Scotland,2,0,2,0,-3
 Belarus,Slovakia,2,0,1,1,-1
 Belarus,Switzerland,2,0,1,1,-5
@@ -595,13 +610,13 @@ Belgium,Egypt,2,0,1,1,-1
 Belgium,England,3,1,1,1,1
 Belgium,Estonia,4,4,0,0,13
 Belgium,Finland,1,1,0,0,2
-Belgium,France,4,0,4,0,-5
+Belgium,France,6,0,6,0,-9
 Belgium,Germany,1,1,0,0,1
 Belgium,Greece,1,0,0,1,0
 Belgium,Iceland,2,2,0,0,5
 Belgium,Iran,1,0,0,1,0
 Belgium,Israel,2,1,1,0,1
-Belgium,Italy,4,0,3,1,-3
+Belgium,Italy,5,1,3,1,-1
 Belgium,Ivory Coast,1,0,0,1,0
 Belgium,Kazakhstan,4,3,0,1,11
 Belgium,Liechtenstein,2,2,0,0,13
@@ -626,6 +641,7 @@ Belgium,Spain,1,0,1,0,-1
 Belgium,Sweden,2,1,0,1,3
 Belgium,Switzerland,1,1,0,0,1
 Belgium,Tunisia,1,1,0,0,5
+Belgium,Turkey,1,1,0,0,3
 Belgium,Ukraine,3,1,1,1,1
 Belgium,United States,2,2,0,0,6
 Belgium,Wales,6,4,0,2,6
@@ -633,7 +649,7 @@ Belize,Bermuda,2,0,1,1,-1
 Belize,Costa Rica,2,0,2,0,-12
 Belize,Cuba,1,0,1,0,-3
 Belize,Dominican Republic,2,0,2,0,-4
-Belize,French Guiana,8,4,2,2,2
+Belize,French Guiana,10,4,4,2,-1
 Belize,Grenada,2,0,2,0,-2
 Belize,Guatemala,2,0,2,0,-3
 Belize,Guyana,3,0,3,0,-5
@@ -644,11 +660,11 @@ Belize,Panama,1,0,1,0,-2
 Belize,Puerto Rico,2,1,0,1,3
 Belize,Saint Kitts and Nevis,3,2,1,0,1
 Belize,Saint Martin,1,1,0,0,1
-Belize,Saint Vincent and the Grenadines,4,1,2,1,-3
-Belize,Sint Maarten,1,0,1,0,-1
+Belize,Saint Vincent and the Grenadines,5,1,3,1,-4
+Belize,Sint Maarten,2,1,1,0,0
 Belize,Turks and Caicos Islands,3,3,0,0,12
 Benin,Botswana,1,1,0,0,1
-Benin,Burkina Faso,1,0,1,0,-3
+Benin,Burkina Faso,2,0,1,1,-3
 Benin,Cameroon,1,0,0,1,0
 Benin,DR Congo,3,0,2,1,-3
 Benin,Egypt,1,0,1,0,-2
@@ -661,7 +677,7 @@ Benin,Lesotho,4,2,0,2,5
 Benin,Liberia,2,2,0,0,5
 Benin,Libya,2,1,0,1,1
 Benin,Madagascar,4,2,2,0,0
-Benin,Mauritania,2,1,1,0,1
+Benin,Mauritania,3,2,1,0,2
 Benin,Morocco,2,0,1,1,-1
 Benin,Mozambique,2,0,2,0,-2
 Benin,Niger,1,0,0,1,0
@@ -685,6 +701,7 @@ Bermuda,DR Congo,1,0,1,0,-2
 Bermuda,Dominica,2,2,0,0,6
 Bermuda,Dominican Republic,3,1,2,0,-4
 Bermuda,French Guiana,2,0,1,1,-3
+Bermuda,Guadeloupe,1,0,1,0,-1
 Bermuda,Guatemala,1,0,0,1,0
 Bermuda,Guinea,1,0,1,0,-4
 Bermuda,Guyana,3,1,2,0,-2
@@ -695,6 +712,7 @@ Bermuda,Mexico,2,0,2,0,-5
 Bermuda,Montserrat,1,0,1,0,-1
 Bermuda,Nicaragua,1,1,0,0,2
 Bermuda,Panama,2,1,1,0,-1
+Bermuda,Saint Lucia,1,0,1,0,-3
 Bermuda,Saint Vincent and the Grenadines,2,1,1,0,1
 Bermuda,Suriname,1,0,1,0,-6
 Bermuda,Trinidad and Tobago,2,0,1,1,-3
@@ -725,7 +743,7 @@ Bolivia,Jordan,1,1,0,0,1
 Bolivia,Mexico,2,0,2,0,-2
 Bolivia,Nicaragua,1,0,0,1,0
 Bolivia,Panama,3,0,2,1,-3
-Bolivia,Paraguay,5,1,2,2,1
+Bolivia,Paraguay,6,1,3,2,-1
 Bolivia,Peru,6,2,4,0,-5
 Bolivia,Russia,1,0,1,0,-3
 Bolivia,Saudi Arabia,1,1,0,0,1
@@ -739,10 +757,13 @@ Bolivia,Uruguay,6,1,4,1,-9
 Bolivia,Uzbekistan,1,0,1,0,-1
 Bolivia,Venezuela,6,2,4,0,-4
 Bonaire,British Virgin Islands,4,3,1,0,2
+Bonaire,Cuba,1,0,1,0,-2
 Bonaire,El Salvador,3,0,2,1,-2
+Bonaire,Grenada,2,1,1,0,2
 Bonaire,Guyana,1,0,1,0,-1
 Bonaire,Montserrat,2,1,1,0,0
 Bonaire,Niger,1,0,1,0,-6
+Bonaire,Saint Kitts and Nevis,1,0,1,0,-1
 Bonaire,Saint Martin,3,0,3,0,-8
 Bonaire,Saint Vincent and the Grenadines,4,1,2,1,-1
 Bonaire,Sint Maarten,2,0,1,1,-5
@@ -772,13 +793,14 @@ Bosnia and Herzegovina,Netherlands,4,0,2,2,-5
 Bosnia and Herzegovina,North Macedonia,1,0,0,1,0
 Bosnia and Herzegovina,Northern Ireland,1,0,0,1,0
 Bosnia and Herzegovina,Panama,1,0,0,1,0
-Bosnia and Herzegovina,Poland,2,0,2,0,-4
+Bosnia and Herzegovina,Poland,4,1,2,1,-3
 Bosnia and Herzegovina,Portugal,2,0,2,0,-8
 Bosnia and Herzegovina,Qatar,1,1,0,0,2
-Bosnia and Herzegovina,Romania,4,3,1,0,1
+Bosnia and Herzegovina,Romania,5,4,1,0,3
 Bosnia and Herzegovina,San Marino,2,2,0,0,7
 Bosnia and Herzegovina,Slovakia,2,0,2,0,-3
 Bosnia and Herzegovina,Slovenia,1,0,1,0,-1
+Bosnia and Herzegovina,Sweden,1,0,0,1,0
 Bosnia and Herzegovina,Switzerland,1,0,1,0,-3
 Bosnia and Herzegovina,Ukraine,3,0,2,1,-3
 Bosnia and Herzegovina,United States,2,0,2,0,-3
@@ -792,7 +814,7 @@ Botswana,Eswatini,4,3,0,1,4
 Botswana,Guinea,2,1,0,1,1
 Botswana,Lesotho,2,2,0,0,5
 Botswana,Liberia,1,0,0,1,0
-Botswana,Libya,2,1,1,0,0
+Botswana,Libya,3,1,1,1,0
 Botswana,Malawi,3,1,1,1,0
 Botswana,Mauritania,2,0,1,1,-1
 Botswana,Mozambique,3,0,2,1,-3
@@ -801,7 +823,7 @@ Botswana,Senegal,1,0,1,0,-3
 Botswana,Seychelles,1,1,0,0,1
 Botswana,Somalia,2,2,0,0,4
 Botswana,South Africa,5,0,4,1,-4
-Botswana,Tunisia,2,0,1,1,-3
+Botswana,Tunisia,3,0,1,2,-3
 Botswana,Uganda,2,0,2,0,-2
 Botswana,Zambia,5,1,3,1,-2
 Botswana,Zimbabwe,3,0,2,1,-4
@@ -819,6 +841,7 @@ Brazil,Ghana,1,1,0,0,3
 Brazil,Guinea,1,1,0,0,3
 Brazil,Haiti,1,1,0,0,3
 Brazil,Honduras,1,1,0,0,7
+Brazil,India,1,1,0,0,4
 Brazil,Japan,3,2,1,0,1
 Brazil,Mexico,1,1,0,0,1
 Brazil,Morocco,2,0,1,1,-1
@@ -847,15 +870,16 @@ British Virgin Islands,Gibraltar,1,0,1,0,-4
 British Virgin Islands,Grenada,1,0,1,0,-3
 British Virgin Islands,Guatemala,2,0,2,0,-6
 British Virgin Islands,Jamaica,1,0,1,0,-1
+British Virgin Islands,Montserrat,2,0,2,0,-5
 British Virgin Islands,Puerto Rico,2,0,2,0,-8
 British Virgin Islands,Saint Kitts and Nevis,2,0,2,0,-4
 British Virgin Islands,Saint Vincent and the Grenadines,2,0,1,1,-3
-British Virgin Islands,Turks and Caicos Islands,3,1,0,2,2
+British Virgin Islands,Turks and Caicos Islands,5,1,2,2,-4
 British Virgin Islands,United States Virgin Islands,2,0,0,2,0
 Brunei,Cambodia,1,0,1,0,-4
-Brunei,Hong Kong,1,0,1,0,-10
+Brunei,Hong Kong,2,0,2,0,-12
 Brunei,Indonesia,3,0,3,0,-19
-Brunei,Laos,2,1,1,0,0
+Brunei,Laos,3,1,2,0,-2
 Brunei,Lebanon,2,0,2,0,-8
 Brunei,Macau,2,2,0,0,4
 Brunei,Malaysia,1,0,1,0,-4
@@ -872,18 +896,20 @@ Bulgaria,Croatia,1,0,1,0,-1
 Bulgaria,Cyprus,2,1,0,1,2
 Bulgaria,Czech Republic,2,1,1,0,0
 Bulgaria,England,2,0,2,0,-10
+Bulgaria,Estonia,1,0,0,1,0
 Bulgaria,Finland,2,0,2,0,-3
 Bulgaria,France,1,0,1,0,-3
 Bulgaria,Georgia,5,2,2,1,-2
 Bulgaria,Gibraltar,3,2,0,1,7
 Bulgaria,Greece,1,0,1,0,-4
 Bulgaria,Hungary,3,0,2,1,-5
+Bulgaria,Iceland,1,0,1,0,-3
 Bulgaria,Indonesia,1,1,0,0,1
 Bulgaria,Iran,1,0,1,0,-1
 Bulgaria,Italy,2,0,1,1,-2
 Bulgaria,Kosovo,2,0,1,1,-1
 Bulgaria,Lithuania,4,1,2,1,-3
-Bulgaria,Luxembourg,3,1,0,2,1
+Bulgaria,Luxembourg,5,2,1,2,2
 Bulgaria,Moldova,1,0,0,1,0
 Bulgaria,Montenegro,5,0,3,2,-3
 Bulgaria,North Macedonia,2,1,0,1,1
@@ -906,6 +932,7 @@ Bulgaria,Wales,2,0,2,0,-2
 Burkina Faso,Burundi,2,2,0,0,5
 Burkina Faso,Cameroon,2,0,1,1,-1
 Burkina Faso,Cape Verde,3,2,1,0,1
+Burkina Faso,Central African Republic,1,1,0,0,1
 Burkina Faso,Comoros,1,1,0,0,1
 Burkina Faso,DR Congo,4,3,0,1,5
 Burkina Faso,Djibouti,4,4,0,0,15
@@ -958,11 +985,12 @@ Burundi,Nigeria,1,0,1,0,-1
 Burundi,Senegal,2,0,2,0,-3
 Burundi,Seychelles,3,3,0,0,14
 Burundi,Tanzania,3,1,0,2,1
+Burundi,Togo,1,0,1,0,-1
 Burundi,Tunisia,1,0,1,0,-1
 Cambodia,Equatorial Guinea,1,0,1,0,-2
 Cambodia,Guam,2,2,0,0,2
 Cambodia,Guyana,1,0,1,0,-3
-Cambodia,Hong Kong,7,1,3,3,-6
+Cambodia,Hong Kong,8,1,4,3,-8
 Cambodia,India,1,0,1,0,-2
 Cambodia,Indonesia,3,0,3,0,-7
 Cambodia,Iran,2,0,2,0,-24
@@ -971,6 +999,7 @@ Cambodia,Laos,1,1,0,0,3
 Cambodia,Macau,1,1,0,0,4
 Cambodia,Malaysia,3,0,2,1,-6
 Cambodia,Mongolia,3,1,1,1,1
+Cambodia,Myanmar,1,1,0,0,1
 Cambodia,Pakistan,4,2,1,1,2
 Cambodia,Philippines,1,1,0,0,1
 Cambodia,Singapore,2,0,2,0,-2
@@ -978,11 +1007,12 @@ Cambodia,Sri Lanka,2,0,0,2,0
 Cambodia,Taiwan,1,1,0,0,1
 Cambodia,Tajikistan,1,0,1,0,-1
 Cambodia,Thailand,2,0,2,0,-3
-Cambodia,Timor-Leste,3,3,0,0,5
+Cambodia,Timor-Leste,4,3,0,1,5
 Cambodia,Vietnam,3,0,3,0,-7
 Cameroon,Cape Verde,5,1,2,2,0
 Cameroon,China,1,1,0,0,2
-Cameroon,Comoros,2,2,0,0,4
+Cameroon,Comoros,3,3,0,0,6
+Cameroon,Congo,1,0,0,1,0
 Cameroon,DR Congo,1,0,1,0,-1
 Cameroon,Egypt,1,0,0,1,0
 Cameroon,Equatorial Guinea,1,0,0,1,0
@@ -993,7 +1023,7 @@ Cameroon,Gambia,2,2,0,0,3
 Cameroon,Ghana,1,0,0,1,0
 Cameroon,Guinea,1,0,0,1,0
 Cameroon,Guinea-Bissau,1,1,0,0,2
-Cameroon,Ivory Coast,3,1,1,1,0
+Cameroon,Ivory Coast,4,2,1,1,1
 Cameroon,Jamaica,1,0,0,1,0
 Cameroon,Japan,1,0,0,1,0
 Cameroon,Kenya,2,2,0,0,4
@@ -1021,7 +1051,7 @@ Cameroon,Uzbekistan,1,0,1,0,-2
 Cameroon,Zambia,2,1,0,1,1
 Cameroon,Zimbabwe,2,1,0,1,1
 Canada,Cayman Islands,1,1,0,0,11
-Canada,Chile,1,0,0,1,0
+Canada,Chile,2,1,0,1,1
 Canada,Colombia,1,0,0,1,0
 Canada,Costa Rica,3,2,1,0,2
 Canada,Croatia,1,0,1,0,-3
@@ -1044,7 +1074,7 @@ Canada,Mexico,6,1,3,2,-4
 Canada,Morocco,2,0,2,0,-4
 Canada,Netherlands,1,0,1,0,-4
 Canada,Panama,4,3,1,0,5
-Canada,Peru,1,1,0,0,1
+Canada,Peru,2,2,0,0,3
 Canada,Qatar,2,2,0,0,8
 Canada,Republic of Ireland,1,0,0,1,0
 Canada,Romania,1,1,0,0,3
@@ -1054,7 +1084,7 @@ Canada,Switzerland,1,0,1,0,-1
 Canada,Trinidad and Tobago,1,1,0,0,2
 Canada,Tunisia,1,0,0,1,0
 Canada,Ukraine,1,1,0,0,2
-Canada,United States,9,4,3,2,0
+Canada,United States,10,4,4,2,-1
 Canada,Uruguay,2,0,1,1,-2
 Canada,Uzbekistan,1,1,0,0,2
 Canada,Venezuela,2,1,0,1,2
@@ -1079,12 +1109,13 @@ Cape Verde,Liberia,2,2,0,0,2
 Cape Verde,Libya,2,1,0,1,1
 Cape Verde,Liechtenstein,1,1,0,0,6
 Cape Verde,Malaysia,2,1,0,1,3
+Cape Verde,Mali,1,0,1,0,-2
 Cape Verde,Mauritania,3,2,1,0,2
 Cape Verde,Mauritius,2,2,0,0,3
 Cape Verde,Morocco,1,0,0,1,0
 Cape Verde,Mozambique,3,2,0,1,4
 Cape Verde,Nigeria,2,0,1,1,-1
-Cape Verde,Rwanda,2,0,0,2,0
+Cape Verde,Rwanda,3,0,1,2,-1
 Cape Verde,San Marino,1,1,0,0,2
 Cape Verde,Saudi Arabia,1,0,0,1,0
 Cape Verde,Senegal,2,0,2,0,-4
@@ -1097,11 +1128,13 @@ Cape Verde,Uruguay,1,0,0,1,0
 Cascadia,Chagos Islands,1,1,0,0,3
 Catalonia,Venezuela,1,1,0,0,1
 Cayman Islands,Cuba,1,0,1,0,-3
+Cayman Islands,Dominica,1,0,0,1,0
 Cayman Islands,Gibraltar,2,0,2,0,-6
 Cayman Islands,Guadeloupe,2,0,2,0,-7
+Cayman Islands,Guyana,1,0,1,0,-2
 Cayman Islands,Honduras,1,0,1,0,-1
 Cayman Islands,Montserrat,1,0,1,0,-1
-Cayman Islands,Puerto Rico,2,0,2,0,-7
+Cayman Islands,Puerto Rico,4,0,4,0,-11
 Cayman Islands,Saint Kitts and Nevis,2,0,1,1,-3
 Cayman Islands,Saint Martin,2,1,1,0,-2
 Cayman Islands,Suriname,1,0,1,0,-3
@@ -1115,7 +1148,7 @@ Central African Republic,Lesotho,2,1,1,0,1
 Central African Republic,Liberia,2,0,2,0,-3
 Central African Republic,Madagascar,4,2,2,0,0
 Central African Republic,Mali,2,0,0,2,0
-Central African Republic,Mauritania,3,1,2,0,-2
+Central African Republic,Mauritania,4,1,3,0,-4
 Central African Republic,Morocco,4,0,4,0,-14
 Central African Republic,Niger,1,1,0,0,2
 Central African Republic,Nigeria,2,1,1,0,-1
@@ -1159,7 +1192,7 @@ Chile,Guinea,1,1,0,0,1
 Chile,Haiti,1,1,0,0,1
 Chile,Honduras,1,0,1,0,-1
 Chile,Japan,1,1,0,0,4
-Chile,Mexico,2,0,1,1,-2
+Chile,Mexico,3,1,1,1,0
 Chile,Morocco,1,0,1,0,-2
 Chile,New Zealand,1,0,1,0,-3
 Chile,Panama,1,1,0,0,5
@@ -1172,7 +1205,7 @@ Chile,Russia,1,1,0,0,2
 Chile,Slovakia,1,0,0,1,0
 Chile,South Korea,1,0,1,0,-2
 Chile,Tunisia,1,0,1,0,-2
-Chile,United States,1,0,0,1,0
+Chile,United States,2,0,1,1,-2
 Chile,Uruguay,6,0,4,2,-6
 Chile,Venezuela,4,2,2,0,1
 China,Curaçao,1,1,0,0,2
@@ -1184,18 +1217,18 @@ China,Japan,6,0,5,1,-13
 China,Kyrgyzstan,1,1,0,0,1
 China,Lebanon,1,0,0,1,0
 China,Malaysia,1,0,0,1,0
-China,Maldives,2,2,0,0,10
+China,Maldives,3,3,0,0,13
 China,Myanmar,2,2,0,0,7
-China,New Zealand,2,0,1,1,-1
+China,New Zealand,3,0,2,1,-4
 China,Oman,2,0,1,1,-2
-China,Palestine,1,1,0,0,2
+China,Palestine,2,1,1,0,-3
 China,Philippines,4,3,0,1,7
 China,Qatar,1,0,1,0,-1
 China,Saudi Arabia,4,0,3,1,-3
 China,Singapore,3,2,0,1,4
 China,South Korea,5,0,5,0,-10
 China,Syria,3,1,2,0,0
-China,Tajikistan,2,1,0,1,1
+China,Tajikistan,3,1,1,1,0
 China,Thailand,4,2,0,2,2
 China,Uzbekistan,2,0,1,1,-1
 China,Vietnam,3,2,1,0,1
@@ -1211,11 +1244,11 @@ Colombia,Honduras,1,1,0,0,1
 Colombia,Iraq,1,1,0,0,1
 Colombia,Japan,2,2,0,0,2
 Colombia,Jordan,1,1,0,0,2
-Colombia,Mexico,3,3,0,0,6
+Colombia,Mexico,4,3,0,1,6
 Colombia,New Zealand,1,1,0,0,1
 Colombia,Panama,2,2,0,0,8
-Colombia,Paraguay,7,4,0,3,5
-Colombia,Peru,8,4,2,2,6
+Colombia,Paraguay,8,4,1,3,4
+Colombia,Peru,9,5,2,2,8
 Colombia,Portugal,1,0,0,1,0
 Colombia,Qatar,1,1,0,0,1
 Colombia,Romania,1,1,0,0,1
@@ -1247,11 +1280,12 @@ Comoros,Mali,3,0,2,1,-6
 Comoros,Mauritius,2,1,1,0,-1
 Comoros,Mayotte,2,0,1,1,-2
 Comoros,Morocco,3,0,3,0,-6
-Comoros,Namibia,3,2,0,1,5
+Comoros,Namibia,4,3,0,1,6
 Comoros,Oman,1,0,1,0,-1
 Comoros,Palestine,1,0,1,0,-4
 Comoros,Réunion,2,1,0,1,1
 Comoros,Saudi Arabia,1,0,1,0,-2
+Comoros,Senegal,1,0,1,0,-1
 Comoros,Seychelles,3,3,0,0,10
 Comoros,Sierra Leone,1,1,0,0,2
 Comoros,Togo,4,1,1,2,-1
@@ -1268,7 +1302,7 @@ Congo,Madagascar,1,0,0,1,0
 Congo,Mali,2,0,2,0,-6
 Congo,Mauritania,1,0,1,0,-2
 Congo,Morocco,2,0,2,0,-7
-Congo,Namibia,2,0,0,2,0
+Congo,Namibia,3,0,1,2,-1
 Congo,Niger,2,1,1,0,-1
 Congo,Senegal,4,0,3,1,-6
 Congo,Sierra Leone,1,0,1,0,-1
@@ -1284,9 +1318,9 @@ Cook Islands,New Caledonia,1,0,1,0,-8
 Cook Islands,Papua New Guinea,1,0,1,0,-3
 Cook Islands,Samoa,2,0,2,0,-4
 Cook Islands,Solomon Islands,1,0,1,0,-2
-Cook Islands,Tahiti,2,0,2,0,-11
+Cook Islands,Tahiti,4,1,3,0,-12
 Cook Islands,Tonga,3,2,1,0,0
-Costa Rica,Curaçao,3,1,0,2,1
+Costa Rica,Curaçao,4,1,1,2,0
 Costa Rica,Dominican Republic,1,1,0,0,1
 Costa Rica,Ecuador,1,0,1,0,-2
 Costa Rica,El Salvador,5,3,0,2,4
@@ -1295,7 +1329,7 @@ Costa Rica,Germany,1,0,1,0,-2
 Costa Rica,Grenada,1,1,0,0,3
 Costa Rica,Guadeloupe,2,2,0,0,5
 Costa Rica,Guatemala,4,1,2,1,1
-Costa Rica,Haiti,5,0,2,3,-2
+Costa Rica,Haiti,7,1,3,3,-2
 Costa Rica,Honduras,6,2,0,4,3
 Costa Rica,Iran,1,0,1,0,-5
 Costa Rica,Jamaica,4,3,0,1,3
@@ -1304,7 +1338,7 @@ Costa Rica,Jordan,1,0,0,1,0
 Costa Rica,Martinique,3,3,0,0,5
 Costa Rica,Mexico,7,0,3,4,-4
 Costa Rica,New Zealand,1,1,0,0,1
-Costa Rica,Nicaragua,3,2,0,1,7
+Costa Rica,Nicaragua,4,3,0,1,10
 Costa Rica,Nigeria,1,1,0,0,2
 Costa Rica,Panama,11,1,8,2,-11
 Costa Rica,Paraguay,1,1,0,0,1
@@ -1321,10 +1355,10 @@ Costa Rica,United States,7,1,5,1,-9
 Costa Rica,Uruguay,2,0,1,1,-1
 Costa Rica,Uzbekistan,1,1,0,0,1
 Croatia,Cyprus,2,2,0,0,4
-Croatia,Czech Republic,3,1,0,2,4
+Croatia,Czech Republic,4,2,0,2,5
 Croatia,Denmark,2,2,0,0,2
 Croatia,Egypt,1,1,0,0,2
-Croatia,England,2,0,2,0,-3
+Croatia,England,3,0,3,0,-10
 Croatia,Faroe Islands,2,2,0,0,3
 Croatia,France,6,2,3,1,-2
 Croatia,Georgia,1,1,0,0,1
@@ -1347,7 +1381,7 @@ Croatia,Saudi Arabia,1,1,0,0,1
 Croatia,Scotland,3,2,1,0,2
 Croatia,Slovakia,4,3,0,1,7
 Croatia,Slovenia,4,2,1,1,3
-Croatia,Spain,3,0,2,1,-5
+Croatia,Spain,5,0,4,1,-9
 Croatia,Sweden,2,1,1,0,0
 Croatia,Switzerland,1,1,0,0,1
 Croatia,Tunisia,2,0,1,1,-1
@@ -1356,7 +1390,7 @@ Croatia,Wales,4,1,1,2,0
 Cuba,Curaçao,1,0,1,0,-1
 Cuba,Dominican Republic,3,1,0,2,2
 Cuba,French Guiana,1,0,1,0,-3
-Cuba,Grenada,1,0,1,0,-2
+Cuba,Grenada,2,1,1,0,1
 Cuba,Guadeloupe,3,1,2,0,-3
 Cuba,Guatemala,3,0,3,0,-3
 Cuba,Haiti,2,0,1,1,-1
@@ -1366,7 +1400,7 @@ Cuba,Martinique,3,1,1,1,-1
 Cuba,Mexico,1,0,1,0,-7
 Cuba,Nicaragua,7,3,2,2,1
 Cuba,Russia,1,0,1,0,-8
-Cuba,Saint Kitts and Nevis,2,1,1,0,3
+Cuba,Saint Kitts and Nevis,4,1,1,2,3
 Cuba,Saint Lucia,1,1,0,0,3
 Cuba,Saint Vincent and the Grenadines,3,1,2,0,-7
 Cuba,Suriname,1,1,0,0,1
@@ -1386,13 +1420,14 @@ Curaçao,Jamaica,3,1,0,2,2
 Curaçao,Kazakhstan,1,0,1,0,-2
 Curaçao,Martinique,1,0,1,0,-1
 Curaçao,New Zealand,1,0,1,0,-1
+Curaçao,Nicaragua,1,1,0,0,5
 Curaçao,Panama,3,0,2,1,-2
 Curaçao,Saint Kitts and Nevis,1,0,0,1,0
 Curaçao,Saint Lucia,3,2,1,0,6
 Curaçao,Saint Martin,2,2,0,0,9
 Curaçao,Saint Vincent and the Grenadines,1,1,0,0,5
 Curaçao,Scotland,1,0,1,0,-3
-Curaçao,Trinidad and Tobago,4,1,1,2,1
+Curaçao,Trinidad and Tobago,6,2,1,3,2
 Curaçao,United States,1,0,1,0,-1
 Cyprus,Czech Republic,1,0,1,0,-1
 Cyprus,Estonia,3,1,1,1,0
@@ -1402,13 +1437,13 @@ Cyprus,Hungary,1,0,1,0,-1
 Cyprus,Israel,1,1,0,0,1
 Cyprus,Kazakhstan,2,1,0,1,1
 Cyprus,Kosovo,4,0,4,0,-13
-Cyprus,Latvia,1,0,0,1,0
+Cyprus,Latvia,3,1,0,2,1
 Cyprus,Liechtenstein,1,1,0,0,2
 Cyprus,Lithuania,3,3,0,0,3
 Cyprus,Luxembourg,2,1,1,0,-1
 Cyprus,Malta,2,0,1,1,-3
 Cyprus,Moldova,2,1,1,0,0
-Cyprus,Montenegro,2,0,2,0,-6
+Cyprus,Montenegro,3,0,3,0,-7
 Cyprus,Northern Ireland,2,0,0,2,0
 Cyprus,Norway,2,0,2,0,-6
 Cyprus,Romania,4,0,3,1,-8
@@ -1421,7 +1456,7 @@ Cyprus,Slovenia,3,1,1,1,0
 Cyprus,Spain,2,0,2,0,-8
 Cyprus,Ukraine,1,0,1,0,-4
 Czech Republic,Denmark,2,0,1,1,-1
-Czech Republic,England,3,1,2,0,-5
+Czech Republic,England,5,1,4,0,-10
 Czech Republic,Estonia,2,2,0,0,6
 Czech Republic,Faroe Islands,5,4,1,0,9
 Czech Republic,Georgia,3,1,1,1,-2
@@ -1450,7 +1485,7 @@ Czech Republic,Scotland,3,1,2,0,0
 Czech Republic,Slovakia,2,2,0,0,4
 Czech Republic,South Africa,1,0,0,1,0
 Czech Republic,South Korea,1,0,1,0,-1
-Czech Republic,Spain,2,0,1,1,-2
+Czech Republic,Spain,3,0,2,1,-4
 Czech Republic,Sweden,1,0,1,0,-1
 Czech Republic,Switzerland,2,1,1,0,0
 Czech Republic,Turkey,2,0,2,0,-2
@@ -1459,6 +1494,7 @@ Czech Republic,Wales,3,0,1,2,-1
 DR Congo,Denmark,1,0,0,1,0
 DR Congo,Egypt,2,0,1,1,-2
 DR Congo,England,1,0,1,0,-1
+DR Congo,Equatorial Guinea,1,1,0,0,2
 DR Congo,Ethiopia,2,1,1,0,1
 DR Congo,Gabon,4,1,2,1,-2
 DR Congo,Gambia,2,1,0,1,1
@@ -1483,10 +1519,10 @@ DR Congo,Sudan,4,2,2,0,1
 DR Congo,Tanzania,5,3,0,2,6
 DR Congo,Togo,2,2,0,0,2
 DR Congo,Tunisia,1,0,1,0,-1
-DR Congo,Uganda,2,1,1,0,-1
+DR Congo,Uganda,4,1,2,1,-3
 DR Congo,Uzbekistan,1,1,0,0,2
 DR Congo,Zambia,1,0,0,1,0
-DR Congo,Zimbabwe,1,1,0,0,4
+DR Congo,Zimbabwe,2,2,0,0,5
 Denmark,England,4,1,1,2,0
 Denmark,Faroe Islands,4,4,0,0,9
 Denmark,Finland,3,2,1,0,2
@@ -1505,8 +1541,8 @@ Denmark,Moldova,2,2,0,0,12
 Denmark,Netherlands,1,0,1,0,-2
 Denmark,North Macedonia,1,1,0,0,4
 Denmark,Northern Ireland,3,2,1,0,0
-Denmark,Norway,1,1,0,0,2
-Denmark,Portugal,2,1,1,0,-2
+Denmark,Norway,2,1,1,0,1
+Denmark,Portugal,3,1,2,0,-4
 Denmark,Republic of Ireland,2,0,0,2,0
 Denmark,Russia,1,1,0,0,3
 Denmark,San Marino,2,2,0,0,5
@@ -1518,7 +1554,7 @@ Denmark,Sweden,2,2,0,0,3
 Denmark,Switzerland,5,2,0,3,3
 Denmark,Tunisia,1,0,0,1,0
 Denmark,Ukraine,1,1,0,0,1
-Denmark,Wales,1,1,0,0,4
+Denmark,Wales,3,3,0,0,7
 Djibouti,Egypt,2,0,2,0,-9
 Djibouti,Equatorial Guinea,1,0,0,1,0
 Djibouti,Eswatini,2,1,0,1,1
@@ -1535,10 +1571,11 @@ Djibouti,Somalia,1,1,0,0,1
 Djibouti,South Sudan,2,0,2,0,-3
 Dominica,Dominican Republic,4,0,4,0,-13
 Dominica,Guatemala,1,0,1,0,-6
-Dominica,Guyana,1,0,1,0,-2
+Dominica,Guyana,3,0,3,0,-13
 Dominica,Jamaica,1,0,1,0,-1
 Dominica,Nicaragua,2,0,2,0,-6
 Dominica,Panama,1,0,1,0,-1
+Dominica,Puerto Rico,1,0,1,0,-2
 Dominica,Saint Lucia,2,0,2,0,-3
 Dominica,Saint Martin,1,0,1,0,-1
 Dominica,Saint Vincent and the Grenadines,4,3,1,0,3
@@ -1548,12 +1585,13 @@ Dominica,Turks and Caicos Islands,2,2,0,0,5
 Dominican Republic,El Salvador,3,1,1,1,-1
 Dominican Republic,French Guiana,2,0,1,1,-1
 Dominican Republic,Guatemala,4,0,2,2,-4
+Dominican Republic,Haiti,1,0,1,0,-3
 Dominican Republic,Jamaica,1,0,1,0,-1
 Dominican Republic,Jordan,1,0,1,0,-3
 Dominican Republic,Martinique,1,0,0,1,0
 Dominican Republic,Mexico,1,0,1,0,-1
 Dominican Republic,Montserrat,4,1,2,1,1
-Dominican Republic,Nicaragua,2,0,1,1,-2
+Dominican Republic,Nicaragua,4,2,1,1,0
 Dominican Republic,Panama,2,0,2,0,-5
 Dominican Republic,Peru,1,0,1,0,-3
 Dominican Republic,Puerto Rico,3,1,1,1,1
@@ -1561,6 +1599,7 @@ Dominican Republic,Saint Lucia,2,1,1,0,2
 Dominican Republic,Saint Vincent and the Grenadines,1,1,0,0,2
 Dominican Republic,Serbia,1,0,0,1,0
 Dominican Republic,Suriname,1,0,0,1,0
+Dominican Republic,Trinidad and Tobago,1,1,0,0,1
 Dominican Republic,United Arab Emirates,1,0,1,0,-4
 Dominican Republic,Uruguay,1,0,1,0,-1
 Ecuador,El Salvador,1,0,0,1,0
@@ -1571,17 +1610,19 @@ Ecuador,Iraq,1,0,0,1,0
 Ecuador,Italy,1,0,1,0,-2
 Ecuador,Ivory Coast,1,0,1,0,-1
 Ecuador,Jamaica,1,1,0,0,2
-Ecuador,Japan,2,0,0,2,0
+Ecuador,Japan,3,0,0,3,0
 Ecuador,Mexico,6,1,2,3,-2
 Ecuador,Morocco,1,0,0,1,0
 Ecuador,Netherlands,2,0,0,2,0
 Ecuador,New Zealand,1,1,0,0,2
 Ecuador,Nigeria,1,1,0,0,1
+Ecuador,Panama,1,0,0,1,0
 Ecuador,Paraguay,4,1,1,2,0
 Ecuador,Peru,6,2,1,3,1
 Ecuador,Qatar,1,1,0,0,2
 Ecuador,Saudi Arabia,2,1,0,1,1
 Ecuador,Senegal,1,0,1,0,-1
+Ecuador,South Korea,1,0,1,0,-3
 Ecuador,Trinidad and Tobago,1,1,0,0,3
 Ecuador,United States,2,0,1,1,-1
 Ecuador,Uruguay,5,2,2,1,-2
@@ -1611,9 +1652,9 @@ Egypt,Russia,1,1,0,0,1
 Egypt,Saudi Arabia,1,1,0,0,4
 Egypt,Senegal,4,1,2,1,-1
 Egypt,Sierra Leone,2,2,0,0,3
-Egypt,South Africa,2,1,1,0,0
+Egypt,South Africa,3,1,2,0,-1
 Egypt,South Korea,1,0,1,0,-3
-Egypt,South Sudan,1,1,0,0,3
+Egypt,South Sudan,2,2,0,0,8
 Egypt,Spain,1,0,0,1,0
 Egypt,Sudan,2,2,0,0,6
 Egypt,Tanzania,2,2,0,0,3
@@ -1625,13 +1666,13 @@ Egypt,Uzbekistan,1,0,1,0,-2
 Egypt,Zambia,1,1,0,0,1
 Egypt,Zimbabwe,2,2,0,0,2
 El Salvador,Grenada,3,2,0,1,4
-El Salvador,Guatemala,10,4,4,2,-3
+El Salvador,Guatemala,11,4,5,2,-9
 El Salvador,Haiti,1,1,0,0,1
 El Salvador,Honduras,6,1,3,2,-5
 El Salvador,Iceland,1,0,1,0,-1
-El Salvador,Jamaica,4,1,0,3,2
+El Salvador,Jamaica,5,1,1,3,0
 El Salvador,Japan,2,0,2,0,-8
-El Salvador,Martinique,4,1,2,1,-1
+El Salvador,Martinique,6,2,2,2,1
 El Salvador,Mexico,3,0,3,0,-5
 El Salvador,Montserrat,5,4,0,1,7
 El Salvador,Nicaragua,1,0,1,0,-1
@@ -1678,7 +1719,7 @@ England,Senegal,2,1,1,0,1
 England,Serbia,3,3,0,0,8
 England,Slovakia,1,1,0,0,1
 England,Slovenia,1,0,0,1,0
-England,Spain,1,0,1,0,-1
+England,Spain,2,0,2,0,-2
 England,Switzerland,3,1,0,2,1
 England,Ukraine,3,2,0,1,6
 England,United States,1,0,0,1,0
@@ -1700,7 +1741,7 @@ Equatorial Guinea,Nigeria,1,0,0,1,0
 Equatorial Guinea,Rwanda,1,0,0,1,0
 Equatorial Guinea,Saudi Arabia,1,0,1,0,-1
 Equatorial Guinea,Senegal,1,0,1,0,-2
-Equatorial Guinea,Sierra Leone,1,1,0,0,1
+Equatorial Guinea,Sierra Leone,2,2,0,0,2
 Equatorial Guinea,South Sudan,2,1,0,1,1
 Equatorial Guinea,Sudan,2,1,1,0,2
 Equatorial Guinea,São Tomé and Príncipe,2,2,0,0,3
@@ -1708,19 +1749,22 @@ Equatorial Guinea,Tanzania,2,1,1,0,0
 Equatorial Guinea,Togo,4,0,1,3,-3
 Equatorial Guinea,Tunisia,8,2,6,0,-9
 Equatorial Guinea,Zambia,2,1,0,1,2
+Eritrea,Kenya,1,0,0,1,0
 Eritrea,Namibia,2,0,2,0,-3
+Eritrea,South Africa,1,0,1,0,-5
 Estonia,Faroe Islands,2,2,0,0,4
 Estonia,Finland,4,3,1,0,2
 Estonia,Georgia,2,0,1,1,-1
 Estonia,Germany,2,0,2,0,-11
 Estonia,Gibraltar,1,1,0,0,1
 Estonia,Hungary,1,0,1,0,-1
-Estonia,Iceland,2,0,0,2,0
+Estonia,Iceland,4,0,0,4,0
 Estonia,Israel,2,0,2,0,-3
 Estonia,Italy,3,0,3,0,-11
 Estonia,Kenya,1,0,0,1,0
 Estonia,Latvia,2,1,0,1,1
 Estonia,Lithuania,5,3,1,1,2
+Estonia,Luxembourg,1,1,0,0,1
 Estonia,Malta,2,2,0,0,2
 Estonia,Moldova,2,1,0,1,1
 Estonia,Netherlands,2,0,2,0,-9
@@ -1760,9 +1804,10 @@ Ethiopia,Madagascar,2,1,1,0,3
 Ethiopia,Malawi,5,2,1,2,4
 Ethiopia,Niger,2,1,1,0,2
 Ethiopia,Rwanda,1,1,0,0,1
+Ethiopia,Senegal,1,0,1,0,-1
 Ethiopia,Sierra Leone,3,0,1,2,-2
 Ethiopia,South Africa,2,0,2,0,-3
-Ethiopia,Sudan,3,1,0,2,1
+Ethiopia,Sudan,4,1,1,2,0
 Ethiopia,Tanzania,2,0,1,1,-2
 Ethiopia,Uganda,2,1,1,0,0
 Ethiopia,Zimbabwe,2,1,0,1,1
@@ -1774,14 +1819,14 @@ Faroe Islands,Georgia,1,0,1,0,-1
 Faroe Islands,Gibraltar,3,2,0,1,2
 Faroe Islands,Iceland,1,0,1,0,-1
 Faroe Islands,Israel,2,0,2,0,-5
-Faroe Islands,Kazakhstan,1,1,0,0,1
+Faroe Islands,Kazakhstan,3,1,0,2,1
 Faroe Islands,Kosovo,1,0,0,1,0
 Faroe Islands,Latvia,6,1,2,3,-1
 Faroe Islands,Liechtenstein,3,3,0,0,9
 Faroe Islands,Lithuania,3,1,1,1,0
 Faroe Islands,Luxembourg,2,0,1,1,-1
 Faroe Islands,Malta,4,2,1,1,1
-Faroe Islands,Moldova,4,1,1,2,0
+Faroe Islands,Moldova,5,1,1,3,0
 Faroe Islands,Montenegro,2,1,1,0,3
 Faroe Islands,North Macedonia,3,0,2,1,-2
 Faroe Islands,Norway,3,0,3,0,-8
@@ -1789,21 +1834,22 @@ Faroe Islands,Poland,2,0,2,0,-4
 Faroe Islands,Romania,2,0,2,0,-6
 Faroe Islands,San Marino,1,1,0,0,1
 Faroe Islands,Scotland,2,0,2,0,-5
+Faroe Islands,Slovakia,1,0,0,1,0
 Faroe Islands,Spain,2,0,2,0,-7
 Faroe Islands,Sweden,2,0,2,0,-7
 Faroe Islands,Turkey,2,1,1,0,-3
 Fiji,Hong Kong,2,0,1,1,-8
 Fiji,Mauritius,1,1,0,0,1
-Fiji,New Caledonia,5,3,1,1,4
+Fiji,New Caledonia,6,4,1,1,5
 Fiji,New Zealand,2,0,2,0,-11
 Fiji,Northern Mariana Islands,1,1,0,0,10
-Fiji,Papua New Guinea,7,1,3,3,0
+Fiji,Papua New Guinea,8,2,3,3,2
 Fiji,Samoa,1,1,0,0,8
-Fiji,Solomon Islands,10,5,3,2,2
+Fiji,Solomon Islands,11,5,3,3,2
 Fiji,Tahiti,5,2,1,2,1
 Fiji,Thailand,1,0,1,0,-3
 Fiji,Tuvalu,1,1,0,0,9
-Fiji,Vanuatu,8,2,4,2,-2
+Fiji,Vanuatu,10,3,5,2,-2
 Finland,France,3,1,2,0,-2
 Finland,Germany,1,0,1,0,-4
 Finland,Greece,4,1,3,0,-5
@@ -1825,7 +1871,7 @@ Finland,Portugal,1,0,1,0,-2
 Finland,Republic of Ireland,4,2,2,0,0
 Finland,Romania,2,0,1,1,-1
 Finland,Russia,1,0,1,0,-1
-Finland,San Marino,2,2,0,0,7
+Finland,San Marino,3,3,0,0,14
 Finland,Scotland,1,0,0,1,0
 Finland,Slovakia,1,0,1,0,-2
 Finland,Slovenia,2,1,1,0,-1
@@ -1840,7 +1886,7 @@ France,Hungary,1,0,0,1,0
 France,Iceland,4,3,0,1,6
 France,Iraq,1,1,0,0,3
 France,Israel,2,1,0,1,3
-France,Italy,2,1,1,0,0
+France,Italy,3,1,1,1,0
 France,Ivory Coast,2,1,1,0,0
 France,Kazakhstan,2,2,0,0,10
 France,Luxembourg,1,1,0,0,3
@@ -1860,7 +1906,7 @@ France,Spain,4,1,3,0,-3
 France,Sweden,3,3,0,0,6
 France,Switzerland,1,0,0,1,0
 France,Tunisia,1,0,1,0,-1
-France,Turkey,2,0,1,1,-2
+France,Turkey,3,1,1,1,-1
 France,Ukraine,5,3,0,2,12
 France,Wales,1,1,0,0,3
 Franconia,Raetia,1,1,0,0,1
@@ -1869,8 +1915,8 @@ French Guiana,Guatemala,2,1,1,0,-2
 French Guiana,Honduras,1,0,1,0,-1
 French Guiana,Nicaragua,2,0,2,0,-2
 French Guiana,Saint Kitts and Nevis,3,1,0,2,2
-French Guiana,Saint Vincent and the Grenadines,2,2,0,0,4
-French Guiana,Sint Maarten,1,1,0,0,3
+French Guiana,Saint Vincent and the Grenadines,3,2,1,0,3
+French Guiana,Sint Maarten,2,2,0,0,4
 French Guiana,Trinidad and Tobago,2,0,0,2,0
 Frøya,Greenland,1,0,1,0,-2
 Frøya,Hitra,2,0,2,0,-9
@@ -1886,15 +1932,16 @@ Gabon,Kenya,2,2,0,0,2
 Gabon,Lesotho,2,1,0,1,2
 Gabon,Libya,2,1,1,0,0
 Gabon,Mauritania,3,0,1,2,-1
-Gabon,Morocco,4,1,2,1,-6
+Gabon,Morocco,5,1,3,1,-8
 Gabon,Mozambique,1,0,1,0,-1
-Gabon,Niger,2,1,1,0,1
+Gabon,Niger,3,2,1,0,3
 Gabon,Nigeria,1,0,1,0,-3
 Gabon,Senegal,1,0,1,0,-3
 Gabon,Seychelles,2,2,0,0,7
 Gabon,Sudan,2,1,1,0,0
 Gabon,Trinidad and Tobago,1,0,0,1,0
 Gabon,Uzbekistan,1,0,1,0,-2
+Gambia,Ghana,1,1,0,0,2
 Gambia,Guinea,2,1,1,0,0
 Gambia,Guinea-Bissau,1,0,0,1,0
 Gambia,Iran,1,0,1,0,-2
@@ -1911,6 +1958,7 @@ Gambia,Niger,1,1,0,0,2
 Gambia,Senegal,2,0,2,0,-5
 Gambia,Seychelles,2,2,0,0,11
 Gambia,Sierra Leone,1,0,1,0,-1
+Gambia,Somalia,1,1,0,0,1
 Gambia,South Sudan,3,3,0,0,3
 Gambia,Togo,1,1,0,0,1
 Gambia,Tunisia,3,2,1,0,1
@@ -1918,6 +1966,7 @@ Gambia,Uganda,1,0,0,1,0
 Gambia,United Arab Emirates,1,0,0,1,0
 Georgia,Gibraltar,4,4,0,0,9
 Georgia,Greece,3,0,1,2,-2
+Georgia,Hungary,1,0,1,0,-1
 Georgia,Israel,1,0,0,1,0
 Georgia,Kosovo,2,1,1,0,0
 Georgia,Lithuania,1,1,0,0,2
@@ -1927,6 +1976,7 @@ Georgia,Montenegro,1,1,0,0,2
 Georgia,Morocco,1,0,1,0,-3
 Georgia,Netherlands,1,0,1,0,-3
 Georgia,North Macedonia,5,2,1,2,4
+Georgia,Northern Ireland,2,0,1,1,-1
 Georgia,Norway,2,0,1,1,-1
 Georgia,Portugal,1,1,0,0,2
 Georgia,Republic of Ireland,2,0,1,1,-1
@@ -1938,10 +1988,10 @@ Georgia,Sweden,2,1,1,0,1
 Georgia,Switzerland,2,0,2,0,-3
 Georgia,Thailand,1,1,0,0,8
 Georgia,Turkey,3,0,3,0,-6
-Georgia,Ukraine,2,0,1,1,-1
+Georgia,Ukraine,3,0,1,2,-1
 Georgia,Uzbekistan,1,1,0,0,1
 Germany,Ghana,1,1,0,0,1
-Germany,Greece,1,1,0,0,1
+Germany,Greece,3,1,1,1,0
 Germany,Hungary,6,2,1,3,6
 Germany,Iceland,2,2,0,0,7
 Germany,Israel,1,1,0,0,2
@@ -1952,7 +2002,7 @@ Germany,Latvia,1,1,0,0,6
 Germany,Liechtenstein,2,2,0,0,11
 Germany,Luxembourg,2,2,0,0,6
 Germany,Mexico,1,0,0,1,0
-Germany,Netherlands,6,3,1,2,1
+Germany,Netherlands,7,3,1,3,1
 Germany,North Macedonia,2,1,1,0,3
 Germany,Northern Ireland,4,4,0,0,10
 Germany,Oman,1,1,0,0,1
@@ -1962,7 +2012,7 @@ Germany,Poland,1,0,1,0,-1
 Germany,Portugal,2,1,1,0,1
 Germany,Romania,2,2,0,0,2
 Germany,Scotland,1,1,0,0,4
-Germany,Serbia,1,0,0,1,0
+Germany,Serbia,2,1,0,1,2
 Germany,Slovakia,2,1,1,0,4
 Germany,Spain,4,0,2,2,-7
 Germany,Switzerland,4,1,0,3,1
@@ -1970,7 +2020,7 @@ Germany,Turkey,2,0,1,1,-1
 Germany,Ukraine,4,2,0,2,3
 Germany,United States,2,2,0,0,3
 Ghana,Guinea-Bissau,1,1,0,0,2
-Ghana,Ivory Coast,1,0,0,1,0
+Ghana,Ivory Coast,2,0,1,1,-2
 Ghana,Japan,2,0,2,0,-5
 Ghana,Kenya,1,1,0,0,1
 Ghana,Liberia,1,1,0,0,2
@@ -2002,9 +2052,9 @@ Gibraltar,Greece,2,0,2,0,-8
 Gibraltar,Grenada,1,0,0,1,0
 Gibraltar,Kosovo,1,0,1,0,-1
 Gibraltar,Latvia,2,0,2,0,-4
-Gibraltar,Liechtenstein,5,2,0,3,3
+Gibraltar,Liechtenstein,6,3,0,3,5
 Gibraltar,Lithuania,2,0,2,0,-2
-Gibraltar,Malta,2,0,2,0,-3
+Gibraltar,Malta,3,0,2,1,-3
 Gibraltar,Moldova,1,0,0,1,0
 Gibraltar,Montenegro,4,0,4,0,-9
 Gibraltar,Netherlands,4,0,4,0,-22
@@ -2016,6 +2066,7 @@ Gibraltar,San Marino,4,2,0,2,2
 Gibraltar,Scotland,1,0,1,0,-2
 Gibraltar,Slovenia,1,0,1,0,-6
 Gibraltar,Switzerland,2,0,2,0,-9
+Gibraltar,São Tomé and Príncipe,1,0,0,1,0
 Gibraltar,Turkey,2,0,2,0,-9
 Gibraltar,Wales,2,0,1,1,-4
 Gozo,Guernsey,1,0,1,0,-1
@@ -2034,7 +2085,7 @@ Greece,Lithuania,1,0,0,1,0
 Greece,Malta,2,1,0,1,2
 Greece,Moldova,2,2,0,0,4
 Greece,Montenegro,1,0,1,0,-1
-Greece,Netherlands,2,0,2,0,-4
+Greece,Netherlands,3,0,2,1,-4
 Greece,New Zealand,1,1,0,0,2
 Greece,Northern Ireland,2,2,0,0,3
 Greece,Norway,1,1,0,0,1
@@ -2042,6 +2093,7 @@ Greece,Paraguay,1,0,1,0,-1
 Greece,Republic of Ireland,4,4,0,0,7
 Greece,Romania,1,1,0,0,1
 Greece,Scotland,4,2,2,0,1
+Greece,Serbia,1,1,0,0,1
 Greece,Slovakia,1,1,0,0,3
 Greece,Slovenia,2,0,0,2,0
 Greece,Spain,2,0,1,1,-1
@@ -2062,7 +2114,7 @@ Grenada,Qatar,1,0,1,0,-4
 Grenada,Republic of Ireland,1,0,1,0,-5
 Grenada,Russia,1,0,1,0,-5
 Grenada,Rwanda,1,0,1,0,-4
-Grenada,Saint Kitts and Nevis,3,2,0,1,2
+Grenada,Saint Kitts and Nevis,4,2,1,1,-1
 Grenada,Saint Lucia,4,2,2,0,4
 Grenada,Saint Martin,2,1,1,0,-1
 Grenada,Saint Vincent and the Grenadines,4,1,2,1,-1
@@ -2077,7 +2129,7 @@ Guadeloupe,Martinique,3,0,2,1,-2
 Guadeloupe,Nicaragua,2,2,0,0,2
 Guadeloupe,Panama,1,0,1,0,-3
 Guadeloupe,Saint Kitts and Nevis,2,2,0,0,6
-Guadeloupe,Saint Lucia,2,1,1,0,1
+Guadeloupe,Saint Lucia,4,1,3,0,-3
 Guadeloupe,Sint Maarten,4,4,0,0,11
 Guadeloupe,Suriname,2,1,1,0,0
 Guadeloupe,Turks and Caicos Islands,2,2,0,0,13
@@ -2095,7 +2147,7 @@ Guatemala,Guyana,4,3,1,0,7
 Guatemala,Haiti,1,1,0,0,1
 Guatemala,Honduras,4,2,1,1,1
 Guatemala,Iceland,1,0,1,0,-1
-Guatemala,Jamaica,4,1,2,1,-3
+Guatemala,Jamaica,5,1,3,1,-4
 Guatemala,Martinique,1,1,0,0,2
 Guatemala,Mexico,3,0,2,1,-5
 Guatemala,Nicaragua,6,3,0,3,4
@@ -2104,7 +2156,7 @@ Guatemala,Paraguay,1,0,1,0,-2
 Guatemala,Puerto Rico,3,3,0,0,11
 Guatemala,Qatar,1,0,1,0,-2
 Guatemala,Saint Vincent and the Grenadines,1,1,0,0,10
-Guatemala,Suriname,2,1,0,1,2
+Guatemala,Suriname,4,2,0,2,3
 Guatemala,Trinidad and Tobago,3,0,2,1,-2
 Guatemala,United States,1,0,1,0,-1
 Guatemala,Uruguay,1,0,0,1,0
@@ -2119,6 +2171,7 @@ Guernsey,Ynys Môn,1,0,1,0,-1
 Guernsey,Åland Islands,1,1,0,0,3
 Guinea,Guinea-Bissau,3,1,0,2,1
 Guinea,Ivory Coast,1,0,1,0,-2
+Guinea,Kenya,1,1,0,0,1
 Guinea,Kosovo,1,1,0,0,1
 Guinea,Liberia,1,1,0,0,2
 Guinea,Madagascar,1,0,0,1,0
@@ -2133,7 +2186,7 @@ Guinea,Northern Ireland,1,0,1,0,-1
 Guinea,Rwanda,2,1,1,0,-1
 Guinea,Senegal,2,0,1,1,-2
 Guinea,Somalia,2,1,0,1,3
-Guinea,South Africa,1,0,0,1,0
+Guinea,South Africa,2,0,1,1,-1
 Guinea,Sudan,2,0,0,2,0
 Guinea,Tanzania,2,0,2,0,-2
 Guinea,Togo,2,0,1,1,-2
@@ -2145,18 +2198,19 @@ Guinea-Bissau,Ivory Coast,1,0,1,0,-2
 Guinea-Bissau,Mali,3,0,2,1,-5
 Guinea-Bissau,Morocco,2,0,2,0,-8
 Guinea-Bissau,Mozambique,3,0,2,1,-2
-Guinea-Bissau,Nigeria,4,1,3,0,-3
+Guinea-Bissau,Nigeria,5,2,3,0,0
 Guinea-Bissau,Senegal,2,0,2,0,-3
 Guinea-Bissau,Sierra Leone,4,1,1,2,-1
 Guinea-Bissau,Sudan,3,1,0,2,2
 Guinea-Bissau,São Tomé and Príncipe,4,4,0,0,7
+Guinea-Bissau,Tanzania,1,1,0,0,2
 Guyana,Haiti,2,0,2,0,-10
 Guyana,Jamaica,2,0,1,1,-4
 Guyana,Martinique,1,0,0,1,0
 Guyana,Montserrat,3,2,0,1,4
 Guyana,Nicaragua,1,0,1,0,-1
 Guyana,Panama,2,0,2,0,-4
-Guyana,Puerto Rico,3,2,1,0,2
+Guyana,Puerto Rico,4,3,1,0,3
 Guyana,Saint Kitts and Nevis,1,0,1,0,-3
 Guyana,Suriname,3,0,3,0,-7
 Guyana,Trinidad and Tobago,5,0,3,2,-6
@@ -2180,7 +2234,7 @@ Haiti,Saudi Arabia,1,0,1,0,-1
 Haiti,Scotland,1,0,1,0,-1
 Haiti,Sint Maarten,2,2,0,0,14
 Haiti,Suriname,1,0,0,1,0
-Haiti,Trinidad and Tobago,2,0,0,2,0
+Haiti,Trinidad and Tobago,3,1,0,2,1
 Haiti,Tunisia,1,0,1,0,-1
 Haiti,Turks and Caicos Islands,1,1,0,0,10
 Haiti,United States,2,0,2,0,-2
@@ -2190,8 +2244,8 @@ Hitra,Orkney,1,0,1,0,-1
 Hmong,Tamil Eelam,2,0,2,0,-5
 Hmong,Tibet,1,1,0,0,1
 Honduras,Iceland,1,0,1,0,-2
-Honduras,Jamaica,6,0,5,1,-6
-Honduras,Martinique,2,1,0,1,1
+Honduras,Jamaica,8,1,5,2,-5
+Honduras,Martinique,3,1,1,1,0
 Honduras,Mexico,10,2,7,1,-14
 Honduras,Nicaragua,3,1,1,1,0
 Honduras,Panama,4,1,1,2,0
@@ -2200,6 +2254,7 @@ Honduras,Peru,1,0,0,1,0
 Honduras,Puerto Rico,1,1,0,0,4
 Honduras,Qatar,3,0,2,1,-3
 Honduras,Saudi Arabia,1,0,0,1,0
+Honduras,Suriname,1,0,1,0,-1
 Honduras,Trinidad and Tobago,3,3,0,0,10
 Honduras,United States,3,0,3,0,-7
 Honduras,Venezuela,1,0,1,0,-1
@@ -2207,6 +2262,7 @@ Hong Kong,India,2,1,1,0,-3
 Hong Kong,Iran,5,0,5,0,-11
 Hong Kong,Iraq,3,0,3,0,-4
 Hong Kong,Japan,2,0,2,0,-11
+Hong Kong,Laos,1,1,0,0,4
 Hong Kong,Liechtenstein,1,0,1,0,-1
 Hong Kong,Macau,1,1,0,0,2
 Hong Kong,Malaysia,2,0,2,0,-4
@@ -2236,7 +2292,7 @@ Hungary,Lithuania,2,1,0,1,2
 Hungary,Luxembourg,1,0,0,1,0
 Hungary,Montenegro,3,1,1,1,1
 Hungary,Netherlands,2,0,1,1,-4
-Hungary,Northern Ireland,1,1,0,0,1
+Hungary,Northern Ireland,2,1,0,1,1
 Hungary,Poland,2,1,0,1,1
 Hungary,Portugal,3,0,2,1,-4
 Hungary,Republic of Ireland,4,0,2,2,-2
@@ -2249,6 +2305,7 @@ Hungary,Slovenia,1,1,0,0,1
 Hungary,Sweden,1,0,1,0,-2
 Hungary,Switzerland,1,0,1,0,-2
 Hungary,Turkey,5,3,2,0,-1
+Hungary,Ukraine,2,1,1,0,0
 Hungary,Uruguay,1,0,1,0,-1
 Hungary,Wales,2,1,1,0,-1
 Iceland,Israel,3,1,0,2,3
@@ -2257,7 +2314,7 @@ Iceland,Kosovo,2,0,2,0,-3
 Iceland,Latvia,1,0,0,1,0
 Iceland,Liechtenstein,4,4,0,0,18
 Iceland,Lithuania,1,0,0,1,0
-Iceland,Luxembourg,2,0,1,1,-2
+Iceland,Luxembourg,3,1,1,1,1
 Iceland,Mexico,2,0,2,0,-5
 Iceland,Moldova,2,2,0,0,4
 Iceland,Montenegro,2,2,0,0,4
@@ -2293,6 +2350,7 @@ India,Nepal,5,4,0,1,7
 India,North Korea,1,0,1,0,-3
 India,Oman,3,0,2,1,-2
 India,Pakistan,1,1,0,0,4
+India,Panama,1,0,0,1,0
 India,Qatar,4,0,3,1,-5
 India,Singapore,3,0,1,2,-1
 India,Sri Lanka,1,0,0,1,0
@@ -2300,6 +2358,7 @@ India,Syria,3,0,2,1,-4
 India,Tajikistan,3,0,2,1,-4
 India,Thailand,2,1,1,0,1
 India,United Arab Emirates,2,0,2,0,-8
+India,Uruguay,1,0,1,0,-5
 India,Uzbekistan,1,0,1,0,-3
 India,Vietnam,2,0,1,1,-3
 India,Zimbabwe,1,0,1,0,-1
@@ -2311,7 +2370,7 @@ Indonesia,Kuwait,1,1,0,0,1
 Indonesia,Laos,2,1,0,1,4
 Indonesia,Lebanon,1,0,0,1,0
 Indonesia,Libya,2,0,2,0,-5
-Indonesia,Malaysia,3,1,2,0,0
+Indonesia,Malaysia,4,1,2,1,0
 Indonesia,Mozambique,1,1,0,0,1
 Indonesia,Myanmar,3,3,0,0,6
 Indonesia,Nepal,1,1,0,0,7
@@ -2320,10 +2379,10 @@ Indonesia,Palestine,1,0,0,1,0
 Indonesia,Philippines,4,2,1,1,2
 Indonesia,Saint Kitts and Nevis,1,1,0,0,4
 Indonesia,Saudi Arabia,3,1,1,1,1
-Indonesia,Singapore,3,1,0,2,2
+Indonesia,Singapore,4,2,0,2,4
 Indonesia,Taiwan,3,3,0,0,10
 Indonesia,Tanzania,1,0,0,1,0
-Indonesia,Thailand,5,0,2,3,-7
+Indonesia,Thailand,6,0,2,4,-7
 Indonesia,Timor-Leste,3,3,0,0,9
 Indonesia,Turkmenistan,1,1,0,0,2
 Indonesia,United Arab Emirates,2,0,2,0,-10
@@ -2342,7 +2401,7 @@ Iran,North Korea,2,2,0,0,4
 Iran,Oman,1,1,0,0,2
 Iran,Palestine,1,1,0,0,3
 Iran,Qatar,3,1,2,0,1
-Iran,Russia,2,0,1,1,-1
+Iran,Russia,3,0,2,1,-3
 Iran,Senegal,1,0,0,1,0
 Iran,South Korea,3,0,1,2,-2
 Iran,Syria,5,4,0,1,12
@@ -2352,23 +2411,23 @@ Iran,Turkmenistan,2,2,0,0,6
 Iran,United Arab Emirates,5,5,0,0,6
 Iran,United States,1,0,1,0,-1
 Iran,Uruguay,1,1,0,0,1
-Iran,Uzbekistan,7,2,0,5,2
+Iran,Uzbekistan,8,2,1,5,0
 Iran,Vietnam,1,1,0,0,2
 Iran,Wales,1,1,0,0,2
 Iran,Yemen,1,1,0,0,5
 Iraq,Japan,1,1,0,0,1
 Iraq,Jordan,5,1,2,2,-1
-Iraq,Kuwait,4,2,0,2,2
+Iraq,Kuwait,5,3,0,2,3
 Iraq,Lebanon,3,1,0,2,1
 Iraq,Mexico,1,0,1,0,-4
 Iraq,Nepal,1,1,0,0,4
 Iraq,Norway,1,0,1,0,-3
-Iraq,Oman,6,3,0,3,3
+Iraq,Oman,7,3,0,4,3
 Iraq,Palestine,3,2,1,0,1
 Iraq,Philippines,2,2,0,0,6
 Iraq,Qatar,5,2,2,1,-2
 Iraq,Russia,1,0,1,0,-2
-Iraq,Saudi Arabia,3,1,1,1,0
+Iraq,Saudi Arabia,4,1,2,1,-2
 Iraq,Senegal,1,0,1,0,-5
 Iraq,South Korea,5,0,4,1,-7
 Iraq,Spain,1,0,0,1,0
@@ -2392,7 +2451,7 @@ Isle of Wight,Jersey,1,0,1,0,-1
 Isle of Wight,Western Isles,1,1,0,0,1
 Isle of Wight,Åland Islands,1,1,0,0,2
 Israel,Italy,4,0,4,0,-8
-Israel,Kosovo,2,0,1,1,-1
+Israel,Kosovo,3,0,1,2,-1
 Israel,Latvia,2,2,0,0,5
 Israel,Lithuania,1,0,0,1,0
 Israel,Malta,1,0,1,0,-1
@@ -2402,6 +2461,7 @@ Israel,North Macedonia,2,0,1,1,-1
 Israel,Norway,2,0,2,0,-7
 Israel,Poland,2,0,2,0,-5
 Israel,Portugal,1,0,1,0,-4
+Israel,Republic of Ireland,2,0,1,1,-3
 Israel,Romania,3,0,1,2,-1
 Israel,Scotland,5,1,1,3,0
 Israel,Slovakia,3,2,0,1,2
@@ -2421,7 +2481,7 @@ Italy,Poland,2,1,0,1,2
 Italy,San Marino,1,1,0,0,7
 Italy,Spain,4,0,3,1,-3
 Italy,Switzerland,4,1,1,2,1
-Italy,Turkey,3,2,0,1,4
+Italy,Turkey,5,4,0,1,9
 Italy,Ukraine,2,1,0,1,1
 Italy,Venezuela,1,1,0,0,1
 Italy,Wales,1,1,0,0,1
@@ -2446,6 +2506,7 @@ Ivory Coast,Scotland,1,1,0,0,1
 Ivory Coast,Senegal,1,0,0,1,0
 Ivory Coast,Seychelles,2,2,0,0,16
 Ivory Coast,Sierra Leone,4,2,1,1,6
+Ivory Coast,Somalia,1,1,0,0,2
 Ivory Coast,South Africa,2,1,0,1,1
 Ivory Coast,South Korea,1,1,0,0,4
 Ivory Coast,Togo,1,1,0,0,1
@@ -2476,6 +2537,7 @@ Japan,Mexico,2,0,1,1,-2
 Japan,Mongolia,2,2,0,0,20
 Japan,Myanmar,4,4,0,0,22
 Japan,Netherlands,1,0,0,1,0
+Japan,New Zealand,1,1,0,0,1
 Japan,North Korea,1,1,0,0,1
 Japan,Oman,3,2,1,0,1
 Japan,Panama,1,1,0,0,1
@@ -2498,7 +2560,7 @@ Japan,Turkmenistan,1,1,0,0,1
 Japan,United States,2,1,1,0,0
 Japan,Uruguay,2,0,0,2,0
 Japan,Uzbekistan,1,1,0,0,1
-Japan,Venezuela,1,0,1,0,-3
+Japan,Venezuela,2,1,1,0,-2
 Japan,Vietnam,4,3,0,1,4
 Jersey,Menorca,1,1,0,0,4
 Jersey,Orkney,1,1,0,0,5
@@ -2531,16 +2593,17 @@ Jordan,Slovakia,1,0,1,0,-4
 Jordan,South Korea,4,1,1,2,0
 Jordan,Spain,1,0,1,0,-2
 Jordan,Switzerland,1,0,1,0,-3
-Jordan,Syria,3,3,0,0,5
+Jordan,Syria,4,3,0,1,5
 Jordan,Taiwan,2,2,0,0,6
 Jordan,Tajikistan,5,3,1,1,5
 Jordan,Tunisia,1,0,1,0,-1
 Jordan,United Arab Emirates,2,1,1,0,-3
 Jordan,Uzbekistan,3,1,1,1,1
+Jordan,Venezuela,1,0,0,1,0
 Jordan,Vietnam,2,0,0,2,0
 Kazakhstan,Liechtenstein,2,2,0,0,6
 Kazakhstan,Lithuania,2,1,1,0,1
-Kazakhstan,Moldova,3,2,1,0,1
+Kazakhstan,Moldova,4,2,2,0,0
 Kazakhstan,Montenegro,1,0,0,1,0
 Kazakhstan,Namibia,1,1,0,0,2
 Kazakhstan,North Macedonia,3,0,2,1,-5
@@ -2549,7 +2612,7 @@ Kazakhstan,Norway,2,0,1,1,-5
 Kazakhstan,Russia,2,0,2,0,-5
 Kazakhstan,San Marino,4,4,0,0,11
 Kazakhstan,Scotland,2,1,1,0,1
-Kazakhstan,Slovakia,2,2,0,0,2
+Kazakhstan,Slovakia,3,2,1,0,1
 Kazakhstan,Slovenia,4,0,4,0,-6
 Kazakhstan,Tajikistan,1,1,0,0,1
 Kazakhstan,Turkmenistan,1,1,0,0,2
@@ -2566,7 +2629,7 @@ Kenya,Namibia,2,1,0,1,1
 Kenya,Pakistan,1,1,0,0,1
 Kenya,Qatar,1,1,0,0,1
 Kenya,Russia,1,0,0,1,0
-Kenya,Rwanda,2,1,0,1,1
+Kenya,Rwanda,3,1,0,2,1
 Kenya,Senegal,2,0,2,0,-11
 Kenya,Seychelles,2,2,0,0,10
 Kenya,South Sudan,2,1,1,0,0
@@ -2584,6 +2647,7 @@ Kosovo,Montenegro,2,1,0,1,2
 Kosovo,North Macedonia,1,0,1,0,-1
 Kosovo,Northern Ireland,2,1,1,0,0
 Kosovo,Norway,1,0,1,0,-3
+Kosovo,Republic of Ireland,1,1,0,0,1
 Kosovo,Romania,4,0,2,2,-5
 Kosovo,San Marino,1,1,0,0,3
 Kosovo,Slovakia,1,1,0,0,1
@@ -2600,12 +2664,12 @@ Kuwait,Lithuania,1,0,0,1,0
 Kuwait,Malta,1,0,1,0,-2
 Kuwait,Mauritania,1,1,0,0,2
 Kuwait,Nepal,6,5,0,1,14
-Kuwait,Oman,4,0,3,1,-6
+Kuwait,Oman,5,0,4,1,-8
 Kuwait,Pakistan,1,1,0,0,4
 Kuwait,Palestine,3,0,2,1,-3
 Kuwait,Philippines,1,1,0,0,2
 Kuwait,Qatar,4,0,3,1,-6
-Kuwait,Saudi Arabia,3,2,1,0,2
+Kuwait,Saudi Arabia,4,2,2,0,1
 Kuwait,Singapore,1,1,0,0,2
 Kuwait,South Korea,2,0,2,0,-6
 Kuwait,Syria,2,1,0,1,1
@@ -2617,8 +2681,10 @@ Kuwait,Turkmenistan,1,0,0,1,0
 Kuwait,Uganda,1,0,1,0,-2
 Kuwait,United Arab Emirates,4,2,2,0,-1
 Kuwait,Uzbekistan,1,0,1,0,-2
+Kyrgyzstan,Lebanon,1,1,0,0,2
 Kyrgyzstan,Madagascar,1,0,1,0,-3
 Kyrgyzstan,Malaysia,2,0,1,1,-1
+Kyrgyzstan,Maldives,1,1,0,0,5
 Kyrgyzstan,Mongolia,2,1,1,0,0
 Kyrgyzstan,Myanmar,4,3,0,1,16
 Kyrgyzstan,North Korea,2,1,0,1,1
@@ -2651,7 +2717,7 @@ Latvia,Liechtenstein,3,2,0,1,3
 Latvia,Lithuania,3,1,1,1,0
 Latvia,Malta,2,0,1,1,-1
 Latvia,Moldova,2,1,1,0,1
-Latvia,Montenegro,3,0,1,2,-1
+Latvia,Montenegro,4,0,2,2,-2
 Latvia,Netherlands,2,0,2,0,-3
 Latvia,North Macedonia,5,0,4,1,-8
 Latvia,Norway,2,0,1,1,-2
@@ -2663,7 +2729,7 @@ Latvia,Slovenia,2,0,2,0,-6
 Latvia,Turkey,4,0,3,1,-6
 Latvia,Wales,2,0,2,0,-3
 Lebanon,Malaysia,1,0,1,0,-1
-Lebanon,Maldives,1,1,0,0,1
+Lebanon,Maldives,2,2,0,0,7
 Lebanon,Montenegro,1,0,1,0,-1
 Lebanon,Myanmar,1,1,0,0,1
 Lebanon,North Korea,3,1,1,1,1
@@ -2683,8 +2749,9 @@ Lebanon,United Arab Emirates,4,0,3,1,-3
 Lebanon,Yemen,2,0,1,1,-1
 Lesotho,Malawi,5,1,1,3,0
 Lesotho,Mauritius,2,2,0,0,3
-Lesotho,Morocco,2,0,2,0,-8
+Lesotho,Morocco,3,0,3,0,-10
 Lesotho,Mozambique,3,1,2,0,-6
+Lesotho,Niger,1,0,1,0,-1
 Lesotho,Nigeria,4,0,3,1,-6
 Lesotho,Rwanda,2,0,1,1,-1
 Lesotho,Seychelles,2,1,0,1,2
@@ -2696,11 +2763,13 @@ Lesotho,Zambia,4,1,3,0,-4
 Lesotho,Zimbabwe,3,2,0,1,3
 Liberia,Libya,3,1,1,1,0
 Liberia,Malawi,2,0,1,1,-1
+Liberia,Mali,1,0,1,0,-1
 Liberia,Mauritania,1,0,1,0,-1
 Liberia,Morocco,2,0,2,0,-5
 Liberia,Namibia,2,1,0,1,2
 Liberia,Niger,1,0,0,1,0
 Liberia,Nigeria,2,0,2,0,-4
+Liberia,Rwanda,1,0,1,0,-2
 Liberia,Sierra Leone,5,2,3,0,1
 Liberia,South Africa,2,0,1,1,-1
 Liberia,São Tomé and Príncipe,2,2,0,0,2
@@ -2717,9 +2786,10 @@ Libya,South Africa,1,0,1,0,-1
 Libya,Sudan,1,0,1,0,-1
 Libya,Tanzania,3,2,1,0,1
 Libya,Tunisia,4,0,4,0,-10
-Libya,Uganda,1,0,0,1,0
+Libya,Uganda,2,0,1,1,-1
+Liechtenstein,Lithuania,1,0,1,0,-2
 Liechtenstein,Luxembourg,3,1,2,0,-2
-Liechtenstein,Malta,2,0,2,0,-5
+Liechtenstein,Malta,3,0,3,0,-7
 Liechtenstein,Moldova,2,0,2,0,-4
 Liechtenstein,Montenegro,1,0,1,0,-1
 Liechtenstein,North Macedonia,4,0,4,0,-17
@@ -2775,12 +2845,12 @@ Madagascar,Mauritius,2,0,0,2,0
 Madagascar,Morocco,1,0,1,0,-4
 Madagascar,Namibia,1,0,1,0,-2
 Madagascar,Niger,2,1,0,1,4
-Madagascar,Nigeria,1,1,0,0,2
+Madagascar,Nigeria,2,1,1,0,1
 Madagascar,Réunion,1,1,0,0,1
 Madagascar,Senegal,1,0,1,0,-2
 Madagascar,Seychelles,2,1,0,1,1
 Madagascar,South Africa,1,0,1,0,-1
-Madagascar,Tanzania,2,0,1,1,-1
+Madagascar,Tanzania,3,0,1,2,-1
 Madagascar,Tunisia,3,0,3,0,-5
 Malawi,Mauritius,1,1,0,0,2
 Malawi,Morocco,2,0,1,1,-1
@@ -2789,7 +2859,7 @@ Malawi,Namibia,4,2,1,1,1
 Malawi,Senegal,4,0,3,1,-6
 Malawi,Seychelles,2,2,0,0,5
 Malawi,South Africa,2,0,0,2,0
-Malawi,South Sudan,2,2,0,0,2
+Malawi,South Sudan,3,3,0,0,3
 Malawi,São Tomé and Príncipe,2,1,1,0,1
 Malawi,Tanzania,1,0,1,0,-2
 Malawi,Tunisia,2,0,2,0,-3
@@ -2804,7 +2874,7 @@ Malaysia,Oman,2,0,2,0,-4
 Malaysia,Palestine,1,1,0,0,1
 Malaysia,Papua New Guinea,1,1,0,0,10
 Malaysia,Philippines,3,3,0,0,4
-Malaysia,Singapore,4,2,1,1,3
+Malaysia,Singapore,5,3,1,1,9
 Malaysia,Solomon Islands,1,1,0,0,3
 Malaysia,South Korea,1,0,0,1,0
 Malaysia,Sri Lanka,1,1,0,0,6
@@ -2816,7 +2886,7 @@ Malaysia,Timor-Leste,3,3,0,0,11
 Malaysia,Turkmenistan,2,2,0,0,3
 Malaysia,United Arab Emirates,2,0,2,0,-5
 Malaysia,Uzbekistan,1,0,1,0,-4
-Malaysia,Vietnam,7,1,6,0,-8
+Malaysia,Vietnam,8,2,6,0,-7
 Maldives,Mayotte,1,0,1,0,-2
 Maldives,Nepal,1,0,1,0,-1
 Maldives,Pakistan,2,1,1,0,-2
@@ -2831,7 +2901,7 @@ Maldives,Thailand,1,0,1,0,-3
 Maldives,Timor-Leste,1,0,1,0,-1
 Maldives,Uzbekistan,1,0,1,0,-4
 Mali,Mauritania,3,3,0,0,7
-Mali,Morocco,1,0,0,1,0
+Mali,Morocco,2,0,0,2,0
 Mali,Mozambique,2,1,0,1,1
 Mali,Namibia,3,2,0,1,2
 Mali,Russia,1,0,0,1,0
@@ -2866,7 +2936,7 @@ Martinique,Mexico,1,0,1,0,-1
 Martinique,Panama,4,0,3,1,-9
 Martinique,Puerto Rico,1,1,0,0,2
 Martinique,Saint Lucia,1,1,0,0,2
-Martinique,Suriname,3,0,2,1,-2
+Martinique,Suriname,4,0,3,1,-3
 Martinique,Trinidad and Tobago,2,0,0,2,0
 Martinique,United States,1,0,1,0,-5
 Matabeleland,Yoruba Nation,1,0,0,1,0
@@ -2890,6 +2960,7 @@ Mauritius,New Caledonia,1,1,0,0,2
 Mauritius,Pakistan,1,1,0,0,3
 Mauritius,Réunion,2,0,1,1,-1
 Mauritius,Seychelles,3,1,0,2,1
+Mauritius,Sri Lanka,2,1,1,0,2
 Mauritius,Syria,1,0,1,0,-2
 Mauritius,São Tomé and Príncipe,4,1,2,1,0
 Mayotte,Réunion,2,0,1,1,-1
@@ -2901,7 +2972,7 @@ Mexico,New Zealand,1,1,0,0,3
 Mexico,Nigeria,2,2,0,0,5
 Mexico,Panama,10,9,0,1,16
 Mexico,Paraguay,3,1,2,0,0
-Mexico,Peru,1,1,0,0,1
+Mexico,Peru,2,1,0,1,1
 Mexico,Poland,1,0,0,1,0
 Mexico,Portugal,1,0,0,1,0
 Mexico,Qatar,1,0,1,0,-1
@@ -2914,7 +2985,7 @@ Mexico,Sweden,1,0,1,0,-1
 Mexico,Switzerland,1,0,1,0,-2
 Mexico,Trinidad and Tobago,2,1,0,1,2
 Mexico,Turkey,1,1,0,0,1
-Mexico,United States,11,4,5,2,-2
+Mexico,United States,12,4,6,2,-5
 Mexico,Uruguay,3,0,2,1,-7
 Mexico,Uzbekistan,1,0,0,1,0
 Mexico,Venezuela,2,1,1,0,1
@@ -2926,6 +2997,7 @@ Moldova,Romania,2,0,2,0,-6
 Moldova,Russia,1,0,0,1,0
 Moldova,San Marino,1,1,0,0,1
 Moldova,Scotland,2,0,2,0,-3
+Moldova,Slovakia,2,0,2,0,-6
 Moldova,Slovenia,2,0,2,0,-5
 Moldova,South Korea,1,0,1,0,-4
 Moldova,Sweden,2,0,2,0,-3
@@ -2955,6 +3027,7 @@ Montserrat,Panama,1,0,1,0,-2
 Montserrat,Saint Lucia,2,1,0,1,1
 Montserrat,Saint Vincent and the Grenadines,2,0,2,0,-3
 Montserrat,Trinidad and Tobago,1,0,1,0,-5
+Montserrat,Turks and Caicos Islands,2,2,0,0,5
 Montserrat,United States Virgin Islands,1,1,0,0,4
 Morocco,Mozambique,1,1,0,0,1
 Morocco,Namibia,1,1,0,0,1
@@ -2985,10 +3058,11 @@ Mozambique,Namibia,3,1,2,0,-1
 Mozambique,Niger,1,0,0,1,0
 Mozambique,Nigeria,2,0,2,0,-5
 Mozambique,Rwanda,4,2,1,1,3
-Mozambique,Senegal,4,0,3,1,-6
+Mozambique,Senegal,5,0,3,2,-6
 Mozambique,Seychelles,1,0,0,1,0
 Mozambique,Somalia,2,2,0,0,2
 Mozambique,South Africa,4,0,3,1,-6
+Mozambique,Sudan,1,1,0,0,3
 Mozambique,Uganda,2,1,1,0,-2
 Mozambique,Zimbabwe,1,0,0,1,0
 Myanmar,Nepal,2,1,0,1,1
@@ -3001,8 +3075,9 @@ Myanmar,Syria,4,0,3,1,-14
 Myanmar,Taiwan,1,0,0,1,0
 Myanmar,Tajikistan,3,1,2,0,-7
 Myanmar,Thailand,3,0,3,0,-12
-Myanmar,Timor-Leste,1,1,0,0,2
-Myanmar,Vietnam,2,0,2,0,-8
+Myanmar,Timor-Leste,2,2,0,0,4
+Myanmar,Vietnam,3,0,3,0,-12
+Namibia,Russia,1,0,1,0,-6
 Namibia,Senegal,3,1,2,0,-4
 Namibia,Seychelles,1,1,0,0,3
 Namibia,South Africa,5,0,2,3,-5
@@ -3032,6 +3107,7 @@ Netherlands,Republic of Ireland,2,2,0,0,2
 Netherlands,Romania,1,1,0,0,3
 Netherlands,Scotland,2,1,0,1,4
 Netherlands,Senegal,1,1,0,0,2
+Netherlands,Serbia,2,2,0,0,2
 Netherlands,Spain,3,0,0,3,0
 Netherlands,Sweden,1,1,0,0,4
 Netherlands,Tunisia,1,1,0,0,2
@@ -3041,14 +3117,16 @@ Netherlands,United States,1,1,0,0,2
 Netherlands,Uzbekistan,1,1,0,0,1
 Netherlands,Wales,2,2,0,0,2
 New Caledonia,New Zealand,2,0,2,0,-9
-New Caledonia,Papua New Guinea,3,2,1,0,3
-New Caledonia,Solomon Islands,5,2,2,1,1
+New Caledonia,Papua New Guinea,4,3,1,0,4
+New Caledonia,Solomon Islands,6,2,3,1,-1
 New Caledonia,Tahiti,4,3,1,0,7
 New Caledonia,Tonga,1,1,0,0,7
 New Caledonia,Tuvalu,1,1,0,0,11
-New Caledonia,Vanuatu,2,2,0,0,5
+New Caledonia,Vanuatu,3,2,1,0,2
 New Zealand,Norway,1,0,0,1,0
 New Zealand,Oman,1,0,0,1,0
+New Zealand,Palestine,1,0,0,1,0
+New Zealand,Panama,1,0,0,1,0
 New Zealand,Papua New Guinea,1,1,0,0,1
 New Zealand,Peru,1,0,1,0,-1
 New Zealand,Poland,1,0,1,0,-1
@@ -3083,7 +3161,7 @@ Niger,Zambia,3,2,0,1,2
 Niger,Zimbabwe,1,0,0,1,0
 Nigeria,Poland,1,0,0,1,0
 Nigeria,Portugal,2,0,2,0,-5
-Nigeria,Russia,1,0,0,1,0
+Nigeria,Russia,2,0,0,2,0
 Nigeria,Rwanda,4,2,1,1,2
 Nigeria,Saudi Arabia,1,0,0,1,0
 Nigeria,Senegal,1,0,1,0,-1
@@ -3111,7 +3189,9 @@ North Macedonia,Portugal,1,0,1,0,-2
 North Macedonia,Republic of Ireland,1,0,0,1,0
 North Macedonia,Romania,2,0,1,1,-1
 North Macedonia,Saudi Arabia,2,0,2,0,-2
-North Macedonia,Slovenia,3,1,0,2,1
+North Macedonia,Scotland,1,0,1,0,-2
+North Macedonia,Slovenia,4,1,1,2,-1
+North Macedonia,Switzerland,2,0,2,0,-6
 North Macedonia,Turkey,1,0,1,0,-4
 North Macedonia,Ukraine,3,0,3,0,-4
 North Macedonia,Wales,2,0,1,1,-6
@@ -3124,11 +3204,12 @@ Northern Ireland,Slovenia,2,0,2,0,-3
 Northern Ireland,Spain,1,0,1,0,-4
 Northern Ireland,Sweden,1,0,1,0,-4
 Northern Ireland,Switzerland,3,0,1,2,-2
-Northern Ireland,Ukraine,1,0,1,0,-1
+Northern Ireland,Ukraine,2,1,1,0,2
 Northern Ireland,United States,1,0,1,0,-1
 Northern Ireland,Wales,1,0,0,1,0
 Northern Mariana Islands,Tahiti,1,0,1,0,-5
 Northern Mariana Islands,Tuvalu,1,0,1,0,-3
+Norway,Portugal,2,0,2,0,-2
 Norway,Republic of Ireland,1,1,0,0,1
 Norway,Romania,4,1,1,2,1
 Norway,Scotland,2,0,1,1,-1
@@ -3140,9 +3221,10 @@ Norway,Spain,4,0,3,1,-5
 Norway,Sweden,5,3,0,2,4
 Norway,Switzerland,1,0,0,1,0
 Norway,Turkey,2,0,1,1,-3
+Norway,Wales,1,0,1,0,-1
 Oman,Palestine,3,2,0,1,2
 Oman,Qatar,5,1,3,1,-2
-Oman,Saudi Arabia,7,2,5,0,-4
+Oman,Saudi Arabia,8,2,6,0,-7
 Oman,Singapore,1,0,0,1,0
 Oman,Somalia,2,1,0,1,1
 Oman,South Korea,2,0,1,1,-2
@@ -3153,7 +3235,7 @@ Oman,Tajikistan,1,0,0,1,0
 Oman,Thailand,3,2,0,1,3
 Oman,Tunisia,1,0,1,0,-1
 Oman,Turkmenistan,2,2,0,0,4
-Oman,United Arab Emirates,3,1,1,1,0
+Oman,United Arab Emirates,4,1,2,1,-1
 Oman,United States,1,0,1,0,-4
 Oman,Uzbekistan,2,0,2,0,-4
 Oman,Vietnam,2,2,0,0,3
@@ -3165,15 +3247,19 @@ Padania,South Ossetia,1,0,1,0,-1
 Padania,Székely Land,1,1,0,0,4
 Padania,Sápmi,1,1,0,0,4
 Padania,Western Armenia,1,0,0,1,0
+Pakistan,Philippines,1,0,0,1,0
 Pakistan,Saudi Arabia,2,0,2,0,-7
 Pakistan,Syria,2,0,2,0,-7
 Pakistan,Tajikistan,2,0,2,0,-8
+Pakistan,Thailand,1,0,1,0,-4
+Pakistan,Vietnam,1,0,1,0,-2
 Palestine,Philippines,1,1,0,0,4
 Palestine,Qatar,2,1,1,0,0
 Palestine,Saudi Arabia,5,0,2,3,-6
 Palestine,Singapore,2,1,1,0,3
 Palestine,South Korea,2,0,0,2,0
 Palestine,Syria,3,1,0,2,1
+Palestine,Tajikistan,1,1,0,0,2
 Palestine,Tunisia,1,0,0,1,0
 Palestine,United Arab Emirates,1,0,0,1,0
 Palestine,Uzbekistan,3,1,2,0,-1
@@ -3192,12 +3278,12 @@ Panama,Uruguay,3,0,3,0,-10
 Panama,Venezuela,1,0,0,1,0
 Papua New Guinea,Samoa,2,2,0,0,7
 Papua New Guinea,Singapore,1,0,0,1,0
-Papua New Guinea,Solomon Islands,5,2,3,0,-2
+Papua New Guinea,Solomon Islands,6,2,3,1,-2
 Papua New Guinea,Sri Lanka,1,0,0,1,0
 Papua New Guinea,Tahiti,2,0,1,1,-2
 Papua New Guinea,Tonga,1,1,0,0,8
 Papua New Guinea,Tuvalu,1,1,0,0,3
-Papua New Guinea,Vanuatu,6,3,1,2,3
+Papua New Guinea,Vanuatu,7,4,1,2,4
 Paraguay,Peru,8,1,3,4,-3
 Paraguay,Qatar,1,0,0,1,0
 Paraguay,Saudi Arabia,1,0,0,1,0
@@ -3214,6 +3300,7 @@ Peru,Russia,1,0,0,1,0
 Peru,Senegal,1,0,1,0,-2
 Peru,South Korea,1,1,0,0,1
 Peru,Spain,1,0,1,0,-2
+Peru,United States,1,0,1,0,-3
 Peru,Uruguay,7,1,3,3,-4
 Peru,Venezuela,6,3,1,2,2
 Philippines,Singapore,2,0,2,0,-3
@@ -3221,11 +3308,12 @@ Philippines,South Korea,1,0,1,0,-1
 Philippines,Syria,2,0,2,0,-4
 Philippines,Taiwan,2,0,1,1,-1
 Philippines,Tajikistan,3,1,0,2,3
-Philippines,Thailand,6,1,5,0,-9
+Philippines,Thailand,7,2,5,0,-8
 Philippines,Timor-Leste,3,3,0,0,12
-Philippines,Vietnam,4,0,3,1,-4
+Philippines,Vietnam,5,0,4,1,-5
 Philippines,Yemen,1,0,0,1,0
 Poland,Portugal,2,0,2,0,-6
+Poland,Romania,1,1,0,0,6
 Poland,Russia,1,0,0,1,0
 Poland,San Marino,2,2,0,0,11
 Poland,Saudi Arabia,1,1,0,0,2
@@ -3233,7 +3321,7 @@ Poland,Scotland,3,1,1,1,0
 Poland,Slovakia,1,0,1,0,-1
 Poland,Slovenia,2,1,1,0,-1
 Poland,Spain,1,0,0,1,0
-Poland,Sweden,3,1,2,0,0
+Poland,Sweden,4,1,3,0,-2
 Poland,Turkey,1,1,0,0,1
 Poland,Ukraine,3,2,1,0,2
 Poland,Wales,3,2,0,1,2
@@ -3252,6 +3340,7 @@ Portugal,Ukraine,2,0,1,1,-1
 Portugal,United States,1,1,0,0,2
 Portugal,Uruguay,1,1,0,0,2
 Portugal,Uzbekistan,1,1,0,0,5
+Portugal,Wales,1,1,0,0,1
 Puerto Rico,Saint Kitts and Nevis,1,0,1,0,-1
 Puerto Rico,Saint Vincent and the Grenadines,1,1,0,0,1
 Puerto Rico,Saudi Arabia,1,0,1,0,-3
@@ -3261,7 +3350,7 @@ Puerto Rico,Trinidad and Tobago,1,0,0,1,0
 Puerto Rico,United States Virgin Islands,1,1,0,0,2
 Qatar,Republic of Ireland,3,0,2,1,-5
 Qatar,Russia,2,0,1,1,-3
-Qatar,Saudi Arabia,2,1,1,0,1
+Qatar,Saudi Arabia,3,1,1,1,1
 Qatar,Senegal,1,0,1,0,-2
 Qatar,Serbia,2,0,2,0,-8
 Qatar,Singapore,1,1,0,0,2
@@ -3271,10 +3360,10 @@ Qatar,Switzerland,1,0,0,1,0
 Qatar,Syria,1,0,0,1,0
 Qatar,Tajikistan,1,1,0,0,1
 Qatar,Tunisia,1,0,1,0,-3
-Qatar,United Arab Emirates,8,4,2,2,5
+Qatar,United Arab Emirates,9,4,2,3,5
 Qatar,United States,1,0,1,0,-1
 Qatar,Uzbekistan,3,1,1,1,-2
-Qatar,Yemen,1,1,0,0,6
+Qatar,Yemen,2,2,0,0,7
 Qatar,Zimbabwe,1,0,1,0,-1
 Raetia,Tibet,1,0,0,1,0
 Raetia,Ticino,2,2,0,0,11
@@ -3291,7 +3380,7 @@ Romania,San Marino,2,2,0,0,10
 Romania,Slovakia,2,0,1,1,-2
 Romania,Slovenia,1,0,1,0,-1
 Romania,Spain,2,0,2,0,-6
-Romania,Sweden,2,0,2,0,-3
+Romania,Sweden,4,0,4,0,-5
 Romania,Switzerland,2,1,0,1,1
 Romania,Turkey,1,0,1,0,-1
 Romania,Ukraine,1,1,0,0,3
@@ -3337,7 +3426,8 @@ Saint Lucia,San Marino,2,1,0,1,1
 Saint Lucia,Sint Maarten,2,1,1,0,3
 Saint Lucia,Trinidad and Tobago,1,0,1,0,-1
 Saint Martin,Sint Maarten,1,0,1,0,-1
-Saint Martin,United States Virgin Islands,2,1,1,0,0
+Saint Martin,United States Virgin Islands,4,2,2,0,3
+Saint Vincent and the Grenadines,Sint Maarten,2,2,0,0,6
 Saint Vincent and the Grenadines,Suriname,3,1,1,1,-2
 Saint Vincent and the Grenadines,Trinidad and Tobago,3,1,2,0,-4
 Samoa,Solomon Islands,1,0,1,0,-1
@@ -3356,7 +3446,7 @@ Saudi Arabia,Spain,1,0,1,0,-4
 Saudi Arabia,Tajikistan,2,1,0,1,1
 Saudi Arabia,Thailand,1,0,0,1,0
 Saudi Arabia,Trinidad and Tobago,1,0,0,1,0
-Saudi Arabia,United Arab Emirates,1,0,1,0,-1
+Saudi Arabia,United Arab Emirates,2,1,1,0,1
 Saudi Arabia,United States,2,0,1,1,-1
 Saudi Arabia,Uruguay,1,0,0,1,0
 Saudi Arabia,Uzbekistan,2,2,0,0,4
@@ -3365,8 +3455,9 @@ Saudi Arabia,Vietnam,2,2,0,0,3
 Saudi Arabia,Yemen,4,3,0,1,6
 Scotland,Serbia,1,0,0,1,0
 Scotland,Slovakia,2,1,1,0,0
+Scotland,Slovenia,2,0,1,1,-1
 Scotland,Spain,2,1,1,0,0
-Scotland,Switzerland,1,0,0,1,0
+Scotland,Switzerland,2,0,1,1,-3
 Scotland,Turkey,1,0,1,0,-1
 Scotland,Ukraine,3,1,1,1,1
 Senegal,South Africa,1,0,0,1,0
@@ -3387,7 +3478,7 @@ Serbia,Turkey,2,0,0,2,0
 Serbia,Ukraine,2,0,1,1,-5
 Serbia,United States,1,1,0,0,1
 Seychelles,South Sudan,2,0,2,0,-2
-Seychelles,Sri Lanka,2,1,0,1,1
+Seychelles,Sri Lanka,4,1,2,1,-4
 Seychelles,Zambia,1,0,1,0,-2
 Shetland,Ynys Môn,2,0,2,0,-3
 Sierra Leone,Somalia,1,1,0,0,2
@@ -3396,6 +3487,7 @@ Sierra Leone,South Sudan,1,0,0,1,0
 Sierra Leone,São Tomé and Príncipe,2,1,0,1,2
 Sierra Leone,Togo,1,0,1,0,-3
 Sierra Leone,Zambia,2,0,2,0,-3
+Sierra Leone,Zimbabwe,1,0,1,0,-1
 Singapore,Solomon Islands,2,1,0,1,1
 Singapore,South Korea,2,0,2,0,-12
 Singapore,Taiwan,2,1,1,0,1
@@ -3413,12 +3505,12 @@ Slovakia,Sweden,3,0,2,1,-2
 Slovakia,Ukraine,1,0,1,0,-1
 Slovakia,Wales,3,1,1,1,3
 Slovenia,Sweden,4,0,1,3,-2
-Slovenia,Switzerland,2,0,1,1,-3
+Slovenia,Switzerland,3,0,2,1,-4
 Slovenia,United States,1,1,0,0,1
 Solomon Islands,Tahiti,2,1,1,0,-1
 Solomon Islands,Taiwan,1,1,0,0,1
 Solomon Islands,Tuvalu,1,1,0,0,13
-Solomon Islands,Vanuatu,6,4,2,0,6
+Solomon Islands,Vanuatu,7,4,2,1,6
 Somalia,Uganda,2,0,2,0,-3
 Somalia,Zimbabwe,2,1,1,0,-1
 Somaliland,Yorkshire,1,0,1,0,-4
@@ -3439,7 +3531,9 @@ South Korea,Tunisia,1,1,0,0,4
 South Korea,Turkmenistan,2,2,0,0,7
 South Korea,United Arab Emirates,2,1,1,0,0
 South Korea,United States,1,1,0,0,2
-South Korea,Uruguay,2,0,1,1,-1
+South Korea,Uruguay,3,0,2,1,-4
+South Korea,Uzbekistan,1,1,0,0,2
+South Korea,Venezuela,1,0,0,1,0
 South Korea,Vietnam,1,1,0,0,6
 South Korea,Wales,1,0,0,1,0
 South Ossetia,Székely Land,1,0,0,1,0
@@ -3480,7 +3574,7 @@ Syria,Tajikistan,3,2,1,0,0
 Syria,Thailand,2,1,1,0,1
 Syria,Tunisia,2,2,0,0,3
 Syria,United Arab Emirates,5,0,3,2,-5
-Syria,Uzbekistan,3,1,1,1,-1
+Syria,Uzbekistan,4,1,2,1,-4
 Syria,Venezuela,1,0,1,0,-1
 Syria,Vietnam,1,0,1,0,-1
 Syria,Yemen,1,0,0,1,0
@@ -3511,14 +3605,15 @@ Thailand,Trinidad and Tobago,1,1,0,0,1
 Thailand,Turkmenistan,2,1,1,0,-1
 Thailand,United Arab Emirates,4,1,2,1,-3
 Thailand,Uzbekistan,2,0,2,0,-3
-Thailand,Vietnam,11,3,3,5,0
+Thailand,Vietnam,12,4,3,5,2
 Timor-Leste,Vietnam,1,0,1,0,-7
+Togo,Zambia,1,0,1,0,-2
 Tonga,Tuvalu,1,0,1,0,-4
 Tonga,Vanuatu,1,0,1,0,-14
 Trinidad and Tobago,United States,6,1,5,0,-26
 Trinidad and Tobago,Venezuela,2,0,2,0,-5
 Trinidad and Tobago,Wales,1,0,1,0,-1
-Tunisia,Uganda,1,1,0,0,2
+Tunisia,Uganda,2,1,0,1,2
 Tunisia,United Arab Emirates,1,1,0,0,1
 Tunisia,Zambia,2,2,0,0,4
 Turkey,United States,2,2,0,0,2
@@ -3536,7 +3631,7 @@ Ukraine,Wales,1,0,1,0,-1
 United Arab Emirates,Uzbekistan,3,0,2,1,-2
 United Arab Emirates,Venezuela,1,0,1,0,-4
 United Arab Emirates,Vietnam,2,1,1,0,0
-United Arab Emirates,Yemen,3,3,0,0,7
+United Arab Emirates,Yemen,4,4,0,0,11
 United States,Uruguay,4,1,1,2,3
 United States,Uzbekistan,1,1,0,0,3
 United States,Venezuela,2,1,1,0,-1
