@@ -1,14 +1,14 @@
 {
-  "model_version": "20261026T122711Z-5dcefd1aa048",
-  "trained_at": "2026-10-26T12:27:11.264641+00:00",
-  "training_duration_seconds": 3.931,
-  "data_snapshot_version": "5dcefd1aa0483979ea8378cef5be448d2005609d39945ea162378561a30a6767",
+  "model_version": "20261102T150015Z-09aac809e317",
+  "trained_at": "2026-11-02T15:00:15.538844+00:00",
+  "training_duration_seconds": 3.819,
+  "data_snapshot_version": "09aac809e317f3004c69720a38addb656c49ebb19f1937deab96f96e3362257a",
   "training_source": "analytics.mart_model_features",
   "warehouse_path": "data/warehouse/wc26.duckdb",
   "artifact_checksums": {
-    "outcome_model.joblib": "1294d768b78fb7828215378c479d6597cb8a42a6dfd31b0152ba7a415d4b5876",
-    "home_goals_model.cbm": "1ebb0a29d970ba7dcf29c19686d71854997d6858ae70fa6146e659de6af00204",
-    "away_goals_model.cbm": "5ddfe212392f4c33a643e2d4c93d655a3a98e015c28b32a114ced569269a873f",
+    "outcome_model.joblib": "119b3e14b5218e751abcb4a45d866069a8725d1063d68c592a3a5290c237a0c4",
+    "home_goals_model.cbm": "5b855c4f8874d57bda7e658454afc6a52602870d58019484b1a7447d61ac1a07",
+    "away_goals_model.cbm": "f0d454ed1fcdddf480b13ffff53ecd99be058f6dbcf595e5b6c0dc4a4a6ae89c",
     "team_profiles.parquet": "49dff7026f7c5937a6e352d391096eeb615abfcc3227ef177c1a7ba7e303fdf7",
     "h2h_profiles.parquet": "f468017132e9d879381eac35dd845fcda70ef43587b4a2659e398392a0c4aca3"
   },
