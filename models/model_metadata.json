@@ -1,16 +1,16 @@
 {
-  "model_version": "20261102T150015Z-09aac809e317",
-  "trained_at": "2026-11-02T15:00:15.538844+00:00",
-  "training_duration_seconds": 3.819,
+  "model_version": "20261109T152954Z-09aac809e317",
+  "trained_at": "2026-11-09T15:29:54.479193+00:00",
+  "training_duration_seconds": 3.825,
   "data_snapshot_version": "09aac809e317f3004c69720a38addb656c49ebb19f1937deab96f96e3362257a",
   "training_source": "analytics.mart_model_features",
   "warehouse_path": "data/warehouse/wc26.duckdb",
   "artifact_checksums": {
-    "outcome_model.joblib": "119b3e14b5218e751abcb4a45d866069a8725d1063d68c592a3a5290c237a0c4",
-    "home_goals_model.cbm": "5b855c4f8874d57bda7e658454afc6a52602870d58019484b1a7447d61ac1a07",
-    "away_goals_model.cbm": "f0d454ed1fcdddf480b13ffff53ecd99be058f6dbcf595e5b6c0dc4a4a6ae89c",
-    "team_profiles.parquet": "49dff7026f7c5937a6e352d391096eeb615abfcc3227ef177c1a7ba7e303fdf7",
-    "h2h_profiles.parquet": "f468017132e9d879381eac35dd845fcda70ef43587b4a2659e398392a0c4aca3"
+    "outcome_model.joblib": "0c60a111781ec41eb85cf12953e1d50e97e3aa9fc47e5ddd71f2972686ab6737",
+    "home_goals_model.cbm": "64ab7b5e8ca9882d865fcd4a044ff5b38f21ca93b0af07b05632a1292d3fe857",
+    "away_goals_model.cbm": "04436c9110ed036315e3c4139f4434e79aa6ee90a0bd4a100aca79f09d37467c",
+    "team_profiles.parquet": "1143697736bebad1e929bb1be51d57f9821c0f4b0bc80e099da05dd4cd597859",
+    "h2h_profiles.parquet": "445c5f256b9db76ce760a76f52fa3736710322042497fb6de3a8d559d40aa982"
   },
   "training_row_count": 4744,
   "validation_row_count": 543,
